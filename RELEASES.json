@@ -4,7 +4,7 @@
   "repository": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
   "historical_parent_record_doi": "10.5281/zenodo.22083916",
   "historical_parent_concept_doi": "10.5281/zenodo.21792434",
-  "lineage_status": "DOI_RESERVED_NOT_YET_PUBLISHED",
+  "lineage_status": "PUBLIC_ANONYMOUS_READBACK_PASS",
   "releases": [
     {
       "release_id": "2026-08-27-fga-complete",

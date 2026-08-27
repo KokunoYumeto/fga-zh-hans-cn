@@ -1,6 +1,6 @@
 {
   "schema": "fga_zh_hans_cn_canonical_publication_plan/v1",
-  "status": "REMOTES_CREATED_DOI_RESERVED_NOT_YET_PUBLISHED",
+  "status": "PUBLIC_ANONYMOUS_READBACK_PASS",
   "scope": "First canonical per-language GitHub repository and first new per-language Zenodo concept for complete FGA zh-Hans-CN",
   "github": {
     "owner": "KokunoYumeto",
@@ -13,7 +13,9 @@
     "repository_description": "Unofficial mainland Simplified-Chinese FGA edition with editable source, provenance, rights, and QA.",
     "topics": ["algebraic-geometry", "fga", "grothendieck", "simplified-chinese", "zh-hans-cn", "mathematical-translation", "tex"],
     "authenticated_duplicate_check": "PASS_NOT_FOUND_2026-08-27",
-    "remote_created": true
+    "remote_created": true,
+    "public_release_created": true,
+    "anonymous_release_asset_readback": "PASS_9_OF_9"
   },
   "zenodo": {
     "transaction": "CREATE_NEW_DEPOSITION_AND_NEW_CONCEPT; NEVER_CALL_NEWVERSION_ON_22083916_OR_ITS_CONCEPT",
@@ -35,7 +37,9 @@
     },
     "public_duplicate_search": "PASS_ONLY_MULTILINGUAL_PARENT_FOUND_2026-08-27",
     "authenticated_draft_duplicate_check": "PASS_NO_MATCHING_DRAFT_BEFORE_CREATION_2026-08-27",
-    "remote_created": true
+    "remote_created": true,
+    "published": true,
+    "anonymous_record_file_readback": "PASS_10_OF_10"
   },
   "release_directory": "releases/2026-08-27-fga-complete",
   "release_files": [

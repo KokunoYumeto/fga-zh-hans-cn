@@ -1,0 +1,38 @@
+{
+  "schema": "fga_zh_hans_cn_github_publication_receipt/v1",
+  "recorded": "2026-08-27T17:57:03.2369684Z",
+  "status": "PASS",
+  "repository": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
+  "branch": "main",
+  "release_commit": "b17fd67d1ef6a2dbc24cc4e17f8a791b0074ab4e",
+  "release_tree": "effbeba27e7d91de3a221723eb73d4015131071d",
+  "tag": "fga-zh-hans-cn-2026-08-27-r1",
+  "annotated_tag_object": "bbdeef78a58aacbf1b3af8f53328c3af1fd90f2d",
+  "tag_peeled_commit": "b17fd67d1ef6a2dbc24cc4e17f8a791b0074ab4e",
+  "release_url": "https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/tag/fga-zh-hans-cn-2026-08-27-r1",
+  "release_published_at": "2026-08-27T17:54:47Z",
+  "anonymous_git_readback": {
+    "status": "PASS",
+    "main_at_release_readback": "b17fd67d1ef6a2dbc24cc4e17f8a791b0074ab4e",
+    "tag_object": "bbdeef78a58aacbf1b3af8f53328c3af1fd90f2d",
+    "tag_peeled_commit": "b17fd67d1ef6a2dbc24cc4e17f8a791b0074ab4e"
+  },
+  "anonymous_release_readback": {
+    "status": "PASS",
+    "release_page_http_status": 200,
+    "files": 9,
+    "mismatches": 0
+  },
+  "files": [
+    {"name": "fga-zh-hans-cn-source.zip", "bytes": 411052, "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D"},
+    {"name": "fga-zh-hans-cn.pdf", "bytes": 973659, "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E"},
+    {"name": "MANIFEST.json", "bytes": 3114, "sha256": "7EB8C2F2420AED4B891C6027C3B36122CFC17A7D9914DBD3503C5F7AFBB7E4FD"},
+    {"name": "PRODUCER_RELEASE_RECEIPT.json", "bytes": 3173, "sha256": "827F223294BF3F86F24D9378B068A668E953944589BF3D470D6E16414B8EC1EF"},
+    {"name": "PROVENANCE.json", "bytes": 3019, "sha256": "8741D4F9A1943B56D49461ACC62286D0F7162D351B7F05E8287AA37AE387C258"},
+    {"name": "QA.json", "bytes": 13600, "sha256": "8975420A32408354E015857B7F2C65E5A7DD4A300B00FC81BA465AC7076F1438"},
+    {"name": "README.md", "bytes": 1676, "sha256": "047DB661C40BC26876AEE9B626B4B26FB0682D46F9685206D90F893E5D7C421C"},
+    {"name": "RIGHTS.md", "bytes": 872, "sha256": "5FF93E55EB03EF5146543738BBF74EEEDAD503F8461EB161A0CEE836C893FCAE"},
+    {"name": "SOURCE_ARCHIVE_MANIFEST.json", "bytes": 7128, "sha256": "D39AD44AA7CF84360D5E974960C1602C6E89B6E37C7D724D0D714F696404571F"}
+  ],
+  "credential_material_present": false
+}

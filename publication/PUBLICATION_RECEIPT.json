@@ -1,0 +1,37 @@
+{
+  "schema": "fga_zh_hans_cn_canonical_publication_receipt/v1",
+  "recorded": "2026-08-27T17:57:03.2369684Z",
+  "status": "PASS_PUBLIC",
+  "scope": "Complete FGA zh-Hans-CN language edition",
+  "github": {
+    "repository": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
+    "branch": "main",
+    "release_commit": "b17fd67d1ef6a2dbc24cc4e17f8a791b0074ab4e",
+    "tag": "fga-zh-hans-cn-2026-08-27-r1",
+    "tag_object": "bbdeef78a58aacbf1b3af8f53328c3af1fd90f2d",
+    "release": "https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/tag/fga-zh-hans-cn-2026-08-27-r1",
+    "anonymous_files": "PASS_9_OF_9"
+  },
+  "zenodo": {
+    "concept_doi": "10.5281/zenodo.22132590",
+    "record_doi": "10.5281/zenodo.22132591",
+    "record": "https://zenodo.org/records/22132591",
+    "anonymous_files": "PASS_10_OF_10"
+  },
+  "historical_multilingual_parent": {
+    "record_doi": "10.5281/zenodo.22083916",
+    "disposition": "immutable related provenance only; not modified and not used as this language edition's version lineage"
+  },
+  "release_artifacts": {
+    "reader": {"bytes": 973659, "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E"},
+    "source_archive": {"bytes": 411052, "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D"}
+  },
+  "deterministic_gates": {
+    "staging_hashes": "PASS",
+    "source_zip": "PASS_42_ENTRIES",
+    "github_anonymous_readback": "PASS",
+    "zenodo_anonymous_readback": "PASS",
+    "doi_resolution": "PASS",
+    "credential_leak": false
+  }
+}
