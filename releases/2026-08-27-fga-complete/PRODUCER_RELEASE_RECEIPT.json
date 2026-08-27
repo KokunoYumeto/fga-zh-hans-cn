@@ -1,0 +1,75 @@
+{
+  "schema": "fga_zh_hans_cn_producer_release_receipt/v2",
+  "recorded": "2026-08-27T00:00:00Z",
+  "status": "READY_FOR_NEW_CANONICAL_LANGUAGE_LINEAGE",
+  "scope": "complete bounded FGA zh-Hans-CN corpus through EOF of e236",
+  "historical_parent": {
+    "record_doi": "10.5281/zenodo.22083916",
+    "concept_doi": "10.5281/zenodo.21792434",
+    "relation": "isDerivedFrom",
+    "preserved_as_immutable_history": true
+  },
+  "manifest": {
+    "filename": "MANIFEST.json",
+    "bytes": 3114,
+    "sha256": "7EB8C2F2420AED4B891C6027C3B36122CFC17A7D9914DBD3503C5F7AFBB7E4FD"
+  },
+  "reader": {
+    "filename": "fga-zh-hans-cn.pdf",
+    "bytes": 973659,
+    "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+    "pages": 148,
+    "byte_identity_with_historical_parent": true
+  },
+  "editable_source": {
+    "filename": "fga-zh-hans-cn-source.zip",
+    "bytes": 411052,
+    "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D",
+    "entries": 42,
+    "deterministic_rebuild_match": true,
+    "internal_manifest": {
+      "filename": "SOURCE_ARCHIVE_MANIFEST.json",
+      "bytes": 7128,
+      "sha256": "D39AD44AA7CF84360D5E974960C1602C6E89B6E37C7D724D0D714F696404571F",
+      "payload_entries": 41,
+      "payload_tree_sha256": "A3D735D8744762EC46087293AE7E44C4027C67931164B8757F0FCEEB8972E396"
+    }
+  },
+  "qa": {
+    "filename": "QA.json",
+    "bytes": 13600,
+    "sha256": "8975420A32408354E015857B7F2C65E5A7DD4A300B00FC81BA465AC7076F1438",
+    "corpus_replay": "PASS",
+    "pdf_mechanics": "PASS",
+    "bounded_visual": "PASS",
+    "producer_certification_only": true,
+    "independent_chinese_certification": false
+  },
+  "clean_source_replay": {
+    "status": "PASS_CONTENT_EQUIVALENT_WITH_NONIDENTICAL_CONTAINER_BYTES",
+    "passes": 5,
+    "final_converged": true,
+    "fresh_pdf_sha256_observed": "7866D3FE80DE209D07308AD6FF9B22CC2BD1BC6F73E7EE3F34DA40F581706B32",
+    "preserved_pdf_sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+    "default_text_extraction_sha256_each": "D8780366B8DA286B0561655CF7F574ABC5D3E496841354364A197E6D77A4B62B",
+    "all_page_render_md5_mismatches": 0,
+    "byte_identical_pdf_container": false
+  },
+  "privacy_and_scope": {
+    "status": "PASS",
+    "absolute_private_path_values_rewritten": 16,
+    "internal_task_fields_removed": 1,
+    "credentials_included": false,
+    "authority_scans_included": false,
+    "french_or_english_witness_files_included": false,
+    "chinese_tex_bytes_changed": false,
+    "mathematical_content_changed": false
+  },
+  "prior_release_packet": {
+    "filename": "fga-zh-hans-cn-complete.zip",
+    "bytes": 1422652,
+    "sha256": "31063347F42424AC65EA2A2911B79B845540FB7C031E61F47C63E6AA3FC1F494",
+    "disposition": "historical input only; not republished because the canonical packet uses a privacy-clean projection"
+  },
+  "next_action": "Create the new GitHub repository and new Zenodo deposition, reserve the new DOIs, insert them into repository metadata, publish the exact nine release files, and anonymously read back every public byte."
+}

@@ -1,0 +1,385 @@
+{
+  "schema": "fga_zh_hans_cn_final_qa/v1",
+  "recorded": "2026-08-24T17:36:59.5843138+02:00",
+  "locale": "zh-Hans-CN",
+  "scope": {
+    "units": [
+      "149",
+      "182",
+      "190",
+      "195",
+      "212",
+      "221",
+      "232",
+      "236",
+      "com",
+      "e149",
+      "e182",
+      "e190",
+      "e195",
+      "e212",
+      "e221",
+      "e232",
+      "e236"
+    ],
+    "units_complete": 17,
+    "units_total": 17,
+    "hard_stop": "EOF of e236",
+    "main_body_input_order_exact": true,
+    "target_total_bytes": 468464,
+    "target_corpus_digest": "578810008DAED9659DAA805DE7D17A370F52D8DFDD8086D76AF04912A632B096"
+  },
+  "authority_replay": {
+    "manifest": {
+      "path": "external-source/SOURCE_FILES.csv",
+      "bytes": 7241,
+      "sha256": "30AB17BCB74755DD36F6C95463043CD049680C3CCDFEF883CAC3240DF0A566ED"
+    },
+    "validation": {
+      "bytes": 517,
+      "sha256": "85960D5F61FBCF39706DAB7F9DC6487E38CA12403557AAAB7B80F536B73B20DB",
+      "status": "PASS"
+    },
+    "pdf_count": 17,
+    "pdf_bytes": 21297718,
+    "physical_pdf_pages": 228,
+    "catalog_pages": 212,
+    "byte_hash_page_mismatches": 0,
+    "rights": "Authority witnesses only; consult NUMDAM conditions. No scan redistribution or open licence inferred."
+  },
+  "editable_witness_replay": {
+    "corrected_french_zip": {
+      "bytes": 670941,
+      "sha256": "BC1BF3AAEEE95554F8B7BD0B2375958E8F44AD4AE3EC48DAC0B41D06FF4BA0E0",
+      "entries": 34,
+      "testzip": "PASS"
+    },
+    "english_witness_zip": {
+      "bytes": 659690,
+      "sha256": "285E9F52254481E96C25C25223BF59767FCDFC204F82B5DBA8ABBF8397E252D2",
+      "entries": 34,
+      "testzip": "PASS"
+    },
+    "checkpoint_and_readback_hashes_match": true,
+    "english_role": "secondary comparison witness only"
+  },
+  "final_units": {
+    "e232": {
+      "authority_pdf": "16_SB_1961-1962__7__303_0.pdf",
+      "authority_bytes": 134758,
+      "authority_sha256": "CBC9B1A1967B448A5087D97B4C102B028F1D1BD99A22A95BD4FE2F1F6147F344",
+      "physical_pages": 2,
+      "printed_pages": "303",
+      "french_source": {
+        "path": "fr/e232.tex",
+        "bytes": 1438,
+        "sha256": "65C0E646179EDB9A3F5F8BC5752D07425903003C37610FD2BDB872C18DCB139A"
+      },
+      "english_witness": {
+        "path": "en/e232.tex",
+        "bytes": 1289,
+        "sha256": "F67B39329BE0732D7F1F166DA7643AE0EA6F8E086A38C35C7D4CB13CE6CF86C9"
+      },
+      "target": {
+        "path": "zh/e232.tex",
+        "bytes": 1208,
+        "sha256": "B287432348F3E4769C49DD5B3A8E79E1ABA125D27A7359239D3006C14B64D5B9"
+      },
+      "source_anchors_exact": {},
+      "inline_math_exact_order": "1/1",
+      "display_math_exact_order": "0/0",
+      "noindent_exact": "7/7",
+      "medskip_exact": "0/0",
+      "utf8_placeholders": "PASS"
+    },
+    "e236": {
+      "authority_pdf": "17_SB_1961-1962__7__303_1.pdf",
+      "authority_bytes": 475371,
+      "authority_sha256": "D8FFB36337F12CE15F9E15E917174A4C5EDCBD28C5B0CD9F0A501098DB8BD61B",
+      "physical_pages": 6,
+      "printed_pages": "303-307",
+      "french_source": {
+        "path": "fr/e236.tex",
+        "bytes": 10113,
+        "sha256": "791D011B91C727AC0CCCA2B32E3E7D4F4BA24A5B18A4E272BB34BA416BC1316D"
+      },
+      "english_witness": {
+        "path": "en/e236.tex",
+        "bytes": 9033,
+        "sha256": "6AFECEBA8F68AA269EBC6C289127E8F625F63E75989456FF9DB0317C01DA47CE"
+      },
+      "target": {
+        "path": "zh/e236.tex",
+        "bytes": 8130,
+        "sha256": "889654E39DAC1B4FDA8D017913778F2B5997CC58E3F6B55E30FBE5692C286280"
+      },
+      "source_anchors_exact": [
+        {},
+        {},
+        {},
+        {},
+        {}
+      ],
+      "inline_math_exact_order": "96/96",
+      "display_math_exact_order": "9/9",
+      "noindent_exact": "20/20",
+      "medskip_exact": "6/6",
+      "utf8_placeholders": "PASS"
+    }
+  },
+  "all_target_sources": {
+    "strict_utf8": true,
+    "nul_count": 0,
+    "replacement_character_count": 0,
+    "placeholder_hits": 0,
+    "obvious_untranslated_heading_hits": 0,
+    "earlier_unit_receipts": [
+      {
+        "path": "qa/149.json",
+        "sha256": "C499BE6F814B8C2458F269E5893F08625E895C9359AEEEED96CCBEB732038B25",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/182.json",
+        "sha256": "A7127123E081C23B7FA2DEF36EF1A7B3E31914921D992B38961190E8887B10F1",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/190.json",
+        "sha256": "478DF8D47B46C5DF8ECCA57B549C475EF4DCD1FAACA6AAD84C506B96A11F8EA2",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/195.json",
+        "sha256": "53A246150A0665C759179ADF39BA2BE1DE4DB80AADBB73E284D254D1D0E1B9C2",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/212.json",
+        "sha256": "34A6ADB4827983C234283AC4A89F35FB2B7DA97A9CA9E4906376C9BF8410B288",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/221.json",
+        "sha256": "3DF8AD7739B452CF6861FA89AC7B491E760A2584EE1AC9C3D82B99CD56952BE8",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/232.json",
+        "sha256": "BEC218B41F9D1DCAADAC486A85C0065B995B9AF5F0F55FB1B91C804A2163B19C",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/236.json",
+        "sha256": "F478158B6DBD6C9C593C5EA3231EC661FB025B83A46094E42F5A3344F1C66241",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/com.json",
+        "sha256": "76FC70138AEE355252A6DD8687FC8548B97DCF8D7DC94C28D35BBA7B33E1834F",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/errata_149_190.json",
+        "sha256": "EE5C9B7331AF35930FFE759F55A8C4B6B3724FF6F84A1866965BC90DD5F6772E",
+        "status": "PASS"
+      },
+      {
+        "path": "qa/errata_195_221.json",
+        "sha256": "8E8302F0B2159B63629934CF29F9B7FEA8A2EEAFAE818DD8135E4C12CDD84BE7",
+        "status": "PASS"
+      }
+    ]
+  },
+  "build": {
+    "engine": "XeTeX 3.141592653-2.6-0.999998 / MiKTeX 26.5",
+    "environment": {
+      "SOURCE_DATE_EPOCH": "1787529600",
+      "FORCE_SOURCE_DATE": "1",
+      "TZ": "UTC"
+    },
+    "main_source": {
+      "path": "zh/main.tex",
+      "bytes": 1055,
+      "sha256": "43234017090C5F67ADA13E8EB6677E267F0421ABE138A707F06145A48640F33D"
+    },
+    "locale_style": {
+      "path": "tex/zh.tex",
+      "bytes": 2749,
+      "sha256": "F8990EC2CA5F8BF87A200E310A05BB4D0613CB4331A330135999898EC0C7FF8E"
+    },
+    "pdf": {
+      "path": "build/main.pdf",
+      "bytes": 973659,
+      "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+      "pages": 148,
+      "page_size": "A4",
+      "converged_identical_final_pass": true
+    },
+    "log": {
+      "bytes": 215127,
+      "sha256": "2F7A45E404A9998CB821DE950A1D5BEAC9D62146B5BB60690277D1973A921CD6"
+    },
+    "aux": {
+      "bytes": 10878,
+      "sha256": "4D9531FC38EF0EEEC3A988C0D0F9EF5AFB561966AC6CD594E613D40E52A46D2C"
+    },
+    "toc": {
+      "bytes": 6910,
+      "sha256": "F0E98C7F63AF3035840CC3792FCDE18D5C19178E9772AB1731F91C13626F6784"
+    },
+    "diagnostics": {
+      "fatal": 0,
+      "undefined_references": 0,
+      "undefined_citations": 0,
+      "missing_glyphs": 0,
+      "overfull_hboxes": 0,
+      "overfull_vboxes": 0,
+      "rerun_requests": 0,
+      "underfull_hboxes": 2,
+      "underfull_vboxes": 2,
+      "font_warning_lines": 7,
+      "pdf_string_warnings": 2,
+      "disposition": "The underfull boxes are non-overflowing bibliography/page-fill spacing already inspected. Font-shape fallbacks remain embedded and visually sound. Both PDF-string warnings come from math shifts around J in the section-6 title in zh/182.tex; the bookmark retains the visible J text."
+    }
+  },
+  "pdf_integrity": {
+    "fonts": 11,
+    "all_fonts_embedded": true,
+    "all_fonts_subset": true,
+    "all_fonts_unicode": true,
+    "named_destinations": 1317,
+    "invalid_destinations": 0,
+    "link_annotations": 180,
+    "internal_links": 180,
+    "external_links": 0,
+    "unresolved_links": 0,
+    "out_of_bounds_links": 0,
+    "all_expected_unit_and_source_destinations_present": true,
+    "final_unit_destination_pages": {
+      "fga.e232": 145,
+      "src:e232:303": 145,
+      "fga.e236": 146,
+      "src:e236:303": 146,
+      "src:e236:307": 148
+    },
+    "text_extraction": {
+      "path": "qa/final_text.txt",
+      "bytes": 560898,
+      "sha256": "EAF278A4E083B65E0515E63A5D0E60B4FD0482D3FB3DEBBF1D78DB2802D2724D",
+      "replayed_identically_from_final_pdf": true,
+      "nul_count": 0,
+      "replacement_character_count": 0,
+      "form_feeds": 148
+    },
+    "tagged_pdf": false,
+    "tagging_disposition": "Known toolchain property; source order, Unicode extraction and internal navigation pass, but this producer receipt does not claim tagged-PDF accessibility certification."
+  },
+  "visual_qa": {
+    "status": "PASS",
+    "authority_pages_inspected": [
+      "qa/errata_auth_232_236/e232-2.png",
+      "qa/errata_auth_232_236/e236-2.png",
+      "qa/errata_auth_232_236/e236-3.png",
+      "qa/errata_auth_232_236/e236-4.png",
+      "qa/errata_auth_232_236/e236-5.png",
+      "qa/errata_auth_232_236/e236-6.png"
+    ],
+    "cumulative_pages_inspected": [
+      "qa/final_render/front-001.png",
+      "qa/final_render/front-002.png",
+      "qa/final_render/front-003.png",
+      "qa/final_render/front-004.png",
+      "qa/final_render/front-005.png",
+      "qa/final_render/end-141.png",
+      "qa/final_render/end-142.png",
+      "qa/final_render/end-143.png",
+      "qa/final_render/end-144.png",
+      "qa/final_render/end-145.png",
+      "qa/final_render/end-146.png",
+      "qa/final_render/end-147.png",
+      "qa/final_render/end-148.png"
+    ],
+    "final_rebuild_pixel_replay": "13/13 PNGs byte-identical",
+    "observations": "Title, complete contents, first content page, errata seams, dense formula pages, source-page markers, headers, footers and final page are readable and free of clipping, overlap, missing glyphs and footer damage."
+  },
+  "terminology_evidence": {
+    "witnesses": {
+      "records": 15,
+      "sha256": "FEA0D55A7FD49A6CF606958EAD43C809A4DB103CD7A29F7049ECD4061EFAA4A0"
+    },
+    "loci": {
+      "records": 26,
+      "sha256": "DFAEF3BD866704E38CBEBB6FC0F2AB8D2F2A6FB9CE02F6393F188320C1142FA1"
+    },
+    "terms": {
+      "records": 52,
+      "sha256": "5F462BD91C5648B5CA10FF79D7B59CF153DBDE25A8CADAD12F783BCD2F43BDEF"
+    },
+    "qa": {
+      "records": 18,
+      "sha256": "CC6920F15915934B2A708F092F69FBE079612B450DCA21890A624120FA6DA8D8"
+    }
+  },
+  "source_hypotheses": {
+    "ledger": "control/ISSUES.jsonl",
+    "records": 18,
+    "bytes": 27132,
+    "sha256": "987BBA9B0E0417B7D9F12545C443E61C6C421E960D842E52B00A5A58B0B59CA8",
+    "final_new_id": "FGA-E232-CAND-001",
+    "routing": "keeper task 019fca5a-bcf8-7813-93dd-1adff100c52d only; no upstream issue"
+  },
+  "producer_status": "complete_uncertified",
+  "certification_claim": false,
+  "status": "PASS",
+  "producer_evidence_origin": {
+    "filename": "fga-zh-hans-cn-qa.json",
+    "bytes": 10586,
+    "sha256": "E6A868D19FE908E1046BEC275A4C72C2A730DFA53ADF2029274DEEA0C12D97DA",
+    "historical_parent_record_doi": "10.5281/zenodo.22083916"
+  },
+  "public_privacy_projection": {
+    "absolute_private_path_values_rewritten": 16,
+    "internal_task_fields_removed": 1,
+    "chinese_tex_bytes_changed": false,
+    "mathematical_content_changed": false,
+    "terminology_projection": {
+      "BASE.json": {
+        "bytes": 10248,
+        "sha256": "70E68B3BA7640488C1C95B5E116806C48BD2765DC1F391F3E5AEF538527FC598"
+      },
+      "WITNESSES.jsonl": {
+        "bytes": 10024,
+        "sha256": "D54485342D466797C9E647B7701AB689E1399E856C5E562BFAAC76A00B5E2E10"
+      },
+      "LOCI.jsonl": {
+        "bytes": 12706,
+        "sha256": "BA896F5F15058BB0E41040DD831A297F6CDB4FA0D7D9AAA303D8AB3E8AFE6639"
+      },
+      "TERM.jsonl": {
+        "bytes": 27934,
+        "sha256": "A4F407A000BA92AEE67FDE1FDA485830361A2F711D317BC0DAB06B8883754B86"
+      },
+      "QA.jsonl": {
+        "bytes": 9306,
+        "sha256": "976060F4A889C37B54CD4BCC5510AB36407F2C5CCBFA23B1B3DE8DFB1D52B31C"
+      }
+    }
+  },
+  "canonical_source_archive_replay": {
+    "status": "PASS_CONTENT_EQUIVALENT_WITH_NONIDENTICAL_CONTAINER_BYTES",
+    "fresh_directory_passes": 5,
+    "consecutive_final_passes_identical": true,
+    "converged_fresh_pdf_bytes_observed": 973662,
+    "converged_fresh_pdf_sha256_observed": "7866D3FE80DE209D07308AD6FF9B22CC2BD1BC6F73E7EE3F34DA40F581706B32",
+    "preserved_release_pdf_bytes": 973659,
+    "preserved_release_pdf_sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+    "byte_identical_to_preserved_release": false,
+    "pages": 148,
+    "default_text_extraction_bytes_each": 465004,
+    "default_text_extraction_sha256_each": "D8780366B8DA286B0561655CF7F574ABC5D3E496841354364A197E6D77A4B62B",
+    "all_page_72dpi_render_md5_mismatches": 0,
+    "observed_container_differences": "XeTeX/dvipdfmx generated different font-subset prefixes and a different PDF document ID in the clean build.",
+    "disposition": "Preserve the previously verified reader bytes; the clean source replay has byte-identical extracted text and pixel-identical rendering on all 148 pages but is not a byte-for-byte PDF-container reproduction."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "schema": "fga_zh_hans_cn_canonical_staging_receipt/v1",
+  "recorded": "2026-08-27T00:00:00Z",
+  "status": "PASS_STAGED_NO_REMOTE_MUTATION",
+  "repository": {
+    "proposed_url": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
+    "branch": "main",
+    "tag": "fga-zh-hans-cn-2026-08-27-r1",
+    "remote_created": false
+  },
+  "zenodo": {
+    "new_concept_required": true,
+    "concept_doi": null,
+    "record_doi": null,
+    "historical_parent_record_doi": "10.5281/zenodo.22083916",
+    "relation": "isDerivedFrom",
+    "remote_created": false
+  },
+  "source_locks": {
+    "exact_prior_packet_and_receipt_hashes": "PASS",
+    "original_complete_zip_member_verification": "PASS_54_OF_54",
+    "chinese_reader_byte_identity_preserved": true
+  },
+  "source_archive": {
+    "filename": "fga-zh-hans-cn-source.zip",
+    "bytes": 411052,
+    "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D",
+    "deterministic_rebuild_match": true,
+    "verification": {
+      "status": "PASS",
+      "entries": 42,
+      "expected_entries": 42,
+      "name_mismatches": 0,
+      "size_mismatches": 0,
+      "sha256_mismatches": 0,
+      "duplicate_entries": 0,
+      "unsafe_entries": 0,
+      "internal_manifest_present": true
+    }
+  },
+  "clean_source_replay": {
+    "status": "PASS_CONTENT_EQUIVALENT_WITH_NONIDENTICAL_CONTAINER_BYTES",
+    "passes": 5,
+    "pages": 148,
+    "default_text_extraction_sha256_each": "D8780366B8DA286B0561655CF7F574ABC5D3E496841354364A197E6D77A4B62B",
+    "all_page_render_md5_mismatches": 0,
+    "preserved_pdf_sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+    "fresh_pdf_sha256_observed": "7866D3FE80DE209D07308AD6FF9B22CC2BD1BC6F73E7EE3F34DA40F581706B32",
+    "byte_identical_pdf_container": false
+  },
+  "privacy_scan": {
+    "status": "PASS",
+    "absolute_private_path_hits": 0,
+    "internal_task_reference_hits": 0,
+    "credential_marker_hits": 0,
+    "authority_scans_included": false,
+    "french_or_english_witness_files_included": false
+  },
+  "inventory_excluding_this_receipt": [
+    {
+      "path": ".gitattributes",
+      "bytes": 12,
+      "sha256": "E753774A5C6C845D5B43DB5E4E133C8B7308C233F036517BE1E2AE01CB068790"
+    },
+    {
+      "path": ".zenodo.json",
+      "bytes": 2339,
+      "sha256": "57C0AC30186C239B90A9CCBE5D1C4C18781C65DC87674FE6303AD3520978E6EE"
+    },
+    {
+      "path": "CITATION.cff",
+      "bytes": 671,
+      "sha256": "0B8E6673C2CE6944FF4DF7AC19DDBA68A7B9C009FEA4973C189BC29EF8BECCCE"
+    },
+    {
+      "path": "publication/HISTORICAL_PARENT_AND_DUPLICATE_CHECK.json",
+      "bytes": 2123,
+      "sha256": "A32FA81441FC4D93041355745BA1C4CFDB459F438779EF29E2D0C2B478E1C34A"
+    },
+    {
+      "path": "publication/prepare_local_stage.ps1",
+      "bytes": 26549,
+      "sha256": "4DC6B3619CA2B8649661752F7B9A523A745115D5808F65F71A03B2BA2929D6F6"
+    },
+    {
+      "path": "publication/PUBLICATION_PLAN.json",
+      "bytes": 3317,
+      "sha256": "5EB001D7C009338A8162C18E8F72ABB16B0642EF9AFE335739F8AFE7E8B2431E"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2489,
+      "sha256": "2C89B499FAAECC6379038A8316ABDF98A9015ED0641B4A840EF21C4B46E9279A"
+    },
+    {
+      "path": "RELEASES.json",
+      "bytes": 862,
+      "sha256": "9D1D95FD5C0B263DDDB543F81A4CC4CEE91362C1F262A7A8B1ED2CBA67E63F7D"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/fga-zh-hans-cn-source.zip",
+      "bytes": 411052,
+      "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/fga-zh-hans-cn.pdf",
+      "bytes": 973659,
+      "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/MANIFEST.json",
+      "bytes": 3114,
+      "sha256": "7EB8C2F2420AED4B891C6027C3B36122CFC17A7D9914DBD3503C5F7AFBB7E4FD"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/PRODUCER_RELEASE_RECEIPT.json",
+      "bytes": 3173,
+      "sha256": "827F223294BF3F86F24D9378B068A668E953944589BF3D470D6E16414B8EC1EF"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/PROVENANCE.json",
+      "bytes": 3019,
+      "sha256": "8741D4F9A1943B56D49461ACC62286D0F7162D351B7F05E8287AA37AE387C258"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/QA.json",
+      "bytes": 13600,
+      "sha256": "8975420A32408354E015857B7F2C65E5A7DD4A300B00FC81BA465AC7076F1438"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/README.md",
+      "bytes": 1676,
+      "sha256": "047DB661C40BC26876AEE9B626B4B26FB0682D46F9685206D90F893E5D7C421C"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/RIGHTS.md",
+      "bytes": 872,
+      "sha256": "5FF93E55EB03EF5146543738BBF74EEEDAD503F8461EB161A0CEE836C893FCAE"
+    },
+    {
+      "path": "releases/2026-08-27-fga-complete/SOURCE_ARCHIVE_MANIFEST.json",
+      "bytes": 7128,
+      "sha256": "D39AD44AA7CF84360D5E974960C1602C6E89B6E37C7D724D0D714F696404571F"
+    }
+  ],
+  "deterministic_gaps": [
+    "A new Zenodo deposition must be created remotely before its record DOI and concept DOI can be known.",
+    "An authenticated Zenodo draft-deposition duplicate check must be repeated immediately before creation because public search cannot see private drafts.",
+    "The reserved DOIs must be inserted into CITATION.cff, README.md, RELEASES.json, and publication state before commit/tag.",
+    "Remote GitHub and Zenodo byte-readback receipts do not exist until publication.",
+    "A clean five-pass source replay is text- and pixel-identical on all 148 pages but not PDF-byte-identical to the preserved reader because the XeTeX/dvipdfmx container uses different font-subset prefixes and a different document ID."
+  ]
+}

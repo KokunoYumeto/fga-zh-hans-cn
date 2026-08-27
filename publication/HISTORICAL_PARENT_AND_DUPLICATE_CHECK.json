@@ -1,0 +1,41 @@
+{
+  "schema": "fga_zh_hans_cn_parent_and_duplicate_check/v1",
+  "checked_date": "2026-08-27",
+  "status": "PASS",
+  "github_duplicate_check": {
+    "target": "KokunoYumeto/fga-zh-hans-cn",
+    "authenticated_cli_result": "NOT_FOUND",
+    "anonymous_api_http_status": 404,
+    "disposition": "No existing accessible repository occupies the proposed canonical name."
+  },
+  "zenodo_public_duplicate_check": {
+    "query_scope": "FGA title plus Chinese or Simplified-Chinese language marker",
+    "hits": 1,
+    "records": [
+      {
+        "record_id": 22083916,
+        "doi": "10.5281/zenodo.22083916",
+        "concept_doi": "10.5281/zenodo.21792434",
+        "title": "Fondements de la géométrie algébrique (FGA): French, English, and Simplified Chinese editions",
+        "disposition": "Historical multilingual parent; not a canonical Chinese-only concept."
+      }
+    ],
+    "separate_public_chinese_only_lineage_found": false
+  },
+  "historical_parent_anonymous_readback": {
+    "record_id": 22083916,
+    "doi": "10.5281/zenodo.22083916",
+    "anonymous": true,
+    "files_checked": 5,
+    "mismatches": 0,
+    "status": "PASS",
+    "files": [
+      {"name": "fga-zh-hans-cn-complete.zip", "bytes": 1422652, "sha256": "31063347F42424AC65EA2A2911B79B845540FB7C031E61F47C63E6AA3FC1F494", "match": true},
+      {"name": "fga-zh-hans-cn-manifest.json", "bytes": 9296, "sha256": "FAAA82D5DE461338470FBCEB04050014F3C4CB065A423EEAB909B81254736881", "match": true},
+      {"name": "fga-zh-hans-cn-qa.json", "bytes": 10586, "sha256": "E6A868D19FE908E1046BEC275A4C72C2A730DFA53ADF2029274DEEA0C12D97DA", "match": true},
+      {"name": "fga-zh-hans-cn-release-receipt.json", "bytes": 1679, "sha256": "7E9729BF4A5B6891440B7E1F3FCE125E289963E9CE11EEA47CECF71B236161D7", "match": true},
+      {"name": "fga-zh-hans-cn.pdf", "bytes": 973659, "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E", "match": true}
+    ]
+  },
+  "remaining_duplicate_check_gap": "Public search cannot see an unpublished Zenodo draft. Repeat an authenticated draft-list check immediately before creating the new deposition."
+}

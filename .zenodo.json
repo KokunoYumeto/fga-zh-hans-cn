@@ -1,0 +1,34 @@
+{
+  "creators": [
+    {"name": "Grothendieck, Alexandre"}
+  ],
+  "contributors": [
+    {"name": "AI typesetting & translation", "type": "Other"}
+  ],
+  "title": "《代数几何基础》简体中文版 / Fondements de la géométrie algébrique (FGA) — Unofficial Simplified-Chinese Edition",
+  "version": "2026-08-27-r1",
+  "access_right": "open",
+  "description": "<p>This is the first release in the canonical mainland Simplified-Chinese (<code>zh-Hans-CN</code>) FGA language lineage. It contains all eight Séminaire Bourbaki Exposés 149, 182, 190, 195, 212, 221, 232, and 236; the 1962 <em>Commentaires</em>; and all eight linked errata through the end of the erratum to Exposé 236.</p><p>The 148-page reader and editable-source archive passed source and witness replay, structural and formula checks, deterministic XeLaTeX convergence, font and glyph checks, text extraction, internal-link validation, archive-member verification, privacy review, and bounded visual inspection. The edition is producer-complete and mechanically/visually verified; it does not claim independent Chinese-language certification.</p><p>This is an independent, unofficial translation and typesetting project. It does not imply endorsement by the historical author, the Séminaire Bourbaki, NUMDAM, a publisher, or any institution. NUMDAM scans and French/English witness files are excluded. No new blanket public-domain or open-license claim is made over the underlying FGA text. This language-specific lineage is derived from, but is not a new version within, the earlier shared multilingual record <a href=\"https://doi.org/10.5281/zenodo.22083916\">10.5281/zenodo.22083916</a>. The public repository is <a href=\"https://github.com/KokunoYumeto/fga-zh-hans-cn\">KokunoYumeto/fga-zh-hans-cn</a>.</p>",
+  "related_identifiers": [
+    {
+      "identifier": "https://doi.org/10.5281/zenodo.22083916",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-other"
+    }
+  ],
+  "keywords": [
+    "Fondements de la géométrie algébrique",
+    "FGA",
+    "algebraic geometry",
+    "代数几何",
+    "简体中文",
+    "Simplified Chinese translation",
+    "zh-Hans-CN",
+    "Grothendieck",
+    "Séminaire Bourbaki"
+  ],
+  "license": "notspecified",
+  "upload_type": "publication",
+  "publication_type": "book",
+  "language": "zho"
+}

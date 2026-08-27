@@ -1,0 +1,64 @@
+{
+  "schema": "fga_zh_hans_cn_canonical_publication_plan/v1",
+  "status": "REMOTES_CREATED_DOI_RESERVED_NOT_YET_PUBLISHED",
+  "scope": "First canonical per-language GitHub repository and first new per-language Zenodo concept for complete FGA zh-Hans-CN",
+  "github": {
+    "owner": "KokunoYumeto",
+    "repository": "fga-zh-hans-cn",
+    "url": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
+    "visibility": "public",
+    "default_branch": "main",
+    "tag": "fga-zh-hans-cn-2026-08-27-r1",
+    "release_title": "FGA zh-Hans-CN — complete 2026-08-27 r1",
+    "repository_description": "Unofficial mainland Simplified-Chinese FGA edition with editable source, provenance, rights, and QA.",
+    "topics": ["algebraic-geometry", "fga", "grothendieck", "simplified-chinese", "zh-hans-cn", "mathematical-translation", "tex"],
+    "authenticated_duplicate_check": "PASS_NOT_FOUND_2026-08-27",
+    "remote_created": true
+  },
+  "zenodo": {
+    "transaction": "CREATE_NEW_DEPOSITION_AND_NEW_CONCEPT; NEVER_CALL_NEWVERSION_ON_22083916_OR_ITS_CONCEPT",
+    "deposition_id": 22132591,
+    "concept_doi": "10.5281/zenodo.22132590",
+    "record_doi": "10.5281/zenodo.22132591",
+    "publication_date": "2026-08-27",
+    "version": "2026-08-27-r1",
+    "language": "zho",
+    "locale": "zh-Hans-CN",
+    "access_right": "open",
+    "license": "notspecified",
+    "upload_type": "publication",
+    "publication_type": "book",
+    "historical_parent_relation": {
+      "identifier": "https://doi.org/10.5281/zenodo.22083916",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-other"
+    },
+    "public_duplicate_search": "PASS_ONLY_MULTILINGUAL_PARENT_FOUND_2026-08-27",
+    "authenticated_draft_duplicate_check": "PASS_NO_MATCHING_DRAFT_BEFORE_CREATION_2026-08-27",
+    "remote_created": true
+  },
+  "release_directory": "releases/2026-08-27-fga-complete",
+  "release_files": [
+    "fga-zh-hans-cn.pdf",
+    "fga-zh-hans-cn-source.zip",
+    "MANIFEST.json",
+    "PRODUCER_RELEASE_RECEIPT.json",
+    "PROVENANCE.json",
+    "QA.json",
+    "README.md",
+    "RIGHTS.md",
+    "SOURCE_ARCHIVE_MANIFEST.json"
+  ],
+  "sequence": [
+    "Run an authenticated duplicate check for private GitHub repositories and unpublished Zenodo drafts.",
+    "Create the public GitHub repository without generated starter files.",
+    "Create a brand-new Zenodo deposition, reserve its new record DOI and concept DOI, and do not derive it through the new-version endpoint.",
+    "Insert the reserved DOIs into CITATION.cff, README.md, RELEASES.json, and this publication state; recompute affected repository metadata hashes only.",
+    "Initialize the staged repository, commit the complete tree, and tag fga-zh-hans-cn-2026-08-27-r1.",
+    "Push main and the tag, create the GitHub release, and attach the nine exact release files.",
+    "Upload the same nine exact files and the .zenodo.json metadata to the new Zenodo deposition, then publish it.",
+    "Anonymously read back the GitHub tag/release and Zenodo public inventory; download every release artifact and verify filename, byte count, and SHA-256.",
+    "Persist sanitized GitHub and Zenodo publication receipts, update lineage status to PUBLIC, and push the receipt-only follow-up commit."
+  ],
+  "terminal_gate": "Both canonical remotes exist; GitHub main/tag/release and the new Zenodo record/concept identify only FGA zh-Hans-CN; all nine public artifacts pass anonymous byte readback; the multilingual DOI remains a related historical parent only."
+}

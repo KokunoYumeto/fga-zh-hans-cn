@@ -1,0 +1,46 @@
+{
+  "schema": "fga_zh_hans_cn_public_provenance/v1",
+  "recorded": "2026-08-27",
+  "locale": "zh-Hans-CN",
+  "corpus": "FGA",
+  "scope": {
+    "units": ["149", "182", "190", "195", "212", "221", "232", "236", "com", "e149", "e182", "e190", "e195", "e212", "e221", "e232", "e236"],
+    "units_complete": 17,
+    "hard_stop": "EOF of the erratum and supplement to Exposé 236"
+  },
+  "authority": {
+    "inventory": "provenance/AUTHORITY.csv",
+    "inventory_bytes": 6665,
+    "inventory_sha256": "D697A5E8053E0583E433ED4709C742B4B0AA7A5414032A41AB7FEAEC47FEE138",
+    "numdam_witnesses": 17,
+    "physical_pages": 228,
+    "catalog_pages": 212,
+    "scan_redistributed": false,
+    "conditions": "Consult the source-specific NUMDAM conditions; no scan redistribution or open licence is inferred."
+  },
+  "editable_witnesses_not_redistributed": {
+    "corrected_french_archive": {"bytes": 670941, "sha256": "BC1BF3AAEEE95554F8B7BD0B2375958E8F44AD4AE3EC48DAC0B41D06FF4BA0E0", "entries": 34},
+    "corrected_french_reader": {"bytes": 786499, "sha256": "19B66332DD67CB19B8C5CFB2D8040600430804158DA580F2E9E502976BCAF72C", "pages": 154},
+    "english_comparison_archive": {"bytes": 659690, "sha256": "285E9F52254481E96C25C25223BF59767FCDFC204F82B5DBA8ABBF8397E252D2", "entries": 34},
+    "english_comparison_reader": {"bytes": 765114, "sha256": "0695B36C719AA160AB373652740127C7260581B222FF867CFAEB8FF074BE3B48", "pages": 149},
+    "english_role": "secondary comparison witness only"
+  },
+  "historical_parent": {
+    "record_doi": "10.5281/zenodo.22083916",
+    "record_id": 22083916,
+    "concept_doi": "10.5281/zenodo.21792434",
+    "concept_record_id": 21792434,
+    "relation": "isDerivedFrom",
+    "disposition": "Immutable multilingual parent provenance; not the version lineage for this language-specific release."
+  },
+  "prior_public_chinese_assets": [
+    {"filename": "fga-zh-hans-cn.pdf", "bytes": 973659, "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E"},
+    {"filename": "fga-zh-hans-cn-complete.zip", "bytes": 1422652, "sha256": "31063347F42424AC65EA2A2911B79B845540FB7C031E61F47C63E6AA3FC1F494"},
+    {"filename": "fga-zh-hans-cn-manifest.json", "bytes": 9296, "sha256": "FAAA82D5DE461338470FBCEB04050014F3C4CB065A423EEAB909B81254736881"},
+    {"filename": "fga-zh-hans-cn-qa.json", "bytes": 10586, "sha256": "E6A868D19FE908E1046BEC275A4C72C2A730DFA53ADF2029274DEEA0C12D97DA"},
+    {"filename": "fga-zh-hans-cn-release-receipt.json", "bytes": 1679, "sha256": "7E9729BF4A5B6891440B7E1F3FCE125E289963E9CE11EEA47CECF71B236161D7"}
+  ],
+  "known_residual": "The Exposé 182 erratum catalog describes printed pages 298–300, while direct scan content contains printed pages 298–299; the discrepancy is preserved rather than silently repaired.",
+  "translation_status": "producer-complete and mechanically/visually verified; no independent Chinese-language certification claim",
+  "rights": "No new blanket public-domain or open-license claim is made over the underlying FGA text."
+}

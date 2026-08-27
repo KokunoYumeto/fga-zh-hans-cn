@@ -1,0 +1,20 @@
+{
+  "schema": "fga_zh_hans_cn_cumulative_release_index/v1",
+  "locale": "zh-Hans-CN",
+  "repository": "https://github.com/KokunoYumeto/fga-zh-hans-cn",
+  "historical_parent_record_doi": "10.5281/zenodo.22083916",
+  "historical_parent_concept_doi": "10.5281/zenodo.21792434",
+  "lineage_status": "DOI_RESERVED_NOT_YET_PUBLISHED",
+  "releases": [
+    {
+      "release_id": "2026-08-27-fga-complete",
+      "scope": "Complete bounded FGA zh-Hans-CN corpus through the erratum to Exposé 236",
+      "path": "releases/2026-08-27-fga-complete",
+      "tag": "fga-zh-hans-cn-2026-08-27-r1",
+      "reader_sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+      "source_archive_sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D",
+      "zenodo_concept_doi": "10.5281/zenodo.22132590",
+      "zenodo_record_doi": "10.5281/zenodo.22132591"
+    }
+  ]
+}

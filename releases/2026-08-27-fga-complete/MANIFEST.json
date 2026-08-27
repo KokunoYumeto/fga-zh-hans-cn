@@ -1,0 +1,80 @@
+{
+  "schema": "fga_zh_hans_cn_release_manifest/v2",
+  "recorded": "2026-08-27T00:00:00Z",
+  "work": "Fondements de la géométrie algébrique (FGA)",
+  "display_title_zh": "《代数几何基础》简体中文版",
+  "locale": "zh-Hans-CN",
+  "locale_characterization": "mainland-oriented Simplified Chinese; not Singapore zh-Hans and not a Traditional-Chinese localization",
+  "status": "PRODUCER_COMPLETE_UNCERTIFIED",
+  "coverage": "all eight Exposés 149, 182, 190, 195, 212, 221, 232, and 236; the 1962 Commentaires; and all eight linked errata through EOF of e236",
+  "public_candidates": [
+    {
+      "filename": "fga-zh-hans-cn.pdf",
+      "role": "complete reader",
+      "bytes": 973659,
+      "sha256": "F12BBA02B9927D06E102ACD8C84435B3187F2BA9B7F7AD1EBC8BEFDB10E95A0E",
+      "pages": 148
+    },
+    {
+      "filename": "fga-zh-hans-cn-source.zip",
+      "role": "editable Chinese source, sanitized provenance, terminology, and compact QA evidence",
+      "bytes": 411052,
+      "sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D",
+      "entries": 42,
+      "uncompressed_bytes": 1220870.0,
+      "deterministic_rebuild_match": true
+    },
+    {
+      "filename": "MANIFEST.json",
+      "role": "release inventory; self identity is recorded by the producer receipt"
+    },
+    {
+      "filename": "QA.json",
+      "role": "privacy-clean terminal QA record",
+      "bytes": 13600,
+      "sha256": "8975420A32408354E015857B7F2C65E5A7DD4A300B00FC81BA465AC7076F1438"
+    },
+    {
+      "filename": "PRODUCER_RELEASE_RECEIPT.json",
+      "role": "post-manifest producer receipt"
+    }
+  ],
+  "supporting_local_files": [
+    {
+      "filename": "README.md",
+      "bytes": 1676,
+      "sha256": "047DB661C40BC26876AEE9B626B4B26FB0682D46F9685206D90F893E5D7C421C"
+    },
+    {
+      "filename": "RIGHTS.md",
+      "bytes": 872,
+      "sha256": "5FF93E55EB03EF5146543738BBF74EEEDAD503F8461EB161A0CEE836C893FCAE"
+    },
+    {
+      "filename": "PROVENANCE.json",
+      "bytes": 3019,
+      "sha256": "8741D4F9A1943B56D49461ACC62286D0F7162D351B7F05E8287AA37AE387C258"
+    },
+    {
+      "filename": "SOURCE_ARCHIVE_MANIFEST.json",
+      "bytes": 7128,
+      "sha256": "D39AD44AA7CF84360D5E974960C1602C6E89B6E37C7D724D0D714F696404571F"
+    }
+  ],
+  "historical_parent": {
+    "record_doi": "10.5281/zenodo.22083916",
+    "relation": "isDerivedFrom",
+    "version_lineage": false
+  },
+  "qa": {
+    "corpus_replay": "PASS",
+    "pdf_mechanics": "PASS",
+    "bounded_visual": "PASS",
+    "archive_replay": "PASS",
+    "privacy_projection": "PASS",
+    "fresh_source_replay": "PASS_CONTENT_EQUIVALENT_WITH_NONIDENTICAL_CONTAINER_BYTES",
+    "independent_chinese_certification": false
+  },
+  "rights": "Independent unofficial translation/typesetting; no endorsement implied and no new blanket public-domain or open-license claim over the underlying FGA text.",
+  "destination": "new canonical FGA zh-Hans-CN GitHub repository and new Zenodo concept; never a new version of the historical multilingual concept"
+}
