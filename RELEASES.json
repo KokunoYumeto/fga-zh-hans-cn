@@ -15,6 +15,40 @@
       "source_archive_sha256": "C9CD804A6B2EC744080A4C64CFC97E48F1B9D99BDBF06199FC8FF202C3238F4D",
       "zenodo_concept_doi": "10.5281/zenodo.22132590",
       "zenodo_record_doi": "10.5281/zenodo.22132591"
+    },
+    {
+      "release_id": "2026-10-03-fga-current",
+      "scope": "完整17单元、148页简体中文校订读本及对应可编辑源文件",
+      "path": "releases/2026-10-03-fga-current",
+      "tag": "fga-zh-hans-cn-2026-10-03-r2",
+      "zenodo_concept_doi": "10.5281/zenodo.22132590",
+      "zenodo_record_doi": "10.5281/zenodo.23124640",
+      "files": [
+        {
+          "name": "01_FGA_ZH_CURRENT.pdf",
+          "bytes": 975406,
+          "sha256": "7B297283619071FE260F9FAD6EEBE7A5A8C5B061446AE58DFF42E06586AEF8CB",
+          "github_name": "01_FGA_ZH_CURRENT.pdf"
+        },
+        {
+          "name": "02_FGA_ZH_CURRENT.tex",
+          "bytes": 473552,
+          "sha256": "B33E7F19844A38C4AAC320F48BBDBDF8C89C8B93AE737BBC6788A0371F17E362",
+          "github_name": "02_FGA_ZH_CURRENT.tex"
+        },
+        {
+          "name": "03_FGA_ZH_SOURCE.zip",
+          "bytes": 346464,
+          "sha256": "3BC55C24C474997BB318F18FD906338CF9BD22AACE78D5DE8E41DA8440318C43",
+          "github_name": "03_FGA_ZH_SOURCE.zip"
+        },
+        {
+          "name": "04_阅读与重建说明.txt",
+          "bytes": 4587,
+          "sha256": "4778BCA36852554C3C94BDA129CE00EA6FBE005AA75855CA723759E915F92DB7",
+          "github_name": "04_FGA_ZH_GUIDE.txt"
+        }
+      ]
     }
   ]
 }

@@ -1,21 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this edition, cite the historical work and this specific language-edition release."
-title: "Fondements de la géométrie algébrique (FGA) — Unofficial Simplified-Chinese Edition"
+message: "引用本译本时，请同时注明历史原著和本次语言版本。"
+title: "《代数几何基础》简体中文版：校订读本与完整LaTeX源文件"
 type: book
-version: "2026.08.27-r1"
-date-released: 2026-08-27
-doi: "10.5281/zenodo.22132591"
+version: "2026-10-03-r2"
+date-released: 2026-10-03
+doi: "10.5281/zenodo.23124640"
 authors:
   - family-names: Grothendieck
     given-names: Alexandre
-contributors:
-  - name: OpenAI Codex
-    type: other
-    contribution: "AI typesetting, translation, deterministic replay, and quality assurance"
 repository-code: "https://github.com/KokunoYumeto/fga-zh-hans-cn"
+abstract: "非官方简体中文译本。初始翻译与排版：OpenAI Codex — GPT-5.6 Sol，Ultra；本次更正整合与发布：OpenAI Codex — GPT-6 Astra，Ultra。不声称人工审校。"
 keywords:
-  - algebraic geometry
+  - 代数几何
   - FGA
-  - Simplified Chinese
-  - zh-Hans-CN
-  - mathematical translation
+  - 简体中文
+  - LaTeX

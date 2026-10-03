@@ -1,34 +1,49 @@
 {
+  "title": "《代数几何基础》简体中文版：校订读本与完整LaTeX源文件",
+  "publication_date": "2026-10-03",
+  "description": "<p><strong>《代数几何基础》简体中文版：校订读本与完整LaTeX源文件</strong></p><ol><li><a href=\"https://zenodo.org/records/23124640/files/01_FGA_ZH_CURRENT.pdf\">累计校订读本（PDF，148页）</a></li><li><a href=\"https://zenodo.org/records/23124640/files/02_FGA_ZH_CURRENT.tex\">完整累计LaTeX（可直接阅读、编辑）</a></li><li><a href=\"https://zenodo.org/records/23124640/files/03_FGA_ZH_SOURCE.zip\">完整可重建源包（ZIP）</a></li><li><a href=\"https://zenodo.org/records/23124640/files/04_%E9%98%85%E8%AF%BB%E4%B8%8E%E9%87%8D%E5%BB%BA%E8%AF%B4%E6%98%8E.txt\">阅读、重建、来源与权利说明</a></li></ol><p>作者：亚历山大·格罗滕迪克（Alexandre Grothendieck）。本独立、非官方简体中文译本收录全部八次布尔巴基讨论班报告（149、182、190、195、212、221、232、236）、1962年《评注》及八份勘误，共17个单元。</p><p>本版是校订后的现行读本，不是原印本的逐字摹写。已确认的双分次记号、对偶图式、Picard函子反变性、下标、基变换与引用更正已纳入正文和完整源文件；相关注释区分原印本与校订读法。历史版本继续可访问。本次发布不表示整个Canon更正积压已经清零。</p><p>LaTeX是主要可编辑成果。直接下载的累计.tex包含全部正文与宏；ZIP保留17个单元、模块化主文件、样式、相同累计源文件、构建脚本与完整重建说明。标准TeX发行版和合法安装的系统字体是外部环境依赖。</p><p>原生模块化源文件、累计LaTeX及公开构建脚本均通过构建和独立回放的字节一致性检查。180个内部链接、1317个命名目标以及嵌入字体与Unicode映射已核验；封面、目录与变化页面已作视觉检查。保留的字体形状回退和宏包警告已披露。本译本未经独立人工中文专家认证。</p><p>人工智能贡献：初始中文翻译与排版由OpenAI Codex — GPT-5.6 Sol，Ultra推理强度完成；本次更正整合、读本核验与发布材料由OpenAI Codex — GPT-6 Astra，Ultra推理强度完成。AI不是原著作者；不暗示历史作者或机构参与了本次译校。</p><p>权利：保留既有权利说明；不对原著或译本新作整体公有领域或开放许可声明，不表示原作者、布尔巴基讨论班、NUMDAM或出版机构认可本译本。源包不含原始扫描件或专有字体。</p><p><a href=\"https://doi.org/10.5281/zenodo.22132590\">本语言概念DOI</a> · <a href=\"https://doi.org/10.5281/zenodo.22132591\">此前中文版本</a> · <a href=\"https://github.com/KokunoYumeto/fga-zh-hans-cn\">中文仓库</a> · <a href=\"https://doi.org/10.5281/zenodo.22083916\">历史法英中来源</a></p>",
+  "access_right": "open",
   "creators": [
-    {"name": "Grothendieck, Alexandre"}
+    {
+      "name": "Grothendieck, Alexandre",
+      "affiliation": null
+    }
   ],
   "contributors": [
-    {"name": "AI typesetting & translation", "type": "Other"}
-  ],
-  "title": "《代数几何基础》简体中文版 / Fondements de la géométrie algébrique (FGA) — Unofficial Simplified-Chinese Edition",
-  "version": "2026-08-27-r1",
-  "access_right": "open",
-  "description": "<p>This is the first release in the canonical mainland Simplified-Chinese (<code>zh-Hans-CN</code>) FGA language lineage. It contains all eight Séminaire Bourbaki Exposés 149, 182, 190, 195, 212, 221, 232, and 236; the 1962 <em>Commentaires</em>; and all eight linked errata through the end of the erratum to Exposé 236.</p><p>The 148-page reader and editable-source archive passed source and witness replay, structural and formula checks, deterministic XeLaTeX convergence, font and glyph checks, text extraction, internal-link validation, archive-member verification, privacy review, and bounded visual inspection. The edition is producer-complete and mechanically/visually verified; it does not claim independent Chinese-language certification.</p><p>This is an independent, unofficial translation and typesetting project. It does not imply endorsement by the historical author, the Séminaire Bourbaki, NUMDAM, a publisher, or any institution. NUMDAM scans and French/English witness files are excluded. No new blanket public-domain or open-license claim is made over the underlying FGA text. This language-specific lineage is derived from, but is not a new version within, the earlier shared multilingual record <a href=\"https://doi.org/10.5281/zenodo.22083916\">10.5281/zenodo.22083916</a>. The public repository is <a href=\"https://github.com/KokunoYumeto/fga-zh-hans-cn\">KokunoYumeto/fga-zh-hans-cn</a>.</p>",
-  "related_identifiers": [
     {
-      "identifier": "https://doi.org/10.5281/zenodo.22083916",
-      "relation": "isDerivedFrom",
-      "resource_type": "publication-other"
+      "name": "OpenAI Codex — GPT-5.6 Sol（Ultra）：初始中文翻译与排版",
+      "type": "Other"
+    },
+    {
+      "name": "OpenAI Codex — GPT-6 Astra（Ultra）：更正整合与本次发布",
+      "type": "Other"
     }
   ],
   "keywords": [
-    "Fondements de la géométrie algébrique",
     "FGA",
-    "algebraic geometry",
     "代数几何",
     "简体中文",
-    "Simplified Chinese translation",
-    "zh-Hans-CN",
-    "Grothendieck",
-    "Séminaire Bourbaki"
+    "格罗滕迪克",
+    "布尔巴基讨论班",
+    "LaTeX"
   ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22083916",
+      "relation": "isDerivedFrom",
+      "resource_type": "publication-other",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/tag/fga-zh-hans-cn-2026-10-03-r2",
+      "relation": "isIdenticalTo"
+    }
+  ],
+  "version": "2026-10-03-r2",
+  "language": "zho",
   "license": "notspecified",
+  "imprint_publisher": "Zenodo",
   "upload_type": "publication",
   "publication_type": "book",
-  "language": "zho"
+  "notes": "完整累计PDF、直接可编辑LaTeX与完整源包按序提供；保留历史版本、原作者署名及原印本和校订本的区别。"
 }

@@ -1,0 +1,41 @@
+《代数几何基础》简体中文版：阅读与重建说明
+
+作者：亚历山大·格罗滕迪克（Alexandre Grothendieck）。本独立、非官方译本完整收录第149、182、190、195、212、221、232、236次布尔巴基讨论班报告、1962年《评注》及八份勘误，共17个单元。当前累计读本为148页。
+
+本版是经过校订的现行读本，不是原印本的逐字摹写。原印本的已知误植与现行修订应区分；译文中的注释保留相关依据。历史发布版继续可用。本次把已确认的更正落实到读本及其完整源文件，包括双分次记号、对偶图式、Picard函子的反变性、Hilbert概形与Picard概形段落中的下标、基变换和引用。未声称整部译文经人工审校，也未声称整个FGA维护积压已清零。
+
+下载顺序
+1. 01_FGA_ZH_CURRENT.pdf：累计阅读文件。
+2. 02_FGA_ZH_CURRENT.tex：含全部正文、序言和宏的完整累计LaTeX，可直接阅读和编辑；不是仅含\input的空壳主文件。
+3. 03_FGA_ZH_SOURCE.zip：完整模块化源文件、相同累计LaTeX、构建脚本、清单与重建说明。
+
+源包结构
+native/zh/main.tex 是模块化主文件，调用17个正文单元和native/tex/zh.tex。
+direct/02_FGA_ZH_CURRENT.tex 是忠实合并的完整文件。两种形式各自在全新目录中进行了五遍构建及五遍回放，最终PDF完全相同。修改分文件后，须重新合并累计文件；两者不是自动同步的。
+
+重建环境
+Windows PowerShell、XeLaTeX（验证环境为MiKTeX），以及标准TeX发行版中的book、geometry、fontspec、xeCJK、microtype、graphicx、mathtools、amsthm、unicode-math、bookmark、hyperref及其依赖。字体为TeX Gyre Pagella、TeX Gyre Heros、TeX Gyre Cursor、Latin Modern Math、宋体SimSun和微软雅黑Microsoft YaHei。专有系统字体不在源包中再分发，须从合法来源安装。所有本项目特有的输入、宏和样式已包含；没有外部图像或BibTeX数据库。
+
+在解压后的目录中运行：
+powershell -NoProfile -File .\BUILD.ps1 -SourceForm direct -OutputDirectory C:\FGA-build-direct -XeLaTeXPath "完整的xelatex.exe路径"
+或将direct改为native，使用另一个尚不存在的输出目录。若XeLaTeX已在PATH中，可省略-XeLaTeXPath。脚本用全局互斥锁Global\InterlanguageTeXSlotV1串行执行全部构建，限制整个进程树内存为3221225472字节，关闭shell escape，并核查最后两遍及独立回放的PDF字节一致性。若锁被占用，不启动第二个TeX进程。
+
+为重现本次字节，脚本设置SOURCE_DATE_EPOCH=1791028800、FORCE_SOURCE_DATE=1、TZ=UTC。精确字节还取决于TeX和字体版本；其他合法安装应重建相同文本，但不保证跨版本哈希相同。SYSTEM_INPUTS.json列出验证构建实际读取的标准系统依赖及其哈希。EXPECTED_READER.json给出本次已验证PDF的准确身份。
+
+质量与限制
+原生模块化文件和合并文件的构建、回放均一致；148页中136页的页面内容流与历史读本不变。180个内部链接及1317个命名目标通过检查。全部字体嵌入并带Unicode映射。封面、目录和12个变化页面已直接检查。日志并非零警告：存在继承的字体形状回退、宏包版本及PDF字符串警告，已记录；没有缺字或未解析引用。不冒充人工或独立中文专家审校。
+
+人工智能贡献
+初始中文翻译与排版：OpenAI Codex — GPT-5.6 Sol，Ultra推理强度。
+本次Canon更正整合、读本核验及发布材料：OpenAI Codex — GPT-6 Astra，Ultra推理强度。
+历史数学文本的作者仍为Alexandre Grothendieck；上述AI不是原著作者。历史法英对照文本的全部编辑贡献不能仅凭本次记录归入单一模型。
+
+版本与来源
+本语言专属Zenodo概念DOI：https://doi.org/10.5281/zenodo.22132590
+此前版本：https://doi.org/10.5281/zenodo.22132591
+规范仓库：https://github.com/KokunoYumeto/fga-zh-hans-cn
+历史法英中多语言来源：https://doi.org/10.5281/zenodo.22083916
+该多语言记录是历史来源，不是本语言谱系的新版本。新旧版的PDF及可编辑来源保持可访问。
+
+权利说明
+本译本不表示原作者、布尔巴基讨论班、NUMDAM、出版社或任何机构的认可。原始扫描不随包分发。本次不对FGA原文新增公共领域或开放许可主张；既有许可状态notspecified保持不变。RIGHTS_ORIGINAL.txt保留上一版的原始权利说明，本文给出中文解释。请尊重原著及所用字体的权利。
