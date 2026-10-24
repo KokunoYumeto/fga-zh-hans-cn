@@ -876,9 +876,9 @@ $\mathcal J=\mathfrak m\mathcal O_X$。那么 $G(\mathfrak X)$ 典范同构于
 $\mathcal J=\mathfrak m\mathcal O_{\mathfrak X}$（因而 $X_0$ 是
 $\Lambda/\mathfrak m$ 上的预概形）。对任意有限 $\Lambda$-代数 $A$，令
 \[
-  F(A)=G(\mathfrak X\times_\Lambda A).
+  F(A)=G(\mathfrak X\times_\Lambda A),
 \]
-这是一个以 $A$ 为自变量、取值于集合范畴的协变函子；由 (c)，只要知道它
+其中标记在换基到约化系数代数 $A_{\mathrm{red}}$ 后取得，而非直接在 $A/\mathfrak mA$ 上取得。这是一个以 $A$ 为自变量、取值于集合范畴的协变函子；由 (c)，只要知道它
 在阿廷代数 $A$ 上的取值，就能完全确定该函子。说这个函子 pro-可表，等价
 于说它具有如下形式：
 \[
@@ -889,7 +889,7 @@ $\Lambda/\mathfrak m$ 上的预概形）。对任意有限 $\Lambda$-代数 $A$�
 其中 $O$ 是 A 第5节所考察类型的拓扑 $\Lambda$-代数；而这又等价于只对
 阿廷代数 $A$ 要求同一表示。因此，定理1与定理2合在一起确实给出：
 
-\result{命题}{5.1} 前述函子 pro-可表。
+\result{命题}{5.1} 若该函子所分类的每个阿廷基变换族均在其系数代数上平坦，并且所选开子集在有关基变换后仍在概形意义下稠密，则前述函子 pro-可表。
 
 当然，由 (a) 可知，若 $U=\mathfrak X$，则对 $\mathfrak X$ 上的任意
 $\mathfrak Y$，$G(\mathfrak Y)$ 都只有一个元素；此时函子 $F$ 并无多大
@@ -908,14 +908,13 @@ $\Lambda$ 可取为它的一个 Cohen 子环）；可以期望，本节的结果
 关系。无论如何，正是命题5.1之前的分析，使 [2] 中研究基本群的方法能够推广
 到\fquote{驯分歧}的情形，并使\fquote{三点问题}能够用超越方法解决。
 
-最后指出，当 $X_0$ 的维数为1时，情形会得到简化：由 (a) 与 (b)，
+最后指出，当 $X_0$ 的维数为1时，情形会得到简化：由 (a) 以及穿孔完备局部概形上的形式粘合，
 \[
   G(\mathfrak X)\simeq
   \prod_iG\bigl(\operatorname{Spec}(\widehat{\mathcal O}_{\mathfrak X,x_i})\bigr),
 \]
 其中 $x_i$ 是 $X_0-U$ 的各点：可以任意给定各分歧点处的\fquote{局部}
-扩张。此外，当 $X_0$ 正规时，由5.1所保证存在的形式模概形在
-$\operatorname{Spec}(\Lambda)$ 上光滑。
+扩张。仅有 $X_0$ 的正规性并不能保证5.1中的形式模概形在 $\operatorname{Spec}(\Lambda)$ 上光滑；原文最后这一断言一般不成立。
 
 \src{390}
 \begin{center}
