@@ -1,3 +1,13 @@
+# 代数几何基础 — 简体中文累积校订版
+
+亚历山大·格罗滕迪克的布尔巴基讨论班第149、182、190、195、212、221、232、236次报告，各篇报告的勘误与补充，以及1962年评论。中文翻译、校订和排版由AI完成；出版者没有翻译正文。
+
+- [累积校订版 — PDF，151页](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-10-24-r3/00_FGA_zh_Hans_CUMULATIVE_READER.pdf) · [LaTeX源文件](https://github.com/KokunoYumeto/fga-zh-hans-cn/tree/main/editions/FGA_ZH_CURRENT/)
+
+[来源与署名](https://github.com/KokunoYumeto/fga-zh-hans-cn/blob/main/editions/FGA_ZH_CURRENT/ATTRIBUTION.md) · [权利说明](https://github.com/KokunoYumeto/fga-zh-hans-cn/blob/main/editions/FGA_ZH_CURRENT/RIGHTS_NOTICE.md).
+
+每份读本均附单一LaTeX文件及包含必要构建输入的完整可编辑源文件包。
+
 # 代数几何基础 — 简体中文版
 
 [Reader PDF](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-10-03-r2/01_FGA_ZH_CURRENT.pdf) · [Editable LaTeX](sources/current/README.md).

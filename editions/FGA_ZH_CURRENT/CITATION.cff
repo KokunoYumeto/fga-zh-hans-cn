@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: 引用本译本时，请同时注明历史原著和本次语言版本。
+title: 《代数几何基础》简体中文版：校订读本与完整LaTeX源文件
+version: '2026-10-24'
+authors: &id001
+- family-names: Grothendieck
+  given-names: Alexandre
+repository-code: https://github.com/KokunoYumeto/fga-zh-hans-cn
+abstract: 非官方简体中文译本，含八篇讲演、勘误和1962年评论。中文翻译、订正与排版由人工智能生成。原作与所参考的英文人工翻译分别保留其作者身份与来源。
+keywords:
+- 代数几何
+- FGA
+- 简体中文
+- LaTeX
+references:
+- type: software
+  title: FGA — human English translation used as a reference
+  authors:
+  - family-names: Hosgood
+    given-names: Tim
+  repository-code: https://github.com/thosgood/fga
+  url: https://github.com/thosgood/fga/tree/9976dd5f8e2ddcb388f0a07f3aa334f120d1019f
+  commit: 9976dd5f8e2ddcb388f0a07f3aa334f120d1019f
+- type: book
+  title: Fondements de la géométrie algébrique — Chinese edition, 2026-10-03
+  authors:
+  - family-names: Grothendieck
+    given-names: Alexandre
+  doi: 10.5281/zenodo.23124640
+  url: https://doi.org/10.5281/zenodo.23124640
+  version: 2026-10-03-r2
+  year: '2026'
+  languages:
+  - zh
+preferred-citation:
+  type: book
+  title: 《代数几何基础》简体中文版：校订读本与完整LaTeX源文件
+  version: '2026-10-24'
+  authors: *id001
+  url: https://github.com/KokunoYumeto/fga-zh-hans-cn
+url: https://github.com/KokunoYumeto/fga-zh-hans-cn

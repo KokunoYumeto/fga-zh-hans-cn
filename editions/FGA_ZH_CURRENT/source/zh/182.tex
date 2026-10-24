@@ -1,0 +1,1176 @@
+\unit{第182次报告——形式几何与代数几何}
+\sid{182}
+\src{193}
+\seminarzh{（1959年5月）}
+\paperhead{形式几何与代数几何}%
+  {亚历山大·格罗滕迪克 著}
+
+\fsection{1}{概形}
+
+众所周知，定义在域 $k$ 上的仿射代数空间本质上由其仿射代数 $A$
+（定义在 $k$ 上的正则函数环）所决定；代数空间的态射
+$X\longrightarrow Y$ 与 $k$-代数同态
+$A(Y)\longrightarrow A(X)$ 一一对应。与一个代数空间相应的仿射代数是
+有限生成的 $k$-代数，并且从\fquote{经典}观点来看，它没有幂零元；反过来，
+每个这类代数都可由一个定义在 $k$ 上的代数空间作为其仿射代数而得到。
+于是有一套熟知的词典，可将有关仿射代数空间的情形解释为交换代数的
+情形。人们早已发现，由此得到的命题其实更为一般：通常不再需要假设所涉
+各环都属于刚才考察的类型，诺特性假设大多已经足够。特别地，无论是否
+指定了基域，都没有理由排除这些环含有幂零元的情形。以往几何学家一直
+拒绝正视这些启示，执意把研究限制在无幂零元的仿射代数上，也就是说，
+限制在结构层中不含幂零元的代数空间上（而且往往还要限制在
+\fquote{绝对不可约}的代数空间上）。报告人认为，这种观念严重阻碍了
+代数几何中真正自然的方法的发展。
+
+设 $A$ 是交换环。众所周知，$A$ 的素理想所成的集合
+$X=\operatorname{Spec}(A)$ 带有一个自然拓扑，称为\fquote{Zariski 拓扑}
+或谱拓扑。另一方面，$X$ 上有一个交换环层 $\Osh_X$，其在
+$\mathfrak p\in X$ 处的茎是局部化环 $A_{\mathfrak p}$，其截面环可与 $A$
+等同。这样，$X$ 就成为一个\emph{赋环空间}，称为 $A$ 的\emph{素谱}。
+环同态 $f:A\longrightarrow B$ 定义了赋环空间的一个态射
+$f':\operatorname{Spec}(B)\longrightarrow\operatorname{Spec}(A)$，
+其底层集合映射正是
+$\mathfrak p\longmapsto f^{-1}(\mathfrak p)$。由这种方式得到的
+
+\src{194}
+从 $\operatorname{Spec}(B)$ 到 $\operatorname{Spec}(A)$ 的赋环空间态射，
+恰好是使所有同态 $\Osh_x\longrightarrow\Osh_y$（其中 $x=f'(y)$）均为
+局部同态的那些态射（即极大理想的逆像仍为极大理想）。
+
+与某个 $\operatorname{Spec}(A)$ 同构的赋环空间称为\emph{仿射概形}；
+局部仿射的赋环空间称为\emph{预概形}，也就是说，它的每一点都有一个
+开邻域，在诱导结构下该邻域是仿射概形。预概形的\emph{态射}按显然方式
+定义；局部地，它们与环同态相对应。
+
+固定一个预概形 $S$ 并考察预概形态射 $X\longrightarrow S$ 时，$S$ 所起的
+作用类似于基域或基环（更确切地说，是一个纤维化中的基空间）。这时称
+$X$ 为一个 $S$-预概形；若 $S=\operatorname{Spec}(A)$，这也意味着
+$\Osh_X$ 是一个 $A$-代数层。于是每个预概形都能以唯一方式看成一个
+$\mathbf Z$-预概形。当然，$S$-预概形构成一个范畴；进一步可以证明，
+在这个范畴中任意两个对象 $X,Y$ 的乘积总是存在，记作 $X\times_S Y$。
+借助乘积的概念，可以定义与一个态射 $S'\longrightarrow S$ 相应的
+$S$-预概形的基变换：事实上，$X\times_S S'$ 可看成一个 $S'$-预概形。
+
+若 $X$ 在 $X\times_S X$ 中的对角像是闭的，就称 $X$ 在 $S$ 上
+\emph{分离}。在 $\mathbf Z$ 上分离的预概形称为\emph{概形}；于是它在
+任意基底上都是分离的。为简单起见，下文只谈概形，并且还总假设它们是
+\emph{诺特的}，也就是说，可由有限个仿射开集覆盖，且这些开集都是诺特环
+的谱。若对 $S$ 的每个仿射开集 $U$，其在 $X$ 中的逆像都能由有限个仿射
+开集覆盖，并且这些开集的环都是 $U$ 的环上的有限型代数，就称 $X$ 在
+$S$ 上\emph{有限型}。正是这类 $S$-概形适合进行真正的几何研究。特别地，
+对每个 $s\in S$，$X$ 在 $s$ 上的纤维 $f^{-1}(s)$ 是定义在 $s$ 的局部环
+$\Osh_s$ 的剩余域 $\kappa(s)$ 上的代数概形。因此，在某种程度上可以把
+$X$ 看成一族\fquote{代数空间} $f^{-1}(s)$，其中参数 $s$ 遍历 $S$
+（也就是说，从局部观点来看，遍历某个给定环的素理想集合）。当然，各个
+$\kappa(s)$ 可以具有不同的特征。若 $S=\operatorname{Spec}(k)$，其中
+$k$ 是一个域，便基本恢复了通常的\fquote{代数空间}概念，唯一的区别是
+现在结构层可以含有幂零元。
+
+\src{195}
+仿照熟知的概念，可以定义\emph{射影态射}，以及更一般的\emph{固有态射}。
+这类态射是有限型的；此外，它将闭子集映为闭子集，并且在任意基变换下
+仍保持这一性质。
+
+设 $X$ 是一个概形（照例是诺特的），则层 $\Osh_X$ 是[2]意义下的
+\emph{凝聚环层}。因此，$X$ 上的凝聚模层也正是那些局部同构于某个同态
+$\Osh_X^{m}\longrightarrow\Osh_X^{n}$ 的余核的层。
+
+\fsection{2}{形式概形}
+
+设 $X$ 是一个概形，$X'$ 是 $X$ 的一个闭子集。于是存在 $\Osh_X$ 的一个
+凝聚子层 $J$，使得 $X'=\operatorname{Supp}(\Osh_X/J)$（而且还存在其中
+最大的一个）。赋予 $\Osh_X/J$ 后，$X'$ 成为一个概形，记作 $X_0$；
+这样的概形称为\fquote{$X$ 的闭子概形}。对每个 $n$，还可以考察赋有
+$\Osh_X/J^{n+1}$ 的 $X'$，记作 $X_n$；它是 $X$ 的一个闭子预概形，
+其底层集合仍为 $X'$，但结构层已经不同，即
+$\Osh_{X_n}=\Osh_X/J^{n+1}$。显然，各 $\Osh_{X_n}$ 构成 $X'$ 上环层的
+一个逆系统；其逆极限 $\overline{\Osh}_X$ 称为 $\Osh_X$ 沿 $X'$ 的
+\emph{形式完备化}。赋予这个环层后，$X'$ 称为 $X$ 沿 $X'$ 的
+\emph{形式完备化}；所以它是一个赋环空间，但一般不是概形。对 $X$ 上的
+每个凝聚层 $F$，同样可以考察 $F$ 沿 $X'$ 的形式完备化
+$\overline F=\varprojlim_n F_n$（其中
+$F_n=F\otimes_{\Osh_X}\Osh_X/J^{n+1}$）；它是 $\overline X$ 上的模层。
+它的截面称为\fquote{$F$ 沿 $X'$ 的形式截面}，并可与
+$\varprojlim_n\Gamma(X',F_n)$ 的元素等同。取 $F=\Osh_X$ 时，得到
+Zariski 意义下 $X$ 沿 $X'$ 的\fquote{全纯函数}（由于这一称法与经典术语
+相冲突，本文不沿用它）。
+
+所谓\emph{形式概形}（默认是诺特的），是指一个拓扑空间 $\mathfrak X$，
+连同其上的一个拓扑环层 $\Osh_{\mathfrak X}$，并满足以下条件：存在拓扑
+环层的同构
+$\Osh_{\mathfrak X}=\varprojlim_n\Osh_n$，其中各 $\Osh_n$ 构成
+$\mathfrak X$ 上环层的一个逆系统，并且每个 $\Osh_n$ 都使
+$\mathfrak X$ 成为一个概形 $\mathfrak X_n$；当 $m\geq n$ 时，同态
+$\Osh_m\longrightarrow\Osh_n$ 是满射，其核为 $J_m^{n+1}$，其中 $J_m$ 是
+
+\src{196}
+$\Osh_m\longrightarrow\Osh_0$ 的核。由此可以证明，
+$\Osh_{\mathfrak X}$ 是一个凝聚的诺特局部环层。
+
+根据定义，上述形式完备化 $\overline X$ 是一个形式概形；反过来，每个形式
+概形\emph{局部地}都具有这种形式。事实上，给定一个\emph{仿射}形式概形
+（即 $\mathfrak X_0$ 为仿射概形；这蕴含所有 $\mathfrak X_n$ 都是仿射
+概形），等价于给定一个在 $J$-进拓扑下分离且完备的诺特拓扑环。
+
+普通概形的各项通常定义——态射、有限型态射、固有态射等等——都能毫无
+困难地推广到形式概形。
+
+\fsection{3}{三个基本定理}
+
+设 $f:X\longrightarrow Y$ 是概形（照例是诺特概形）的固有态射，$Y'$ 是
+$Y$ 的一个闭子集，$X'$ 是它在 $X$ 中的逆像；考察相应的形式完备化
+$\overline Y$ 和 $\overline X$。于是 $f$ 诱导形式概形的态射
+$\overline f:\overline X\longrightarrow\overline Y$，而且这个态射仍是
+固有的。设 $F$ 是 $X$ 上的凝聚层，则 $\overline F$ 是 $\overline X$ 上的
+凝聚层。在定理1中，我们不再提 $X,Y,F$，只考察形式概形的固有态射
+$\overline f$ 和 $\overline X$ 上的凝聚层 $\overline F$。（不过，报告人
+只在从 $X,Y,f,F$ 出发的情形中写出了完整证明。）
+
+\result{定理}{1（有限性定理）}
+\begin{enumerate}
+  \item[\textit{i.}] 各 $R^{q}\overline f_{*}(\overline F)$ 都是
+    $\overline Y$ 上的凝聚层。
+  \item[\textit{ii.}] 自然同态
+    \[
+      R^{q}\overline f_{*}(\overline F)
+      \longrightarrow \varprojlim_n R^{q}f_{n*}(F_n)
+    \]
+    都是同构。
+\end{enumerate}
+
+在这个命题中，假定已经选取了 $\Osh_Y$ 的一个定义 $Y'$ 的凝聚子层 $J$；
+由逆像得到 $\Osh_X$ 的一个定义 $X'$ 的凝聚子层，进而按第2节定义
+$F_n,X_n,Y_n$ 以及 $f_n:X_n\longrightarrow Y_n$。若从任意两个形式概形
+之间的固有态射出发，为明确这些记号而需要作出的细微调整也是显然的。
+
+定理1只涉及\fquote{形式上同调}。下一个定理
+
+\src{197}
+把它与\fquote{代数上同调}联系起来，并且类似于 Serre 关于代数上同调与
+解析上同调之比较的一个熟知定理[4]。
+
+\result{定理}{2（第一比较定理）} 各 $R^{q}f_{*}(F)$ 都是 $Y$ 上的凝聚层
+（这是定理1的一个特例），并且自然同态
+\[
+  \overline{R^{q}f_{*}(F)}
+  \longrightarrow \varprojlim_n R^{q}f_{n*}(F_n)
+\]
+都是同构。
+
+\result{推论}{1} 有典范同构
+\[
+  \overline{R^{q}f_{*}(F)}=R^{q}\overline f_{*}(\overline F).
+\]
+
+当 $q=0$ 时，这个推论是 Zariski 的\fquote{全纯函数基本定理}的推广；我们
+将由它推出 Zariski 的\fquote{连通性定理}的推广。还应注意，定理1
+（\textit{ii}）在 $q=0$ 时虽然是平凡的，定理2或它的等价表述（推论1）
+却绝非如此。事实上，证明对 $q$ 作降归纳（当 $q$ 很大时两端都为零，
+所以结论平凡），于是 $q=0$ 的情形正是归纳的最后一步，因而可以说是
+\fquote{最困难}的情形。
+
+\result{推论}{2} 设 $Y=\operatorname{Spec}(A)$，而 $Y'$ 由 $A$ 的理想
+$J$ 定义。则对 $X$ 上的每个凝聚层 $F$，各 $H^{q}(X,F)$ 都是有限生成的
+$A$-模，其 $J$-进完备化就是 $H^{q}(\overline X,\overline F)$。
+
+最后将这个推论应用于
+$H=\Homsh_{\Osh_X}(F,G)$，得到：
+
+\result{推论}{3} 设 $Y=\operatorname{Spec}(A)$，而 $Y'$ 由 $A$ 的理想
+$J$ 定义。若 $F,G$ 是 $X$ 上的两个凝聚层，则
+$\operatorname{Hom}(F,G)$ 是有限生成的 $A$-模，其 $J$-进完备化可与
+$\operatorname{Hom}(\overline F,\overline G)$ 等同。
+
+当然，自然映射
+$\operatorname{Hom}(F,G)\longrightarrow
+\operatorname{Hom}(\overline F,\overline G)$ 把同态
+$u:F\longrightarrow G$ 映为它\fquote{依连续性}得到的延拓
+$\overline u:\overline F\longrightarrow\overline G$（采用这一约定后，
+$\overline F$ 成为关于 $F$ 的函子）。
+
+现在假设 $A$ 在其 $J$-进拓扑下分离且完备，则上述推论2和推论3给出
+\[
+  H^{q}(X,F)=H^{q}(\overline X,\overline F),
+  \qquad
+  \operatorname{Hom}(F,G)
+  =\operatorname{Hom}(\overline F,\overline G).
+\]
+
+\src{198}
+最后这个等式表明，$X$ 上凝聚层的范畴可与 $\overline X$ 上凝聚层范畴的
+一个\emph{子范畴}（其态射为所诱导的态射）等同。事实上还有更强的结论：
+
+\result{定理}{3} $\overline X$ 上的一个模层是凝聚的，当且仅当它同构于
+形如 $\overline F$ 的层，其中 $F$ 是 $X$ 上的凝聚层（由定理2的推论3，
+$F$ 在典范同构的意义下唯一确定）。[回顾此时
+$Y=\operatorname{Spec}(A)$，其中 $A$ 是一个在 $J$-进拓扑下分离且完备的
+诺特拓扑环。]
+
+\result{推论}{1} $X$ 的闭子概形与 $\overline X$ 的闭形式子概形一一对应。
+
+事实上，它们分别对应于 $\Osh_X$ 和 $\overline{\Osh}_X$ 的凝聚子层。
+把态射的图看成闭子概形，由推论1得到：
+
+\result{推论}{2} 设 $X,Z$ 是 $A$ 上的两个固有概形（$A$ 是在 $J$-进拓扑
+下分离且完备的诺特环）。则映射 $g\longmapsto\overline g$ 在从 $X$ 到
+$Z$ 的 $Y$-态射与从 $\overline X$ 到 $\overline Z$ 的 $\overline Y$-态射
+之间给出一一对应。
+
+换言之，$A$ 上的固有代数概形构成 $\overline Y$ 上固有形式概形范畴的一个
+\emph{子范畴}（其态射为所诱导的态射）。但须注意，$\overline Y$ 上存在
+不能\fquote{代数化}的固有形式概形，也就是说，它们并不同构于任何
+$\overline X$，其中 $X$ 在 $A$ 上固有（正如存在并非来自复数域上代数簇的
+紧复解析簇一样）。这类形式概形在\fquote{模理论}中会自然出现。不过，
+下面这个形式概形可代数化的特殊情形值得注意：
+
+\result{定理}{4} 设 $A$ 是剩余域为 $k$ 的完备诺特局部环，$\mathfrak X$
+是 $A$ 上的固有形式概形（赋有其 $\mathfrak m(A)$-进拓扑）。假设：
+\begin{enumerate}
+  \item[\textit{i.}] $\Osh_{\mathfrak X}$ 的各局部环都是平坦 $A$-模；
+    或者等价地，若给 $\Osh_{\mathfrak X}$ 和 $A$ 赋予由 $A$ 的极大理想
+    的各次幂定义的滤过，则相伴分次对象满足关系
+    \[
+      \operatorname{gr}(\Osh_{\mathfrak X})
+      \simeq
+      \operatorname{gr}^{0}(\Osh_{\mathfrak X})
+      \otimes_k\operatorname{gr}(A).
+    \]
+  \item[\textit{ii.}] 把
+    $\mathfrak X_0=\mathfrak X\otimes_A k$ 看成 $k$ 上的代数概形时，有
+    \[
+      H^2(\mathfrak X_0,\Osh_{\mathfrak X_0})=0.
+    \]
+  \item[\textit{iii.}] $\mathfrak X_0$ 是射影的。
+\end{enumerate}
+在这些条件下，$\mathfrak X$ 可以代数化；更确切地说，它同构于
+$\overline X$，其中 $X$ 是一个射影 $A$-概形。
+
+当 $\mathfrak X_0$ 是 $k$ 上的一条非奇异曲线时，条件\textit{(ii)}和
+\textit{(iii)}特别成立；因此定理4尤其可以应用于给定亏格曲线的
+\fquote{模理论}\ldots{} 下面说明如何证明定理4：可以证明（参见下文命题3）
+条件\textit{(i)}和\textit{(ii)}蕴含，$\mathfrak X_0$ 上每个局部同构于
+结构层的凝聚层，都可以从 $\mathfrak X$ 上的一个同类层经约化得到。
+从 $\mathfrak X_0$ 上的一个\fquote{丰沛}层出发（由\textit{(iii)}知这样的
+层存在），把它提升为 $\mathfrak X$ 上的一个可逆层；再用定理1证明，
+该层的某个张量幂定义了 $\mathfrak X$ 到某个概形 $\mathbf P_A^r$ 沿闭集的
+形式完备化中的一个浸入（$\mathbf P_A^r$ 是 $A$ 上维数为 $r$ 的
+\fquote{标准射影}概形）。
+
+定理1至定理3的证明见[1]。
+
+\src{199}
+\fsection{4}{连通性定理与 Zariski\fquote{主定理}的应用}
+
+设 $f:X\longrightarrow Y$ 是概形的固有态射。由有限性定理，
+$f_*(\Osh_X)=\mathcal A$ 是 $Y$ 上的凝聚层；它还是一个交换代数层，
+因而对应于一个在 $Y$ 上有限的 $Y$-概形
+$g:Y'\longrightarrow Y$（其定义条件是在 $Y$ 上仿射，即一个仿射开集的
+逆像仍为仿射，并且 $g_*(\Osh_{Y'})=\mathcal A$）。立即可见，$f$ 典范地
+分解为 $f=gf'$，其中 $f':X\longrightarrow Y'$ 是从 $X$ 到 $Y'$ 的态射，
+并且这一次满足 $f'_*(\Osh_X)=\Osh_{Y'}$。$f$ 的这个分解称为 $f$ 的
+\emph{Stein 分解}。把第一比较定理的推论1应用于 $f'$，并取 $Y'$ 中仅含
+一点 $y'$ 的部分，便知 $f'^{-1}(y')=X'$ 是连通的（否则，$X$ 沿 $X'$ 的
+形式截面不会构成局部环，而 $f'_*(\Osh_X)_{y'}=\Osh_{Y',y'}$ 的完备化
+却是局部的！）。我们已经证明：
+
+\result{定理}{5（Zariski\fquote{连通性定理}）} 设
+$f:X\longrightarrow Y$ 是固有态射，则 $f$ 可唯一地（不计同构）分解为
+$f=gf'$，其中 $g:Y'\longrightarrow Y$ 是有限态射，并且
+$f':X\longrightarrow Y'$ 满足 $f'_*(\Osh_X)=\Osh_{Y'}$（从而
+$g_*(\Osh_{Y'})=f_*(\Osh_X)$）。$f'$ 的各纤维都是连通的；也就是说，
+$f$ 的纤维 $f^{-1}(y)$ 的连通分支集合，与 $Y'$ 中位于 $y$ 上方的点集
+一一对应，也即与 $f_*(\Osh_X)_y$ 中的极大理想集合一一对应。
+
+连通性定理的各个通常变体立即随之得到。这里只记下下面的推论。
+
+\src{200}
+\result{推论}{1} $X$ 的点 $x$ 在其纤维 $f^{-1}(y)$ 中孤立，当且仅当纤维
+$f'^{-1}(y')$（其中 $y'=f'(x)$）只有点 $x$；或者等价地，$f'$ 在 $x$ 的
+某个邻域与 $y'$ 的某个邻域之间诱导同构。这类点的集合是一个开集 $U$，
+且 $f'$ 把 $U$ 同构地映到 $Y'$ 的一个开集上。
+
+为证明 $f'$ 在 $x$ 处是局部同构，注意 $f'$ 诱导同构
+$\Osh_{y'}\longrightarrow\Osh_x$；这是由 $f'_*(\Osh_X)=\Osh_{Y'}$，以及
+下述事实看出的：$f'$ 是闭映射且在 $y'$ 上的纤维只有 $x$，所以当 $V$
+遍历 $y'$ 的一个基本邻域系时，各 $f'^{-1}(V)$ 遍历 $x$ 的一个基本邻域系。
+由此立即得到下面的结论；在\fquote{几何}情形中，这个结论归功于 Chevalley。
+
+\result{推论}{2} 态射 $f$ 是有限态射，当且仅当它是固有态射并且其纤维
+都是有限的。
+
+在这种情形中，由上述结果，$f'$ 的确是同构。
+
+设 $f:X\longrightarrow Y$ 是一个不必固有的态射，但假设 $X$ 作为开集包含
+在一个固有 $Y$-概形 $\widetilde f:\widetilde X\longrightarrow Y$ 中
+（特别地，当 $f$ 拟射影时便是如此）。应用推论1可知，$\widetilde f'$
+把 $X$ 中在各自纤维内孤立的点所成的集合 $U$ 同构地映到 $Y'$ 的一个
+开集上（并且 $U$ 的确是开集）。由此得到 Zariski\fquote{主定理}的如下
+整体形式。
+
+\result{定理}{6（Zariski\fquote{主定理}）} 设
+$f:X\longrightarrow Y$ 是有限型态射。则 $X$ 中在各自纤维内孤立的点所成
+的集合 $U$ 是开集；若 $f$ 分离，\footnote{1962年的勘误在此把印出的假设
+\fquote{$f$ 拟射影}改为较弱的假设\fquote{$f$ 分离}；依据 SGA VIII，6.2，
+每个拟有限且分离的态射都是拟射影的。} 则 $U$ 在 $Y$ 上同构于某个在
+$Y$ 上有限的概形 $Y'$ 的一个开部分。
+
+由于有限型态射局部仿射，因而\textit{更不消说}局部拟射影，Zariski 主定理
+的各个通常局部形式立即由定理6推出。
+
+\fsection{5}{固有平坦态射的上同调研究}
+
+设 $f:X\longrightarrow Y$ 是固有态射，$F$ 是 $X$ 上的凝聚层，并假设
+$F$ 在 $Y$ 上平坦，即各 $F_x$ 都是环 $\Osh_y$（$y=f(x)$）上的平坦模。
+这也意味着，对每个 $y\in Y$，若沿纤维 $f^{-1}(y)$ 用
+$\mathfrak m_y^nF$ 对 $F$ 作滤过（$\mathfrak m_y$ 是 $\Osh_y$ 的极大
+理想），则相伴分次对象同构于
+$(F/\mathfrak m_yF)\otimes_{\kappa(y)}\operatorname{gr}(\Osh_y)$；换言之，
+对每个整数 $n$ 都有
+\[
+  \mathfrak m_y^nF/\mathfrak m_y^{n+1}F
+  =F_y\otimes_{\kappa(y)}
+  (\mathfrak m_y^n/\mathfrak m_y^{n+1})
+\]
+这里 $X_y$ 表示把纤维 $f^{-1}(y)$ 看成 $y$ 的剩余域 $\kappa(y)$ 上的
+固有概形，而 $F_y$ 表示 $F$ 在 $X_y$ 上诱导的层
+$F/\mathfrak m_yF$。结合这个同构和定理2，由 $X_y$ 关于系数层 $F_y$ 的
+上同调，可以得到 $y$ 附近各 $R^qf_*(F)$ 的估计，有时还可作出计算。
+定理2在这里具有形式
+\[
+  \widehat{R^qf_*(F)_y}
+  =\varprojlim_n H^q(X_y,F/\mathfrak m_y^nF).
+\]
+这里只指出下面这个推论：
+
+\src{201}
+\result{命题}{1} 设 $f:X\longrightarrow Y$ 是固有态射，$F$ 是 $X$ 上在
+$Y$ 上平坦的凝聚层。设 $y\in Y$，$q$ 是一个整数，并假设
+$H^q(X_y,F_y)=0$。则 $R^qf_*(F)$ 在 $y$ 的一个邻域内为零，而且对每个
+$n$，自然同态
+\[
+  R^{q-1}f_*(F)_y\longrightarrow
+  H^{q-1}(X_y,F/\mathfrak m_y^nF)
+\]
+都是满射。
+
+特别地，若 $f$ 是平坦态射（即 $\Osh_X$ 在 $Y$ 上平坦），则 $X$ 上每个
+局部自由凝聚层 $F$ 都在 $Y$ 上平坦。设 $F,G$ 是两个这样的层，把命题1
+应用于 $\Homsh_{\Osh_X}(F,G)$ 并取 $q=1$，得到：
+
+\result{定理}{7} 设 $f$ 是固有平坦态射，$F,G$ 是 $X$ 上的两个局部自由
+凝聚层，$y\in Y$，并假设
+\[
+  H^1\bigl(X_y,\Homsh_{\Osh_{X_y}}(F_y,G_y)\bigr)=0,
+\]
+则每个同态 $u_0:F_y\longrightarrow G_y$ 都由一个同态
+\[
+  u:F|V\longrightarrow G|V,
+  \qquad V=f^{-1}(U),
+\]
+诱导，其中 $U$ 是 $y$ 的一个邻域。
+
+\result{推论}{} 若 $u_0$ 是同构（相应地，是单态射或满态射），则当 $U$
+充分小时，$u$ 也具有同一性质。
+
+特别地：
+
+\src{202}
+\result{推论}{2} 设 $E_0$ 是 $X_y$ 上的局部自由凝聚层，并且
+\[
+  H^1\bigl(X_y;\Homsh_{\Osh_{X_y}}(E_0,E_0)\bigr)=0,
+\]
+则两个局部自由层如果在 $X_y$ 上的限制都同构于 $E_0$，它们就在 $X_y$
+的一个邻域内同构。
+
+于是：
+
+\result{推论}{3} 假设 $H^1(X_y,\Osh_{X_y})=0$。则 $X$ 上两个可逆层
+（即局部同构于 $\Osh_X$ 的层），只要它们在 $X_y$ 上的限制同构，它们
+就在 $X_y$ 的一个邻域内同构。\footnote{原文未明确限定邻域。这里采用推论2中的局部结论，后面的命题2的证明也使用这一结论。}
+
+由此得到：
+
+\result{命题}{2} 设 $Y$ 是连通概形，$E$ 是 $Y$ 上秩至少为 $2$ 的局部自由凝聚层。\footnote{原文未给出秩的下界。秩为 $1$ 时，$\mathbf P(E)=Y$，下面分解中的整数 $n$ 不再唯一。随后的自同构推论及正合列也采用秩至少为 $2$ 的假设。}
+考察与 $E$ 相伴的射影空间丛 $X=\mathbf P(E)$，并赋以其熟知的可逆层
+$\Osh_X(1)$。则 $X$ 上的每个可逆层 $L$ 都同构于形如
+\[
+  f^*(L')\otimes\Osh_X(n),
+\]
+的层，其中 $L'$ 是 $Y$ 上的可逆层，$n$ 是整数。这个整数 $n$ 唯一确定，
+而 $L'$ 在同构意义下唯一确定。
+
+上述推论3证明，在每条纤维的一个邻域内，$L$ 都同构于某个
+$\Osh_X(n)$。其余部分几乎是形式的。
+
+借助命题2，可以确定从 $X=\mathbf P(E)$ 到另一个射影丛的 $Y$-态射。
+特别地得到：
+
+\result{推论}{} 设 $u$ 是 $X=\mathbf P(E)$ 的一个自同构。则存在 $Y$
+上的一个可逆层 $L'$ 和一个同构 $v:E\longrightarrow E\otimes L'$，使得
+$u$ 是相应的同构
+\[
+  \mathbf P(E)\xrightarrow{\sim}\mathbf P(E\otimes L')=\mathbf P(E);
+\]
+二元组 $(v,L')$ 在同构意义下唯一确定。
+
+设 $\Gamma$ 是 $Y$ 上满足 $E\otimes L'\simeq E$ 的可逆丛 $L'$ 的同构类
+所成的集合。它的元素都是挠元：事实上，若 $n$ 是 $E$ 的秩，取第 $n$
+外幂便知必有 $L'^{\otimes n}\simeq\Osh_Y$。因此，上述推论也可以表述为
+存在群的正合列
+\[
+  e\longrightarrow
+  \operatorname{Aut}(E)/\Gamma(Y,\Osh_Y^*)
+  \longrightarrow \operatorname{Aut}_Y(X)
+  \longrightarrow \Gamma\longrightarrow e
+\]
+（此外，它也可以由下面这个群层正合列所诱导的上同调正合列推出：
+\[
+  e\longrightarrow \Osh_Y^*
+  \longrightarrow \underline{\operatorname{Aut}}(E)
+  \longrightarrow \underline{\operatorname{Aut}}_Y(X)
+  \longrightarrow e,
+\]
+其中 $\Osh_Y^*$ 是 $\Osh_Y$ 的\fquote{可逆元}层，并等同于
+$\underline{\operatorname{Aut}}(E)$ 的中心）。
+
+\src{203}
+\fsection{6}{完备 \texorpdfstring{$J$}{J}-进环上层与概形的存在性及唯一性定理的应用}
+
+定理7利用定理1和定理2给出了局部自由凝聚层的一个唯一性结论。现在利用
+定理3，我们将推出层、概形态射或概形的存在性定理。下文中，$A$ 表示一个
+分离且完备的诺特局部环。一般方法始终是先作形式构造；这实质上就是在
+阿廷环上作代数几何，然后借助三个基本定理推出具有\fquote{代数}性质的
+结论。
+
+\result{命题}{3} 设 $\mathfrak X$ 是 $A$ 上的固有平坦形式概形，$F_0$
+是 $X_0$ 上的局部自由层，并满足
+\[
+  H^2\bigl(X_0,\Homsh_{\Osh_{X_0}}(F_0,F_0)\bigr)=0.
+\]
+则 $\mathfrak X$ 上存在一个局部自由层 $F$，它在 $X_0$ 上诱导的层同构于
+$F_0$。（此外，若
+$H^1(X_0,\Homsh_{\Osh_{X_0}}(F_0,F_0))=0$，则 $F$ 在同构意义下唯一。）
+
+逐次在各 $X_n$ 上构造相互诱导的局部自由层 $F_n$。构造 $F_n$ 时遇到的
+障碍位于
+\[
+  H^2\bigl(X_0,\Homsh_{\Osh_{X_0}}(F_0,F_0)\bigr)
+  \otimes_{A/J}(J^n/J^{n+1}),
+\]
+所以按假设该障碍为零。现在使用定理3，得到：
+
+\result{推论}{1} 设 $X$ 是 $A$ 上的固有平坦概形，$F_0$ 如上。则 $X$
+上存在一个局部自由层 $F$，它在 $X_0$ 上诱导的层同构于 $F_0$。此外，
+若 $H^1(X_0,\Homsh_{\Osh_{X_0}}(F_0,F_0))=0$，则 $F$ 在同构意义下唯一。
+
+设 $X_0$ 是域 $k$ 上的有限型概形；假设 $X_0$ 在 $k$ 上非奇异（这里指
+绝对非奇异），但不必在 $k$ 上固有。设 $A$ 是剩余域为 $k$ 的阿廷局部环。
+我们要寻找在 $A$ 上平坦并且满足 $X\otimes_A k=X_0$ 的概形 $X$
+（这是 $X_0$ 的\fquote{模理论}或\fquote{结构变形}的出发点）。给出这样
+一个 $X$，等价于在拓扑空间 $X_0$ 上给出一个环层 $\Osh_X$，并赋予如下
+结构：
+\begin{enumerate}
+  \item[\textit{i.}] 它是一个 $A$-代数层。
+  \item[\textit{ii.}] 它带有一个增广同态
+    $\Osh_X\longrightarrow\Osh_{X_0}$（与 $A$-代数结构相容）；这些数据
+    还须满足如下条件：该增广诱导同构
+    $\Osh_X\otimes_A k\xrightarrow{\sim}\Osh_{X_0}$；$\Osh_X$ 在 $A$
+    上平坦，也就是说，用 $A$ 的极大理想 $\mathfrak m$ 的各次幂对
+    $\Osh_X$ 作滤过后所得的相伴分次对象，同构于
+    $\operatorname{gr}^0(\Osh_X)\otimes_k\operatorname{gr}(A)$；亦即有同构
+    \[
+      \mathfrak m^n\Osh_X/\mathfrak m^{n+1}\Osh_X
+      =\Osh_{X_0}\otimes_k(\mathfrak m^n/\mathfrak m^{n+1}).
+    \]
+\end{enumerate}
+基本事实如下：
+
+\src{204}
+\result{定理}{8} 设 $X_0$ 是域 $k$ 上有限型且非奇异的概形，并假设
+$X_0$ 仿射。设 $A$ 是剩余域为 $k$ 的阿廷局部环。则存在一个在 $A$
+上平坦的 $A$-概形 $X$，使得 $X\otimes_A k=X_0$；任意两个这样的概形
+必定同构。
+
+这里的同构并非典范的，因为一般而言，$X$ 会有在 $X_0$ 上诱导恒等的
+非平凡 $A$-自同构。另一方面，一般不存在满足所给条件的 $X$ 的
+\fquote{典范}选择；唯一的例外是 $A$ 为 $k$-代数（等特征情形），此时
+可以取 $X=X_0\otimes_k A$，即
+$\Osh_X=\Osh_{X_0}\otimes_k A$（事实上无论 $X_0$ 是否仿射都可以）。
+在混合特征情形中，当 $X_0$ 不仿射时，我一般不知道能否把 $X_0$
+\fquote{提升}为定义在 $A$ 上的 $X$。不过，设 $n>0$ 是整数，令
+$A_{n-1}=A/\mathfrak m^n$，并假设已经把 $X_0$ 提升为一个平坦
+$A_{n-1}$-概形 $X_{n-1}$；现在要把 $X_{n-1}$ 提升为一个平坦
+$A_n$-概形 $X_n$。由定理8已知这在局部是可能的；另一方面容易验证，
+若 $U_n$ 提升了 $X_{n-1}$ 的开集 $U_{n-1}$，则 $U_n$ 的自同构群层
+（在 $U_{n-1}$ 上诱导恒等的那些自同构）典范同构于
+\[
+  \Theta_{X_0/k}\otimes_k(\mathfrak m^n/\mathfrak m^{n+1})
+\]
+在 $U_{n-1}$ 上的限制，因而特别是交换的（$\Theta_{X_0/k}$ 表示 $X_0$
+上的 $k$-导子芽层）。由此容易看出，构造提升 $X_{n-1}$ 的 $X_n$ 时有
+一个障碍，它位于
+\[
+  H^2(X_0,\Theta_{X_0/k})\otimes_k
+  \mathfrak m^n/\mathfrak m^{n+1}.
+\]
+因此：
+
+\result{推论}{1} 设 $X_0$ 是 $k$ 上有限型且非奇异的概形，并假设
+$H^2(X_0,\Theta_{X_0/k})=0$。则对每个剩余域为 $k$ 的阿廷局部环 $A$，
+都存在一个在 $A$ 上平坦的 $A$-概形 $X$，使得
+$X\otimes_A k=X_0$。
+
+此外，如果已经找到一个在 $A$ 上平坦并提升 $X_0$ 的 $X$，那么由定理8，
+提升 $X_0$ 的平坦 $A$-概形的同构类集合可与
+\[
+  H^1\bigl(X_0,\underline{\operatorname{Aut}}(X)\bigr),
+\]
+等同；这里 $\underline{\operatorname{Aut}}(X)$ 当然表示 $A$-代数层
+$\Osh_X$ 的、与增广相容的自同构芽层。$\Osh_X$ 的滤过定义了
+$\underline{\operatorname{Aut}}(X)$ 的一个滤过；这个层对第 $n$ 个滤过
+子群的商为 $\underline{\operatorname{Aut}}(X_n)$。该滤过的相伴分次对象
+是交换的，并可与 $\Theta_{X_0/k}\otimes_k\operatorname{gr}(A)$ 等同。
+特别地，若 $\mathfrak m^{n+1}$ 是 $\mathfrak m$ 的第一个为零的幂，则
+$F^n(\underline{\operatorname{Aut}}(X))$（滤过的最后一项）包含在
+$\underline{\operatorname{Aut}}(X)$ 的中心中，并同构于
+$\Theta_{X_0/k}\otimes_k\mathfrak m^n$；它也正是 $X$ 的、在
+$X_{n-1}=X\otimes_A A/\mathfrak m^n$ 上诱导恒等的自同构芽层。利用这些
+结果，立即得到以下命题：
+
+\src{205}
+\result{推论}{2} 设 $X_0$ 是 $k$ 上有限型且非奇异的概形，$A$ 是剩余域
+为 $k$、极大理想为 $\mathfrak m$ 的阿廷局部环；假设
+$\mathfrak m^{n+1}=0$，令 $A_{n-1}=A/\mathfrak m^n$；再设 $X_{n-1}$
+是一个满足 $X_{n-1}\otimes_A k=X_0$ 的平坦 $A_{n-1}$-概形。则所有满足
+$X_n\otimes_A A_{n-1}=X_{n-1}$ 的平坦 $A$-概形 $X_n$ 的同构类
+（所取同构须在 $X_{n-1}$ 上诱导恒等）所成的集合，或者为空，或者是群
+\[
+  H^1(X_0,\Theta_{X_0/k})\otimes_k\mathfrak m^n.
+\]
+作用下的主齐性空间。
+
+（注意，一般而言，这个空间没有特选的原点，因为没有特选的方式把
+$X_{n-1}$ 提升为 $X_n$。）
+
+\result{推论}{3} 设 $X_0$ 是 $k$ 上有限型且非奇异的概形，并假设
+$H^1(X_0,\Theta_{X_0/k})=0$。则对每个剩余域为 $k$ 的阿廷局部环 $A$，
+至多存在一个（不计同构）满足 $X\otimes_A k=X_0$ 的平坦 $A$-概形 $X$。
+
+推论1和推论3立即蕴含表面上更一般的结论：只须假设 $A$ 是剩余域为 $k$
+的完备诺特局部环，并把 $X$ 作为 $A$ 上的形式概形引入即可：
+
+\result{定理}{9} 设 $k$ 是域，$X_0$ 是 $k$ 上有限型且非奇异的概形。
+对每个剩余域为 $k$ 的完备诺特局部环 $A$，令 $F(A)$ 表示所有满足
+$\mathfrak X\otimes_A k=X_0$、在 $A$ 上有限型且平坦的形式概形
+$\mathfrak X$ 的同构类集合（所取同构须在 $X_0$ 上诱导恒等）。采用这些
+记号：
+\begin{enumerate}
+  \item[\textit{i.}] 若 $H^1(X_0,\Theta_{X_0/k})=0$，则对每个 $A$，
+    $F(A)$ 至多有一个元素。
+  \item[\textit{ii.}] 若 $H^2(X_0,\Theta_{X_0/k})=0$，则对每个 $A$，
+    $F(A)$ 至少有一个元素。
+\end{enumerate}
+
+\src{206}
+\result{推论}{1} 假设 $X_0$ 在 $k$ 上固有。在条件\textit{(i)}下，对每个
+$A$，至多存在一个（不计在 $X_0$ 上诱导恒等的同构）满足
+$X\otimes_A k=X_0$、在 $A$ 上固有且平坦的概形 $X$。
+
+这里使用定理3的推论2。例如：
+
+\result{推论}{2} 若 $X$ 是 $A$ 上的固有平坦概形，并且
+$X\otimes_A k$ 同构于 $k$ 上维数为 $r$ 的标准射影概形
+$\mathbf P_k^r$，则 $X$ 同构于 $\mathbf P_A^r$。
+
+（也可由命题3的推论1推出这个结果。）
+
+\result{推论}{3} 设 $X_0$ 是 $k$ 上的非奇异射影概形，并假设
+\[
+  H^2(X_0,\Osh_{X_0})=H^2(X_0,\Theta_{X_0/k})=0.
+\]
+则对每个 $A$，都存在一个在 $A$ 上射影且平坦的概形 $X$，使得
+$X\otimes_A k=X_0$。
+
+结合定理9\textit{(ii)}和定理4即可。特别地：
+
+\result{推论}{4} 设 $X_0$ 是 $k$ 上一条完备非奇异代数曲线的概形。
+则对每个剩余域为 $k$ 的完备诺特局部环 $A$，都存在一个 $A$ 上的
+\fquote{光滑曲线概形} $X$，使得 $X\otimes_A k=X_0$。
+
+\result{注记}{}
+
+1）推论3和推论4主要在 $k$ 的特征为 $p\ne0$ 时有意义：可取 $A$ 为特征
+为 $0$、剩余域为 $k$ 的离散赋值环，例如取\fquote{最小的可能 $A$}，
+即其极大理想由 $p$ 生成的环。（事实上，由 Cohen 定理，只须对一个这样的
+环 $A$ 知道推论3和推论4即可。）在这方面应当指出，据专家所知，目前尚
+不知道域 $k$ 上是否存在不能由定义在这类环 $A$ 上的平坦概形模 $p$ 约化
+得到的概形。至少，本节的结果提供了系统研究这一问题的方法。首先应当
+考察 $H^2(X_0,\Theta_{X_0/k})$ 中的第一个障碍是否必然为零。
+
+\emph{1962年补记。}---J.-P. Serre 构造了特征 $p>0$ 的代数闭域 $k$
+上的一个三维非奇异射影簇；它并非某个固有概形的约化，而该固有概形定义
+在一个剩余域为 $k$、分式域特征为零的整局部环上。据说 Mumford 找到了
+一个以非奇异射影曲面为例的类似结果。
+
+2）应注意，定理3及相应的方法只对完备基环（为具体起见，可设为局部环）
+有效。
+
+要从局部环的完备化上已知的结果过渡到该局部环自身的相应结果，还需要
+第四个\fquote{基本定理}，而它的最终表述仍有待找到。
+
+\src{207}
+3）应把本节的结果（特别是前面的推论1和推论2）以及下一节的结果，与
+Kodaira--Spencer 关于复结构变形的结果相比较。利用刚才提到的猜想性定理，
+在推论1的条件下但不再假设 $A$ 完备，应当可以断言：存在一个包含 $A$、
+在 $A$ 上有限且非分歧的环 $A'$，使
+$X\otimes_A A'$ 与 $X'\otimes_A A'$ 在 $A'$ 上同构（这里 $X,X'$ 是
+两个给定的固有平坦 $A$-概形，并满足
+$X\otimes_A k=X'\otimes_A k=X_0$）。至少当 $X_0=\mathbf P_k^r$ 时，
+利用命题2的推论可以证明这一点。无论如何，当
+$H^1(X_0,\Theta_{X_0/k})=0$ 时，可以证明 $X,X'$ 在
+$Y=\operatorname{Spec}(A)$ 的每一点 $y$ 上的纤维同构，至少在把剩余域
+$\kappa(y)$ 换成其代数闭包以后如此。（还有一个表面上更强的局部结果，
+其中不再需要假设 $A$ 是局部环。）关于射影空间的\fquote{结构变形}，
+再指出一个由 Kodaira--Spencer 的相应问题所启发的问题。设 $X$ 是整局部
+环 $A$ 上的固有平坦概形，$A$ 的分式域为 $K$、剩余域为 $k$；假设
+$X\otimes_A K$ 同构于 $\mathbf P_K^r$，那么
+$X\otimes_A k=X_0$ 是否同构于 $\mathbf P_k^r$（至少在 $k$ 的代数闭包
+上如此）？在这个问题中，可以假设 $A$ 是完备离散赋值环。当 $X_0$ 是
+阿贝尔簇时也有类似的问题。
+
+\emph{1962年补记。}---此时报告人对上述猜想性结果已不那么乐观。不过，
+射影空间结构变形的问题已由 Hironaka 肯定地解决，阿贝尔簇的相应问题
+则由 Koizumi 解决。
+
+\fsection{7}{模理论的应用}
+
+报告人本人也才刚开始研究这一理论，因此这里只能给出一些说明。为简单
+起见，取基底为域 $k$，也就是说只讨论等特征情形；不过定理8看来也能在
+没有本质变化的情况下处理一般情形。目前我们还没有越过\fquote{形式}
+阶段；但报告人希望在某些情形中能够由此构造真正的模概形，特别是对每个
+整数 $g$，在整数环上构造一个概形，使其扮演亏格为 $g$ 的非奇异曲线的
+万有模概形。
+
+\emph{1962年补记。}---Mumford 已构造了亏格为 $g$ 的曲线的模概形
+（参见 SHMI）。此外，定理10还证明，模理论中的\fquote{$n$ 级 Jacobi
+概形}是非奇异的，甚至在 $\mathbf Z$ 上光滑。
+
+\src{208}
+回到定理9的情形和记号，现在假设 $A$ 是 $k$ 上的有限维局部代数；为简单
+起见，还假设 $k$ 代数闭。于是可把 $F(A)$ 看成关于 $A$ 的、取值于集合
+范畴的协变函子：$k$-代数同态 $A\longrightarrow B$ 定义映射
+$F(A)\longrightarrow F(B)$，因为每个满足 $X\otimes_A k=X_0$ 的平坦
+$A$-概形 $X$ 都产生具有同样性质的 $B$-概形 $X\otimes_A B$。假设可以
+找到一个完备诺特局部 $k$-代数 $\mathcal O$ 和一个函子性同构
+\begin{equation}
+  \tag{*}
+  \operatorname{Hom}(\mathcal O,A)\xrightarrow{\sim}F(A)
+\end{equation}
+（左端表示 $k$-代数同态）。容易看出，这样的 $\mathcal O$ 在典范同构的
+意义下唯一确定；这时称 $\mathcal O$ 的形式谱 $\mathfrak Y$（即只含一个
+点的拓扑空间，并赋以值为 $\mathcal O$ 的拓扑环层）为 $X_0$ 的
+\emph{形式模概形}。（它不一定存在。）设 $\mathfrak r$ 是 $\mathcal O$
+的极大理想；对每个 $n$ 令
+$\mathcal O_n=\mathcal O/\mathfrak r^{n+1}$（所以 $\mathcal O_0=k$）。
+典范同态 $\mathcal O\longrightarrow\mathcal O_n$ 是
+$\operatorname{Hom}(\mathcal O,\mathcal O_n)$ 的一个元素，因而定义
+$F(\mathcal O_n)$ 的一个元素，也就是一个平坦 $\mathcal O_n$-概形
+$X_n$，其模 $\mathfrak r$ 约化为 $X_0$。这些 $X_n$ 通过标量扩张
+（在这里即约化）相互诱导，因此它们来自形式模概形 $\mathfrak Y$ 上一个
+唯一确定的形式概形 $\mathfrak X$；$\mathfrak X$ 在 $\mathfrak Y$ 上
+平坦，并且 $\mathfrak X_0=X_0$。立即可见，同构(*)是这样给出的：对每个
+$k$-代数同态 $\mathcal O\longrightarrow A$，对应 $A$-概形
+$\mathfrak X\otimes_{\mathcal O}A$ 的同构类（也就是说，对每个 $k$-概形
+态射 $Y'=\operatorname{Spec}(A)\longrightarrow\mathfrak Y$，对应由基变换
+得到的 $Y'$-概形 $\mathfrak X\otimes_{\mathfrak Y}Y'$）。进一步，即使
+只假设 $A$ 是完备诺特局部 $k$-代数（而不必是阿廷的），同构(*)及上述
+描述仍然成立。当然，照例 $\mathcal O$\textit{先验地}完全可能含有幂零元；
+看来很可能存在 $\mathcal O$ 本身是阿廷环而又不等于 $k$ 的情形。这说明
+Kodaira--Spencer 的观点（只取正则环 $A$）\textit{先验地}多么不适合一般
+情形。
+
+\src{209}
+现在还须给出在 $X_0$ 于 $k$ 上固有时，其形式模概形存在的充分条件。一般
+而言，对一个从有限维局部 $k$-代数到集合的函子 $A\longmapsto F(A)$，
+容易给出简单的充要条件，使它能够写成适当 $\mathcal O$ 的
+$\operatorname{Hom}(\mathcal O,A)$。这里不详述这些条件。只指出，在我们
+所考虑的情形中，这些条件对 $X_0$ 施加了非平凡的上同调条件；虽然报告人
+尚未构造出反例，但它们看来不太可能总是满足。另一方面，
+$H^0(X_0,\Theta_{X_0/k})=0$ 看来很可能是形式模概形存在的一个充分条件
+（虽然绝非必要条件）。这里只陈述一个特别简单情形中的定理（它在解析
+空间理论中的类似结果是熟知的，参见 Kodaira--Spencer）；借助上一节的
+结果便可毫无困难地证明它：
+
+\result{定理}{10} 设 $X_0$ 是域 $k$ 上的固有非奇异概形，并且
+\[
+  H^0(X_0,\Theta_{X_0/k})=H^2(X_0,\Theta_{X_0/k})=0.
+\]
+则 $X_0$ 存在形式模概形，对应于一个正则局部环 $\mathcal O$（即 $k$
+上的形式幂级数代数）。
+
+如前所述，$\mathcal O$ 上的形式概形 $\mathfrak X$ 一般并不一定能够
+代数化；但已知当 $X_0$ 射影且 $H^2(X_0,\Osh_{X_0})=0$ 时确能代数化
+（定理4），例如当 $X_0$ 的维数为1时。由此，构造给定亏格曲线的整数环上
+模概形的希望多少得到了一些支持\ldots{}
+
+还应注意，本节所述方法也可以用于 Picard 簇的构造和研究，以及许多其他
+构造。我们不久将再讨论这些问题。
+
+\fsection{8}{基本群的应用}
+
+上述方法使我们能够仿照拓扑理论，对基本群展开系统研究。本节陈述的前
+两个定理推广了 Lang--Serre 一篇新近论文中的结果。
+
+设 $X$ 是概形。若一个 $X$-概形 $X'$ 满足：
+\begin{enumerate}
+  \item[\textit{i.}] $X'$ 在 $X$ 上有限，也就是说，它由 $X$ 上的一个
+    凝聚代数层 $\mathcal A=\mathcal A(X')$ 定义；
+  \item[\textit{ii.}] $\mathcal A$ 是 $X$ 上的局部自由层；
+  \item[\textit{iii.}] 对每个 $x\in X$，商
+    \[
+      \mathcal A_x/\mathfrak m_x\mathcal A_x
+      =\mathcal A_x\otimes_{\Osh_x}\kappa(x)
+    \]
+    是 $\kappa(x)$ 上的可分代数，
+\end{enumerate}
+则称 $X'$ 是 $X$ 的一个\emph{非分歧覆盖}。
+
+\src{210}
+这个非分歧覆盖概念（归功于 Serre 和报告人）具有一切可以合理期待的
+初等性质，这里不逐一列举。只须指出，它产生了一套仿照经典 Galois 理论
+（并包含后者；其证明还比后者通常采用的证明更为简单）以及拓扑覆盖的
+Galois 理论而建立的 Galois 理论。更确切地说，概形 $X$ 的一个
+\emph{几何点}，是指从代数闭域 $\Omega$ 的谱 $\xi$ 到 $X$ 的态射 $a$；
+也就是说，给定 $X$ 的一点 $x=|a|$ 的剩余域 $\kappa(x)$ 的一个代数闭
+扩张（称 $x$ 为几何点 $a$ 的\emph{所在点}）。若 $X'$ 是 $X$ 的非分歧
+覆盖，就可为它配上\fquote{$X'$ 中位于 $a$ 上方的几何点}所成的集合
+$E_a(X')$，也就是由如下二元组组成的集合：位于 $x$ 上方的一点
+$x'\in X'$，以及一个 $\kappa(x)$-同态
+$\kappa(x')\longrightarrow\Omega$。这样，在固定 $(X,a)$ 后，便得到一个
+函子 $F(X,a)$，它从 $X$ 的非分歧覆盖 $X'$ 所成的范畴 $R(X)$ 到有限集
+范畴。若 $X$ 连通，则 $R(X)$ 与 $F(X,a)$ 所成的二元组具有所需的形式
+性质，因而同构于由某个适当的紧全不连通拓扑群 $\pi$（即有限群的逆极限）
+定义的类似二元组：取 $\pi$ 连续作用的有限集 $E$ 所成的范畴 $C(\pi)$，
+以及从该范畴到有限集范畴的遗忘函子 $F(\pi)(E)=E$。此外，由
+$(C(\pi),F(\pi))$ 与给定二元组同构这一条件，$\pi$ 在典范同构的意义下
+唯一确定。在当前情形中，$\pi$ 称为连通概形 $X$ 在几何点 $a$ 处的
+\emph{基本群}，记作 $\pi_1(X,a)$。若 $X$ 不连通，则以 $x=|a|$ 所在的
+连通分支替代 $X$。若 $X$ 连通，则对 $X$ 的两个几何点 $a',a''$，群
+$\pi_1(X,a')$ 与 $\pi_1(X,a'')$ 同构（该同构只在相差内自同构的意义下
+确定）；因此照例可以按问题需要选择 $a$，例如当 $X$ 不可约时取其一般点。
+当然，$\pi_1(X,a)$ 是关于带点概形 $(X,a)$ 的协变函子。关于非分歧覆盖
+分类的每个命题\footnote{印刷文本作\fquote{不可分覆盖}；但本段讨论的是
+非分歧覆盖范畴 $R(X)$ 以及它同带连续 $\pi_1(X,a)$-作用的有限集范畴之间
+的等价。}，都可以依照熟知的词典翻译成群论语言（只是这里还须顾及所涉
+群为拓扑群这一事实）。
+
+\src{211}
+我们的目标是对固有态射 $f:X\longrightarrow Y$ 建立纤维空间同伦正合列的
+类似物。显然，由于尚不知道高阶同伦群应当是什么，所得结果必然不完整。
+为应用第3节的基本定理，首先必须明确说明关于域或阿廷环上概形的几个
+初等引理（这与一般方法完全一致！）。
+
+\result{引理}{1} 设 $(X',a')$ 是一个带点非分歧覆盖，它对应于
+$\pi_1(X,a)$ 在有限集 $E$（带有标记点 $e$）上的一个带点表示。则典范
+同态 $\pi_1(X',a')\longrightarrow\pi_1(X,a)$ 把前一个群等同于
+$\pi_1(X,a)$ 中 $e$ 的稳定子（因而它是单射）。
+
+\result{引理}{2} 设 $X$ 是域 $k$ 上的代数概形，$k'$ 是 $k$ 的纯不可分
+扩张。则 $X\otimes_k k'$ 的每个非分歧覆盖都由 $X$ 的某个非分歧覆盖取
+逆像（即扩张标量）而来，且后者在典范同构的意义下唯一确定。
+
+特别地，由这两个引理可知，对 $k$ 的每个代数扩张 $K$，以及
+$X'=X\otimes_k K$ 中映到 $X$ 的几何点 $a$ 的每个几何点 $a'$，函子性
+同态 $\pi_1(X',a')\longrightarrow\pi_1(X,a)$ 都是单射。
+
+\result{引理}{3} 设 $X$ 是阿廷局部环 $A$ 上的完备概形，并满足
+$H^0(X,\Osh_X)=A$；设 $X'$ 是 $X$ 的非分歧覆盖，并令
+$A'=H^0(X',\Osh_{X'})$，所以 $A'$ 是 $A$ 上的有限环（它
+\textit{先验地}可能在 $A$ 上分歧）。设 $X_0,X'_0$ 分别为与 $X,X'$
+相伴的约化子概形（即分别把 $\Osh_X,\Osh_{X'}$ 除以其幂零元层而得）；
+设 $k$ 是 $A/\mathfrak r(A)$ 的一个子域，使 $A/\mathfrak r(A)$ 在 $k$
+上有限（于是 $X_0$ 是 $k$ 上的完备代数概形，而 $X'_0$ 是它的非分歧
+覆盖）。最后，设 $\Omega$ 是 $k$ 的一个代数闭扩张，并考察
+$X_0\otimes_k\Omega$ 的非分歧覆盖 $X'_0\otimes_k\Omega$。则以下两个
+条件等价：
+\begin{enumerate}
+  \item[\textit{i.}] $X'_0\otimes_k\Omega$ 在
+    $X_0\otimes_k\Omega$ 上完全分裂。
+  \item[\textit{ii.}] 自然态射
+    $X'\longrightarrow X\otimes_A A'$ 是同构。
+\end{enumerate}
+在这些条件下，$A'$ 是 $A$ 的非分歧扩张。最后，若 $X'$ 连通，则条件
+\textit{(i)}等价于下面这个表面上较弱的条件：
+\begin{enumerate}
+  \item[\textit{i bis.}] $X'_0\otimes_k\Omega$ 在
+    $X_0\otimes_k\Omega$ 上有一个正则截面。
+\end{enumerate}
+当条件\textit{(ii)}成立时，称 $X$ 的非分歧覆盖 $X'$ 是
+\emph{几何平凡的}。
+
+\src{212}
+\result{引理}{4} 设 $f:X\longrightarrow Y$ 是固有态射，并满足
+$f_*(\Osh_X)=\Osh_Y$。设 $a$ 是 $X$ 的一个几何点，$b$ 是它在 $Y$ 中
+的像。则 $\pi_1(X,a)\longrightarrow\pi_1(Y,b)$ 是满射。
+
+事实上，只须证明如下命题：若 $Y$ 的一个非分歧覆盖 $Y'$（对应于一个
+局部自由代数层 $\mathcal A$）使得 $X\otimes_Y Y'$ 不连通，则 $Y'$ 也
+不连通。的确，$f^*(\mathcal A)$ 将是两个非零环层的直和，因而其正像也
+如此；但后一正像正是
+$\mathcal A\otimes f_*(\Osh_X)=\mathcal A$。
+
+\result{引理}{5} 设 $X$ 是域 $k$ 上的完备概形。假设
+$H^0(X,\Osh_X)$ 是局部环 $A$，并且 $A/\mathfrak r(A)$ 在 $k$ 上纯不可分。
+设 $\Omega$ 是 $k$ 的一个代数闭包，并令
+$\overline X=X\otimes_k\Omega$（它是连通的）。选取 $\overline X$ 的一个
+几何点 $\overline a$，使其映到 $X$ 的几何点 $a$，则有正合列
+\[
+  e\longrightarrow\pi_1(\overline X,\overline a)
+  \longrightarrow\pi_1(X,a)
+  \longrightarrow\pi_1(k,b)\longrightarrow e
+\]
+（其中 $\pi_1(k,b)$ 是 $\Omega$ 在 $k$ 上的 Galois 群）。
+
+第一个同态的单射性已由引理1和引理2得到；中间的正合性来自引理3；最后
+一个同态的满射性来自引理4（只有这一步用到
+$A/\mathfrak r(A)$ 在 $k$ 上纯不可分）。
+
+\result{命题}{4} 设 $f:X\longrightarrow Y$ 是固有平坦态射，并且对每个
+$y\in Y$，$H^0(f^{-1}(y),\Osh_{f^{-1}(y)})$ 都是剩余域 $\kappa(y)$ 上的
+可分代数（例如，当 $f^{-1}(y)$ 是 $\kappa(y)$ 上的可分概形时便是如此，
+也就是说，它是约化的，并且与其各不可约分支相应的域都是 $\kappa(y)$ 的
+可分扩张）。则与 $f_*(\Osh_X)$ 相伴的 $Y$ 的覆盖 $Y'$ 是非分歧的。
+
+证明由定理2即可容易得到。
+
+\src{213}
+结合引理1，这个命题实际上把固有平坦态射（纤维可分）的同伦研究归结到
+$f_*(\Osh_X)=\Osh_Y$ 的情形（因为利用 Stein 分解，可以用 $Y'$ 代替
+$Y$）。
+
+\result{注}{} 有限型平坦态射如果其纤维都是可分概形（相应地，光滑概形），
+就称为\emph{可分的}（相应地，\emph{光滑的}）。可以证明，若 $f$ 平坦，
+且 $f^{-1}(y)$ 可分（相应地，光滑），则存在 $f^{-1}(y)$ 的一个邻域，
+$f$ 在其上可分（相应地，光滑）。对\fquote{绝对正规}也有同样的结果
+（\fquote{Bertini 定理}）。
+
+设 $f:X\longrightarrow Y$ 是固有态射，并满足
+\begin{equation}
+  \tag{i}
+  f_*(\Osh_X)=\Osh_Y,
+\end{equation}
+且设 $X'$ 是 $X$ 上的有限概形。设 $Y'$ 是与
+$X'\longrightarrow Y$ 的 Stein 分解相应的 $Y$ 的覆盖（参见定理5）。
+取 $y\in Y$；于是 $X'$ 在 $y$ 上的纤维 $F'$ 的连通分支集合，可与 $Y'$
+中位于 $y$ 上方的点 $y'$ 的集合等同（定理5）。考察由自然态射
+$X'\longrightarrow X$ 和 $X'\longrightarrow Y'$ 所诱导的显然态射
+\begin{equation}
+  \tag{*}
+  X'\longrightarrow X\times_Y Y'
+\end{equation}
+\footnote{印刷文本在第二个 $X'$ 上漏掉了撇号；到 $Y'$ 的态射是
+$X'\to Y$ 的 Stein 分解中的态射。} 每当 $X'$ 形如 $X\times_Y Y''$，
+其中 $Y''$ 是 $Y$ 的非分歧覆盖时，这个态射就是同构；此时 $Y'$ 正是
+$Y''$，而(*)是恒等。我们要给出使 $X'$ 具有上述形式的条件，也就是使
+$Y'$ 非分歧且(*)为同构的条件。为此，引入 $X$ 在 $y$ 上的纤维 $F$；
+它是 $\kappa(y)$ 上的固有概形，而 $F'$ 是它的一个覆盖（若 $X'$ 非分歧，
+则这个覆盖也非分歧）。设 $F'_1$ 是 $F'$ 的一个连通分支，它对应于 $Y'$
+中位于 $y$ 上方的一点 $y'_1$。再假设：
+\begin{enumerate}
+  \item[\textit{(ii)}] $X'$ 在 $F'_1$ 的各点处在 $X$ 上非分歧（所以
+    $F'_1$ 是 $F$ 的非分歧覆盖）；
+  \item[\textit{(iii)}] $F'_1$ 是 $F$ 的几何平凡覆盖（参见引理3）。
+\end{enumerate}
+
+\result{定理}{11} 在这些条件下，$Y'$ 中存在 $y'_1$ 的一个开邻域 $U'$，
+使(*)在 $U'$ 上是同构。此外，$Y'$ 在 $y'_1$ 处在 $Y$ 上非分歧（但在
+$Y'$ 中位于 $y$ 上方的其他点 $y'$ 处可能分歧）。
+
+当然，条件\textit{(ii)}和\textit{(iii)}也是定理结论成立的必要条件。
+利用引理3和定理2即可容易地证明本定理。
+
+\src{214}
+\result{推论}{1} 仍假设\textit{(i)}成立。$X$ 的一个非分歧覆盖 $X'$
+同构于 $Y$ 的某个非分歧覆盖 $Y'$ 的逆像，当且仅当 $X'$ 在每条纤维
+$f^{-1}(y)$ 上诱导几何平凡覆盖。
+
+由定理11，使这一条件成立的 $Y$ 中各点所成的集合是开集，所以只须在闭点
+$y$ 上验证即可\ldots{} 还可注意到与推论1等价的如下表述：同态
+$\pi_1(X)\longrightarrow\pi_1(Y)$（由引理4知它是满射）的核，是由各群
+$\pi_1(\overline{f^{-1}(y)})$ 在 $\pi_1(X)$ 中的像所生成的闭正规子群，
+其中
+\[
+  \overline{f^{-1}(y)}
+  =f^{-1}(y)\otimes_{\kappa(y)}\overline{\kappa(y)},
+\]
+$\overline{\kappa(y)}$ 表示 $\kappa(y)$ 的一个代数闭包。应注意，由于不能
+为所有纤维选取同一个基点，一旦为 $X$（从而也为 $Y$）选定基点，同态
+$\pi_1(\overline{f^{-1}(y)})\longrightarrow\pi_1(X)$ 无论如何也只能在
+复合 $\pi_1(X)$ 的内自同构的意义下确定。
+
+\result{推论}{2} 在定理11的一般条件下，再假设 $Y,X,X'$ 都是整概形，
+其函数域分别为 $K,L,L'$。则 $L'/K$ 中存在一个可分中间扩张 $K'$，它与
+$L$ 线性无关，并且 $L'=LK'$（从而 $L'=L\otimes_K K'$）。
+
+（把引理3的最后部分应用于 $X$ 的几何纤维。）定理11最有意义的应用情形
+是 $f$ 为可分态射。此时 $X'$ 在 $Y$ 上也可分，所以由命题4，$Y'$ 在
+$Y$ 上非分歧；因而(*)右端 $X\times_Y Y'$ 在 $X$ 上非分歧。由此容易
+推出：
+
+\result{推论}{3} 除\textit{(i)}外，再假设 $f$ 可分。设 $X'$ 是 $X$
+的一个连通非分歧覆盖；则 $X'$\footnote{印刷文本此处作 $X$；这个判据的
+主语是前一句引入的覆盖 $X'$。} 是 $Y$ 的某个非分歧覆盖 $Y'$ 的逆像，
+当且仅当它在某条几何纤维 $\overline F=f^{-1}(y)$ 上诱导的覆盖
+$\overline F'$ 有一个正则截面。
+
+应注意，不必假设 $\overline F'$ 在 $\overline F$ 上几何平凡（这将在
+\textit{事后}成立，尽管\textit{先验地}这个条件强得多）。推论3事实上
+等价于以下命题：
+
+\src{215}
+\result{推论}{4} 设 $f:X\longrightarrow Y$ 是满足
+$f_*(\Osh_X)=\Osh_Y$ 的固有可分态射。设 $\overline F$ 是 $Y$ 中一点
+$y$ 的几何纤维，并在 $\overline F$ 中选取一个几何点；由态射
+$\overline F\longrightarrow X\longrightarrow Y$ 得到 $X,Y$ 中的几何点，
+并取作 $\overline F,X,Y$ 的基本群的基点。在这些条件下，有正合列
+\[
+  \boxed{
+    \pi_1(\overline F)\longrightarrow\pi_1(X)
+    \longrightarrow\pi_1(Y)\longrightarrow e
+  }.
+\]
+
+由此容易推出 Serre--Lang 的下面两个命题；这里已完全除去了正规性假设：
+
+\result{推论}{5} 设 $X,Y$ 是域 $k$ 上的连通概形。假设约化概形
+$X_{\mathrm{red}}$ 在 $k$ 上可分（若 $k$ 完美，这一点自动成立），并且
+$X$ 或 $Y$ 在 $k$ 上固有。\footnote{此条件由1962年的勘误加入。} 在
+$X$（相应地，$Y$）中选取几何点 $a$（相应地，$b$），从而在
+$X\times_kY$ 中得到几何点 $c=(a,b)$ 以及自然态射
+\[
+  \pi_1(X\times_kY,c)\longrightarrow
+  \pi_1(X,a)\times\pi_1(Y,b)
+\]
+（它由从 $\pi_1(X\times Y,c)$ 到 $\pi_1(X,a)$ 和 $\pi_1(Y,b)$ 的函子性
+态射诱导）。这个态射是单射；若 $k$ 代数闭，它还是双射。
+
+（后一情形中的满射性几乎是平凡的。）与 Serre--Lang 一起，由此推出：
+
+\result{推论}{6} 设 $X$ 是代数闭域 $k$ 上的连通固有代数概形，$K$ 是 $k$
+的一个代数闭扩张。则 $X$ 与 $X\otimes_kK$ 的基本群相同；也就是说，
+后一个概形的每个非分歧覆盖都由 $X$ 的一个非分歧覆盖扩张标量而来，且
+后者在同构意义下唯一。\footnote{原文未注明固有性。在正特征下，一般的非固有概形不满足这一基域扩张不变性。}
+
+\result{注记}{}
+
+1）利用命题4可以看出，推论4中的假设 $f_*(\Osh_X)=\Osh_Y$ 并非必要。
+在一般情形中，不应在 $\pi_1(Y)$ 后接单位群 $e$，而应继续为
+\[
+  \pi_0(\overline F)\longrightarrow\pi_0(X)
+  \longrightarrow\pi_0(Y)\longrightarrow e.
+\]
+如同代数拓扑中一样。
+
+\src{216}
+2）一般说来，对于
+$\pi_1(\overline F)\longrightarrow\pi_1(X)$ 的核，目前还无法作出
+结论；这里看来应当涉及一个 $\pi_2(Y)$。不过，若 $Y$ 是局部环 $A$
+的谱，似乎应当可以借助下文定理12证明
+$\pi_1(\overline F)\longrightarrow\pi_1(X)$ 是单射；定理12在 $A$
+完备时断言的正是这一点。
+
+定理11只用到了定理1和定理2。现在我们将应用定理3，并使用如下初等引理：
+
+\result{引理}{6} 设 $X$ 是概形，$X_0$ 是相应的约化概形（也就是说，
+把幂零元杀掉所得的概形）。则 $X_0$ 的每个非分歧覆盖 $X'_0$ 都由
+$X$ 的一个非分歧覆盖 $X'$ 诱导，且 $X'$ 在典范同构的意义下唯一。
+
+这个纯局部性质的引理，在这里所起的作用类似于模理论中的定理8。把它与
+存在性定理（定理3）结合起来，就得到：
+
+\result{定理}{12} 设 $A$ 是剩余域为 $k$ 的完备诺特局部环，$X$ 是
+$A$ 上的固有概形。则 $X_0=X\otimes_Ak$ 的每个非分歧覆盖 $X'_0$
+都由 $X$ 的一个非分歧覆盖 $X'$ 诱导，且后者在同构意义下唯一。
+
+换言之：
+
+\result{推论}{1} 在 $X_0$ 中选取一个几何点，作为 $X_0$ 和 $X$ 的
+基本群的基点。则典范同态
+$\pi_1(X_0)\longrightarrow\pi_1(X)$ 是同构。
+
+现在把引理5应用于 $X_0$（为简单起见，假设
+$H^0(X_0,\Osh_{X_0})=k$），并注意到由于 $A$ 完备，它的非分歧扩张
+与其剩余域的非分歧扩张相对应；也就是说，
+$\pi_1(Y)=\pi_1(k)$，其中 $Y=\operatorname{Spec}(A)$。于是得到正合列
+\[
+  e\longrightarrow\pi_1(\overline X_0)
+  \longrightarrow\pi_1(X)\longrightarrow\pi_1(Y)\longrightarrow e.
+\]
+
+\result{推论}{2} 设 $f:X\longrightarrow Y$ 是固有平坦态射，$y_1$
+是 $Y$ 中一点，$y_0$ 是 $y_1$ 的一个特殊化，并考虑相应的
+\fquote{几何}纤维 $\overline X_1$ 和 $\overline X_0$。假设
+$\overline X_0$ 可分且连通（这蕴含 $\overline X_1$ 也满足同样的条件）。
+则存在群同态
+$\pi_1(\overline X_1)\longrightarrow\pi_1(\overline X_0)$；它在复合
+一个内自同构的意义下确定，并且是满射。
+
+\src{217}
+人们也许会期望这个同态总是双射；遗憾的是，当 $\kappa(y_0)$ 的特征
+$>0$ 时，一般并非如此。不过我们将在下文给出这个同态的核的一个上界
+（至少在 $\overline X_0$ 非奇异时），并由此推出：若 $\kappa(y_0)$
+的特征为 $0$，则上述同态是双射（这一结果也可用超越方法证明）。无论如何，
+我们已经能够借助一般纤维的 $\pi_1$ 来控制特殊纤维的 $\pi_1$。例如，
+利用特征 $p$ 的代数曲线可提升为特征零曲线这一事实（定理9，推论4），
+由超越方法可得：
+
+\result{推论}{3} 设 $X_0$ 是任意特征的代数闭域上一条完备非奇异曲线
+的概形，$g$ 是 $X_0$ 的亏格。则 $\pi_1(X_0)$ 有 $2g$ 个拓扑生成元，
+它们满足熟知的关系。
+
+再由熟知的超平面截面技巧推出：
+
+\result{推论}{4} 设 $X$ 是任意特征的代数闭域上的非奇异射影概形。
+则 $\pi_1(X)$ 有有限个拓扑生成元。
+
+下面来考察同态
+$\pi_1(\overline X_1)\longrightarrow\pi_1(\overline X_0)$ 的核。为此，
+可以假设 $Y$ 是完备离散赋值环 $V=\Osh_y$（$y=y_0$）的谱。问题等价于：
+给定 $\overline X_1$ 的一个非分歧覆盖 $\overline X'_1$（若愿意，还可
+假设它是 Galois 覆盖），判定它在什么条件下来自 $X_0$ 的一个非分歧
+覆盖。\textit{先验地}，这个给定覆盖由 $X_1\otimes_KK'$ 的一个非分歧
+覆盖 $X'_1$ 扩张标量而来，其中 $K'$ 是 $V$ 的分式域 $K$ 的代数闭包
+$\overline K$ 中的一个有限子扩张；若 $\overline X'_1$ 是 Galois 覆盖，
+其群为 $G$，则可选取 $X'_1$ 也为群 $G$ 的 Galois 覆盖。于是，要使
+$X'_1\otimes_{K'}\overline K=\overline X'_1$ 来自 $X_0$ 的一个非分歧
+覆盖，当且仅当能够在 $\overline K$ 中找到
+$K'$ 的一个有限扩张 $K''$，使
+$X''_1=X'_1\otimes_{K'}K''$ 形如 $X''\otimes_{V''}K''$；这里 $V''$
+是 $V$ 在 $K''$ 中的整闭包，而 $X''$ 是 $X\otimes_VV''$ 的一个
+非分歧覆盖。例如，假设 $X_0$ 绝对正规；则 $X\otimes_VV''$ 正规
+（因为它在 $V''$ 上平坦且特殊纤维正规），其函数域就是下列各概形共有
+的函数域 $K''(X_1)$：
+\[
+  X_1\otimes_KK''
+  =(X\otimes_VK)\otimes_KK''
+  =X\otimes_VK''
+  =(X\otimes_VV'')\otimes_{V''}K''.
+\]
+令 $L''=K''(X'_1)$ 为 $X'_1\otimes_{K'}K''$ 的函数域。它是
+$K''(X_1)$ 的有限可分扩张，而上述条件也就是说，$L''$ 是
+$X\otimes_VV''$ 的函数域的非分歧扩张（也就是说，
+$X\otimes_VV''$ 在 $L''$ 中的正规化在 $X\otimes_VV''$ 上非分歧）。
+只须检验 $L''$ 在 $X\otimes_VV''$ 的特殊纤维各点处非分歧即可
+（因为它在一般纤维 $X_1\otimes_KK''$ 上方已经非分歧）。现在若
+$X_0$ 非奇异，则由 Nagata--Zariski 的\fquote{纯性定理}，甚至只须检验
+$L''$ 在 $X\otimes_VV''$ 的特殊纤维一般点处的局部环 $O''$ 上方
+非分歧即可。这个环是离散赋值环，也是特殊纤维一般点处的局部环
+$O\subset K(X_1)$ 在 $K''(X_1)$ 中的正规化。因此我们得到：
+
+\src{218}
+\result{推论}{5} 在上述条件和记号下，$\overline X_1=
+X_1\otimes_K\overline K$ 的非分歧覆盖
+$X'_1\otimes_{K'}\overline K$ 来自 $\overline X_0$ 的一个非分歧覆盖，
+当且仅当存在 $\overline K/K'$ 的一个有限子扩张 $K''$，使
+$K''(X'_1)$ 在离散赋值环 $O''\subset K''(X_1)$ 上方非分歧。
+
+现在注意，$O''$ 是离散赋值环 $O'\subset K'(X_1)$ 在 $K''(X_1)$
+中的正规化；这里 $O'$ 是 $O$ 在 $K'(X_1)$ 中的正规化。环 $O'$ 包含
+$V$ 在 $K'$ 中的整闭包 $V'$，而 $V'$ 的一个素元 $u$ 也是 $O'$ 的
+素元。再假设 $X'_1$ 是 Galois 覆盖，Galois 群 $G$ 的阶 $n$ 与
+$\kappa(y_0)$ 的特征 $p$ 互素（$p$ 也是 $O'$ 的剩余域的特征）。于是
+$K'(X'_1)$ 在 $O'$ 上方驯分歧。由 Abhyankar 引理容易推出：向它添加
+$O'$ 的一个素元的 $n$ 次根 $v$ 后，所得扩张在 $O'$ 于
+$K'(X_1)(v)$ 中的正规化上方非分歧。而 $v$ 可以取为 $V'$ 的一个素元
+的 $n$ 次根，这就证明了推论5的条件成立。（利用 Abhyankar 引理和纯性
+定理的这一办法，是 Serre 卖给我的。）为了表述所得结果，对每个紧致全
+不连通群 $\pi$，令 $\widetilde\pi$ 表示 $\pi$ 关于其 Sylow $p$-子群
+所生成的闭子群的商群；也就是说，它是 $\pi$ 的所有阶与 $p$ 互素的离散
+商群的逆极限。采用这个记号，便有：
+
+\result{定理}{13} 设 $f:X\longrightarrow Y$ 是固有平坦态射，$y_1$
+是 $Y$ 中一点，$y_0$ 是 $y_1$ 的一个特殊化，并假设 $\overline X_0$
+连通且非奇异。由定理12推论2中的满同态所诱导的同态
+$\widetilde\pi_1(\overline X_1)\longrightarrow
+\widetilde\pi_1(\overline X_0)$ 是同构。
+
+换言之：
+
+\src{219}
+\result{推论}{1} Galois 群的阶与 $\kappa(y_0)$ 的特征 $p$ 互素的
+非分歧 Galois 覆盖，在 $\overline X_0$ 和 $\overline X_1$ 上有相同的
+分类。
+
+特别地，若 $\kappa(y_0)$ 的特征为零，便由代数方法得出
+$\pi_1(\overline X_1)\longrightarrow\pi_1(\overline X_0)$ 是双射。
+
+最后指出，上述技巧还给出下面这个比定理13更一般的结果：
+
+\result{定理}{14} 设 $f:X\longrightarrow Y$ 是固有光滑态射，$D$ 是
+$X$ 的一个闭子概形，它在 $Y$ 上光滑，并且在每一点处的余维数都为1。
+对 $f$ 的一条纤维 $Z=f^{-1}(z)$，令 $Z'=Z-Z\cap D$，并令
+$\pi_1^t(Z')$ 为基本群 $\pi_1(Z')$ 的如下商群：它分类 $Z'$ 的那些
+在 $\overline{Z\cap D}$ 上方驯分歧的非分歧覆盖。设 $y_0,y_1$ 如定理13。
+则有一个满同态（在复合一个内自同构的意义下确定）
+\[
+  \pi_1^t(\overline X'_1)\longrightarrow\pi_1^t(\overline X'_0),
+\]
+并且相应的同态
+\[
+  \widetilde\pi_1^t(\overline X'_1)
+  \longrightarrow\widetilde\pi_1^t(\overline X'_0)
+\]
+是同构。
+
+由此可得定理13各推论以及定理12推论4的相应变体。同样，利用定理9
+推论3，由超越方法可得：
+
+\result{推论}{} 设 $X_0$ 是任意特征的代数闭域上一条完备非奇异曲线
+的概形，$S=(s_i)_{1\le i\le n}$ 是 $X_0$ 中一个含 $n$ 个元素的有限
+子集。则 $\pi_1^t(X_0-S)$ 有 $2g+n$ 个拓扑生成元
+$x_i,y_i$（$1\le i\le g$）和 $\sigma_j$（$1\le j\le n$），它们
+满足关系
+\[
+  \left(\prod_i x_i y_i x_i^{-1}y_i^{-1}\right)
+  \sigma_1\cdots\sigma_n=1,
+\]
+其中 $\sigma_j$ 是与 $s_j$ 相应的惯性群的生成元。对于每个阶与该域
+的特征互素的有限群 $G$，若它由满足上述关系的元素
+$x_i,y_i,\sigma_j$ 生成，则存在 $X_0-S$ 的一个群为 $G$ 的非分歧
+Galois 覆盖，而且它在点 $s_j$ 处的惯性群由 $\sigma_j$ 生成。
+
+当 $X_0$ 的亏格为0且 $n=3$ 时，我们便得到\fquote{三点问题}的一个
+解，至少对阶与该域特征互素的 Galois 覆盖如此。（这里定理9其实并不
+需要；另一方面，看来还可以从三点问题所考察的特殊情形推出前一推论。）
+
+\src{220}
+\result{注记}{}
+
+1）更完整的研究或许应当引入 $X,X_0,X_1$ 的广义 Galois 覆盖
+（其 Galois 群可以是无穷小群），从而有可能恢复定理12推论2中的核。
+相反，对具有非驯分歧的覆盖进行研究，看来要困难得多。
+
+2）将引理6与 Grauert 关于沿超平面截面的非奇异射影概形的形式完备化
+的一项结果结合起来（或者与定理11之后注记2中提到、目前尚未证明的定理
+结合起来），也可以在\fquote{抽象}代数几何中证明经典的基本群 Lefschetz
+定理。
+
+\begin{center}
+  \textbf{参考文献}
+\end{center}
+
+\begin{description}
+  \item[{[1]}] Dieudonné (J.) 和 Grothendieck (A.). --- \emph{Éléments de
+    géométrie algébrique}, Publications mathématiques de l'Institut des Hautes
+    Études Scientifiques（即将出版）。
+  \item[{[2]}] Grothendieck (Alexander). --- \emph{The cohomology theory of
+    abstract algebraic varieties}. International Congress of Mathematicians
+    [1958. Edinburgh]（即将出版）。
+  \item[{[3]}] Serre (Jean-Pierre). --- \emph{Faisceaux algébriques
+    cohérents}, Annals of Math., Series 2, t. 61, 1955, p. 197--278.
+  \item[{[4]}] Serre (Jean-Pierre). --- \emph{Géométrie algébrique et
+    géométrie analytique}, Ann. Institut Fourier Grenoble, t. 6, 1955--1956,
+    p. 1--42.
+\end{description}
+
+\par

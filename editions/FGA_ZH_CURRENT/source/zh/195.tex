@@ -1,0 +1,938 @@
+\unit{第195次报告——下降技术 II}
+\sid{195}
+\src{369}
+\seminarzh{第12年度，1959/60，第195号\\（1960年2月）}
+\paperhead{下降技术与代数几何中的存在性定理\\
+II. 形式模理论中的存在性定理}%
+  {亚历山大·格罗滕迪克 著}
+
+\fsection{A}{可表函子与 pro-可表函子}
+
+\subsection*{1. 可表函子}
+\addcontentsline{toc}{subsection}{1. 可表函子}
+
+设 $\mathcal C$ 是一个范畴。对每个 $X\in\mathcal C$，以 $h_X$ 表示从
+$\mathcal C$ 到集合范畴 $(\operatorname{Ens})$ 的反变函子
+\[
+  h_X:\mathcal C\longrightarrow(\operatorname{Ens}),
+\]
+其定义公式为
+\[
+  h_X(Y)=\operatorname{Hom}(Y,X).
+\]
+若在 $\mathcal C$ 中给定一个态射 $X\longrightarrow X'$，便以显然方式得到
+函子同态 $h_X\longrightarrow h_{X'}$：$h_X$ 关于 $X$ 协变。换言之，我们
+定义了一个典范协变函子
+\[
+  h:\mathcal C\longrightarrow
+  \operatorname{Hom}\bigl(\mathcal C^o,(\operatorname{Ens})\bigr)
+\]
+它从 $\mathcal C$ 取值于从 $\mathcal C$ 的对偶范畴 $\mathcal C^o$ 到集合
+范畴的协变函子所成的范畴。回顾：
+
+\result{命题}{1.1} 函子 $h$ 是\emph{全忠实}的；也就是说，对 $\mathcal C$
+中任意一对对象 $X,X'$，自然映射
+\[
+  \operatorname{Hom}(X,X')\longrightarrow
+  \operatorname{Hom}(h_X,h_{X'})
+\]
+是双射。
+
+特别地，若函子
+$F\in\operatorname{Hom}(\mathcal C^o,(\operatorname{Ens}))$ 同构于某个形如
+$h_X$ 的函子，则 $X$ 在唯一同构意义下确定。这时称函子 $F$ 是
+\emph{可表的}。上述命题意味着，典范函子 $h$ 给出 $\mathcal C$ 与
+$\operatorname{Hom}(\mathcal C^o,(\operatorname{Ens}))$ 中由可表函子组成的
+全子范畴之间的等价。这一事实是\fquote{泛问题的解}这一概念的基础：这类问题
+总是在考察从 $\mathcal C$ 到 $(\operatorname{Ens})$ 的某个给定函子（如这里
+一样为反变函子，或在对偶情形中为协变函子）是否可表。
+
+\src{370}
+此外，由范畴中积的概念本身的定义[1]，函子 $h:X\longmapsto h_X$ 在积存在时
+与积交换（更一般地，在有限或无限逆极限存在时与之交换；特别包括纤维积、
+\fquote{核}[2]的形成等等）：只要 $X\times X'$ 存在，就有函子同构
+\[
+  h_{X\times X'}\xrightarrow{\sim}h_X\times h_{X'}
+\]
+也就是说，有关于 $Y$ 具有函子性的双射
+\[
+  h_{X\times X'}(Y)\xrightarrow{\sim}h_X(Y)\times h_{X'}(Y).
+\]
+特别地，在 $\mathcal C$ 中给定一个态射
+\[
+  X\times X'\longrightarrow X''
+\]
+（也就是在 $\mathcal C$ 中给定 $X,X',X''$ 之间的一个\fquote{合成律}），
+等价于给定一个态射
+\[
+  h_{X\times X'}=h_X\times h_{X'}\longrightarrow h_{X''},
+\]
+也等价于对每个 $Y\in\mathcal C$ 给定一个集合的合成律
+\[
+  h_X(Y)\times h_{X'}(Y)\longrightarrow h_{X''}(Y)
+\]
+并使得对 $\mathcal C$ 中每个态射 $Y\longrightarrow Y'$，集合映射系
+\[
+  h_{X^{(i)}}(Y)\longleftarrow h_{X^{(i)}}(Y')
+  \qquad(\text{对 }i=0,1,2)
+\]
+是分别相对于 $Y$ 与 $Y'$ 的两个合成律之间的态射。由此可见，在
+$\mathcal C$ 的对象 $X$ 上给定\fquote{$\mathcal C$-群}、
+\fquote{$\mathcal C$-环}等结构，最便利的表述（无论理论上还是实践中）是：
+对每个 $Y\in\mathcal C$，在集合 $h_X(Y)$ 上给定通常意义下的群律（相应地，
+环律等等），并要求与态射 $Y\longrightarrow Y'$ 相应的映射
+$h_X(Y)\longleftarrow h_X(Y')$ 是群同态（相应地，环同态等等）。例如，在任意
+基预概形 $S$ 上定义各种经典群 $G_a$、$G_m$、$\operatorname{Gl}(n)$ 等并写出
+这些群之间的经典关系；在由拟凝聚层 $\mathcal F$ 定义的 $S$ 上仿射概形
+$V(\mathcal F)$ 上赋予\fquote{向量丛}结构；以及定义并研究相应的各种旗簇
+（Grassmann 簇、射影丛）等等，采用这种做法最为直观便利。一般的思路就是借助
+典范函子 $h$，直接把 $\mathcal C$ 的对象等同于某些特殊反变函子，也就是
+可表函子，
+
+\src{371}
+它们从 $\mathcal C$ 取值于集合范畴。
+
+通常的反转箭头手续——例如对仿射概形而言，从几何语言转到交换代数语言时
+必须如此——引导我们把上述讨论对偶化；特别地，还要引入从
+$\mathcal C\longrightarrow(\operatorname{Ens})$ 的可表协变函子，也就是形如
+\[
+  Y\longmapsto\operatorname{Hom}(X,Y)=h'_X(Y).
+\]
+的函子。
+
+\subsection*{2. pro-可表函子与 pro-对象}
+\addcontentsline{toc}{subsection}{2. pro-可表函子与 pro-对象}
+
+设 $\widetilde X=(X_i)_{i\in I}$ 是 $\mathcal C$ 中对象的一个逆系统；与之相应
+有协变函子
+\[
+  h'_{\widetilde X}=\varinjlim_i h'_{X_i},
+\]
+更明确地说，
+\[
+  h'_{\widetilde X}(Y)=\varinjlim_i h'_{X_i}(Y)
+  =\varinjlim_i\operatorname{Hom}(X_i,Y),
+\]
+它从 $\mathcal C$ 取值于 $(\operatorname{Ens})$。若从 $\mathcal C$ 到
+$(\operatorname{Ens})$ 的一个函子同构于这类函子，且 $I$ 是滤过的，就称它是
+\emph{pro-可表的}。根据上一小节，这恰好就是同构于可表函子的滤过直极限的
+那些函子。设 $\widetilde X'=(X'_j)_{j\in J}$ 是 $\mathcal C$ 中第二个滤过
+逆系统（建立在第二个滤过预序指标集 $J$ 上）；容易验证存在典范双射（它推广
+命题1.1）
+\[
+  \operatorname{Hom}(h'_{\widetilde X'},h'_{\widetilde X})
+  =\varprojlim_j\varinjlim_i\operatorname{Hom}(X_i,X'_j).
+\]
+这就引出 $\mathcal C$ 的 pro-对象所成的范畴
+$\operatorname{Pro}(\mathcal C)$：它的对象是 $\mathcal C$ 中对象的逆系统
+（其指标集可为任意滤过预序集）。若
+$\widetilde X=(X_i)_{i\in I}$ 与 $\widetilde X'=(X'_j)_{j\in J}$ 是两个这类
+对象，则定义
+\[
+  \operatorname{ProHom}(\widetilde X,\widetilde X')
+  =\varprojlim_j\varinjlim_i\operatorname{Hom}(X_i,X'_j),
+\]
+pro-同态的合成是显然的。由构造本身，
+$\widetilde X\longmapsto h'_{\widetilde X}$ 可视为关于 $\widetilde X$ 的反变
+函子；它给出 $\mathcal C$ 的 pro-对象范畴的对偶范畴与从 $\mathcal C$ 到
+$(\operatorname{Ens})$ 的 pro-可表协变函子范畴之间的等价。当然，
+$\mathcal C$ 的一个对象 $X$ 典范地定义一个 pro-对象，
+
+\src{372}
+仍记为 $X$，从而 $\mathcal C$ 等价于
+$\operatorname{Pro}(\mathcal C)$ 的一个全子范畴。
+若 $\widetilde X=(X_i)_{i\in I}$ 是 $\mathcal C$ 的任意 pro-对象，则（在上述
+等同下）
+\[
+  \widetilde X=\varprojlim_i X_i,
+\]
+这里的逆极限是在 $\operatorname{Pro}(\mathcal C)$ 中取的（因为
+$h'_{\widetilde X}=\varinjlim_i h'_{X_i}$）。须注意，即使 $X_i$ 的逆极限在
+$\mathcal C$ 中存在，它通常也不同构于 $\operatorname{Pro}(\mathcal C)$ 中的
+逆极限 $\widetilde X$；当 $\mathcal C$ 是集合范畴时，这一点已经十分明显。
+还要指出，按定义，$\varprojlim_{\mathcal C}X_i=L$ 的含义是：关于
+$Y\in\mathcal C$、取值于 $(\operatorname{Ens})$ 的函子
+\[
+  \varprojlim_i\operatorname{Hom}_{\mathcal C}(Y,X_i)
+  =\operatorname{Hom}_{\operatorname{Pro}(\mathcal C)}(Y,\widetilde X)
+\]
+可由 $L$ 表示，也就是同构于 $\operatorname{Hom}_{\mathcal C}(Y,L)$。因此，
+$\varprojlim_{\mathcal C}X_i$ 已经由 pro-对象 $\widetilde X$ 定义；只要它有
+定义，它就精确地、函子性地依赖于 pro-对象 $\widetilde X$，所以不妨把它记为
+$\varprojlim_{\mathcal C}(\widetilde X)$。若 $\mathcal C$ 中的逆极限总是存在，
+则 $\varprojlim_{\mathcal C}(\widetilde X)$ 是从
+$\operatorname{Pro}(\mathcal C)$ 到 $\mathcal C$ 的函子，并且有一个函子间的
+典范同态
+$\varprojlim_{\mathcal C}(\widetilde X)\longrightarrow\widetilde X$。
+
+任取一个函子（为确定起见，设为协变函子）
+\[
+  F:\mathcal C\longrightarrow\mathcal C'
+\]
+它都以显然方式延拓为函子
+\[
+  \operatorname{Pro}(F):\operatorname{Pro}(\mathcal C)
+  \longrightarrow\operatorname{Pro}(\mathcal C'),
+\]
+由此可见，若 $\mathcal C'$ 中的逆极限总是存在，则 $F$ 还典范地定义复合函子
+\[
+  \overline F:\operatorname{Pro}(\mathcal C)\longrightarrow\mathcal C',
+  \qquad
+  \overline F=\varprojlim_{\mathcal C'}\circ\operatorname{Pro}(F),
+\]
+它把 $\widetilde X=(X_i)_{i\in I}$ 变为
+$\varprojlim_{\mathcal C'}F(X_i)$。
+
+若 pro-对象 $\widetilde X$ 同构于某个 pro-对象 $(X_i)_{i\in I}$，且其转移
+态射 $X_i\longrightarrow X_j$ 都是满态射，则称 $\widetilde X$ 是一个
+\emph{严格 pro-对象}；由这类对象定义的函子称为\emph{严格 pro-可表的}。
+这时还可以要求 $I$ 是滤过偏序集，并且每个满态射
+$X_i\longrightarrow X'$ 都等价于一个满态射
+
+\src{373}
+$X_i\longrightarrow X_j$，其中 $j\in I$ 适当（并由此条件唯一确定）。在这些
+条件下，逆系统 $(X_i)_{i\in I}$ 在唯一同构意义下确定（这里同构取通常的
+逆系统同构之意）。由此可知，在 $\operatorname{Pro}(\mathcal C)$ 中，严格
+pro-对象的逆系统 $\widetilde X^{(\alpha)}$ 的逆极限总是存在；并且沿用上面对
+$F$、$\overline F$ 的记号，有
+\[
+  \overline F\left(\varprojlim_\alpha\widetilde X^{(\alpha)}\right)
+  =\varprojlim_{\alpha,\mathcal C'}
+  \overline F\left(\widetilde X^{(\alpha)}\right).
+\]
+特别地，若 $\mathcal C$ 的每个 pro-对象都是严格的（参见下一小节），则延拓
+函子 $\overline F$ 与逆极限交换。
+
+\subsection*{3. pro-可表函子的刻画}
+\addcontentsline{toc}{subsection}{3. pro-可表函子的刻画}
+
+设 $\mathcal C$、$\mathcal C'$ 是两个具有有限逆极限的范畴（即相对于有限
+预序集而取的逆极限，指标集不必滤过）；等价地说，它们具有有限积和有限
+纤维积（这特别蕴涵存在一个\fquote{右单位对象} $e$，使得对每个 $X$，
+$\operatorname{Hom}(X,e)$ 只有一个元素）。设 $F$ 是从 $\mathcal C$ 到
+$\mathcal C'$ 的协变函子。下列条件等价：
+
+\begin{enumerate}
+\item[(i)] $F$ 与有限逆极限交换；
+\item[(ii)] $F$ 与有限积和有限纤维积交换；
+\item[(iii)] $F$ 与有限积交换，并且对 $\mathcal C$ 中每个正合图
+\[
+  X\longrightarrow X'\rightrightarrows X''
+\]
+（[3]，A，定义2.1），经 $F$ 变换所得的图
+\[
+  F(X)\longrightarrow F(X')\rightrightarrows F(X'')
+\]
+是正合的。
+\end{enumerate}
+
+这时称 $F$ 是\emph{左正合}的。
+
+以下假设 $\mathcal C$ 中存在有限逆极限。由定义立即可见，可表函子左正合；
+再取极限可知，pro-可表函子也左正合。
+
+为得到逆命题，设
+\[
+  F:\mathcal C\longrightarrow(\operatorname{Ens})
+\]
+是一个协变函子，并设 $X\in\mathcal C$、$\xi\in F(X)$。若对每个
+$X'\in\mathcal C$、每个 $\xi'\in F(X')$ 以及每个严格单态射（[3]，A，2）
+$u:X'\longrightarrow X$，只要 $\xi=F(u)(\xi')$ 就必有 $u$ 为同构，则称
+$\xi$（或二元组 \src{374}$(X,\xi)$）是\emph{极小的}。另一方面，若存在态射
+$v:X\longrightarrow X''$ 使 $\xi''=F(v)(\xi)$，就称二元组 $(X,\xi)$
+\emph{支配} $(X'',\xi'')$（其中 $\xi\in F(X)$、$\xi''\in F(X'')$）。
+若 $\xi$ 极小且 $F$ 左正合，则态射 $v$ 是唯一的；若 $\xi''$ 极小，则
+$v$ 是满射。由此容易推出下列命题：
+
+\result{命题}{3.1} $F$ 严格 pro-可表，当且仅当它满足下列两个条件：
+\begin{enumerate}
+\item[(i)] $F$ 左正合；
+\item[(ii)] 每个二元组 $(X,\xi)$（其中 $\xi\in F(X)$）都由某个极小二元组
+支配。
+\end{enumerate}
+
+若 $\mathcal C$ 的每个对象都是阿廷对象，则后一条件为空条件：只须在 $X$
+的所有子对象 $X'$ 中，选取一个极小者，使得存在 $\xi'\in F(X')$ 且
+$\xi$ 是 $\xi'$ 的像。因此有：
+
+\result{推论}{} 设 $\mathcal C$ 是一个对象均为阿廷对象且具有有限逆极限的
+范畴。那么，从 $\mathcal C$ 到 $(\operatorname{Ens})$ 的 pro-可表函子恰好
+是左正合函子，并且它们实际上都是严格 pro-可表的。
+
+最后这一事实也就是说，\emph{$\mathcal C$ 的每个 pro-对象都是严格的}。
+
+\subsection*{4. 例：Galois 型群与 pro-代数群}
+\addcontentsline{toc}{subsection}{4. Galois 型群与 pro-代数群}
+
+若 $\mathcal C$ 是通常有限群的范畴，则 $\operatorname{Pro}(\mathcal C)$
+等价于紧全不连通拓扑群的范畴。这类群以及把通常有限群换成给定基预概形上的
+有限群概形（例如域 $k$ 上的有限代数群）所得的推广，将充当预概形的绝对与
+相对基本群、同伦群和同调群。在所有这些例子中，命题3.1的推论都适用，而且
+$\pi_1$ 确实应当借助相应函子来定义[2]。从域上（或更一般地，从诺特预概形上）
+的代数群或拟代数群范畴出发时也是如此：由此得到 Serre [4] 的
+\fquote{pro-代数群}。
+
+\subsection*{5. 例：“形式簇”}
+\addcontentsline{toc}{subsection}{5. 例：“形式簇”}
+
+设 $\Lambda$ 是诺特环，$\mathcal C$ 是所有 $\Lambda$-代数 $A$ 所成的
+范畴，其中 $A$ 作为 $\Lambda$-模是有限型阿廷模（简言之，
+
+\src{375}
+是阿廷 $\Lambda$-代数）。此时满足命题3.1之推论的条件。这里的范畴
+$\operatorname{Pro}(\mathcal C)$ 等价于下列 $\Lambda$-拓扑代数 $O$ 所成的
+范畴：$O$ 同构于拓扑逆极限
+\[
+  O=\varprojlim_i O_i
+\]
+，其中 $O_i\in\mathcal C$；也就是说，$O$ 的拓扑是线性的、分离的且完备的，
+并且对 $O$ 的每个开理想 $J_i$，商 $O/J_i$ 都是 $\Lambda$ 上的阿廷代数。
+与这种代数相应的函子 $\mathcal C\longrightarrow(\operatorname{Ens})$
+正是
+\begin{align*}
+  F(A)=h'_O(A)
+  &=\{\text{拓扑 $\Lambda$-代数的连续同态 }
+       O\longrightarrow A\}\\
+  &=\varinjlim_i
+    \operatorname{Hom}_{\Lambda\text{-代数}}(O_i,A).
+\end{align*}
+
+还要指出，范畴 $\mathcal C$ 本质上是若干相应范畴的积，这些范畴对应于
+$\Lambda$ 的各个极大理想 $\mathfrak m$ 所给出的
+$\Lambda_{\mathfrak m}$ 的完备化局部环；因此，如有需要，可以只考察
+$\Lambda$ 是这类完备局部环的情形。无论如何，$O$ 典范地分解成若干局部
+分量的拓扑积，这些分量对应于由 $O$ 定义的形式概形[2]的\fquote{点}。
+这类点由某个 $F(K)$ 中的对象 $\xi$ 定义，其中 $K\in\mathcal C$ 是一个域
+（例如所考察的局部分量的剩余域）；两个二元组 $(\xi,K)$ 与 $(\xi',K')$
+定义同一点，当且仅当它们由同一个 $(\xi'',K'')$ 支配，或者等价地，它们
+支配同一个 $(\xi''',K''')$。（若各 $\Lambda/\mathfrak m$ 都是代数闭的，
+只须取各 $F(\Lambda/\mathfrak m)$ 的不交并。）
+
+关键在于给出条件，保证 $O$ 中与 $\xi\in F(K)$ 相应的局部分量 $O_\xi$
+是诺特环。当 $\Lambda$ 是完备局部环（这里回顾，它是诺特的）时，这等价于
+$O_\xi$ 同构于 $\Lambda$ 上的形式幂级数环
+$\Lambda[[t_1,\ldots,t_n]]$ 的一个商环。为给出这种判据，对每个环 $A$
+引入 $A$ 的\fquote{对偶数}所成的 $A$-代数 $I_A$：
+\[
+  I_A=A[t]/t^2A[t].
+\]
+设 $\varepsilon:I_A\longrightarrow A$ 是增广同态；若
+$A\in\mathcal C$，它定义映射
+\[
+  F(\varepsilon):F(I_A)\longrightarrow F(A),
+\]
+
+\src{376}
+再利用 $F$ 左正合这一事实，就能在 $F(I_A)$ 的子集
+\[
+  F(I_A,\xi)=F(\varepsilon)^{-1}(\xi)
+\]
+上内在地定义 $A$-模结构；这个子集由所有\fquote{约化为 $\xi$}的
+$\xi'\in F(I_A)$ 组成。利用 $F$ 关于 $O$ 的明确形式可知，这个 $K$-模
+可等同于
+\[
+  \operatorname{Hom}_{\Lambda}(\mathfrak m_\xi/\mathfrak m_\xi^2,A),
+\]
+其中 $\mathfrak m_\xi$ 是同态 $\xi:O\longrightarrow A$ 的核；也就是说，
+若 $A$ 是域，它就是 $O$ 的局部分量 $O_\xi$ 的极大理想。由此立即得到：
+
+\result{命题}{5.1} 设 $\xi\in F(K)$，其中 $K\in\mathcal C$ 是一个域。
+$O$ 中相应的局部分量 $O_\xi$ 是诺特环，当且仅当 $F(I_K)$ 中约化为
+$\xi$ 的元素所成的集合 $F(I_K,\xi)$ 是 $K$ 上有限维向量空间。在这些
+条件下，有典范同构
+\[
+  F(I_K,\xi)=
+  \operatorname{Hom}\!\left(
+    \frac{\mathfrak m_\xi/\mathfrak m_\xi^2}
+         {\operatorname{im}(\mathfrak n_\xi/\mathfrak n_\xi^2)},K
+  \right),
+\]
+其中 $\mathfrak n_\xi$ 是 $\Lambda$ 的极大理想，也就是同态
+$\Lambda\longrightarrow K$ 的核。
+\footnote{印刷文本在这里给出的公式只有当 $\Lambda$ 是域时才正确。
+1962年的勘误规定，在一般情形中，须将
+$\mathfrak m_\xi/\mathfrak m_\xi^2$ 除以
+$\mathfrak n_\xi/\mathfrak n_\xi^2$ 的像。}
+特别地，$K$-向量空间 $F(I_K,\xi)$ 的维数等于上述修正后的向量空间在域
+$O_\xi/\mathfrak m_\xi=K(\xi)$ 上的维数。
+
+假设 $O_\xi$ 是诺特环；为简化记号，再假设 $\Lambda$ 是完备局部环且
+$O=O_\xi$。若 $O$ 是 $\Lambda[t_1,\ldots,t_n]$ 在该环某个诱导出
+$\Lambda$ 极大理想的极大理想处局部化之后的完备化代数上的有限平展代数，
+则称 $O$\emph{在 $\Lambda$ 上光滑}。若 $O$ 在 $\Lambda$ 上的剩余扩张
+平凡（例如 $\Lambda$ 的剩余域代数闭），这等价于说 $O$ 本身同构于这类
+形式幂级数代数。
+\footnote{1962年的勘误指出，这个\fquote{在 $\Lambda$ 上光滑}的定义只有
+在剩余扩张 $k'/k$ 可分时才正确；一般情形参见 SGA III，1.1。}
+最后，若不再假设 $O$ 为诺特环，只要 $O$ 同构于若干商
+$\Lambda$-代数的拓扑逆极限，而这些商代数是诺特的并且按上述意义在
+$\Lambda$ 上光滑，仍称 $O$ 在 $\Lambda$ 上光滑。这立即推广到不再假设
+$\Lambda$、$O$ 为局部环的情形。于是有：
+
+\result{命题}{5.2} $O$ 在 $\Lambda$ 上光滑，当且仅当相应函子 $F$
+把满态射变为满态射。
+
+这就是说，对 $\mathcal C$ 中每个满同态 $A\longrightarrow A'$，
+$F(A)\longrightarrow F(A')$ 都是满射。当然，只须在 $A$ 为局部环时验证
+这一条件；并且逐步进行时，只须考虑 $A\longrightarrow A'$ 的核理想被
+$A$ 的极大理想零化的情形。在实践中，这归结为验证某个与无穷小不变量有关的
+障碍
+
+\src{377}
+为零；这里的无穷小不变量属于产生函子 $F$ 的情形。这是一个上同调性质的问题。
+
+最后，在上述背景下简要谈谈\emph{定义环}。仍设 $F$ 是从 $\mathcal C$ 到
+$(\operatorname{Ens})$ 的函子，并由拓扑 $\Lambda$-代数 $O$ pro-表示。
+那么对每个 $A\in\mathcal C$ 和每个 $\xi\in F(A)$，都存在 $A$ 的一个最小
+子环 $A'$，使得 $\xi$ 是 $F(A')$ 中某个元素 $\xi'$ 的像（此时 $\xi'$
+唯一确定）。事实上，只须以从 $O$ 到 $A$ 的同态来解释 $\xi$，再取
+$A'$ 为 $O$ 在该同态下的像。此时称 $A'$ 是对象 $\xi\in F(A)$ 的定义环。
+若 $u:A\longrightarrow B$ 是代数同态且 $\eta=F(u)(\xi)$，则 $\eta$ 的
+定义环就是 $\xi$ 的定义环在 $u$ 下的像。从一个给定函子
+$F:\mathcal C\longrightarrow(\operatorname{Ens})$ 出发时，定义环的存在性
+及其上述性质大致等价于 $F$ 可 pro-表示；因此，这些性质通常远非平凡。
+
+\fsection{B}{两个存在性定理}
+
+沿用 A 第5节的记号，并从一个协变函子
+\[
+  F:\mathcal C\longrightarrow(\operatorname{Ens}) ;
+\]
+出发；我们要寻找便于使用的判据，使 $F$ 可 pro-表示，也就是能像上面那样用
+一个 $\Lambda$-代数 $O$ 表出。根据 A 中命题3.1的推论，这当且仅当 $F$
+左正合。就下降技术目前的状况而言（参见[3]第9页提出的问题），在最重要的
+情形中无法直接以这个形式验证该判据，因而需要表面看来要求较弱的判据。
+
+\result{定理}{1} 函子 $F$ 可 pro-表示，当且仅当它满足下列两个条件：
+\begin{enumerate}
+\item[(i)] $F$ 与有限积交换；
+\item[(ii)] 对每个代数 $A\in\mathcal C$ 以及 $\mathcal C$ 中每个同态
+$A\longrightarrow A'$，只要图
+\[
+  A\longrightarrow A'\rightrightarrows A'\otimes_A A'
+\]
+是正合的（[3]，A，定义1.2），其变换后的图
+\[
+  F(A)\longrightarrow F(A')\rightrightarrows F(A'\otimes_A A')
+\]
+
+\src{378}
+就是正合的。
+\end{enumerate}
+此外，只须在 $A$ 为局部环并且又属于下列两种情形之一时验证（ii）：
+\begin{enumerate}
+\item[(a)] $A'$ 是 $A$ 上的自由模；
+\item[(b)] 商模 $A'/A$ 是长度为1的 $A$-模。
+\end{enumerate}
+
+该定理的证明颇为精细，无法在这里勾勒。我们只指出，它主要依赖于对阿廷代数
+之谱中的等价关系（取范畴意义）的研究；这种研究仍提出若干问题，而其解决看来
+是理论进一步发展所不可缺少的。
+
+在应用中，条件（i）的验证总是平凡的。条件（ii）的验证分成两部分：
+当 $A'$ 是自由 $A$-模时，这属于沿平坦态射的下降技术（[3]，定理1、2、3），
+并无困难。为处理情形（b），采用下列结果：
+
+\result{定理}{2} 设 $A$ 是极大理想为 $\mathfrak m$ 的阿廷局部环，
+$A'$ 是包含 $A$ 的 $A$-代数，满足 $\mathfrak mA'\subset A$，并且
+\[
+  A\longrightarrow A'\rightrightarrows A'\otimes_A A'
+\]
+正合（特别地，当 $A'/A$ 是长度为1的 $A$-模时便是如此）。设
+$\mathcal F$ 是变动预概形上的平坦拟凝聚层所成的纤维范畴（[3]，A，
+定义1.1）。那么态射
+$\operatorname{Spec}(A')\longrightarrow\operatorname{Spec}(A)$ 是严格
+$\mathcal F$-下降态射（[3]，A，定义1.7）。
+
+换言之，给定一个平坦 $A$-模 $M$，完全等价于给定一个平坦
+$A'$-模 $M'$，以及一个从 $M'\otimes_AA'$ 到
+$A'\otimes_AM'$ 的 $A'\otimes_AA'$-同构；该同构满足下降数据通常的传递性
+条件（见前引处）。
+
+定理2的证明首先要证
+\[
+  H^i(A'/A,G_a)=0\qquad\text{对 }i\geq 1
+\]
+（[3]，A，4(e)）；假设 $\mathfrak mA'\subset A$ 使问题很容易化归到
+$A$ 是域 $k$ 的情形（即 $A/\mathfrak m$）。然后应用[3]第16页指出的各个
+等价。
+
+\fsection{C}{若干特殊情形的应用}
+
+\subsection*{1. 由预概形表示的函子：一般评注}
+\addcontentsline{toc}{subsection}{1. 由预概形表示的函子：一般评注}
+
+设 $S$ 是局部诺特预概形。称 $S$ 上的预概形 $X$
+\src{379}在 $S$ 上局部有限型，如果对每个投影到 $y\in S$ 的
+$x\in X$，\footnote{印刷文本此处作\fquote{$y\in Y$}，并在本段末尾再次
+使用 $Y$。由于所考察的态射是 $X\longrightarrow S$，两处均按 $S$ 读取。}
+存在 $y$ 的一个仿射邻域（其环为 $A$）以及 $x$ 在该邻域上的一个仿射邻域
+（其环为 $B$），使得 $B$ 是有限型 $A$-代数。经典泛问题的解提供了许多重要
+例子：有些预概形在 $S$ 上局部有限型，却不在 $S$ 上有限型。因此，必须能够
+把曲线的 Picard 概形看作无穷多个连通分支之并；须注意不要把这些分支与单位元
+的连通分支，也就是\fquote{Picard 簇}混淆。有时，把自己置于 $S$ 上局部
+有限型预概形所成的范畴 $\mathcal C$ 中，并在其中考察反变函子 $F$ 的可表性，
+会很方便。这一系列报告的主要目的，是发展一种一般技术，用来识别这类函子
+$F$ 是否可表，并借助 $F$ 的性质研究相应 $S$-预概形 $X$ 的性质。顺便指出，
+在这一研究中会遇到一些并不病态的、在 $S$ 上非分离的预概形例子，特别是作为
+优良 $S$-概形之\fquote{Picard 预概形}的例子。因此，不应把不是概形的预概形
+逐出代数几何。
+
+设 $X$ 是 $S$ 上局部有限型的预概形，并令
+\[
+  F(Y)=\operatorname{Hom}_S(Y,X)
+\]
+为相应的反变函子。可以考察 $F$ 在 $\mathcal C$ 的子范畴
+$\mathcal C_0$ 上的限制 $F_0$；$\mathcal C_0$ 由 $S$ 上阿廷且有限的
+预概形 $Y$ 组成。因此，当 $S=\operatorname{Spec}(\Lambda)$ 时，
+$\mathcal C_0$ 是 B 中所考察的阿廷 $\Lambda$-代数范畴的对偶范畴。
+若 $Y=\operatorname{Spec}(A)$，其中 $A$ 是阿廷局部环，则 $Y$ 只有一个点
+$y$，它位于 $S$ 的某个闭点 $s$ 之上；从 $Y$ 到 $X$ 的 $S$-态射（即
+$F(Y)$ 的一个元素）由下列数据确定：位于 $s$ 上方的一点 $x\in X$，以及
+从 $\mathcal O_{x,X}$ 到 $A$ 的一个 $\mathcal O_{s,S}$-代数同态。若存在这种
+同态，则 $x$ 必为 $X$ 的闭点（其剩余域是 $s$ 的剩余域的代数扩张）。
+由此可见，$F$ 在\fquote{阿廷 $\Lambda$-代数}上的限制 $F_0$ 是 pro-可表的，
+并由如下拓扑 $\Lambda$-代数表示：其局部分量是 $X$ 在各闭点 $x$ 处的局部环
+之完备化 $\widehat{\mathcal O}_{x,X}$，这里 $x$ 位于 $S$ 的闭点之上。
+这说明，仅知道 $F_0$ 就能得到关于 $X$ 结构的精确信息，即它在上述各点处
+局部环之完备化的结构。还应指出，即使 $S$
+
+\src{380}
+是一个代数闭域的谱，也只有系统地考察这样的\fquote{簇} $Y$，其中
+$\mathcal O_Y$ 可以含有幂零元，特别是使用阿廷局部环的谱，才能得到经典泛问题
+的\fquote{正确表述}，并把握其\fquote{无穷小}方面。
+
+给定一个预先提出的函子 $F$，要判断它是否可表时，借助定理1和定理2研究函子
+$F_0$，将给出几乎完备的判据。可能出现的第一种情形是，正如经常发生的那样
+（例如只需检验集合 $F(I_K,\xi)$ 的性质及其函子性行为，参见 A），便发现
+$F_0$ 已经不是 pro-可表的；这解释了迄今那些试图以多少自然的方式定义秩
+$>1$ 向量丛之分类模空间的尝试为何失败。第二种情形是，可以验证 $F_0$ 确实
+可表，但向量空间 $F(I_K,\xi)$ 不是有限维的，此时只能满足于\fquote{形式}
+解。最后一种情形是，$F_0$ 确实由完备诺特局部环的一个乘积表示；这为 $F$
+本身可表提供了极强的理由，再结合我们打算随后发展的、性质类似但更为整体的
+条件，无疑足以推出它确实可表。最后，还会遇到一些有趣的几何问题（见下文
+第4、5节），其中只有函子 $F_0$ 可用（它并不来自任何\fquote{整体}函子
+$F$）；若能为它配上一个\fquote{形式模概形}，就已经值得庆幸。
+
+作为这些一般评注的结尾，我们说明概形理论如何解释一些表面上的反常现象，
+例如 Igusa 曲面 $V$：它的\fquote{Picard 簇} $P$ 缩为一点，但仍有
+\[
+  H^1(V,\mathcal O_V)\ne 0 ;
+\]
+在此情形，$P$ 是一个\fquote{纯无穷小}群，并未约化为单位群；也就是说，
+它由基域 $k$ 上有限秩的一个局部代数 $O$ 定义，并带有对应于 $P$ 乘法结构
+的对角映射。若 $\mathfrak m$ 是 $O$ 的极大理想，则
+$\mathfrak m/\mathfrak m^2$ 的对偶与 $H^1(V,\mathcal O_V)$ 典范同构
+（参见下文第3节）。只有当 Picard 群是经典意义下的代数群，也就是在基域
+$k$ 上光滑时，$H^1(V,\mathcal O_V)$ 的维数（它始终等于
+$\mathfrak m/\mathfrak m^2$ 的维数）才等于 Picard 群的维数。
+
+\subsection*{2. 概形 $\underline{\operatorname{Hom}}_S(X,Y)$、
+$\Pi_{X/S}Z$、$\underline{\operatorname{Aut}}_S(X)$ 等}
+\addcontentsline{toc}{subsection}{2. Hom、Pi 与 Aut 概形}
+
+设 $X,Y$ 是 $S$ 上的两个预概形；对每个 $S$ 上的预概形 $T$，
+
+\src{381}
+令 $X_T=X\times_ST$、$Y_T=Y\times_ST$，并把集合
+\[
+  F(T)=\operatorname{Hom}_T(X_T,Y_T)
+      =\operatorname{Hom}_S(X_T,Y)
+      =\operatorname{Hom}_S(X\times_ST,Y)
+\]
+看作关于 $T$ 的反变函子。若它可表，就用
+$\underline{\operatorname{Hom}}_S(X,Y)$ 表示代表它的 $S$-预概形；因此有
+函子同构
+\[
+  \operatorname{Hom}_S
+  \bigl(T,\underline{\operatorname{Hom}}_S(X,Y)\bigr)
+  \xrightarrow{\sim}
+  \operatorname{Hom}_S(T\times_SX,Y).
+\]
+这一泛问题有许多可以化归于它的变体：$S$-预概形 $X$ 的 $S$-自同构预概形
+（它将是一个群预概形）；从一个 $S$-群预概形到另一个群预概形的
+$S$-同态预概形（若第二个群概形可交换，它将是一个可交换群预概形）；等等。
+还可以推广 $\underline{\operatorname{Hom}}_S(X,Y)$ 的定义：考虑位于
+$S$ 上预概形 $X$ 之上的一个预概形 $Z$，以及函子
+\[
+  F(T)=\operatorname{Hom}_{X_T}(X_T,Z_T)
+\]
+（即 $Z_T$ 在 $X_T$ 上的\fquote{截面}所成的集合）。若此函子可表，代表它的
+$S$-预概形记为 $\Pi_{X/S}Z$；依定义便有函子同构
+\[
+  \operatorname{Hom}_S(T,\Pi_{X/S}Z)
+  =\operatorname{Hom}_{X_T}(X_T,Z_T).
+\]
+取 $Z=Y\times_SX$，便重新得到
+$\underline{\operatorname{Hom}}_S(X,Y)$。由这些定义可为新引入的预概形
+导出一套虽平凡但有用的公式；这里不再列出，因为它们在任何存在积和纤维积的
+范畴中都成立。更实质的问题是
+$\underline{\operatorname{Hom}}_S(X,Y)$ 这一类概形是否存在。首先可以看出，
+固定 $X$ 后，$\underline{\operatorname{Hom}}_S(X,Y)$ 要对每个 $S$ 上的
+$Y$ 都存在（或者 $\Pi_{X/S}Z$ 要对每个 $X$ 上的 $Z$ 都存在），$X$ 必须
+在 $S$ 上平坦。其次可以确信，若希望对相当一般的 $Y$ 都有解，还应要求 $X$
+在 $S$ 上固有。另一方面，这些条件似乎足以保证
+$\underline{\operatorname{Hom}}_S(X,Y)$ 和 $\Pi_{X/S}Z$ 存在，只须在必要
+时分别对 $Y/S$ 或 $Z/X$ 加上某种\fquote{拟射影}假设；至少在相当多的情形
+可以验证这一点（例如 $Y$ 在 $S$ 上仿射，或以直接的初等构造处理 $X$ 在
+$S$ 上有限的情形）。定理1和定理2给出如下结论：
+
+\src{382}
+\result{命题}{2.1} 设 $\Lambda$ 是诺特环，$X$ 和 $Y$ 是
+$\Lambda$ 上任意两个预概形。在阿廷 $\Lambda$-代数范畴
+$\mathcal C_0$ 上考虑函子
+\[
+  F(A)=\operatorname{Hom}_A(X_A,Y_A)
+\]
+若 $X$ 在 $\Lambda$ 上平坦，则此函子 pro-可表。
+
+此外，对每个 $A\in\mathcal C_0$ 和 $\xi\in F(A)$，有典范同构\footnote{原文作 $H^1$。固定态射的一阶变化由全局导子，即 $H^0$，描述。}
+\[
+  F(I_A,\xi)=H^0\!\left(
+    X_A,
+    \underline{\operatorname{Hom}}_{\mathcal O_{X_A}}
+    \bigl(\xi^*(\Omega^1_{Y_A/A}),\mathcal O_{X_A}\bigr)
+  \right),
+\]
+其中 $\Omega^1_{Y_A/A}$ 是 $Y_A$ 相对于 $A$ 的 Kähler $1$-微分层。令
+$A$ 为域，并使用 A.5.1 与 [2] 的有限性定理，便得到如下推论：
+
+\result{推论}{} 设 $X$ 在 $S$ 上平坦且固有，$Y$ 在 $S$ 上局部有限型。
+则 $F$ pro-可表，并且相应拓扑 $\Lambda$-代数的各个局部分量都是诺特环。
+
+\result{评注}{} 本节所考察的问题以及许多其他问题，在经典代数几何的框架中，
+通常借助射影空间内循环的\fquote{Chow 坐标}来研究；这种坐标使得可以把这些
+循环看成适当射影簇的点。从概形观点看，这一方法以及一般的 Chow 坐标用法似乎
+有不可补救的缺陷，因为它抹去了参数簇中的幂零元，尤其不适于令人满意地研究
+循环的无穷小变化（更不用说它依赖于射影空间而不具有内蕴性）。遗憾的是，许多
+代数几何学家研究簇族或循环族时只使用 Chow 坐标的语言；尽管这种方法确有
+（大概只是暂时的）技术价值，它似乎严重妨碍了这些概念的澄清。若要在概形理论
+中得到 Chow 簇的对应物，就会引向如下泛问题：设 $X$ 是 $S$ 上的预概形；对
+每个 $S$ 上的预概形 $T$，令 $F(T)$ 为
+$X_T=X\times_ST$ 中在 $T$ 上平坦的闭子预概形所成的集合。试图用一个
+$S$ 上的预概形表示这个关于 $T$ 的函子。更一般地，可以在 $X$ 上给定一个
+拟凝聚层 $G$，并令 $F(T)$ 为
+
+\src{383}
+$G_T$ 的所有商层中在 $T$ 上平坦者所成的集合。当 $X$ 在局部诺特预概形
+$S$ 上固有，且
+$G$ 还是凝聚层时，这一问题似乎有解，并可由一个在 $S$ 上局部有限型的概形
+$C$ 表示。无论如何，只假设 $S$ 局部诺特，$F$ 在
+\fquote{阿廷 $S$-代数}上的限制就是 pro-可表的；若再假设 $X$ 在 $S$
+上固有且 $G$ 凝聚，则相应拓扑环 $O$ 的各个局部分量都是诺特环。当然，即使
+已经证明 $X$ 在 $S$ 上的\fquote{Chow 概形}存在，仍须把它分解成互不相交的
+开集 $C_i$（它们对应于固定所变动循环的次数、维数等连续不变量），使它们
+在 $S$ 上有限型，而不只是局部有限型；还须阐明这一概形与经典 Chow
+簇之间的关系，并确定何时某个 $C_i$ 在 $S$ 上甚至是射影的，或者至少是
+拟射影的。\footnote{1962 年勘误说明，射影情形已由 Hilbert 概形（TDTE IV）
+完全解决；而 Nagata 与 Hironaka 的例子表明，在没有射影性假设时，这些函子
+可能不可表，哪怕只考察一个三维非奇异完备簇的零维子簇也是如此；这一现象与
+对称平方可能不存在有关。}
+
+\subsection*{3. Picard 概形}
+\addcontentsline{toc}{subsection}{3. Picard 概形}
+
+设 $f:X\longrightarrow S$ 是一个 $S$-预概形，\footnote{关于更完整的研究，
+1962 年勘误转引 TDTE V。}考虑 $X$ 的结构层中可逆元所成的乘法层
+$\mathcal O_X^*$，以及群
+\[
+  P(X/S)=H^0\bigl(S,R^1f_*(\mathcal O_X^*)\bigr),
+\]
+称为 $X/S$ 的相对 Picard 群。这个群的一个元素可由如下数据给出：$S$ 的一个
+开覆盖 $(U_i)$，以及每个 $f^{-1}(U_i)$ 上的一个可逆层 $L_i$；并且对每一对
+$(i,j)$，限制 $L_i|f^{-1}(U_i\cap U_j)$ 与
+$L_j|f^{-1}(U_i\cap U_j)$ 至少在 $U_i\cap U_j$ 上局部同构（即这两个层在
+[3]，B，4 的意义下\fquote{等价}）。若 $X/S$ 有截面，则 $P(X/S)$ 就是
+$X/S$ 上可逆层模\fquote{等价}（同上引文）所得的类的集合。现在对每个
+$S$ 上的 $T$，令
+\[
+  F(T)=P(X_T/T) ;
+\]
+便得到一个关于 $T$ 的反变函子，可以称为 $X/S$ 的 Picard 函子。若此函子
+可表，代表它的 $S$-预概形称为 $X/S$ 的 Picard 预概形，记为
+$\underline P(X/S)$。于是有函子同构
+\[
+  \operatorname{Hom}_S\bigl(T,\underline P(X/S)\bigr)
+  \xrightarrow{\sim}P(X_T/T).
+\]
+Picard 预概形的形成与基扩张相容。特别地，$X$ 在 $S$ 上各纤维的 Picard
+预概形（它们是各点 $s\in S$ 的剩余域 $K(s)$ 上的预概形），正是
+$\underline P(X/S)$ 的各纤维。当然，由于 $P(X_T/T)=F(T)$ 是可交换群，
+Picard 预概形都是群预概形。还应指出，Rosenlicht 的广义 Jacobi 簇正是可以
+带有奇点的完备曲线之 Picard 概形中单位元的连通分支；一旦存在性得到证明，
+这应使它们的大多数性质变得显然。
+
+\result{评注}{} 这里采用的定义只有在 $S$ 的每个点
+\footnote{印刷文本作\fquote{$Y$}；此处没有定义任何基 $Y$，而这一条件针对
+的是基 $S$。}都有一个开邻域 $U$，使得 $X$ 在其上有截面时才是合理的。
+在一般情形，必须稍微修改 Picard 函子的定义，才能仍然得到存在性定理。
+
+这里 Picard 预概形存在的合理条件如下：$X$ 在 $S$ 上固有且平坦，
+$f_*(\mathcal O_X)=\mathcal O_S$，并且 $X$ 在 $S$ 上局部有截面。最后这个
+条件在应用下降技术时自然出现：给 $X$ 上的可逆层 $L$ 赋予一个沿截面 $s$
+的标记截面，便可消去它的自同构（[3]，B，4）。特别地，得到：
+
+\src{384}
+\result{命题}{3.1} 设 $X$ 在
+$S=\operatorname{Spec}(\Lambda)$ 上平坦，其中 $\Lambda$ 是诺特环，并且对
+每个在 $S$ 上有限型的 $T$，都有
+\[
+  f_{T*}(\mathcal O_{X_T})=\mathcal O_T
+\]
+（若 $f$ 固有且可分，\footnote{1962 年勘误明确规定应加上
+\fquote{$f$ 固有且可分}这一假设。}或者若 $S$ 是一个域的谱，则 Künneth
+定理表明，最后一个条件等价于
+$f_*(\mathcal O_X)=\mathcal O_S$）。于是，$X/S$ 的 Picard 函子在阿廷
+$\Lambda$-代数范畴上 pro-可表。
+
+此外，此时有
+\[
+  F(I_A,\xi)=H^1(X_A,\mathcal O_{X_A}),
+\]
+特别地：
+
+\result{推论}{} 若 $X$ 在 $S$ 上固有，则与 Picard 函子相应的拓扑
+$\Lambda$-代数 $O$ 的各个局部分量都是诺特环。
+
+\result{评注}{} 本节的定义和结果可以推广到 $X$ 上主丛的分类，其中结构群
+是 $S$ 上一个仿射、在 $S$ 上平坦且可交换的群概形 $G$。若 $G$ 不可交换，
+则一个主丛的伴随群丛（其截面就是该主丛的自同构）不再平凡，因而命题3.1
+不再以原有形式成立。不过，可以修改这一泛问题，使其仍然有解（至少目前在
+形式几何中如此）。在本
+\src{385}节及以下各节的语境中，以及每当我们为仅在同构意义下确定的对象类寻找
+\fquote{模概形}时，都应牢记如下黄金法则：必要时引入辅助结构（标记点或
+标记截面的元素、指定微分形式等），以消去待分类对象可能具有的自同构；所取
+辅助结构应足够温和，不致实质性地改变原问题。
+
+\subsection*{4. 簇的形式模}
+\addcontentsline{toc}{subsection}{4. 簇的形式模}
+
+设 $\Lambda$ 是剩余域为 $k$ 的诺特局部环（最常见的情形是
+$\Lambda$ 等于 $k$，或为 Cohen $p$-环），并设 $X_0$ 是 $k$ 上的
+预概形。对每个阿廷局部 $\Lambda$-代数 $A$，令 $F(A)$ 为下列对象在同构
+意义下所成的类的集合：在 $A$ 上平坦的 $A$-预概形 $X$，连同一个同构
+\[
+  (*)\qquad
+  X\otimes_A\kappa(A)\xleftarrow{\sim}
+  X_0\otimes_k\kappa(A),
+\]
+其中 $\kappa(A)$ 是 $A$ 的剩余域；当然，这类平坦 $A$-预概形之间的同构
+必须保持结构中给定的上述同构。若 $A$ 是不必为局部环的阿廷
+$\Lambda$-代数，其局部分量为 $A_i$，就把 $F(A)$ 定义为各 $F(A_i)$ 的
+乘积。这样，$F$ 就成为关于 $A$ 的乘法函子，可以称为 $X_0$（及
+$\Lambda$）的模函子。若此函子可表，则与之相应的是一个剩余域为 $k$ 的
+局部拓扑 $\Lambda$-代数 $O$；$O$ 的形式谱称为 $X_0$（及 $\Lambda$）
+的形式模概形。关于这一概念的若干细节，参见 [2]。
+
+这里应用下降技术时，$X_0$ 的\fquote{有限}自同构是无害的，因为它们不影响
+$A$-预概形 $X$ 是否具有上述意义下的自同构。当 $A$ 不只是一个域时，$X$
+不具有非平凡 $A$-自同构的充要条件是
+\[
+  H^0(X_0,\Theta_{X_0/k})=0,
+\]
+其中 $\Theta_{X_0/k}$ 表示 $X_0$ 的 $k$-导子层（即切层）。此外容易求得
+（至少当 $X_0$ 在 $k$ 上光滑时）
+\[
+  F(I_A,\xi)=H^1(X_A,\Theta_{X_A/A}).
+\]
+于是照例得到：
+
+\src{386}
+\result{命题}{4.1} 设
+$H^0(X_0,\Theta_{X_0/k})=0$。则 $X_0$ 的形式模概形存在。若进一步
+$X_0$ 在 $k$ 上固有，则该形式模概形是诺特的。
+
+\result{评注}{} 1\textsuperscript{o} 当不假设 $X_0$ 在 $k$ 上光滑时，
+$F(I_A,\xi)$ 可等同于下式的一个 $A$-子模：
+\[
+  \operatorname{Ext}^1_{\mathcal O_{P_A}}
+  \bigl(P_A;\mathcal I_{X_A},\mathcal O_{X_A}\bigr),
+\]
+其中令 $P_A=X_A\times_\Lambda X_A$；借助对角态射
+$X_A\longrightarrow P_A$，将 $\mathcal O_{X_A}$ 视为 $P_A$ 上的凝聚层；
+而 $\mathcal I_{X_A}$ 表示由该对角态射定义的 $P_A$ 上凝聚理想层。更确切地
+说，Hochschild 理论的一个直接整体化表明，上述 $\operatorname{Ext}^1$ 可
+等同于下列对象在同构意义下所成的类的集合：$X_A$ 上的平坦
+$I_A$-代数层 $\mathcal O$，连同一个增广同构
+\[
+  \mathcal O\otimes_{I_A}A\longrightarrow\mathcal O_{X_A}
+\]
+（回顾一下，约定 $I_A=A[t]/(t^2)$）。子模 $F(I_A,\xi)$ 对应于可交换
+代数层。因此，光滑性假设在模理论中并非本质性的，这一点与 [2] 所暗示的
+不同。
+
+2\textsuperscript{o} 回顾前引处的结果：特别地，任一在 $k$ 上光滑且固有
+的代数曲线 $X_0$ 都有一个形式模概形；该概形在 $\Lambda$ 上光滑，并且当
+亏格 $g$ 为 $\geq2$ 时，其相对维数为 $3g-3$，当 $g=0$ 或 $1$ 时则为 $g$。
+后两种情形已不能直接归入命题4.1。不过，在椭圆曲线情形（$g=1$）中，可以
+借助以下讨论将其归入该命题。
+
+当然，还可以通过考察带有各种结构的 $k$ 上概形系统，对命题4.1 作任意变形。
+例如，设 $X_0$ 是 $k$ 上带有标记原点的阿贝尔概形（即把 $X_0$ 视为 $k$
+上的群概形），并令 $F(A)$ 为下列对象在同构意义下所成的类的集合：$A$
+上的阿贝尔概形（即 $A$ 上固有且光滑的群概形），连同阿贝尔概形之间的一个
+同构 $(*)$。可以验证，赋予乘法结构（甚至只赋予一个\fquote{单位截面}）
+便会消去无穷小自同构，因而存在一个形式模概形，它对应于一个完备诺特局部环
+$O$。此外，设 $X$ 是局部诺特预概形 $S$ 上的固有光滑概形，并具有
+\fquote{绝对连通}的纤维；则 $X$ 上任何具有单位截面的乘法结构必然是结合
+且可交换的（只要它至少在某个纤维上如此，并且 $S$ 连通），而且还唯一地
+由对
+\src{387}单位截面的了解所确定。此外，设 $S$ 是剩余域为 $k$ 的阿廷局部环
+$A$ 的谱，$X$ 在 $A$ 上固有并配有截面 $s$，且 $X\otimes_Ak$ 配有 $k$
+上的阿贝尔概形结构，其单位元为 $X\otimes_Ak$ 中与 $s$ 对应的点。一个直接
+的障碍计算，结合 Serre 的一个论证，可以证明 $X$ 上确实存在以截面 $s$ 为
+单位截面的乘法结构。（由此出发，先利用 [2] 的\fquote{存在性定理}过渡到
+$A$ 为完备诺特局部环的情形，再利用 [3] 的下降技术处理一般情形，便可对任意
+连通的局部诺特 $S$ 证明相应结论。）这就证明了这里所考察的函子 $F(A)$ 与
+本节开头定义的相应函子同构；定义后者时忽略了 $X_0$ 上的乘法结构。特别地，
+若 $\mathfrak m$ 是 $O$ 的极大理想，则 $\mathfrak m/\mathfrak m^2$ 典范
+同构于 $H^1(X_0,\Theta_{X_0/k})$ 的对偶，因而其维数为 $n^2$，其中
+$n=\dim X_0$。确定 $O$ 是否确实在 $\Lambda$ 上光滑，也就是是否同构于
+$\Lambda$ 上含 $n^2$ 个不定元的形式幂级数代数，将是一个十分有趣的问题。
+第1节命题5.2 将这个问题等价地表述为如下存在性问题：构造约化为某个给定
+阿贝尔概形的阿贝尔概形。无论如何，超越方法表明，当 $k$ 的特征为零时，
+答案是肯定的。在特征 $p\ne0$ 时，显然只需考虑 $\Lambda$ 是由代数闭域 $k$
+构造的 Witt 向量环这一情形。也许现在正是\fquote{Greenberg 函子}证明其
+威力的时候了\ldots\footnote{1962 年勘误指出，域上阿贝尔簇的形式模概形
+在 Witt 环上光滑：任一阿廷局部商环上的阿贝尔概形都可提升到该商环所来自的
+环上。证明使用了第182次报告第12页引入的提升障碍类的变换性质。勘误还回顾了
+Mumford 对亏格为 $g$ 的曲线以及极化阿贝尔概形所作的模概形构造
+（参见 SHMT）。}
+
+\subsection*{5. 覆盖的延拓}
+\addcontentsline{toc}{subsection}{5. 覆盖的延拓}
+
+设 $\mathfrak X$ 是一个诺特形式预概形 [2]，$U$ 是 $\mathfrak X$ 的一个
+开子集；它局部地由 $\mathcal O_{\mathfrak X}$ 的某个截面的
+\fquote{不消失}所定义，该截面不仅在 $\mathfrak X$ 上，而且在每个
+$X_n$ 上都是非零因子，\footnote{这一限定由 1962 年勘误加入。}因而这个开集
+充分大，使得 $\mathcal O_{\mathfrak X}$ 在任一开集 $V$ 上的截面，只要在
+$U\cap V$ 上为零，就必为零。设 $\mathcal J$ 是 $\mathfrak X$ 的一个
+\fquote{定义理想}，并令
+\[
+  X_n=(\mathfrak X,\mathcal O_{\mathfrak X}/\mathcal J^{n+1}),
+\]
+后者于是是一个普通的诺特预概形。若
+$\mathfrak X',\mathfrak X''$ 是 $\mathfrak X$ 的两个平坦覆盖（即
+$\mathfrak X$ 上由代数层定义的两个预概形，这些代数层作为模层是凝聚且局部
+自由的），并且它们在 $U$ 上非分歧，则自然映射
+\[
+  \operatorname{Hom}_{\mathfrak X}(\mathfrak X',\mathfrak X'')
+  \longrightarrow
+  \operatorname{Hom}_{X_0}(X'_0,X''_0)
+\]
+是单射；特别地，若 $\mathfrak X'$ 的一个自同构在 $X'_0$ 上诱导恒等，则
+它本身就是恒等。这使下降技术可以应用于当前情形。具体地，从 $X_0$ 的一个
+平坦覆盖 $X'_0$ 出发，设它在
+
+\src{388}
+$U_0$ 上非分歧；令 $G(\mathfrak X)$ 为 $\mathfrak X$ 的平坦覆盖
+$\mathfrak X'$ 的同构类所组成的集合，其中这些覆盖在 $X_0$ 上诱导出
+$X'_0$（因而必然在 $U$ 上非分歧），而所取的同构须在 $X'_0$ 上诱导恒等。
+对于 $\mathfrak X$ 的任意开子集 $V$，以同样方式定义 $G(V)$；更一般地，
+对于 $\mathfrak X$ 上的任意形式预概形 $\mathfrak Y$，定义
+$G(\mathfrak Y)$。于是 [2] 和 [3] 的结果首先推出以下结论：
+
+\noindent a. 当 $V$ 遍历 $\mathfrak X$ 的开子集时，$G(V)$ 在
+$\mathfrak X$ 上组成一个层，记作 $G_{\mathfrak X}=G$。该层在 $U$ 上的
+限制是各茎均仅含一个元素的常值层。
+
+更一般地，确定 $G_{\mathfrak X}$ 的各茎归结为完备局部环的问题。确切地说：
+
+\noindent b. 对任意 $x\in\mathfrak X$，有
+\[
+  G_x=G\bigl(\operatorname{Spec}(\mathcal O_{\mathfrak X,x})\bigr)
+  \subset
+  G\bigl(\operatorname{Spec}(\widehat{\mathcal O}_{\mathfrak X,x})\bigr),
+\]
+（右端集合由 $\widehat{\mathcal O}_{\mathfrak X,x}$ 上有限自由代数 $B$
+的同构类组成，并配有
+$B\otimes_{\widehat{\mathcal O}_{\mathfrak X,x}}\mathcal O_{X_0,x}$
+与 $\widehat{\mathcal O}'_{0x}$ 之间的同构，其中 $\mathcal O'_0$ 是
+$X_0$ 上定义 $X'_0$ 的代数层）。\footnote{印刷公式把 $G_x$ 直接等同于
+完备化后的项，并漏掉了 $\mathcal O'_{0x}$ 上的帽号。这里的包含关系和
+完备化均依照 1962 年勘误。}
+
+\noindent c. 存在典范同构
+\[
+  G_{\mathfrak X}=\varprojlim_nG_{X_n} ;
+\]
+换言之，对 $\mathfrak X$ 的任意开子集 $V$，有
+\[
+  G(V)=\varprojlim_nG(V_n).
+\]
+
+\noindent d. 设 $X$ 是一个普通固有概形，定义在带有定义理想 $\mathfrak m$
+的完备诺特局部环 $\Lambda$ 上，并且 $\mathfrak X$ 由它得到：
+对 $\mathcal O_X$ 作 $\mathcal J$-进完备化，其中
+$\mathcal J=\mathfrak m\mathcal O_X$。那么 $G(\mathfrak X)$ 典范同构于
+普通概形 $X$ 的那些\fquote{约化为 $X'_0$}的平坦覆盖的同构类所组成的集合。
+
+形象地说，(a) 和 (b) 建立了问题的局部方面与整体方面之间的基本联系，
+(c) 给出了\fquote{有限}方面与\fquote{无穷小}方面之间的联系，而 (d) 则在
+上述条件下重申了\fquote{形式}方面与\fquote{代数}方面的一致性。
+
+现在设 $\mathfrak X$ 定义在完备诺特局部环 $\Lambda$ 上，并且
+$\mathcal J=\mathfrak m\mathcal O_{\mathfrak X}$（因而 $X_0$ 是
+$\Lambda/\mathfrak m$ 上的预概形）。对任意有限 $\Lambda$-代数 $A$，令
+\[
+  F(A)=G(\mathfrak X\times_\Lambda A),
+\]
+其中标记在换基到约化系数代数 $A_{\mathrm{red}}$ 后取得，而非直接在 $A/\mathfrak mA$ 上取得。这是一个以 $A$ 为自变量、取值于集合范畴的协变函子；由 (c)，只要知道它
+在阿廷代数 $A$ 上的取值，就能完全确定该函子。说这个函子 pro-可表，等价
+于说它具有如下形式：
+\[
+  F(A)=\operatorname{Hom}_{\Lambda\text{-拓扑代数}}(O,A),
+\]
+
+\src{389}
+其中 $O$ 是 A 第5节所考察类型的拓扑 $\Lambda$-代数；而这又等价于只对
+阿廷代数 $A$ 要求同一表示。因此，定理1与定理2合在一起确实给出：
+
+\result{命题}{5.1} 若该函子所分类的每个阿廷基变换族均在其系数代数上平坦，并且所选开子集在有关基变换后仍在概形意义下稠密，则前述函子 pro-可表。
+
+当然，由 (a) 可知，若 $U=\mathfrak X$，则对 $\mathfrak X$ 上的任意
+$\mathfrak Y$，$G(\mathfrak Y)$ 都只有一个元素；此时函子 $F$ 并无多大
+意义（将有 $O=\Lambda$）。看来，在几乎所有其他情形中，拓扑局部环 $O$
+都不是诺特环。然而，它的存在以格外鲜明的方式揭示了由解构成的集合
+$G(\mathfrak X)$ 的\fquote{连续}性质（直观上，这对应于：对 $X'_0$ 作
+扩张时，分歧如何传播存在一种\fquote{连续}的选择）。可将这一结果与
+J.-P. Serre 在局部类域论中的观点 [4] 相比较；后者同样揭示了一个
+\fquote{几何}局部域的最大阿贝尔扩张之拓扑 Galois 群所具有的连续性质。
+在那里，其对偶群（在 Pontryagin 意义下）表现为代数群（或至少是拟代数群）
+的归纳极限；在这里，扩张的分类同样由无限维的\fquote{簇}给出。此外，在
+上述讨论中，可以取 $\mathfrak X$ 为某个完备局部环的形式谱（例如，
+$\Lambda$ 可取为它的一个 Cohen 子环）；可以期望，本节的结果能够用于研究
+维数 $>1$ 的完备局部环的扩张。无论在局部情形还是整体情形中，这些结果或许
+都能使人精确表述高阶分歧现象与零特征现象（后者可用超越方法处理）之间的
+关系。无论如何，正是命题5.1之前的分析，使 [2] 中研究基本群的方法能够推广
+到\fquote{驯分歧}的情形，并使\fquote{三点问题}能够用超越方法解决。
+
+最后指出，当 $X_0$ 的维数为1时，情形会得到简化：由 (a) 以及穿孔完备局部概形上的形式粘合，
+\[
+  G(\mathfrak X)\simeq
+  \prod_iG\bigl(\operatorname{Spec}(\widehat{\mathcal O}_{\mathfrak X,x_i})\bigr),
+\]
+其中 $x_i$ 是 $X_0-U$ 的各点：可以任意给定各分歧点处的\fquote{局部}
+扩张。仅有 $X_0$ 的正规性并不能保证5.1中的形式模概形在 $\operatorname{Spec}(\Lambda)$ 上光滑；原文最后这一断言一般不成立。
+
+\src{390}
+\begin{center}
+  \textbf{参考文献}
+\end{center}
+
+\begin{description}
+  \item[{[1]}] Grothendieck (Alexander). --- \emph{关于同调代数的若干问题},
+    Tohoku Math. J., 第 9 卷, 1957, 第 119--221 页。
+  \item[{[2]}] Grothendieck (Alexander). --- \emph{形式几何与代数几何},
+    Bourbaki 讨论班, 第 11 卷, 1958/59, 分册 3,
+    n\textsuperscript{o} 182。
+  \item[{[3]}] Grothendieck (Alexander). --- \emph{下降技术与代数几何中的
+    存在性定理，I：一般论；沿忠实平坦态射的下降}, Bourbaki 讨论班,
+    第 12 卷, 1959/60, 分册 1, n\textsuperscript{o} 190。
+  \item[{[4]}] Serre (Jean-Pierre). --- \emph{局部域与同源},
+    Bourbaki 讨论班, 第 11 卷, 1958/59, 分册 3,
+    n\textsuperscript{o} 185。
+\end{description}
+
+\par
