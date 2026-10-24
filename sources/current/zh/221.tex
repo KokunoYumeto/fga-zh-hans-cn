@@ -338,9 +338,7 @@ $N_r$ 满足条件 (a) 与 $(b_s)$；由归纳假设，诸
 $(N_r)_{(s)}$ 保持有界。另一方面，有短正合列
 $0\longrightarrow(N_r)_{(s)}\longrightarrow\mathcal F_{(s)}
 \longrightarrow\mathcal F_{(r)}\longrightarrow0$，
-所以由 (1.2) (ii)，诸 $\mathcal F_{(s)}$ 保持有界。为证明 (2.2)
-的最后一个断言，注意同态
-$\mathcal F\longrightarrow\mathcal F_{(s)}$ 的核 $N_s$ 由 (1.2) (i) 保持有界，而且 $P_{N_s}$ 中 $n^{s-1}$ 项的系数保持有界；引理 2.6 于是证明下一项的系数保持有下界。证明完毕。
+所以由 (1.2) (ii)，诸 $\mathcal F_{(s)}$ 保持有界。为证明 (2.2) 的最后一个断言，在归纳中同时证明有界性和下一项系数的下界。固定源模到 $\mathcal F_{(s)}$ 的映射之核构成有界族，因此存在一个共同的凝聚源模，满射到每个 $N_s$；但仅凭 (1.2) (i) 并不能推出这些商模 $N_s$ 构成有界族。对这些商模归纳地再次应用系数断言，再由 Hilbert 多项式的可加性和引理 2.6，即得到下一项系数所需的下界。证明完毕。
 
 \fsection{3}{Hilbert 概形：定义与存在性定理}
 
@@ -1054,10 +1052,7 @@ $Y$ 在 $S$ 上的一个截面：
 \pi^u_{X/S}(\mathcal F)\in\Gamma(Y/S).
 \]
 这里不写出正式定义，只指出由此得到的形式体系是通常范数与迹的形式
-体系的一个自然推广。当 $X$ 在 $S$ 上的 $n$ 次对称幂存在时
-（例如，当对称群 $\mathfrak S_n$ 在 $(X/S)^n$ 上作用的各轨道都包含
-于仿射开集中时），可取这个对称幂
-$\operatorname{Symm}^n_S(X)$ 作为 $Y$，并得到一个典范元素
+体系的一个自然推广。对任意在 $S$ 上分离的 $X$，范数律的典范目标是除幂空间 $\Gamma^n_S(X)$。若 $X$ 在 $S$ 上平坦，并且 $n$ 次对称幂存在（例如，当 $\mathfrak S_n$ 在 $(X/S)^n$ 上的各轨道均包含于仿射开集中时），则典范态射 $\operatorname{Symm}^n_S(X)\to\Gamma^n_S(X)$ 是同构，从而得到一个典范元素
 \[
 \pi_{X/S}(\mathcal F)\in\Gamma(\operatorname{Symm}^n_S(X)/S),
 \]
@@ -1082,12 +1077,13 @@ $\pi^u_{X/S}(\mathcal M)$ 的构造与基变换相容，因而得到一个典范
 \[
 \pi^u_{X/S}:\operatorname{Quot}^n_{\mathcal F/X/S}\longrightarrow Y,
 \]
-特别地，若 $X$ 在 $S$ 上的 $n$ 次对称幂存在，则得到
+一般地，得到
 \[
 \pi_{X/S}:\operatorname{Quot}^n_{\mathcal F/X/S}
-\longrightarrow\operatorname{Symm}^n_S(X).
+\longrightarrow\Gamma^n_S(X).
 \]
-最重要的情形是 $\mathcal F=\mathcal O_X$，它给出态射
+当 $X$ 在 $S$ 上平坦时，将这一目标与 $\operatorname{Symm}^n_S(X)$ 识别。
+独立于上述识别，当 $X$ 在 $S$ 上分离时，取 $\mathcal F=\mathcal O_X$ 的有限平坦族构造给出态射
 \[
 \pi_{X/S}:\operatorname{Hilb}^n_{X/S}
 \longrightarrow\operatorname{Symm}^n_S(X).
