@@ -1,0 +1,95 @@
+\usepackage[a4paper,inner=26mm,outer=24mm,top=23mm,bottom=25mm,marginparwidth=15mm,marginparsep=6mm]{geometry}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{TeX Gyre Cursor}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}[AutoFakeBold=2.2]
+\setCJKsansfont{Microsoft YaHei}[AutoFakeBold=2.2]
+\setCJKmonofont{Microsoft YaHei}
+\xeCJKsetup{PunctStyle=kaiming}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{unicode-math}
+\setmathfont{Latin Modern Math}
+\usepackage{bookmark}
+\usepackage{hyperref}
+\hypersetup{hidelinks,unicode=true}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\numberwithin{equation}{section}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt}
+\linespread{1.20}
+\renewcommand{\contentsname}{目录}
+\renewcommand{\proofname}{证明}
+
+\newcommand{\fgaunitid}{unbound}
+\newcommand{\src}[1]{%
+  \phantomsection
+  \hypertarget{src:\fgaunitid:#1}{}%
+  \hypertarget{fga.\fgaunitid.p#1}{}%
+  \ifcsname fgasrcseen#1\endcsname\else
+    \expandafter\gdef\csname fgasrcseen#1\endcsname{1}%
+    \hypertarget{src:#1}{}%
+  \fi
+  \marginpar{\raggedleft\footnotesize\sffamily #1}%
+}
+\newcommand{\sid}[1]{%
+  \gdef\fgaunitid{#1}%
+  \phantomsection\hypertarget{fga:#1}{}\hypertarget{fga.#1}{}%
+}
+\newcommand{\Osh}{\underline{O}}
+\newcommand{\Zsh}{\underline{\mathbf Z}}
+\newcommand{\Ccat}{\mathcal C}
+\newcommand{\Homsh}{\underline{\operatorname{Hom}}}
+\newcommand{\Extsh}{\underline{\operatorname{Ext}}}
+\newcommand{\hsh}{\underline{h}}
+\newcommand{\fquote}[1]{“#1”}
+\newcommand{\zhterm}[1]{\textbf{#1}}
+\newcommand{\seminarzh}[1]{%
+  \begin{flushleft}\sffamily 布尔巴基讨论班\\#1\end{flushleft}%
+}
+\newcommand{\paperhead}[2]{%
+  \begin{center}
+    {\Large\bfseries #1\par}
+    \vspace{0.6\baselineskip}
+    #2
+  \end{center}
+  \vspace{0.8\baselineskip}
+}
+
+\theoremstyle{plain}
+\newtheorem{proposition}{命题}[section]
+\newtheorem{theoreme}[proposition]{定理}
+\newtheorem{theorem}[proposition]{定理}
+\newtheorem{corollaire}[proposition]{推论}
+\newtheorem{corollary}[proposition]{推论}
+\newtheorem{lemme}[proposition]{引理}
+\newtheorem{lemma}[proposition]{引理}
+
+\theoremstyle{definition}
+\newtheorem{definition}[proposition]{定义}
+\newtheorem{definitionen}[proposition]{定义}
+
+\theoremstyle{remark}
+\newtheorem*{remarque}{注}
+\newtheorem*{remark}{注}
+
+\newcommand{\unit}[1]{%
+  \chapter*{#1}%
+  \addcontentsline{toc}{chapter}{#1}%
+  \markboth{#1}{#1}%
+}
+\newcommand{\fsection}[2]{%
+  \section*{#1. #2}%
+  \addcontentsline{toc}{section}{#1. #2}%
+}
+\newcommand{\result}[2]{%
+  \par\medskip\noindent\textbf{#1%
+  \if\relax\detokenize{#2}\relax\else\space#2\fi。——}\enspace
+}

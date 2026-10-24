@@ -1,0 +1,985 @@
+\unit{第236次报告——Picard 概形：一般性质}
+\sid{236}
+\src{221}
+\seminarzh{第14年度，1961/62，第236号\\（1962年5月）}
+\paperhead{下降技术与代数几何中的存在性定理\\
+VI. Picard 概形：一般性质}%
+  {亚历山大·格罗滕迪克 著}
+
+\fsection{0}{上一篇报告（[3]，V）的补充\texorpdfstring{\textsuperscript{(1)}}{（1）}}
+
+关于 [3]，V 中提出的 Picard 预概形存在性问题，已有了一些进展：
+
+\medskip
+\noindent a.（Mumford）一般而言，并非只要
+$f:X\longrightarrow S$ 是射影可分态射（= 平坦且纤维可分），Picard
+预概形 $\operatorname{Pic}_{X/S}$ 就存在；即使 $f$ 的纤维维数为 1，
+且 $S$ 是完备离散赋值环的谱，也不成立。可取
+$S=\operatorname{Spec}\mathbf R[[t]]$，并取 $X$ 为
+$\mathbf P^2_S$ 中由下式定义的子概形（其中 $x,y,z$ 为齐次变量）：
+\[
+x^2+y^2=tz^2,
+\]
+这给出一条在几何上退化为两条相交直线的二次曲线，但在域
+$\mathbf R$ 上的特殊纤维仍不可约（它由 $\mathbf R$ 上的方程
+$x^2+y^2=0$ 给出）。容易看出，经过平展扩张
+$S'\longrightarrow S$，其中
+$S'=\operatorname{Spec}\mathbf C[[t]]$，$X'/S'$ 的 Picard 预概形存在，
+并可明确描述为若干份 $\widetilde S$ 的不交并，其中
+$\widetilde S$ 由 $S$ 将原点无限次加倍而得。关于
+$S'\longrightarrow S$ 的 $\operatorname{Pic}_{X'/S'}$ 上的下降数据
+（这里由 $S'$ 在 $S$ 上的 Galois 群 $\mathbf Z/2\mathbf Z$ 的作用给出）
+不是有效的；这一点容易验证，因为该群交换某些加倍后的点（从而有些
+轨道不包含在任何仿射开集中）。不过，Mumford 能够证明：若
+$f:X\longrightarrow S$ 是射影可分态射，并且对每个 $s\in S$，
+$X_s$ 的各不可约分支相对于 $k(s)$ 几何不可约，则
+$\operatorname{Pic}_{X/S}$ 存在；其证明依赖于他的取商定理的一个
+加强形式，参见 [7]。另一方面应注意，即使不对纤维 $X_s$ 的不可约
+分支作任何假设，下文将引入的概形
+$\operatorname{Pic}^{\tau}_{X/S}$ 仍有可能存在。
+
+\src{222}
+\noindent b.（Murre）设 $X$ 是域上的固有概形，则
+$\operatorname{Pic}_{X/k}$ 存在。证明部分沿用 Chevalley 的证明 [1]，
+并充分利用 Picard 函子的群结构。
+
+关于 Picard 概形理论的一些补充，特别是其与阿贝尔概形的关系，宜参见
+[7]。最后，本篇报告的一个显著缺陷，是没有给出把一个射影概形的
+Picard 概形同其超平面截面的 Picard 概形进行比较的“等价判据”；
+发展这类判据所需的关键定理见 [5]，再加上 Picard 概形的存在性定理。
+
+\fsection{1}{交换群预概形的拓扑性质}
+
+先设 $k$ 为域，$G$ 为 $k$ 上的群预概形。由于单位元 $e$ 在 $k$ 上
+有理，所以它必为闭点；立即可知 $G\times_kG$ 的对角线是闭的，因而
+$G$ 分离：域上的每个群预概形都是分离的。以 $G^\circ$ 表示单位元
+$e$ 所在的连通分支。由于 $e$ 在 $k$ 上有理，$G^\circ$ 实际上是
+几何连通的，亦即 $G^\circ$ 的形成与基域变换相容。还可推出
+$G^\circ$ 作为集合在乘法下稳定；当 $G$ 局部诺特、因而
+$G^\circ$ 为开集时，可把 $G^\circ$ 视为 $G$ 的开子群。以下假设
+$G$ 在 $k$ 上局部有限型；则 $G^\circ$ 几何不可约，并在 $k$ 上
+有限型。事实上，可以假设 $k$ 代数闭，进而还可假设 $G$ 约化
+（因为此时 $G_{\mathrm{réd}}$ 是 $G$ 的子群，这是由于
+$G_{\mathrm{réd}}\times_kG_{\mathrm{réd}}$ 仍然约化）；于是在 $k$
+上的某个非空开集上光滑，而通过平移该开集可见它处处光滑。
+这样，$G$ 局部不可约，所以其不可约分支就是其连通分支，故
+$G^\circ$ 不可约。再令 $U$ 为 $G^\circ$ 中 $e$ 的一个仿射邻域；
+利用 $G^\circ$ 的不可约性，立即可见
+$U\cdot U=G^\circ$，这证明 $G^\circ$ 拟紧，因而在 $k$ 上有限型。
+
+为简单起见，假设 $G$ 交换。对每个整数 $n>0$，令 $G^{(n)}$ 为
+$G^\circ$ 在 $G$ 的 $n$ 次幂同态 $\varphi_n$ 下的逆像，因此
+$G^{(n)}$ 是 $G$ 的开子群。置
+\[
+G^\tau=\bigcup_nG^{(n)}.
+\]
+
+\src{223}
+\[
+G^\sigma=\bigcup_{(n,p)=1}G^{(n)},
+\qquad
+G^\rho=\bigcup_hG^{(p^h)},
+\]
+其中 $p$ 是域 $k$ 的特征指数。这样得到 $G$ 的若干开子群，并满足
+\[
+G^\sigma\cap G^\rho=G^\circ,
+\qquad
+G^\sigma G^\rho=G^\tau.
+\]
+
+\result{注记}{} 可以构造商群概形 $G/G^\circ=N$（参见 [3]，IV），
+进而把 $G^\tau$、$G^\sigma$、$G^\rho$ 定义为 $N$ 的挠子群
+（相应地，后述准素分量的自然补，即各 $q$-准素分量之和，其中 $q$
+遍历满足 $\neq p$ 的素数；再相应地，其 $p$-准素分量）在 $G$ 中的逆像。\footnote{印刷
+文本将后两项的说明次序颠倒；依本页紧前给出的定义，译文按与特征指数互素部分、
+特征指数准素部分的次序复原。}就此还应注意，$N$
+是 $k$ 上的离散可分群概形，所以一旦选定 $k$ 的一个代数闭包
+$\overline k$（从而得到一个 Galois 群 $\pi$），它便可与一个普通离散
+群等同，而 $\pi$ 通过自同构作用于该群。由此可以显然地解释挠子群的
+构造，以及它分解为各 $q$-准素分量的方式。当 $G$ 是 $k$ 上固有概形
+$X$ 的 Picard 概形时，$N$ 可称为 $X$ 在 $k$ 上的（约化）
+\emph{Néron--Severi 概形}。当
+$G^\circ_{\mathrm{réd}}$ 是 $G^\circ$ 的群子概形时——特别地，只要
+$k$ 完美，或者 $G^\circ$ 在 $k$ 上固有（例如 $X$ 几何正规），就会
+如此——还应引入商
+$N'=G/G^\circ_{\mathrm{réd}}$；从特化的观点看，亦即当 $X$ 在代数
+概形族中变化时，它往往比 $N$ 表现得更好。
+
+现在设 $S$ 为局部诺特预概形，$G$ 为 $S$ 上的群预概形，并且在 $S$ 上局部有限型。
+我们不假设 $G$ 在 $S$ 上有限型，也不假设它在 $S$ 上分离。置
+\[
+G^\circ=\bigcup_{s\in S}(G_s)^\circ,
+\]
+并且当 $G$ 交换时，置
+\[
+G^\tau=\bigcup_{s\in S}(G_s)^\tau,
+\qquad
+G^\sigma=\bigcup_{s\in S}(G_s)^\sigma,
+\qquad
+G^\rho=\bigcup_{s\in S}(G_s)^\rho.
+\]
+
+\src{224}
+这些是 $G$ 的一些在 $G$ 的乘法下稳定的子集；这显然并不意味着它们
+能用 $G$ 的群子预概形来定义。特别地，一般似乎不存在底集恰为
+$G^\circ$ 的 $G$ 的群子预概形。当然，如果其中某个集合是开的，那么
+赋予诱导结构后，它就是 $G$ 的开群子预概形。我们将看到，
+$G^\tau$ 总是如此。因此，从可表函子的观点，特别是从“特化”的观点
+看，数值等价的表现比代数等价更为令人满意。下面列出刚才定义的这些
+集合的主要一般性质：
+
+\result{定理}{1.1} $G^\circ$、$G^\tau$、$G^\sigma$、$G^\rho$ 均局部
+可构造。此外：
+
+\noindent (i) $G^\circ$ 在 $S$ 上拟紧。若各 $G_s^\circ$ 均固有，且
+$G$ 在 $S$ 上分离，则 $G^\circ$ 在 $S$ 上固有，因而在 $G$ 中为闭。
+
+\noindent (ii) $G^\tau$ 是开的。若 $G^\circ$ 为闭，则 $G^\tau$ 也为
+闭。
+
+\noindent (iii) 若 $G^\circ$ 为闭，则在等特征情形，即 $S$ 的所有
+剩余域具有同一特征时，$G^\sigma$ 也为闭。若 $G^\circ$ 为闭，并且
+$G\longrightarrow S$ 在 $G^\sigma$ 的各点普遍开（参见下文推论
+1.5），则 $G^\sigma\longrightarrow S$ 普遍开。
+
+\noindent (iv) 若 $G^\circ$ 为闭，则 $G^\rho$ 也为闭。假设处于等特征
+情形，并且对每个满足 $(n,p)=1$ 的整数 $n>0$，$G$ 中的 $n$ 次幂同态
+都是开态射，则 $G^\rho$ 为开。
+
+下面给出证明的要点。$G^\circ$ 的局部可构造性以及它在 $S$ 上的
+拟紧性，包含在下述引理中：
+
+\result{引理}{1.2} 假设 $S\neq\varnothing$，则 $S$ 中存在一个非空
+开集 $U$，$U$ 上存在一个纤维连通的有限型群概形 $H$，并且存在群
+概形同态 $H\longrightarrow G|U$，它是以 $G^\circ|U$ 为像的开浸入。
+
+为证明该引理，可以假设 $S$ 不可约，并令 $\eta$ 为其一般点；作基变换
+$S'=\operatorname{Spec}(\mathcal O_{S,\eta})\longrightarrow S$，得到
+Artin 局部环 $\mathcal O_{S,\eta}=A$ 上的群概形 $G'$，其中有上文所说
+的一个 $A$ 上有限型开群子概形 $G'{}^\circ$。因此，它来自 $\eta$ 的
+某个开邻域 $U$ 上的有限型群概形 $H$，而典范浸入
+$G'{}^\circ\longrightarrow G'$ 来自一个
+
+\src{225}
+开浸入 $H\longrightarrow G|U$；当 $U$ 取得足够小时，它是群概形同态。
+若把 $U$ 取得足够小，则 $H$ 的纤维连通，且全都具有同一维数，等于
+$G$ 的纤维维数（$U$ 足够小时）。因此，对每个 $s\in U$，$H_s$ 在 $G_s$ 中的像恰为
+$G_s^\circ$（仍把 $U$ 取得足够小），这证明了 1.2。
+
+(i) 的第二个断言包含在下述引理中（将它应用于 $G$ 中 $G^\circ$ 的
+一个拟紧开邻域）：
+
+\result{引理}{1.3} 设 $X$ 是局部诺特预概形 $S$ 上的有限型分离预概形，
+$g$ 是 $X$ 在 $S$ 上的一个截面，$X^\circ$ 是各 $X_s$ 中包含
+$g(s)$ 的连通分支之并。设 $s\in S$，且 $X_s^\circ$ 在 $k(s)$ 上
+固有，则存在 $s$ 的一个开邻域 $U$，使 $X^\circ|U$ 在 $U$ 上固有，
+进而在 $X|U$ 中为闭。
+
+通过基的忠实平坦下降，可归结到 $S$ 是完备局部环的谱、$s$ 是其闭点
+的情形。应用 [2]，III，5.5.1，可见 $X$ 分解为两个不交开集 $X'$ 与
+$X''$ 之和；其中前者在 $S$ 上固有，且 $X'_s=X_s^\circ$。这把问题
+归结到 $X=X'$ 的情形，亦即 $X$ 在 $S$ 上固有。此时可用一个标准证明
+解决，即使用某个部分的固有性赋值判据（[2] 第二章中遗漏了这一判据）。
+
+下面证明 $G^\tau$ 为开。考虑到 $G^\tau$ 的形成（正如 $G^\circ$、
+$G^\sigma$、$G^\rho$ 的形成）与基扩张可交换，这等价于证明：对 $G$
+在 $S$ 上的任意截面 $g$，$g^{-1}(G^\tau)$ 为开。这包含两件事：
+
+\medskip
+\noindent a. 设 $y\in S$ 且 $g(y)\in G_y^\tau$，则对每个满足
+$y'\in\overline{\{y\}}$ 且充分接近 $y$ 的点，有
+$g(y')\in G_{y'}^\tau$。
+
+\medskip
+\noindent b. 设 $y'\in S$ 且 $g(y')\in G_{y'}^\tau$，则对 $y'$ 的
+每个泛化 $y$，有 $g(y)\in G_y^\tau$。
+
+对于 (a)，注意存在整数 $n>0$，使 $g^n(y)\in G_y^\circ$。由于
+$G^\circ$ 可构造，$(g^n)^{-1}(G^\circ)$ 也可构造，所以有
+$g^n(y')\in G_{y'}^\circ$，其中 $y'\in\overline{\{y\}}$ 且充分接近
+$y$。对于 (b)，注意诸
+$g(y')^n=g^n(y')$ 都留在 $G_{y'}$ 的某个拟紧开集中（因为它们包含在
+模 $G_{y'}^\circ$ 的有限多个类中），故 $G$ 中存在一个拟紧开集 $U$
+包含所有 $g^n(y')$，从而也包含它们的各泛化 $g^n(y)$；因此
+$g(y)$ 的各次幂都留在 $G_y$ 的一个拟紧开集中，这容易推出
+$g(y)\in G_y^\tau$。
+
+\src{226}
+假设 $G^\circ$ 为闭；下面证明 $G^\tau$ 也为闭。由于已经知道
+$G^\tau$ 为开，因而局部可构造，只须再证明它在特化下稳定。这源于
+它是若干闭集之并，即闭集 $G^\circ$ 在各 $n$ 次幂同态
+$\varphi_n$ 下的逆像之并。
+
+一旦证明 $G^\sigma$ 与 $G^\rho$ 局部可构造，同一论证便证明：若
+$G^\circ$ 为闭，则 $G^\sigma$ 与 $G^\rho$ 也为闭（前一种情形还须
+处于等特征）。对 $x\in G^\tau$，令 $\nu(x)$ 为满足如下条件的最小
+整数 $n>0$：$n$ 次幂同态 $\varphi_n$ 把 $x$ 映入 $G^\circ$。因此，
+$G^\sigma$（相应地，$G^\rho$）由所有满足如下条件的 $x\in G$
+\footnote{印刷文本此处作“$X$”，但本段中没有定义这个符号；所考察的四个
+部分都是 $G$ 的子集。}构成：$\nu(x)$ 与 $p$ 互素（相应地，是 $p$
+的幂）。于是，我们的可构造性断言由下述更精确的结论推出：
+
+\result{引理}{1.4} $G^\tau$ 上的函数 $\nu$ 局部可构造。
+
+这确实意味着：对每个整数 $n>0$，满足 $\nu(x)=n$ 的
+$x\in G^\tau$ 所成的集合局部可构造；而该集合是
+$\varphi_n^{-1}(G^\circ)$ 与诸
+$\varphi_d^{-1}(G^\circ)$ 之并的差，其中 $d$ 遍历 $n$ 的真因子。
+由于 $G^\circ$ 局部可构造，各 $\varphi_d^{-1}(G^\circ)$ 也局部
+可构造，因而上述差集同样如此。
+
+假设 $G^\circ$ 为闭，且 $G\longrightarrow S$ 在 $G^\sigma$ 的各点
+普遍开；下面证明 $G^\sigma\longrightarrow S$ 为开，亦即它把
+$G^\sigma$ 中 $x\in G^\sigma$ 的一个邻域映为 $y=f(x)$ 的一个邻域。
+由于 $G^\sigma$ 局部可构造，只须证明：对 $y$ 的每个泛化 $y'$，都
+存在 $G^\sigma$ 中 $x$ 的一个泛化 $x'$，位于 $y'$ 上方。经基变换，
+可归结到 $S$ 是离散赋值环的谱，而 $y,y'$ 分别为闭点与一般点的
+情形。利用 $G\longrightarrow S$ 在 $x$ 处为开这一事实（因而存在
+$G$ 中 $x$ 的一个泛化 $x_1$，位于 $y'$ 上方），再作一次基变换后，
+可以进一步假设存在 $G$ 在 $S$ 上的截面 $g$，使 $x=g(y)$。若
+$k(y')$ 的特征为 0，只须取 $G$ 中位于 $y'$ 上方的 $x$ 的任意泛化
+$x'$；由于 $G^\tau$ 为开，它属于 $G^\tau$，又由于
+$G_{y'}^\sigma=G_{y'}^\tau$，它属于 $G^\sigma$。若 $k(y')$ 的特征为
+$p>0$，置
+\[
+\nu(g(y'))=p^hm\qquad\text{其中 }(m,p)=1 ;
+\]
+
+\src{227}
+取两个整数 $a$、$b$，使 $ap^h+bm=1$，并置
+\[
+g_1=g^{ap^h},\qquad g_2=g^{bm},\qquad\text{从而}\qquad g=g_1g_2 ;
+\]
+于是依构造有 $g_1(y')\in G^\sigma$、$g_2(y')\in G^\rho$。由于
+$G^\circ$ 为闭，可推出 $g_1(y)\in G^\sigma$、$g_2(y)\in G^\rho$；
+再由
+\[
+g(y)=g_1(y)g_2(y)\in G^\sigma,
+\]
+还可推出 $g_2(y)\in G^\sigma$，因而
+\[
+g_2(y)\in G_y^\sigma\cap G_y^\rho=G_y^\circ.
+\]
+由假设以及 $S$ 是离散赋值环的谱这一事实，
+$G-(G_y-G_y^\circ)$ 是 $G$ 的一个开集，$G\longrightarrow S$ 在其上
+诱导开态射；因此，存在一条“准截面”通过 $G_y^\circ$ 的每个点。于是，
+再对基 $S$ 作一次扩张后，可以假设存在 $G^\circ$ 在 $S$ 上的截面
+$g'_2$，使 $g'_2(y)=g_2(y)$。置 $g'=g_1g'_2$；则依构造，
+$g'(y)=g(y)=x$，且
+\[
+g'(y')=g_1(y')g'_2(y')\in G^\sigma,
+\]
+所以 $g'(y')=x'$\footnote{印刷文本此处作“$g(y')=x'$”；上一句构造且
+此处计算其一般纤维的截面是 $g'$。}是 $G^\sigma$ 中 $x$ 的一个
+泛化，位于 $y'$ 上方。这证明了 (iii)。
+
+最后证明 (iv) 的最后一个断言。可归结为证明：若 $x\in G^\rho$，则
+$x$ 的每个泛化 $x'$ 都属于 $G^\rho$。可以假设（对适当的 $h$ 取
+$\varphi_{p^h}$ 下的像后）\footnote{印刷文本作
+$\varphi_{n^h}$；对 $x\in G^\rho$，第 223 页给出的定义提供了一个
+特征指数 $p$ 的幂，把 $x$ 映入 $G^\circ$。}甚至有
+$x\in G^\circ$。于是，对每个与该特征互素的整数 $n$，$x$ 都属于
+$\varphi_n$ 的像（因为在特征与 $n$ 互素的域上，有限型连通群中的
+$n$ 次幂映射是满射）。由于 $\varphi_n$ 为开，$x'$ 也属于
+$\varphi_n$ 的像。更确切地说，设 $U$ 是 $G^\tau$ 中包含
+$G_y^\circ$ 的一个拟紧开集，则对每个与 $p$ 互素的 $n$，都有
+$x'\in\varphi_n(U)$。取 $n$ 为诸 $\nu(z)$ 中与 $p$ 互素的因子的
+一个公倍数，其中 $z\in U$，可得 $x'\in G^\rho$。
+
+(1.1) 的断言 (iii) 可补充如下：
+
+\result{推论}{1.5} 设 $n>1$ 为整数，使 $n$ 次幂同态
+$\varphi_n:G\longrightarrow G$ 普遍开（例如平展），置
+\[
+G^{(n)}=\varphi_n^{-1}(G^\circ),
+\]
+并假设各连通纤维 $G_s^\circ$ 不“包含任何加性成分”（亦即由
+
+\src{228}
+把域 $k(s)$ 扩张到代数闭包所得到的群不含同构于 $\mathbf G_a$ 的
+子群）。则 $G\longrightarrow S$ 在各 $G^{(n^h)}$ 的点普遍开。特别
+地，若各 $G_s^\circ$ 不含加性成分，并且对每个整数 $n>1$，同态
+$\varphi_n$ 在剩余特征与 $n$ 互素的各点普遍开
+\footnote{印刷文本作“与 $p$ 互素”。在这个由 $n$ 量化的命题中，
+平展性判据以及使用核 ${}_nG$ 的论证要求剩余特征与 $n$ 互素。}，则
+$G\longrightarrow S$ 在 $G^\sigma$ 的各点普遍开；因而由 (1.1)，
+(iii)，若 $G^\circ$ 为闭，则
+$G^\sigma\longrightarrow S$ 普遍开。在这些情形中，
+$s\longmapsto\dim G_s$ 是 $S$ 上的局部常值函数。
+
+事实上，由假设可知 $\varphi_n$ 的核 ${}_nG$ 在 $S$ 上普遍开，所以
+$G\longrightarrow S$ 在 ${}_nG$ 的各点普遍开；因而以 $n^h$ 代替
+$n$ 后，它在 ${}_{n^h}G$ 的各点普遍开。关于纤维 $G_s^\circ$ 的
+假设恰好保证，$G_s$ 中阶为 $n$ 的幂的点在诸
+$G^{(n^h)}$ 之并中稠密；由此容易推出，$G\longrightarrow S$ 在该并
+的每个点普遍开，特别是沿单位截面普遍开，进而容易推出
+$s\longmapsto\dim G_s$ 是局部常值函数。
+
+\result{注记}{1.6} 回忆，若态射 $X\longrightarrow S$ 把每个开集映成
+开集，并且在每次基变换 $S'\longrightarrow S$ 后仍保持这一可贵性质，
+则称它普遍开。这也意味着（当 $S$ 局部诺特且
+$X\longrightarrow S$ 局部有限型时），$X$ 的每个不可约分支都支配
+$S$，并且这一性质在每次基变换 $S'\longrightarrow S$ 后都保持。在
+这两个断言中（在上述有限性假设下），其实只须用如下基变换
+$S'\longrightarrow S$ 作检验：$S'$ 是离散赋值环的谱（如果愿意，
+还可要求完备且剩余域代数闭~……）。该定义显然可推广到 $X$ 的一个
+子集 $Z$（例如 $G$ 的子集 $G^\sigma$）。即使从具有几何连通纤维的
+射影光滑态射 $X\longrightarrow S$ 出发（例如
+$S=\operatorname{Spec}\mathbf C[j]$ 上椭圆曲线模族的纤维平方），
+$\operatorname{Pic}_{X/S}$ 在 $S$ 上并非普遍开，也是完全正常的现象；
+亦即，$\operatorname{Pic}_{X/S}$ 可能有一些不可约分支完全位于 $S$
+的某一个点之上。这与 $X/S$ 各纤维的 Néron--Severi 群的秩可能向上
+跳跃有关（“复乘”现象）。相反，(1.5) 保证，在良好情形中，
+$\operatorname{Pic}_{X/S}^\sigma$（而且看来往往甚至
+$\operatorname{Pic}_{X/S}^\tau$）在 $S$ 上普遍开。
+
+
+\src{229}
+最后，给出一个有用的情形：在这一例外情形下，$G^\circ$ 确为开集：
+
+\result{推论}{1.7} 设 $G\longrightarrow S$ 在 $G^\circ$ 的各点处普遍开
+（参见 (1.5)），并且各纤维 $G_s$ 可分，因而在 $k(s)$ 上光滑（依 Cartier
+的一个结果，后一条件在剩余特征为零时自动满足）。于是 $G^\circ$ 在 $G$
+中是开的。若进一步 $S$ 是约化的，则 $G^\circ$ 在 $S$ 上光滑（特别地，
+是平坦的）。
+
+还可将第一个断言细化如下：若对某个给定的 $s\in S$，
+$G\longrightarrow S$ 在 $G_s^\circ$ 的各点处普遍开，并且 $G_s^\circ$ 在
+$k(s)$ 上可分，则 $G^\circ$ 是 $G_s^\circ$ 的一个邻域（而且，在 $s$
+处所作的假设在邻近点处仍将成立）。这一陈述实际上与任何群结构无关，将在
+[2], IV, 第 7 节中证明。(1.7) 的最后一个断言同样与任何群结构以及任何连通
+分支问题无关，它是 [2], IV, 第 5 节中一个平坦性判据的特例；该判据更一般地
+推出：
+
+\result{推论}{1.8} 设 $U$ 是某一纤维 $G_s$ 的一个开部分，并且
+$G\longrightarrow S$ 在 $U$ 的各点处普遍开（参见 (1.5)）。若 $G_s$ 在
+$k(s)$ 上可分且 $S$ 在 $s$ 处约化，则 $G$ 在 $U$ 的各点处平坦于 $S$
+（因而在这里，在 $U$ 的各点处光滑于 $S$）。
+
+\result{注记}{1.9} 我不知道，当 $G$ 在 $S$ 上分离时，$G^\circ$ 或
+$G^\tau$ 是否总在 $G$ 中闭；这似乎不大可能。无论如何，若去掉分离性假设，
+很容易得到反例。例如，取一条仿射直线，并将其原点复制可数无穷多次；由此得
+到仿射直线上的一个群概形 $G$，除一条纤维为 $\mathbf Z$ 外，其余各纤维均
+约化为单位群。这个群概形是相应于一个退化为两条相交直线的二次曲线族的
+$S$-概形 $X$ 的 Picard 预概形中的一个开群子概形，即单位截面的闭包。
+
+此外，即使从离散赋值环 $V$ 的谱 $S$ 上一个有限平坦群概形 $G$ 出发，因而
+$G^\circ$ 约化为单位截面并且是闭的，只要舍弃某些假设，各种结论仍会失效。
+设 $V$ 具有等特征 $p>0$，并令 $G$ 为同态
+$\mathbf G_a\longrightarrow\mathbf G_a$ 的核；该同态由函子同态
+\[
+f\longmapsto f^p-tf,
+\]
+定义，其中 $t$ 是 $V$ 的一个一致化元。
+
+\src{230}
+（回忆：依定义，$S$ 上的“加法群”$\mathbf G_a$ 表示函子
+$S'\longmapsto\Gamma(S',\mathcal O_{S'})$。）于是，作为 $S$-概形，
+\[
+G=\operatorname{Spec}V[x]/(x^p-tx)
+\]
+是 $p$ 条相交“直线”的并，它刻画一个退化为加性型无穷小群的群
+$\mathbf Z/p\mathbf Z$。在这个例子中，$G^\circ=G^\sigma$（并且它是这
+$p$ 条直线之一），故在 $G$ 中不是开的。在剩余特征为 $p>0$ 的混合特征情形
+下，从群概形 $H=\boldsymbol\mu_p$ 出发；它是 $\mathbf G_m$ 中 $p$ 次幂同态
+的核，因而
+\[
+H=\operatorname{Spec}V[x]/(x^p-1) ;
+\]
+这仍是 $p$ 条相交直线的并，它刻画一个（在特征零时的）群
+$\mathbf Z/p\mathbf Z$，后者在特征 $p$ 时退化为乘性型无穷小群。令 $H'$
+为由通常的有限群 $\mathbf Z/p\mathbf Z$ 定义的“常值群概形”，即
+$\mathbf Z/p\mathbf Z$ 份 $S$ 的不交并，也就是
+$\operatorname{Spec}V^{\mathbf Z/p\mathbf Z}$。于是 $G=H\times_S H'$ 在特征
+零时描述一个群 $(\mathbf Z/p\mathbf Z)^2$，它在特征 $p$ 时退化为一个无穷小
+群与 $\mathbf Z/p\mathbf Z$ 的乘积。这里 $G^\rho$ 是单位截面与特殊纤维的
+并，故 $G^\rho$ 不是开的；而 $G^\sigma$ 是单位截面与泛纤维的并，故不是闭
+的，这与 (1.1) 的 (iii) 和 (iv) 中针对等特征情形所断言的结论相反。当然，
+这些都是与特征 $p>0$ 有关的现象。前面的结果事实上给出：
+
+\result{推论}{1.10} 设 $S$ 的所有剩余特征均为零，因而
+$G^\tau=G^\sigma$ 且 $G^\circ=G^\rho$。于是 $G^\tau=G^\sigma$ 是开的；若
+$G$ 在 $S$ 上分离且各 $G_s^\circ$ 均固有，则它甚至既开又闭。在同一假设
+下，$G^\circ=G^\rho$ 在 $S$ 上固有，因而在 $G$ 中闭。最后，设对每个整数
+$n>1$，$G$ 中的 $n$ 次幂同态均普遍开，则 $G^\circ$ 是开的；若进一步各
+$G_s^\circ$ 没有加性分量（例如各 $G_s^\circ$ 如上均为固有的），则
+$G^\tau\longrightarrow S$ 普遍开；若 $S$ 约化，它甚至是光滑的。
+
+最后指出如下容易的结果：
+
+\result{命题}{1.11} 存在 $S$ 的一个开部分 $U$，使得 $G$ 中那些 $G$ 在
+$S$ 上光滑（相应地，平坦）的点所成的集合 $G'$，是 $G|U$ 的一个开群子概形
+的底层集合。此外，$G$ 在 $U$ 上的每个截面都是 $G'$ 在 $U$ 上的截面。
+
+\src{231}
+\result{推论}{1.12} 若 $G$ 在单位截面的各点处光滑（相应地，平坦）于
+$S$，则它在 $G$ 于 $S$ 上的每个截面的各点处以及 $G^\circ$ 的所有点处也
+具有此性质。若进一步，对每个整数 $n>0$，$n$ 次幂同态
+$\varphi_n:G\longrightarrow G$ 在特征与 $n$ 互素的各点处平展，则 $G$ 在
+$G^\sigma$ 的所有点处光滑（相应地，平坦）于 $S$。
+
+\fsection{2}{关于 Picard 概形局部性质的应用}
+
+\result{定理}{2.1}
+
+\noindent(i) 设 $f:X\longrightarrow S$ 是固有光滑态射，并设
+$\operatorname{Pic}_{X/S}$ 存在（例如，$f$ 是射影态射）。则
+$\operatorname{Pic}_{X/S}$ 在 $S$ 上分离，并且对于
+$\operatorname{Pic}_{X/S}$ 的每个在 $S$ 上有限型的闭子集 $Z$，$Z$ 在
+$S$ 上固有。
+
+\noindent(ii) 设 $X$ 是域 $k$ 上固有且几何正规的预概形。则
+$\operatorname{Pic}_{X/k}^\circ$\footnote{印刷文本作
+$\operatorname{Pic}_{X/S}^\circ$，但在这一关于域 $k$ 的陈述中并未出现
+$S$。} 在 $k$ 上固有。
+
+\begin{proof}
+(i) 赋值判据（[2], II, 第 7 节）将问题归结为证明如下事实：若 $S$ 是一个
+完备离散赋值环的谱，$U$ 是只含 $S$ 的泛点的开集，则
+$\operatorname{Pic}_{X/S}$ 在 $S$ 上的每个有理截面，即 $U$ 上的每个截面，
+均能唯一延拓为 $S$ 上的截面。考虑到 $\operatorname{Pic}_{X/S}$ 的定义，
+这等价于下述陈述：对于 $V=f^{-1}(U)$ 上的每个可逆模 $\mathcal L$，存在
+$X$ 上的一个可逆模延拓 $\mathcal L$，且它在同构意义下唯一。由 $V$ 上以及
+$X$ 上的可逆模分别以 Cartier 除子类描述这一事实，并注意到 $X$ 的各局部环
+均正则（因为 $X$ 在正则概形 $S$ 上光滑），故依 Auslander 的结果均为唯一
+分解环，这一点很容易推出；于是 $X$\footnote{印刷文本此处作“在 $S$ 上”；
+这里所用的唯一分解性是 $X$ 的局部环的唯一分解性。} 上的每个除子都是
+Cartier 除子。事实上，只需取闭包，$V$ 上的每个除子都可延拓为 $X$ 上的
+除子。
+\end{proof}
+
+\result{注记}{2.2} 只假设 $f$ 平坦，并且其纤维 $X_s$ 局部为完全交且在
+$k(s)$ 上于余维 $\leq2$ 处光滑时，上述证明仍然有效。这是因为 [5] 中证明
+了如下结果：在余维 $\leq3$ 处正则的 Noether 局部完全交环是唯一分解环
+（“Samuel 猜想”）。注意，这一
+
+\src{232}
+结果若将“余维 $\leq2$”替换为“余维 $\leq1$”，即替换为“正规”这一假设，
+便不再成立；一个退化为二次锥的非奇异二次超曲面族即足以说明这一点。
+
+(ii) 利用 Chow 引理，可归结到 $X$ 为射影概形的情形，因而嵌入
+$\mathbf P_k^n$；可设 $X$ 连通。若 $\dim X=1$，则 $X$ 在 $k$ 上光滑，
+从而应用 (i)。若 $\dim X\geq2$，可使用已知“等价判据”的一个变体；它推出
+存在有限条 $X$ 上的光滑曲线 $Y_i$（它们由 $X$ 与 $\mathbf P_k^n$ 的适当
+线性子空间相交而得），使得
+\[
+\operatorname{Pic}_{X/k}^\tau\longrightarrow
+\prod_i\operatorname{Pic}_{Y_i/k}^\tau
+\]
+为单态射，因而在连通分支上当然也诱导单态射。由前述结果，右端的连通分支在
+$k$ 上固有；而这里涉及的是群概形的同态，它必然是闭浸入。因此
+$\operatorname{Pic}_{X/k}^\circ$ 在 $k$ 上也固有。也可以利用代数闭域上交换
+代数群的结构（归功于 Chevalley--Borel）来避免诉诸精细的等价判据；问题归结
+为证明从去掉原点的仿射直线\footnote{印刷文本作“仿射直线”。相应勘误
+第~303 页规定为“去掉原点的仿射直线”。} 到
+$\operatorname{Pic}_{X/k}^\tau$ 的每个态射均为常值。这等价于说，
+$X[t,t^{-1}]$\footnote{印刷文本作 $X[t]$；相应勘误第~303 页规定为
+$X[t,t^{-1}]$。} 上的每个可逆模均来自 $X$ 上的一个可逆模。这一结果众所周知
+且十分初等，甚至不需要 $X$ 在 $k$ 上固有（$X$ 正规这一假设使问题立刻归结
+到 $X$ 正则的情形）。
+
+\result{推论}{2.3} 设 $f:X\longrightarrow S$ 是固有正规态射（即平坦且具有
+几何正规纤维），并设 $\operatorname{Pic}_{X/S}$ 存在。则
+$\operatorname{Pic}_{X/S}^\circ$ 在 $S$ 上固有，因而在
+$\operatorname{Pic}_{X/S}$ 中闭；此外，$\operatorname{Pic}_{X/S}^\tau$ 和
+$\operatorname{Pic}_{X/S}^\rho$ 也均为闭的；在“等特征”情形下，
+$\operatorname{Pic}_{X/S}^\sigma$ 也为闭的。
+
+应用 (1.1) 和 (2.1), (ii)。
+
+\result{推论}{2.4} 设 $f:X\longrightarrow S$ 是固有光滑态射，使得
+$\operatorname{Pic}_{X/S}$ 存在并且是 $S$ 上有限型概形 $P^{(i)}$ 的不交并
+（参见 [3], V, 4.1）。则每个 $P^{(i)}$ 都在 $S$ 上固有。
+
+这由 (2.1), (i) 得出。如 (2.2) 中所指出的，可通过对 $f$ 的纤维作较弱的
+假设而推广这一结果；但若只假设 $f$ 正规，结论便不成立。在这种情形下，即使
+假定 $\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上有限型，我也不知道它是否仍在
+$S$ 上固有。
+
+\src{233}
+\result{定理}{2.5} 设 $f:X\longrightarrow S$ 是固有平坦态射，使得
+$\operatorname{Pic}_{X/S}$ 存在；对每个整数 $n$，以 $\varphi_n$ 表示这一
+群预概形中的 $n$ 次幂同态。则 $\varphi_n$ 在每个剩余特征与 $n$ 互素的点
+$x\in\operatorname{Pic}_{X/S}$\footnote{印刷文本作“$x\in X$”；
+$\varphi_n$ 是 Picard 预概形的幂自同态。} 处均为平展的。
+
+由平展态射的无穷小刻画，这一断言等价于下述断言：
+
+\result{引理}{2.6} 设 $S$ 是局部 Artin 环 $A$ 的谱，其极大理想
+$\mathfrak m$ 的第 $(\nu+1)$ 次幂为零，并置
+\[
+A_{\nu-1}=A/\mathfrak m^\nu,
+\qquad X_{\nu-1}=X\otimes_A A_{\nu-1},
+\]
+设 $\mathcal L$ 是 $X$ 上的可逆模，而 $\mathcal L'_{\nu-1}$ 是
+$X_{\nu-1}$ 上的可逆模，其第 $n$ 次张量幂同构于
+\[
+\mathcal L_{\nu-1}=\mathcal L\otimes_A A_{\nu-1}.
+\]
+那么，存在 $X$ 上的可逆模 $\mathcal L'$，其第 $n$ 次张量幂同构于
+$\mathcal L$（这里假定 $n$ 与 $k=k(A)$ 的剩余特征互素）。
+
+证明该引理。置
+\[
+V=\mathfrak m^\nu=\mathfrak m^\nu/\mathfrak m^{\nu+1} ;
+\]
+这是 $k=k(A)$ 上的向量空间。先考察将 $\mathcal L'_{\nu-1}$ 延拓为 $X$
+上的某个可逆模 $\mathcal L'$ 的问题。这样做的障碍位于
+\[
+H^2(X_0,\mathcal O_{X_0})\otimes_k V,
+\]
+但由关于 $\mathcal L'_{\nu-1}$ 的假设以及 $\mathcal L_{\nu-1}$ 可以延拓
+这一事实可见，此障碍的 $n$ 倍为零；由于 $n$ 与特征互素，障碍本身也为零。
+此外，所选延拓的任意性位于
+\[
+H^1(X_0,\mathcal O_{X_0})\otimes_k V,
+\]
+而 $\mathcal L'^{\otimes n}$ 与 $\mathcal L$ 之间的偏差 $\xi$ 也位于同一个
+模中；若试图修正 $\mathcal L'$ 以使这一偏差为零，就归结为在该模中找到一个
+$\eta$，使得 $n\eta=\xi$。由于 $n$ 与特征互素，这仍然可以做到。
+
+\result{推论}{} 在 (2.5) 的条件下，进一步设各纤维 $X_s$ 的 Picard 概形
+均不含加性分量（例如各 $X_s$ 几何正规，参见 (2.1), (ii)）。则
+$\operatorname{Pic}_{X/S}\longrightarrow S$ 在
+$\operatorname{Pic}_{X/S}^\circ$ 的各点处普遍开。若
+$\operatorname{Pic}_{X/S}^\circ$ 是闭的（例如各 $X_s$ 几何正规，参见
+(2.3)），则 $\operatorname{Pic}_{X/S}^\sigma$ 本身在 $S$ 上普遍开。最后，
+在等特征情形下，$\operatorname{Pic}_{X/S}^\rho\longrightarrow S$ 普遍开。
+
+应用 (1.5) 和 (1.1)。
+
+\src{234}
+\result{推论}{2.7} 设 $f:X\longrightarrow S$\footnote{印刷文本作
+“$f:X\longrightarrow Y$”，但下面的 Picard 预概形和函数的基都是 $S$。}
+是固有平坦态射，并设 $\operatorname{Pic}_{X/S}$ 存在。则 $S$ 上的函数
+\[
+s\longmapsto\dim\operatorname{Pic}_{X_s/k(s)}
+\]
+是上半连续的（即它可以向上跳跃，但不能向下跳跃）；若各
+$\operatorname{Pic}_{X_s/k(s)}$ 均不含加性分量，则它甚至连续（即局部常值）。
+
+第一个断言对于局部 Noether 基上局部有限型的任一群预概形而言是显然的，
+或近乎显然的，因为只需沿单位截面考察即可。第二个断言由 (2.5) 得出。
+
+\result{注记}{2.8} 设 $s,s'\in S$，且 $s$ 是 $s'$ 的一个特化。于是 (2.7)
+等价于 $X_{s'}$ 的 Picard 概形与其“特化”$X_s$ 的 Picard 概形的维数之间的
+一个不等式（相应地，一个等式）。事实上，早在 Picard 概形构造出来之前，
+Serre 就已指出：在光滑态射 $f:X\longrightarrow S$ 的情形下，各 $X_s$ 的
+Picard 概形维数不变性，是基本群的特化理论（[4], X）以及 Picard 簇上的有限
+阶点与阿贝尔化基本群之间的经典 Kummer 关系（[4], XI）的形式推论。一般地，
+以 $\alpha,\mu,\lambda$ 分别表示
+$\operatorname{Pic}_{X_s/k(s)}^\circ$ 的阿贝尔部分、乘性部分和加性部分的
+维数，并类似地定义 $\alpha',\mu',\lambda'$。已知关系可表为如下不等式：
+\[
+\tag{*}\alpha+\mu+\lambda\geq\alpha'+\mu'+\lambda'
+\]
+（只要 $\operatorname{Pic}_{X/S}$ 存在，该式就成立，因而它很可能总是成立）；
+当 $\lambda=\lambda'=0$ 时，这个不等式化为一个等式，并在同样的存在性假设下
+成立：
+\[
+\alpha+\mu=\alpha'+\mu' ;
+\]
+另一方面，有
+\[
+\tag{**}2\alpha+\mu\leq2\alpha'+\mu'
+\]
+
+\src{235}
+根据 Serre 的论证，若各 $X_s$ 可分（甚至无须假设
+$\operatorname{Pic}_{X/S}^\tau$ 存在），或者若
+${}_n\operatorname{Pic}_{X/S}$（Picard 函子中 $\varphi_n$ 的核）在 $S$ 上
+分离（注意到依 (2.5)，它们在 $S$ 上平展），则 (**) 成立。人们倾向于猜想
+(*) 总是等式，或至少在各 $X_s$ 可分时如此，并且有不等式
+\[
+\tag{***}\alpha\leq\alpha',\qquad\lambda\geq\lambda',
+\]
+只要存在一个局部 Noether 的 $S$ 上局部有限型、且纤维维数恒定的群预概形，
+这些不等式就应成立（这一方向上的一个肯定结果见 (1.3)）。
+
+\result{注记}{2.9} 在所有已知情形中，$\operatorname{Pic}_{X/S}^\tau$ 在
+$S$ 上普遍开；但即使 $f:X\longrightarrow S$ 光滑，大概也不应据此抱有过度
+幻想。无论如何，Mumford 构造了一个
+$\operatorname{Pic}_{X/S}^\tau$ 不在 $S$ 上平坦的例子（诚然其中 $S$ 非约化，
+事实上 $S$ 是一个 Artin 环的谱），其方法是对 Igusa 曲面作无穷小变形。
+Mumford 所考察的点实际上位于 $\operatorname{Pic}_{X/S}^\rho$ 中；并且仍有可能
+（当 $f:X\longrightarrow S$ 光滑时）$\operatorname{Pic}_{X/S}^\tau$ 在
+$\operatorname{Pic}_{X/S}^\sigma$ 的各点处平坦于 $S$。不过，报告人怀疑这是否
+总是成立，即便只限于 $\operatorname{Pic}_{X/S}^\circ$ 的各点，并假定 $S$ 是
+离散赋值环的谱。这一问题还与有限自同构群作用下阿贝尔概形的不动点研究有关；
+在这种情形下似乎缺少例子。
+
+看来，即使只考虑光滑射影态射 $f:X\longrightarrow S$，本节关于
+$\operatorname{Pic}_{X/S}$ 的局部正则性结果以及 (2.8) 中指出的猜想，也几乎
+穷尽了在不对 $f$ 的纤维性质作更特殊假设时所能说的一切。不过仍需回忆：若
+$\operatorname{Pic}_{X/S}$ 的几何纤维均约化且不含加性分量，则由 (1.8) 和
+(2.5) 可知，当 $S$ 约化时，$\operatorname{Pic}_{X/S}$ 在
+$\operatorname{Pic}_{X/S}^\sigma$ 的各点处光滑于 $S$；若
+$f:X\longrightarrow S$ 正规，则即使不对 $S$ 作任何假设，这一结果仍成立，
+如我们将在 (3.5) 中看到的。为此指出：
+
+\result{命题}{2.10}
+
+\noindent(i) 若 $\operatorname{Pic}_{X/S}$ 在单位截面的各点处光滑（相应地，
+平坦）于 $S$，则它在 $\operatorname{Pic}_{X/S}^\sigma$ 的所有点处以及
+$\operatorname{Pic}_{X/S}$ 于 $S$ 上任一截面的各点处也具有此性质。
+
+\src{236}
+\noindent(ii) 设 $s\in S$ 满足
+\[
+H^2(X_s,\mathcal O_{X_s})=0,
+\]
+则存在 $s$ 的一个开邻域 $U$，使得 $\operatorname{Pic}_{X/S}|U$ 在 $U$ 上
+光滑。
+
+\noindent(iii) 设 $X$ 是域上的固有概形，则有
+\[
+\dim\operatorname{Pic}_{X/k}\leq\dim H^1(X,\mathcal O_X),
+\]
+等号成立当且仅当 $\operatorname{Pic}_{X/k}$ 在 $k$ 上光滑；若 $k$ 的特征为
+零，等号总是成立。
+
+(i) 由 (2.5) 和 (1.12) 得出；(ii) 由光滑态射的无穷小判据和一个熟知的障碍
+计算得出，同时要注意，（由“半连续性定理”）在 $s$ 处所作的假设在邻近点处
+仍然成立。最后，(iii) 由 $H^1(X,\mathcal O_X)$ 同构于
+$\operatorname{Pic}_{X/k}$ 在单位元处的 Zariski 切空间这一事实得出；最后一个
+断言是 Cartier 的一个定理的特例，该定理称特征零的“形式群”在 $k$ 上形式
+光滑。
+
+\fsection{3}{\texorpdfstring{$\operatorname{Pic}_{X/S}$}{Picard 概形} 的典范阿贝尔子概形与 Albanese 概形}
+
+\result{命题}{3.1} 设 $k$ 是域，$G$ 是 $k$ 上有限型的交换群概形，并且
+“不含加性分量”。则 $G_{\mathrm{réd}}^\circ$ 在 $k$ 上可分，因而是 $k$ 上的
+光滑群子概形。
+
+当 $k$ 完美时，这是显然的；特别地，对 $G_{\bar k}$ 亦然，其中 $\bar k$
+是 $k$ 的代数闭包。因此只需说明 $(G_{\bar k}^\circ)_{\mathrm{réd}}$ 下降自
+$G$ 的一个子概形。由关于 $G_{\bar k}$ 的假设（不含加性分量）\footnote{印刷
+文本作“Or l'hypothèse ...”；相应勘误第~303 页规定为“Or, de l'hypothèse
+...”。} 很容易推出，存在一个整数 $m$，使得
+$(G_{\bar k}^\circ)_{\mathrm{réd}}$ 是 $G_{\bar k}$ 中 $m$ 次幂同态的概形论像。
+由于后一个同态来自 $G$ 上的相应同态，后者的概形论像就是所求子概形。
+
+\result{推论}{3.2} 设 $X$ 是 $k$ 上的几何正规固有概形，并且
+$\operatorname{Pic}_{X/k}$ 存在。则存在 $\operatorname{Pic}_{X/k}$ 的一个
+阿贝尔子概形 $A$，其底层集合是 $\operatorname{Pic}_{X/k}^\circ$。
+
+事实上，由 (2.1), (ii)，$\operatorname{Pic}_{X/k}^\circ$ 在 $k$ 上固有，
+因而满足 (3.1) 的条件。
+
+
+\src{237}
+因此，前述结果表明，在某些情形下，经典的“Picard 簇”（在现代理论中应记为
+$(\operatorname{Pic}_{X/k})_{\mathrm{réd}}^\circ$）“定义在 $k$ 上”，而不必假设域
+$k$ 是完美域。
+
+现设 $f:X\longrightarrow S$ 为一个固有且平坦的态射。为简单起见，设有
+\[
+\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)
+\]
+并假设 $\operatorname{Pic}_{X/S}$ 存在，且
+$\operatorname{Pic}_{X/S}^\circ$ 在 $S$ 上固有。对 (3.3) 的 (ii)，我们还假设
+$\operatorname{Pic}_{X/S}$ 中存在一个包含 $\operatorname{Pic}_{X/S}^\circ$、
+且在 $S$ 上拟射影的开集；前面已经看到，当 $f$ 是射影态射，且其几何纤维可分、
+不可约时，这一条件成立。回忆：$S$ 上的阿贝尔概形，是指一个在 $S$ 上固有、
+光滑并具有几何连通纤维的 $S$-群概形。我们要考察，$\operatorname{Pic}_{X/S}$
+中是否存在一个阿贝尔子概形 $A$，其底层集合为
+$\operatorname{Pic}_{X/S}^\circ$。刚才已经看到，当 $S$ 是某个域的谱时，
+这样的子概形总是存在。在这里所考虑的一般情形下，已知如下结论：
+
+\result{定理}{3.3} 在上述条件下：
+
+\noindent(i) 如果 $\operatorname{Pic}_{X/S}$ 中存在一个底层集合为
+$\operatorname{Pic}_{X/S}^\circ$ 的阿贝尔子概形，那么它是唯一的。因此，
+它的形成与基变换相容。
+
+\noindent(ii) 为使这样的阿贝尔子概形存在，只需它在每个基变换
+$S'\longrightarrow S$ 后都存在，其中 $S'$ 为局部 Artin 概形；如果 $S$ 是一个
+局部环的谱，那么甚至只需对 $S'=\operatorname{Spec}(A_n)$ 检验，其中
+$A_n=A/\mathfrak m^{n+1}$。如果 $S$ 是约化的，那么同样只需对基变换
+$S'\longrightarrow S$ 检验，其中 $S'$ 是离散赋值环的谱（如果愿意，可要求
+该环完备且剩余域代数闭）。
+
+\noindent(iii) 假设 $A$ 存在，并令 $B=\operatorname{Alb}^0(X/S)$ 为其对偶
+阿贝尔概形（即 $B=\operatorname{Pic}_{A/S}^\circ$ [7]）。那么可以典范地构造
+$B$ 下的主齐性空间 $P=\operatorname{Alb}^1(X/S)$，以及一个 $S$-态射
+$X\longrightarrow P$；它对从 $X$ 到 准阿贝尔概形（即阿贝尔概形下的
+主齐性空间）的 $S$-态射是泛的。$\operatorname{Alb}^0(X/S)$、
+$\operatorname{Alb}^1(X/S)$ 以及 $X\longrightarrow\operatorname{Alb}^1(X/S)$
+的形成都与基变换相容。
+
+我们概述其证明：
+
+(i) 是交换群概形的阿贝尔子概形所具有的一般刚性性质：如果两个这样的子概形
+在一点 $s\in S$ 上集合论地重合，那么它们在 $s$ 所在的整个
+
+\src{238}
+连通分支上都重合 [7]。（这一结果推广了 Chow 的一个经典定理。）
+
+(ii) 利用 Hilbert 概形可知，下述函子可由一个 $S$ 上有限型概形 $T$ 表示：
+它把每个 $S$ 上的 $S'$，映到 $(\operatorname{Pic}_{X/S})\times_S S'$ 的
+典范阿贝尔子概形所成的集合（该集合有一个或零个元素）。由 (i)，
+$T\longrightarrow S$ 是单态射；由 (3.2)，它是满射。说
+$\operatorname{Pic}_{X/S}$ 存在典范阿贝尔子概形，就是说 $T$ 在 $S$ 上有
+一个截面，也就是说 $T\longrightarrow S$ 是同构。这也等价于说
+$T\longrightarrow S$ 是平展态射；而当 $S$ 约化时，还等价于说
+$T\longrightarrow S$ 是固有态射。由此立即得到 (ii)。
+
+(iii) 仅利用 $\operatorname{Pic}_{X/S}$ 的定义即可看出：对于 $S$ 上的任意
+阿贝尔概形 $C$，给定一个从 $X$ 到 $C$ 下主齐性空间的 $S$-态射，等价于给定
+一个群同态 $C'\longrightarrow\operatorname{Pic}_{X/S}$，其中 $C'$ 是 $C$
+的对偶阿贝尔概形。现在，如果 $\operatorname{Pic}_{X/S}$ 的典范阿贝尔
+子概形 $A$ 存在，这些同态必然经由 $A$ 分解（也可再次利用有限阶点看出）。
+由此立即得到 (iii)。
+
+\result{注}{3.4} 如果 $\operatorname{Pic}_{X/S}$ 的典范阿贝尔子概形存在，
+我们把它记为 $\operatorname{Pic}_{X/S}^{\circ\circ}$。遗憾的是，它并不总是
+存在；把 Igusa 曲面作无穷小变动（通过一阶模变形）便可看出这一点。不过，
+$\operatorname{Pic}_{X/S}^{\circ\circ}$ 至少在 $S$ 约化时仍可能存在；由
+(ii)，这等价于 $S$ 是一个离散赋值环的谱时它存在。现设 $X_0,X_1$ 分别为
+$X$ 的特殊纤维和泛纤维，并令
+\[
+A_1=\operatorname{Pic}_{X_1/K}^\circ,
+\]
+其中 $K$ 是赋值环 $V$ 的分式域。由 Koizumi 的定理，$S$ 上存在一个本质唯一的
+阿贝尔概形 $A$，其泛纤维为 $A_1$；与 (2.1) 的 (i) 中一样，很容易看出
+（从现在起假设 $X$ 在 $S$ 上光滑），$A_1$ 的恒等态射可延拓为一个态射
+\[
+A\longrightarrow\operatorname{Pic}_{X/S}.
+\]
+从而得到同态
+\[
+\tag{*}A_0\longrightarrow\operatorname{Pic}_{X_0/k}^{\circ\circ},
+\]
+容易证明它是满同态，其核为有限 $p$-群，其中 $p$ 是剩余域 $k$ 的特征指数
+
+\src{239}
+（仍然利用有限阶点）。在此约定下，关于 $X/S$ 的下列条件等价：
+
+\medskip
+\noindent a. 上述同态 (*) 是同构（Shimura 会把这一点表述为“Picard 簇”的
+形成“与特殊化相容”）。
+
+\noindent b. $\operatorname{Pic}_{X/S}^{\circ\circ}$ 存在（此时它正是 $A$）。
+
+\noindent c. （备考）各 $\operatorname{Pic}_{X_n/S}^{\circ\circ}$ 均存在。
+
+根据前面对 (*) 的核所作的说明，当剩余特征为零时，条件 (a) 成立；但这一结果
+将在 (3.5) 中得到显著推广。
+
+当然，如果 $\operatorname{Pic}_{X/S}$ 在 $\operatorname{Pic}_{X/S}^\circ$
+的各点处相对于 $S$ 光滑，那么后者在 $\operatorname{Pic}_{X/S}$ 中是开的
+（参见 (1.7)）；因此，赋予诱导结构后，它就是 $\operatorname{Pic}_{X/S}$
+的一个阿贝尔子概形，因而等于此时确实存在的
+$\operatorname{Pic}_{X/S}^{\circ\circ}$。但还有强得多的结论：
+
+\result{定理}{3.5} 在 (3.3) 的条件下，设 $s\in S$，并且
+$\operatorname{Pic}_{X_s/k(s)}$ 在 $k(s)$ 上光滑（等价地，
+\[
+\dim\operatorname{Pic}_{X_s/k(s)}=\dim H^1(X_s,\mathcal O_{X_s})).
+\]
+那么存在 $s$ 的一个开邻域 $U$，使得 $\operatorname{Pic}_{X/S}$ 在
+$\operatorname{Pic}_{X/S}^\circ|U$ 的各点处相对于 $S$ 光滑；因而后者是
+$\operatorname{Pic}_{X/S}|U$ 的一个开阿贝尔子概形。更进一步，
+$\operatorname{Pic}_{X|U/U}^{\circ\circ}$ 存在。
+
+下面说明证明的原理。前面的讨论把问题归约到 $S$ 是一个局部 Artin 环 $A$
+的谱的情形；我们对 $A$ 的无穷小阶数作归纳。因此可以假设
+$\operatorname{Pic}_{X_n/A_n}^\circ$ 在 $A_n$ 上光滑，而只需证明
+$\operatorname{Pic}_{X_{n+1}/A_{n+1}}^\circ$ 在 $A_{n+1}$ 上光滑。为此，
+只要构造一个 $A_{n+1}$ 上的阿贝尔概形 $P_{n+1}$，使它延拓
+\[
+P_n=\operatorname{Pic}_{X_n/A_n}^\circ,
+\]
+同时再构造 $X_{n+1}\times_{A_{n+1}}P_{n+1}$ 上的可逆模
+$\mathcal L_{n+1}$，使它延拓 $X_n\times_{A_n}P_n$ 上的可逆模
+$\mathcal L_n$；后者作为一个泛问题的解，出现在 Picard 概形
+$\operatorname{Pic}_{X_n/A_n}$ 的定义中。（注意——我们可以假设 $X$ 在
+$S$ 上带有一个截面……）为完成这一构造，必须使用如下关键结果：定义在局部
+Artin 环的商上的每个阿贝尔概形都可以延拓（换言之，代数闭域上的阿贝尔
+概形的绝对“形式模概形”([3], II) 在
+
+\src{240}
+$k$ 的 Witt 向量环上光滑）；这一结果本身可由提升障碍的一般形式性质和群运算
+得到。
+承认这一结果后，先任意把 $P_n$ 延拓为 $P_{n+1}$；于是会遇到提升
+$\mathcal L_n$ 的一个障碍，该障碍位于
+\[
+H^2(X_0\times P_0,\mathcal O_{X_0\times P_0})\otimes_k V
+\qquad(\text{其中 }V=\mathfrak m^{n+1}/\mathfrak m^{n+2}),
+\]
+而且实际上位于子空间
+\[
+H^1(X_0,\mathcal O_{X_0})\otimes
+H^1(P_0,\mathcal O_{P_0})\otimes_k V
+\]
+中（这是因为 $\mathcal L_n$ 在两个因子 $X_n$ 和 $P_n$ 上的限制均平凡）。
+而这后一空间正是
+\[
+H^1(P_0,\mathcal T_{P_0/k})\otimes V,
+\]
+其中 $\mathcal T_{P_0/k}$ 是 $P_0/k$ 的切层；因此，它也正是刻画把 $P_n$
+提升为 $P_{n+1}$ 时所具有的不定性的空间（[3], II）。所以，可以修正这一
+提升（而且按理应当恰有一种修正方式），从而消去提升 $\mathcal L_n$ 的障碍。
+
+\result{推论}{3.6} 在 (3.5) 的条件下，$R^1f_*(\mathcal O_X)$ 在 $s$ 附近
+是 $S$ 上的局部自由模，且它的形成与基变换相容。
+
+事实上，这个模就是 $\operatorname{Pic}_{X/S}$ 沿单位截面的切模。
+
+\result{注}{3.7} 利用与 (3.5) 相同的论证，可以证明：如果 $S'$ 是由一个
+凝聚幂零理想定义的 $S$ 的子概形，并且仅假设
+$\operatorname{Pic}_{X'/S'}^\circ$ 存在且具有光滑纤维，那么
+$\operatorname{Pic}_{X/S}^\circ$ 必然存在，并且是 $S$ 上的阿贝尔概形。
+这使我们在缺少射影性假设的某些情形下仍能构造 Picard 概形；例如，Artin 环
+上的阿贝尔概形的对偶阿贝尔概形总是存在。另一方面，当 $X$ 是 $S$ 上的
+阿贝尔概形时应用 (3.6)，并利用 $H^*(X_s,\mathcal O_{X_s})$ 是由
+$H^1(X_s,\mathcal O_{X_s})$ 生成的外代数这一已知结构（Rosenlicht--Serre），
+可得对每个 $i$，$R^if_*(\mathcal O_X)$ 都是局部自由的；更确切地说，
+它同构于 $R^1f_*(\mathcal O_X)$ 的第 $i$ 次外幂。
+
+\result{注}{3.8} 当 $f:X\longrightarrow S$ 是光滑射影态射，$S$ 约化且所有
+剩余特征均为零时，结果 (3.6) 作为 Hodge 理论的推论，早已由超越方法得到。
+事实上，此时所有 $R^pf_*(\Omega^q_{X/S})$ 都是局部自由的。另一方面，存在反例
+
+\src{241}
+表明在混合特征情形下 $R^1f_*(\mathcal O_X)$ 未必局部自由；这些反例由 Serre
+簇得到（[8]，第 50 页）。在等特征情形下似乎尚无反例。
+
+\result{推论}{3.8}\footnote{印刷文本在紧前一条注记之后仍将本推论编号为
+3.8；译文保留原编号。} 在 (3.5) 的条件下，$\operatorname{Pic}_{X/S}|U$ 在
+$\operatorname{Pic}_{X/S}^\sigma|U$ 的每一点处相对于 $U$ 光滑。
+
+应用 (2.10) 的 (i)。特别地，再计及 (2.10) 的 (iii)，得到：
+
+\result{推论}{3.9} 假设 $S$ 的所有剩余特征均为零。那么
+$\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上光滑。
+
+\result{注}{3.10} 例如，如果 $\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上固有，
+则由此可知，$f$ 的各几何纤维的 Néron--Severi 群的挠子群，在 $S$ 的每个
+连通分支上都保持不变（当 $f$ 光滑且射影时，这一点也可明显地由超越方法看出）。
+还应指出，直接应用 (2.5) 可以更一般地证明：如果
+$\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上固有（例如
+$f:X\longrightarrow S$ 光滑且射影），而 $q$ 是不同于 $S$ 的所有剩余特征
+的素数，那么 $X/S$ 的各几何纤维的 Néron--Severi 群的挠子群之 $q$-准素
+分量，在 $S$ 的每个连通分支上都保持不变。不过，在特征 $p>0$ 时，对挠子群
+的 $p$-准素分量，结论不再成立。尽管如此，
+\[
+\operatorname{Pic}_{X_s/k(s)}^\tau/
+\operatorname{Pic}_{X_s/k(s)}^{\circ\circ}=T_{X_s/k(s)}
+\]
+在 $k(s)$ 上的秩仍可能局部恒定；当 $S$ 约化时，可以证明，这等价于
+$\operatorname{Pic}_{X/S}^{\circ\circ}$ 存在且
+$\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上平坦；并且只需在 $S$ 是离散赋值环
+的谱时检验这一问题。这正是我在所考察的少数例子中验证过的情形；不过，因为
+$S$ 为 Artin 概形时相应的陈述为假（参见注 (2.9) 和 (3.4)），大概不应抱有
+过度乐观的幻想。
+
+\fsection{4}{Picard 概形的有限性定理}
+
+设 $f:X\longrightarrow S$ 是一个射影平坦态射，并且
+$\operatorname{Pic}_{X/S}$ 存在。考察“Hilbert 多项式”
+$Q\in\mathbf Q[t]$，可以把 $\operatorname{Pic}_{X/S}$ 分解为开集
+$\operatorname{Pic}_{X/S}^Q$ 的不交并。如果不作附加假设，例如不假设
+$\operatorname{Pic}_{X/S}$ 在 $S$ 上分离，那么这些开集一般未必在 $S$ 上
+为有限型；当 $X$ 是“一条退化为两条直线的二次曲线”时即得到一个反例。不过，
+仍有
+
+\src{242}
+可能在 $f$ 可分且具有几何不可约纤维时，它们确实为有限型。这个问题与
+$\operatorname{Pic}_{X/S}^\tau$ 是否在 $S$ 上为有限型有关；后者可能无需对
+$X/S$ 的纤维作任何假设便成立。当 $f:X\longrightarrow S$ 光滑时，注意到
+$\operatorname{Pic}_{X/S}^\tau$ 包含在某个 $\operatorname{Pic}_{X/S}^Q$
+中（因为在非奇异射影簇上，除子的“挠等价”比数值等价更细——事实上，由
+Matsusaka 的结果，两者“相同”）；所以，如果各
+$\operatorname{Pic}_{X/S}^Q$ 在 $S$ 上为有限型，那么前者亦然。还应注意，
+即使不假设
+$\operatorname{Pic}_{X/S}$ 存在，刚提出的有限性问题仍有显然的意义，因为
+它们等价于说，某些可逆模族在 [3], IV 的意义下是“有界”的：对每个代数闭域
+$k$，考虑 $\mathbf P_k^r$ 中维数为 $n$、次数为 $d$ 的整子概形，以及这种
+预概形上 Hilbert 多项式为 $Q$ 的可逆模，其中 $r,n,d,Q$ 固定；问题是证明
+这些模所成的族（把它们视为各 $\mathbf P_k^r$ 上的凝聚模）有界，即可由一个
+$\mathbf Z$ 上的有限型概形参数化。
+
+利用 Matsusaka 的方法 [6]，通过一个颇具技术性的证明（以适当形式使用
+“等价性判据”），可以在只考虑 $\mathbf P_k^r$ 的非奇异子簇时给出肯定答案。
+更确切地说，有如下结果：
+
+\result{定理}{4.1} 设 $f:X\longrightarrow S$\footnote{印刷文本作“设：
+$X\longrightarrow S$”；下文所用的态射是 $f$。} 是一个具有几何连通纤维的
+光滑射影态射，$S$ 是 Noether 概形；设 $\mathcal O_X(1)$ 是 $X$ 上相对于
+$S$ 的甚丰沛模，$E$ 是 $\operatorname{Pic}_{X/S}$ 的一个子集，对应于
+$X/S$ 的几何纤维 $\overline X_{s_i}$ 上的一族可逆模 $(\mathcal L_i)$；
+设 $D_i$ 是 $\overline X_{s_i}$ 上定义 $\mathcal L_i$ 的一个除子（不必为
+有效除子），
+\[
+a_n^{(i)}t^n+\cdots+a_0^{(i)}
+\]
+是 $\mathcal L_i$ 的 Hilbert 多项式；设 $\xi=\xi_i$ 是定义
+$\mathcal O_X(1)$ 的一个除子，即一个超平面截面。下列条件等价：
+
+\noindent a. $E$\footnote{印刷文本此处作“$Q$”；陈述中引入的子集是 $E$，
+其拟紧性正表示该族有界。} 是拟紧的，即包含在 $S$ 上的某个有限型开集中；
+也就是说，族 $(\mathcal L_i)$ 有界。
+
+\noindent b. $E$ 包含在有限多个集合 $\operatorname{Pic}_{X/S}^Q$ 的并中，
+$Q\in\mathbf Q[t]$；也就是说，$\mathcal L_i$ 的 Hilbert 多项式只取有限多个值。
+
+\noindent b'. （如果 $X/S$ 的所有纤维都具有相同的维数 $n$。）
+$\mathcal L_i$ 的 Hilbert 多项式的两个系数 $a_{n-1}^{(i)}$ 和
+$a_{n-2}^{(i)}$ 都只取有限多个值。
+
+\src{243}
+\noindent b''. （如果 $X/S$ 的所有纤维都具有相同的维数 $n$。）整数
+\[
+\xi^{n-1}D_i\qquad\text{和}\qquad\xi^{n-2}D_i^2
+\]
+（$D_i$ 和 $D_i^2$ 的射影次数）有上界。
+
+\result{推论}{4.2} 设 $f:X\longrightarrow S$ 是一个具有几何连通纤维的
+光滑射影态射，那么概形 $\operatorname{Pic}_{X/S}^Q$ 和
+$\operatorname{Pic}_{X/S}^\tau$（$Q\in\mathbf Q[t]$）在 $S$ 上都是射影的。
+
+由 (4.1)，它们在 $S$ 上为有限型，因此可以应用 (2.4)。
+
+\section*{参考文献}
+\addcontentsline{toc}{section}{参考文献}
+
+\begin{description}
+\item[{[1]}] CHEVALLEY (Claude). -- Sur la théorie de Picard,
+\emph{Amer. J. of Math.}, 第 82 卷，1960 年，第 435--490 页。
+
+\item[{[2]}] GROTHENDIECK (A.) et DIEUDONNÉ (J.). -- Éléments de géométrie
+algébrique, 第 I 章及以下各章。-- 巴黎，Presses universitaires de France，
+1960--1961 年（Institut des Hautes Études Scientifiques，4, 8, 11,
+\ldots）。
+
+\item[{[3]}] GROTHENDIECK (Alexander). -- Technique de descente et théorèmes
+d'existence en géométrie algébrique, I--V, \emph{Séminaire Bourbaki}, 第 12 卷，
+1959/60 年，n\textsuperscript{o} 190，29 页及 n\textsuperscript{o} 195，22 页；
+第 13 卷，1960/61 年，n\textsuperscript{o} 212，20 页及
+n\textsuperscript{o} 221，28 页；第 14 卷，1961/62 年，
+n\textsuperscript{o} 232，19 页。
+
+\item[{[4]}] GROTHENDIECK (Alexander). -- Séminaire de géométrie algébrique,
+1960/61. -- 巴黎，Institut des Hautes Études Scientifiques，1961 年。
+
+\item[{[5]}] GROTHENDIECK (Alexander). -- Séminaire de géométrie algébrique,
+1961/62, 由一组听课者整理。-- 巴黎，Institut des Hautes Études Scientifiques
+（待刊）。
+
+\item[{[6]}] MATSUSAKA (T.). -- The criteria for algebraic equivalence and the
+torsion group, \emph{Amer. J. Math.}, 第 79 卷，1957 年，第 53--66 页。
+
+\item[{[7]}] MUMFORD (D.) and TATE (J.). -- Séminaire de géométrie algébrique,
+Harvard University, Spring Term 1962（待刊）。
+
+\item[{[8]}] SERRE (Jean-Pierre). -- Sur la topologie des variétés algébriques
+en caractéristique $p$, \emph{Symposium internacional de topología algebraica}
+[1956, Mexico], 第 24--53 页。-- Mexico, Universidad nacional autónoma，1958 年。
+\end{description}
+
+% FGA Canon R30: scan restoration and explicit editorial apparatus.
+\par\smallskip
+\begingroup\footnotesize
+\noindent\textit{3.2 的印刷本假设 $X$ 在 $k$ 上正规且固有，未要求几何正规。3.10 的两处印刷本固有性前提均指整个 Picard 概形，而非 $\operatorname{Pic}_{X/S}^{\tau}$。原文采用 2.10(i) 与 3.8 中印刷的 $\sigma$；圆圈与 $\tau$ 是转录错误，而非印刷读法。}\par
+\endgroup

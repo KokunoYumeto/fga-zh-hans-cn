@@ -1,0 +1,1202 @@
+\unit{第221次报告——Hilbert 概形}
+\sid{221}
+\src{249}
+\seminarzh{第13年度，1960/61，第221号\\（1961年5月）}
+\paperhead{代数几何中的构造技术与存在性定理\\
+IV. Hilbert 概形}%
+  {亚历山大·格罗滕迪克 著}
+
+\subsection*{引言}
+\addcontentsline{toc}{subsection}{引言}
+
+[2] 的 I、II 两篇报告中阐述的方法，就其实质而言，并不依赖于对所考察概形所作的任何射影性假设。遗憾的是，目前这些方法尚不能解决 [2] 的报告 II 中提出的存在性问题。在本篇报告及下一篇报告中，我们将在射影性假设下解决这些问题。所用方法具有典型的射影性质，并且实际上几乎不使用 [2] 的 I、II 两篇报告中的结果。这里我们将构造用来取代 Chow 坐标的“Hilbert 概形”，正如 [2]，II，n\textsuperscript{o}~2 中所说。在下一篇报告中，III 中所发展的概形取商理论与 Hilbert 概形理论结合起来，将使我们例如能够在相当一般的条件下构造 Picard 概形（定义见 [2]，II，n\textsuperscript{o}~3）。
+
+总而言之，可以说我们现在已有一种大致令人满意的射影构造方法；所欠缺的仍然是\footnote{见本篇报告末尾的补遗。}一个对射影群这类“无不动点”作用的群取商的定理（参见 [2]，III，n\textsuperscript{o}~8）。在解析几何中，情形似乎甚至稍好一些（这里限于研究给定解析空间上的“射影”解析空间），因为对解析空间而言，由一个作用良好的群取商所造成的困难消失了。另一方面，无论在代数几何还是解析几何中，仍有待建立一种无须射影性假设也适用的构造方法。
+
+\fsection{1}{层的有界族：稳定性性质}
+
+设 $k$ 为域，$X$ 为一个 $k$-预概形；为简单起见，设其为有限型。于是，对每个扩张 $K/k$，得到一个 $K$-预概形
+$X_K=X\otimes_k K$。若 $\mathcal F$ 是 $X_K$ 上的凝聚层，且 $K'$ 是 $K$ 的一个扩张，则
+$\mathcal F\otimes_K K'=\mathcal F_{K'}$ 是
+$X_K\otimes_K K'=X_{K'}$ 上的拟凝聚层。现在，若 $K$ 与 $K'$ 是 $k$ 的任意两个扩张，$\mathcal F$ 是 $X_K$ 上的拟凝聚层，而
+$\mathcal F'$
+\src{250}
+是 $X_{K'}$ 上的拟凝聚层，则称 $\mathcal F$ 与 $\mathcal F'$ \emph{等价}，如果存在从 $K$、$K'$ 到 $k$ 的某个共同扩张 $K''$ 的 $k$-同态，使得
+$\mathcal F_{K''}$ 与 $\mathcal F'_{K''}$ 在 $X_{K''}$ 上同构。这确实是一个等价关系；我们将研究层关于这一关系的等价类，以及等价类的集合。注意，若 $X$ 在 $k$ 上为有限型，\footnote{印刷文本此处作 $X_0$；本段中只定义了 $X$。}则凝聚层的每个等价类都可由某个 $X_K$ 上的凝聚层定义，其中 $K$ 是 $k$ 的有限型扩张。因此，在凝聚层类的定义中，可以只考虑 $k$ 的代数闭扩张；也可以只考虑一个固定的、超越次数为无穷的 $k$ 的代数闭扩张 $\Omega$。此时，$X_\Omega$ 上的两个凝聚层 $\mathcal F$ 与 $\mathcal F'$ 等价，当且仅当存在 $\Omega$ 的一个 $k$-自同构 $\sigma$，使
+$\mathcal F\otimes_\Omega(\Omega,\sigma)$ 与 $\mathcal F'$ 同构。容易看出，按上述两种定义得到的凝聚层类之间存在一一对应。
+
+设 $E$、$E'$ 为 $X$ 上凝聚层类的两个集合。考虑所有形如
+$\mathcal F\otimes\mathcal F'$ 的层的类，其中 $\mathcal F$ 与
+$\mathcal F'$ 是同一个 $X_K$ 上的凝聚层，$\mathcal F$ 的类属于
+$E$，$\mathcal F'$ 的类属于 $E'$。这样得到一个凝聚层类的集合，记作
+$E\otimes E'$。类似地定义
+$\operatorname{Tor}_i(E,E')$ 等。更一般地，设函数 $U$ 对同一个
+$X_K$ 上的任意 $n$ 个凝聚层序列
+$\mathcal F_1,\ldots,\mathcal F_n$ 指定 $X_K$ 上凝聚层的一个集合
+$U(\mathcal F_1,\ldots,\mathcal F_n)$，并且显然地与层同构以及基变换下的逆像相容；由此可定义一个仍以 $U$ 表示的函数，它对凝聚层类的任意 $n$ 个集合序列
+$E_1,\ldots,E_n$ 指定一个凝聚层类的集合
+$U(E_1,\ldots,E_n)$。
+
+本节的目标，是定义层类集合中的某些所谓\emph{有界}集合，并证明最常见的运算 $U$ 作用于有界集合后，所得集合仍然有界。
+
+设 $X$ 是诺特预概形 $S$ 上的有限型预概形。对每个 $s\in S$，纤维
+$X_s$ 是 $k(s)$ 上的有限型预概形；我们按前述意义考虑 $X_s$ 上的凝聚层类。于是，“$X/S$ 的某条纤维上的凝聚层类”这一说法以及类似说法都有了意义。同样地，在每条纤维上分别进行构造，仍可考虑
+$E\otimes E'$ 等运算，它们由 $X/S$ 各纤维上凝聚层类的若干集合体系
+\src{251}
+得到 $X/S$ 各纤维上凝聚层类的另一个集合。
+
+\result{定义}{1.1} 设 $E$ 为 $X/S$ 各纤维上凝聚层类的一个集合。若存在 $S$ 上的一个有限型预概形 $S'$，以及
+$X'=X\times_S S'$ 上的一个凝聚层 $\mathcal F'$，使 $E$ 包含于由
+$\mathcal F'$ 所定义的 $X/S$ 各纤维上的层类集合中，则称 $E$ \emph{有界}。
+
+按照定义，后一集合对每个 $s\in S$ 给出诸层
+$\mathcal F'\otimes_{S'}k(s')$ 的类，其中 $s'$ 遍历 $S'$ 中位于
+$s$ 上方的点（因而 $k(s')$ 是 $k(s)$ 的扩张，并且
+$X_s\otimes_{k(s)}k(s')$ 可与 $X'$ 在 $s'$ 处的纤维
+$X'\otimes_{S'}k(s')=X'_{s'}$ 等同）。因此可以说，有界族正是那些包含于一个由 $S$ 上有限型的 $S'$ 参数化的凝聚层\emph{代数族}中的族。
+
+有限多个有界族之并仍然有界（取定义各个包含族的参数预概形
+$S_i$ 的不交并预概形）。基变换 $T\longrightarrow S$ 将相对于
+$X/S$ 的有界族变为相对于 $X_T/T$ 的有界族；若
+$T\longrightarrow S$ 满射，则其逆命题也成立（更一般地，只须它的像包含给定的 $X/S$ 上的族 $E$ 中实际出现的那些 $s$）。从理论上说，这把有界族的确定归结为 $S$ 是整数环 $\mathbf Z$ 上有限型代数之谱的情形。
+
+若 $E$ 与 $E'$ 是相对于 $X/S$ 的层类有界族，则
+$E\otimes E'$ 也有界。事实上，设 $E$ 与 $E'$ 分别包含在由
+$T\longrightarrow S$ 及 $X_T$ 上的 $\mathcal F$、以及
+$T'\longrightarrow S$ 及 $X_{T'}$ 上的 $\mathcal F'$ 所定义的代数族中，则 $E\otimes E'$ 包含在由
+$T''=T\times_S T'\longrightarrow S$ 以及 $X_{T''}$ 上的层
+$\mathcal F''$ 所定义的代数族中，其中 $\mathcal F''$ 是
+$\mathcal F$ 与 $\mathcal F'$ 在 $X_{T''}$ 上的逆像之张量积。这一论证之所以成立，仅仅是因为关于 $\mathcal F$、$\mathcal F'$ 的函子
+$\mathcal F\otimes\mathcal F'$ 是右正合的，因而与基扩张可交换（特别是与取纤维可交换）。这一论证不能原样用于
+$\operatorname{Tor}_i(E,E')$、
+$\operatorname{Hom}(E,E')$、
+$\operatorname{Ext}^i(E,E')$ 这类局部运算。不过仍可证明，这些运算也把有界集合变为有界集合：其方法与处理
+$E\otimes E'$ 时相同，但还要使用下述类型的结果（均见 [3]，IV，6.11）：有界族 $E$ 总可以包含在一个由 $X_T$ 上的凝聚层
+$\mathcal F$ 所定义的代数族中（其中 $T$ 在 $S$ 上为有限型），并且
+$\mathcal F$ 相对于 $T$ 平坦。（即把原参数空间“分割成若干片”。）这类
+\src{252}
+适当层的平坦性性质，确实保证
+$\operatorname{Tor}_i(\mathcal F,\mathcal F')$ 这类运算与任意基变换可交换。同一方法也适用于全局性质的运算：凝聚层在固有态射下的正像和导出正像、相对于固有态射的全局
+$\operatorname{Ext}$（参见 [5]，III，\S~6）等；所有这些运算都将层的有界族变为层的有界族。（注意——这里，在所考虑的这类运算下，承载各个层的预概形可以发生变化。）
+
+以下两个命题本质上也由同一平坦性方法证明；关于有限型态射纤维上的准素分解，尤其可参见 [5]，IV。
+
+\result{命题}{1.2} 设 $E$、$E'$ 为 $X/S$ 各纤维上的层类有界集合，并假设 $X$ 在 $S$ 上固有。则：
+
+\medskip
+\noindent (i) 所有同态
+$\mathcal F\longrightarrow\mathcal F'$ 的核、余核与像所成的族有界，其中 $\mathcal F$ 的类属于 $E$，$\mathcal F'$ 的类属于 $E'$。
+
+\smallskip
+\noindent (ii) 所有可置于短正合列
+$0\longrightarrow\mathcal F\longrightarrow\mathcal F''
+\longrightarrow\mathcal F'\longrightarrow0$
+中的层 $\mathcal F''$ 所成的族有界，其中 $\mathcal F$ 的类属于
+$E$，而 $\mathcal F'$ 的类属于 $E'$。
+
+经过适当的基变换，可以假设 $E$ 与 $E'$ 分别由某个
+$X_T/T$ 上的凝聚层 $\mathcal G$ 与 $\mathcal G'$ 定义，其中 $T$ 在
+$S$ 上为有限型。还可假设满足某些平坦性条件，这些条件保证层
+$f_{T*}(\operatorname{Hom}_{X_T}(\mathcal G,\mathcal G'))$ 与
+$\operatorname{Ext}^{1}_{f_T}(\mathcal G,\mathcal G')$ 的形成同任意态射
+$T'\longrightarrow T$ 的基变换可交换。此外，可以假设上述 $T$ 上的凝聚层是局部自由的。此时，设 $T_0$ 与 $T_1$ 为 $T$ 上的向量丛，其截面芽层分别为上述两个层。于是可以典范地定义
+$X_{T_0}$ 上凝聚层的同态
+$\mathcal G_{T_0}\longrightarrow\mathcal G'_{T_0}$，以及
+$X_{T_1}$ 上凝聚层的扩张
+\[
+0\longrightarrow\mathcal G_{T_1}\longrightarrow\mathcal G''
+\longrightarrow\mathcal G'_{T_1}\longrightarrow0,
+\]
+它具有显然的泛性质。第二个层定义了一个包含 (ii) 中所考察之族的代数族。上述同态的核、余核与像也同样如此；
+\src{253}
+考察它们即得 (i)（只须假设余核相对于 $T_0$ 平坦，而这一情形仍可通过把 $T_0$ 分割成若干片来归结到\ldots）。
+
+\result{命题}{1.3} 设 $E$ 为 $X/S$ 各纤维上的层类有界族。则
+$(\operatorname{supp}\mathcal F)_{\mathrm{réd}}$ 的结构层的类构成一个有界族，其中 $\mathcal F$ 是某个 $X_K$ 上的凝聚层，$K$ 代数闭，且 $\mathcal F$ 的类属于 $E$。
+
+这里，$(\operatorname{supp}\mathcal F)_{\mathrm{réd}}$ 表示
+$\mathcal F$ 的支集赋予其诱导约化结构；也就是说，它的结构层是
+$\mathcal O_{X_K}$ 对定义 $\operatorname{supp}\mathcal F$ 的最大理想层之商。对于通过准素分解理论由 $\mathcal F$ 典范导出的层，也可以证明与 (1.3) 类似的结果。例如可取
+$\mathcal F/\mathcal F_i$，其中各 $\mathcal F_i$ 分别是关于
+$\mathcal F$ 支集某一分支的准素子层，并在具有该性质的子层中极小；也可取
+$\mathcal O_{X_K}/\mathfrak p$，其中 $\mathfrak p$ 是与
+$\mathcal F$ 相伴的素理想层；还可取
+$\mathcal O_{X_K}/\mathfrak q$，其中 $\mathfrak q$ 是与
+$\mathcal F$ 支集的某一分支相伴的准素理想层（这里基域为代数闭域）。
+
+\fsection{2}{有界族与 Hilbert 多项式}
+
+以下假设 $X$ 在 $S$ 上射影，并配备一个甚丰沛层，记作
+$\mathcal O_X(1)$。对 $S$ 中一点 $s$ 的剩余域 $k(s)$ 的任一扩张
+$K$，在 $X_K$ 上考虑相应的层 $\mathcal O_{X_K}(1)$；它仍然甚丰沛。
+
+对 $X_K$ 上的每个凝聚层 $\mathcal F$，赋予函数
+\[
+P_{\mathcal F}(n)=\text{$X_K$ 上 $\mathcal F(n)$ 的 Euler--Poincaré 示性数},
+\]
+它是整数 $n$ 的一个多项式，称为 $\mathcal F$ 的\emph{Hilbert 多项式}。当 $n$ 充分大时，$P(n)$ 就是
+$H^0(X_K,\mathcal F(n))$ 在 $K$ 上的维数，因为当 $i>0$ 且 $n$ 充分大时，
+$H^i(X_K,\mathcal F(n))$ 均为零。
+
+现在若 $\mathcal F$ 是 $X$ 上相对于 $S$ 平坦的凝聚层，则在属于
+$S$ 的同一个连通分支的各纤维 $X_s$ 上诱导出的层
+$\mathcal F_s$，其 Hilbert 多项式全都相等 [5]，III，\S~7。由此可知（无须平坦性假设），对 $X$ 上的任一凝聚层 $\mathcal F$，诸层
+$\mathcal F_s$（$s\in S$）的 Hilbert 多项式所成的集合是有限的。
+\src{254}
+另一方面，回忆若 $\mathcal F$ 是 $X$ 上的凝聚层，则当 $n$、$N$ 充分大时，它同构于某个层 $\mathcal O_X(-n)^N$ 的商层。因此，纤维上诱导出的层 $\mathcal F_s$ 也都是该纤维上的层
+$\mathcal O(-n)^N$ 的商层。\footnote{印刷文本及法、英可编辑见证在此
+第二次出现时都漏去了指数 $N$；上一句明确给出
+$\mathcal O_X(-n)^N$，取纤维仍保留同一重数。}
+
+由这两点可得下述定理的“必要性”部分：
+
+\result{定理}{2.1} 设 $X$ 在诺特预概形 $S$ 上射影，
+$\mathcal O_X(1)$ 在 $X$ 上相对于 $S$ 甚丰沛。设 $E$ 为
+$X/S$ 各纤维上的层类集合。$E$ 有界的充分必要条件\footnote{印刷文本仅作“必要”；1962 年关于报告 221 的勘误规定改为“充分必要”。}是满足以下条件：
+
+\medskip
+\noindent (a) 存在 $X$ 上的一个凝聚层 $\mathcal L$（可假设其形如
+$\mathcal O_X(-n)^N$），使得 $E$ 包含于所有形如 $\mathcal L_K$ 的层之凝聚商层的类所成的族中。
+
+\smallskip
+\noindent (b) 类属于 $E$ 的诸层 $\mathcal F$ 的 Hilbert 多项式
+$P_{\mathcal F}$ 都属于同一个有限多项式集合。
+
+尚须证明“充分性”部分；它将是一个更精确结果的特例。对域 $K$ 上有限型预概形上的任一凝聚模 $\mathcal F$ 以及任一整数 $r$，令
+$N_r$ 为 $\mathcal F$ 的子模，其在每个开集上的截面，正是
+$\mathcal F$ 在该开集上支集维数 $<r$ 的那些截面。于是，当
+$r>\dim\operatorname{supp}\mathcal F$ 时
+$N_r=\mathcal F$；当 $r\leq0$ 时 $N_r=0$。由此得到
+$\mathcal F$ 的一个有限递增滤过，其因子
+$N_{r+1}/N_r$\footnote{印刷文本把此商颠倒写成
+$N_r/N_{r+1}$，这与刚定义的递增滤过不相容。}的相伴素循环，恰为与
+$\mathcal F$ 相伴且维数为 $r$ 的素循环。置
+\[
+\mathcal F_{(r)}=\mathcal F/N_r.
+\]
+于是 $\mathcal F_{(r)}$ 的相伴素循环，恰为与 $\mathcal F$ 相伴且维数
+$\geq r$ 的素循环；特别地，$\mathcal F_{(r)}=\mathcal F$ 当且仅当
+$\mathcal F$ 的全部相伴素循环的维数均 $\geq r$。在此记号下：
+
+\result{定理}{2.2} 在 (2.1) 的条件下，设 $s$ 为整数，并假设 $E$ 满足条件 (a)，以及下列条件 (b) 的弱化形式：
+
+\medskip
+\noindent $(b_s)$ 类属于 $E$ 的诸层 $\mathcal F$ 的 Poincaré 多项式
+$P_{\mathcal F}$，其次数 $\geq s-1$ 的系数保持有界。
+
+在这些条件下，层 $\mathcal F_{(s)}$（其中 $\mathcal F$ 的类遍历
+$E$）构成有界族。此外，$P_{\mathcal F}$ 的 $s-2$ 次系数保持有下界。
+\src{255}
+因此：
+
+\result{推论}{2.3} 假设类属于 $E$ 的诸层 $\mathcal F$ 的全部相伴素循环，其维数 $d$ 均满足 $s\leq d\leq r$。则在 (2.1) 的条件
+(b) 中，只须考虑 $P_{\mathcal F}$ 的 $s-1$ 次至 $r$ 次系数。
+
+本节余下部分用于概述 (2.2) 的证明。关键是以下两个引理，其中第一个是熟知的（并概括了 Chow 坐标中有用的数学内容）：
+
+\result{引理 2.4（CHOW）}{} 考虑各纤维 $X_K$ 的子概形 $Y$ 的结构层，其中 $K$ 遍历 $S$ 的各剩余域的代数闭扩张；假设 $Y$ 约化，且它的所有分支都有同一维数 $r$（将 $\mathcal O_Y$ 视为
+$\mathcal O_X$ 的商层）。若 $Y$ 的次数保持有界，则这些 $Y$ 构成一个有界族。
+
+这里，最方便的做法是把 $Y$ 的次数 $a$ 定义为下式首项中的系数：
+\[
+P_{\mathcal O_Y}=a\frac{n^r}{r!}+\cdots.
+\]
+
+\result{引理}{2.5} 设 $\mathcal L$ 为 $X$ 上的凝聚层，$E$ 为形如
+$\mathcal L_K$ 的层之商层 $\mathcal F$ 的类所成的集合，其中 $K$ 是
+$S$ 的某个剩余域的扩张。假设 $X$ 在 $S$ 上的纤维维数
+$\leq r$，并写成
+\[
+P_{\mathcal F}(n)=a_{\mathcal F}\frac{n^r}{r!}
++b_{\mathcal F}\frac{n^{r-1}}{(r-1)!}
++\text{次数 $<r-1$ 的项}.
+\]
+则系数 $a_{\mathcal F}$ 保持有界，而 $b_{\mathcal F}$ 保持有下界。若
+$b_{\mathcal F}$ 保持有界，则诸 $\mathcal F_{(r)}$ 构成有界族。
+
+\emph{证明。}——以一族覆盖 $S$ 的子概形之并替代 $S$ 后，可以假设存在有限态射
+$f:X\longrightarrow\mathbf P^r_S$，使 $\mathcal O_X(1)$ 同构于
+$\mathcal O_{\mathbf P^r_S}(1)$ 的逆像。因此，对 $X$ 上的每个凝聚层
+$\mathcal F$，有
+$P_{\mathcal F}=P_{f_*(\mathcal F)}$。另一方面，容易验证（使用上一节的方法），$X$ 上诸层 $\mathcal F$ 所成的集合有界，当且仅当诸
+$f_*(\mathcal F)$ 所成的集合有界。最后有
+\[
+f_*(\mathcal F)_{(r)}=f_*(\mathcal F_{(r)}).
+\]
+\src{256}
+因此可归结到 $X=\mathbf P^r_S$ 的情形。此外，可以假设
+$\mathcal L=\mathcal O_{\mathbf P^r_S}(k)^s$，其中 $k$、$s$ 适当。系数
+$a_{\mathcal F}$ 满足
+\[
+0\leq a_{\mathcal F}\leq s
+\]
+因而保持有界。现在，断言 $P_{\mathcal F}(n)$ 的 $n^{r-1}$ 系数保持有下界（相应地，保持有界），等价于对
+$P_{\mathcal F}(n-k)=P_{\mathcal F(-k)}(n)$ 作同一断言。因此可归结到
+\[
+\mathcal L=\mathcal O_{\mathbf P^r_S}^{,s}.
+\]
+
+考虑正合列
+\[
+0\longrightarrow N_r\longrightarrow\mathcal F
+\longrightarrow\mathcal F_{(r)}\longrightarrow0,
+\]
+从而
+\[
+P_{\mathcal F}=P_{\mathcal F_{(r)}}+P_{N_r}.
+\]
+由于 $P_{N_r}$ 中 $n^{r-1}$ 的系数为正（因为
+$\dim\operatorname{supp}N_r\leq r-1$），故
+\[
+b_{\mathcal F_{(r)}}\leq b_{\mathcal F}.
+\]
+因此在证明本引理的各断言时，可以用 $\mathcal F_{(r)}$ 替代
+$\mathcal F$；亦即，可以假设所考察的 $\mathcal L$ 的商层
+$\mathcal F$ 均无挠。
+
+由于 $\mathbf P^r_K$ 正规，可知 $\mathcal F$ 在开集
+$U=\mathbf P^r_K-Y$ 上是秩为 $a=a_{\mathcal F}$ 的局部自由层，其中
+$Y$ 的余维 $\geq2$。于是 $\bigwedge^a\mathcal F$ 是
+$\mathbf P^r_K$ 上的层，其在 $U$ 上的限制可逆；因而（由于
+$\mathbf P^r_K$ 正则且 $Y$ 的余维 $\geq2$）它同构于
+$\mathbf P^r_K$ 上某个可逆层在 $U$ 上的限制，而后者在同构意义下唯一确定。该可逆层形如
+$\mathcal O_{\mathbf P^r_K}(d)$，其中整数 $d$ 唯一确定。由于
+$\bigwedge^a\mathcal F$ 是
+$\bigwedge^a\mathcal O_{\mathbf P^r_K}^{,s}\simeq
+\mathcal O_{\mathbf P^r_K}^{,N}$\footnote{印刷文本此处以一个未定义的
+$n$ 代替指数 $s$；$s$ 是满射到 $\mathcal F$ 的自由层之秩。}的商，其中
+$N=\binom{s}{a}$，它有 $N$ 个典范截面，因而在 $U$ 上定义了
+\src{257}
+$\mathcal O_{\mathbf P^r_K}(d)$ 的截面；这些截面是
+$\mathcal O_{\mathbf P^r_K}(d)$ 的截面 $s_i$（$1\leq i\leq N$）在
+$U$ 上的限制（因为 $\mathbf P^r_K$ 正规且 $Y$ 的余维 $\geq2$）。这些截面在 $U$ 的各点生成
+$\mathcal O_{\mathbf P^r_K}(d)$，所以它们不全为零；由此推出
+$d\geq0$。另一方面，简单计算给出
+\[
+b_{\mathcal F}=a_{\mathcal F}(r+1)/2+d.
+\]
+特别地，这表明 $b_{\mathcal F}>0$，故 $b_{\mathcal F}$ 保持有下界。
+$b_{\mathcal F}$ 保持有界，当且仅当 $d$ 保持有界；下面证明在这种情形下 $\mathcal F$ 属于一个有界族。可以假设
+$a_{\mathcal F}$ 与 $b_{\mathcal F}$ 固定，分别为 $a$ 与 $b$，因而
+$d$ 固定。知道 $\mathcal O_{\mathbf P^r_K}(d)$ 的这 $N$ 个截面
+$s_i$，亦即知道一个同态
+\[
+s:\bigwedge^a\mathcal L_K\longrightarrow\mathcal O_{\mathbf P^r_K}(d),
+\]
+便可把 $\mathcal F$ 恢复为下述相应复合同态的余像：
+\[
+\mathcal L_K\longrightarrow
+\operatorname{Hom}\!\left(\bigwedge^{a-1}\mathcal L_K,
+\bigwedge^a\mathcal L_K\right)\longrightarrow
+\operatorname{Hom}\!\left(\bigwedge^{a-1}\mathcal L_K,
+\mathcal O_{\mathbf P^r_K}(d)\right),
+\]
+其中第一个同态是由外积给出的典范同态，第二个同态由 $s$ 导出。于是由
+(1.2) (i) 得到结论。
+
+结合以上两个引理即可证明：
+
+\result{引理}{2.6} 在 (2.1) 的预备假设下，设对每个 $\mathcal F$ 均有
+\[
+P_{\mathcal F}(n)=a_{\mathcal F}\frac{n^r}{r!}
++b_{\mathcal F}\frac{n^{r-1}}{(r-1)!}
++\text{次数 $<r-1$ 的项},
+\]
+并且系数 $a_{\mathcal F}$ 保持有界。则系数 $b_{\mathcal F}$ 保持有下界。若 $b_{\mathcal F}$ 保持有界，则诸 $\mathcal F_{(r)}$ 构成有界族。
+
+可以假设诸层 $\mathcal F$ 的基域 $K$ 都是代数闭域。对每个
+$\operatorname{supp}\mathcal F_{(r)}$ 赋予诱导约化结构；它是
+$\operatorname{supp}\mathcal F$ 的维数为 $r$ 的各分支之并。\footnote{印刷文本作“次数 $r$”；滤过 $\mathcal F_{(r)}$ 是按支集维数而非次数定义的。}于是
+$\operatorname{supp}\mathcal F_{(r)}$ 的次数以 $a$ 为上界，所以由
+(2.4)，诸 $\operatorname{supp}\mathcal F_{(r)}$ 构成有界集合。此外，对
+$\operatorname{supp}\mathcal F_{(r)}$ 的每个分支，$\mathcal F_{(r)}$ 沿该分支的长度都 $\leq a$；因此，若 $\mathcal J_{\mathcal F}$ 是定义
+$\operatorname{supp}\mathcal F_{(r)}$ 的理想，则可把
+$\mathcal F_{(r)}$
+\src{258}
+视为 $X$ 的子概形 $Y_{\mathcal F}$ 上的模，其中
+$Y_{\mathcal F}$ 由 $\mathcal J_{\mathcal F}^{,a}$ 定义。与上一引理相同，还可归结到 $\mathcal F=\mathcal F_{(r)}$ 的情形，因此
+$\mathcal F$ 来自 $Y_{\mathcal F}$ 上的一个模。诸 $Y_{\mathcal F}$ 对应于
+$\mathcal O_{X_K}$ 的商模所成的一个有界族，因而来自概形
+$X\times_S T$ 的某个闭子概形 $Y$。于是可以把 (2.5) 应用于
+$Y/T$ 及 $\mathcal L\otimes_XY$，从而得到结论。
+
+现在可以对 $\dim\operatorname{supp}\mathcal F$ 的上界 $r$ 作归纳来证明
+(2.2)。当 $r<0$ 时结论显然。现设 $r\geq0$，并假设结论已对所有
+$r'<r$ 得证。由 (2.6)，诸 $\mathcal F_{(r)}$ 构成有界集合；因此再由
+(1.2) (i)，诸同态
+$\mathcal L_K\longrightarrow\mathcal F_{(r)}$ 的核也构成有界集合。所以存在 $X$ 上的凝聚模 $\mathcal L'$，使得上述各核以及
+\[
+N_r(\mathcal F)=\operatorname{Ker}(\mathcal F\longrightarrow\mathcal F_{(r)})
+\]
+也都是诸模 $\mathcal L'_K$ 的商。由于诸 $\mathcal F_{(r)}$ 有界，
+$P_{\mathcal F_{(r)}}$ 保持有界；公式
+\[
+P_{\mathcal F}=P_{\mathcal F_{(r)}}+P_{N_r}
+\]
+于是表明，$P_{N_r}$ 满足与 $P_{\mathcal F}$ 相同的条件 $(b_s)$。因此
+$N_r$ 满足条件 (a) 与 $(b_s)$；由归纳假设，诸
+$(N_r)_{(s)}$ 保持有界。另一方面，有短正合列
+$0\longrightarrow(N_r)_{(s)}\longrightarrow\mathcal F_{(s)}
+\longrightarrow\mathcal F_{(r)}\longrightarrow0$，
+所以由 (1.2) (ii)，诸 $\mathcal F_{(s)}$ 保持有界。为证明 (2.2)
+的最后一个断言，注意同态
+$\mathcal F\longrightarrow\mathcal F_{(s)}$ 的核 $N_s$ 由 (1.2) (i) 保持有界，而且 $P_{N_s}$ 中 $n^{s-1}$ 项的系数保持有界；引理 2.6 于是证明下一项的系数保持有下界。证明完毕。
+
+\fsection{3}{Hilbert 概形：定义与存在性定理}
+
+设 $X$ 是另一个预概形 $S$ 上的预概形，$\mathcal F$ 是 $X$ 上的拟凝聚模。记
+\[
+\operatorname{Quot}(\mathcal F/X/S)
+\]
+为 $\mathcal F$ 的、在 $S$ 上平坦的拟凝聚商模所成的集合。现在设
+$S'\longrightarrow S$ 为一个基变换态射，置
+$X'=X\times_S S'$ 以及
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'}$，于是
+$X'$ 是 $S'$ 上的预概形，并配备了一个
+
+\src{259}
+拟凝聚模 $\mathcal F'$，并可考虑
+$\operatorname{Quot}(\mathcal F'/X'/S')$。置
+\[
+\underline{\operatorname{Quot}}_{\mathcal F/X/S}(S')
+=\operatorname{Quot}(\mathcal F'/X'/S')
+\qquad\text{（其中 $X'=X\times_SS'$）}.
+\]
+现在若 $S''\longrightarrow S'$ 是一个 $S$-态射，则
+$X''=X\times_SS''$ 同构于 $X'\times_{S'}S''$，而 $\mathcal F''$ 同构于
+$\mathcal F'\otimes_{\mathcal O_{S'}}\mathcal O_{S''}$。由于从 $X'$ 上
+拟凝聚模范畴到 $X''$ 上拟凝聚模范畴的逆像函子
+\[
+\mathcal G'\longmapsto
+\mathcal G'\otimes_{\mathcal O_{S'}}\mathcal O_{S''}
+\]
+是右正合的，并把 $S'$-平坦模变为 $S''$-平坦模，因而得到一个自然映射
+\[
+\operatorname{Quot}(\mathcal F'/X'/S')\longrightarrow
+\operatorname{Quot}(\mathcal F''/X''/S''),
+\]
+所以，以 $S'$（$S$ 上的预概形）为变量，
+$\underline{\operatorname{Quot}}_{\mathcal F/X/S}(S')$ 是一个取值于
+集合范畴的反变函子。下文中，我们假设 $X$ 在诺特预概形 $S$ 上射影，
+$\mathcal F$ 凝聚，并且为简便起见，只考虑 $S$ 上局部诺特的 $S'$。
+
+\result{定理}{3.1} 在这些条件下，局部诺特 $S$-预概形范畴上的反变函子
+$\underline{\operatorname{Quot}}_{\mathcal F/X/S}$ 可由一个 $S$-预概形
+$\operatorname{Quot}_{\mathcal F/X/S}$ 表示；该预概形是一列射影
+$S$-概形的不交并（特别地，
+$\operatorname{Quot}_{\mathcal F/X/S}$ 在 $S$ 上局部有限型）。
+
+我们将如下得到这种分解。设 $\mathcal O_X(1)$ 是 $X$ 上相对于 $S$
+甚丰沛的可逆层。对于任意有理系数多项式 $P(n)$，令
+$\operatorname{Quot}^P(\mathcal F/X/S)$ 为
+$\operatorname{Quot}(\mathcal F/X/S)$ 中如下部分：它由 $\mathcal F$
+的凝聚商 $\mathcal G$ 构成，这些商在 $S$ 上平坦，并且在每个
+$s\in S$ 处的 Hilbert 多项式均等于 $P$。于是置
+\[
+\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}(S')
+=\operatorname{Quot}^P(\mathcal F'/X'/S'),
+\]
+从而得到 $\underline{\operatorname{Quot}}_{\mathcal F/X/S}$ 的一个
+子函子。第2节中回顾的 Hilbert 多项式不变性意味着如下结论：
+$\underline{\operatorname{Quot}}_{\mathcal F/X/S}$ 可表，当且仅当各个
+$\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}$ 均可表；此时，
+表示它的 $S$-预概形 $\operatorname{Quot}_{\mathcal F/X/S}$ 同构于
+由各个 $\operatorname{Quot}^P_{\mathcal F/X/S}$ 构成的不交并预概形，
+其中 $\operatorname{Quot}^P_{\mathcal F/X/S}$ 表示函子
+$\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}$。因此，(3.1)
+是下述定理的推论：
+\src{260}
+\result{定理}{3.2} 沿用上述记号，函子
+$\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}$ 可由射影
+$S$-预概形 $\operatorname{Quot}^P_{\mathcal F/X/S}$ 表示。
+
+本节余下部分用于证明 (3.2)。
+
+设 $\nu$ 为一个整数。对于 $S$ 上的任意 $S'$，以 $A_\nu(S')$
+表示 $\mathcal F'=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'}$
+的如下商
+$\mathcal G=\mathcal F'/\mathcal K$ 的集合：这些商是凝聚的、在
+$S'$ 上平坦，并满足下列条件：
+\begin{align*}
+\text{a.}\quad &R^if'_*(\mathcal G(n))=0 &&\text{当 $i>0$ 且 $n\geq\nu$ 时},\\
+\text{b.}\quad &R^if'_*(\mathcal K(n))=0 &&\text{当 $i>0$ 且 $n\geq\nu$ 时},\\
+\text{c.}\quad &f'_*(\mathcal K(\nu+k))
+=\mathcal S'_k f'_*(\mathcal K(\nu)) &&\text{当 $k\geq0$ 时}.
+\end{align*}
+在最后一个关系中，假设 $X$ 已写成 $S$ 上一个拟凝聚正分次代数
+$\mathcal S_*$ 的齐次素谱；该代数由 $\mathcal S_1$ 生成。置
+$\mathcal S'_* =\mathcal S_*\otimes_{\mathcal O_S}\mathcal O_{S'}$，
+于是 $X'$ 是 $\mathcal S'_*$ 的齐次素谱。为证明 (3.2)，容易归约到
+$X=\mathbf P^r_S$ 的情形（因为 $S$ 是一些开集 $U$ 的并，在每个
+$U$ 上，$X|U$ 是 $\mathbf P^r_U$ 的闭子概形，且
+$\mathcal O_X(1)$ 由 $\mathcal O_{\mathbf P^r_U}(1)$ 诱导），并归约到
+$\mathcal F$ 形如 $\mathcal O_{\mathbf P^r_S}^{,N}$ 的情形；此时
+$\mathcal F$ 在 $S$ 上平坦。于是，在上述讨论中，各层 $\mathcal K$
+也在 $S'$ 上平坦。由 Künneth 关系（[5]，III，\S~7）可知，条件
+(a) 和 (b) 在基变换下稳定，并且蕴涵：当 $n\geq\nu$ 时，
+$f'_*(\mathcal G(n))$ 和 $f'_*(\mathcal K(n))$ 的形成与基扩张可交换
+（同上）；因此 (c) 在基扩张下也稳定。
+
+换言之，以 $S'$ 为变量的 $A_\nu(S')$ 是一个反变函子；更确切地说，
+它是
+$A(S')=\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}(S')$
+的一个子函子。当 $\nu$ 变化时，由此得到 $A(S')$ 的递增子集列
+$A_\nu(S')$；根据 Serre 的一个著名定理 [5]，III，\S~2，其并集为
+$A(S')$。现在设 $\mathcal G$ 是 $\mathcal F'$ 的凝聚商，并在 $S'$
+上平坦；设 $s$ 是 $S'$ 的一个点，使得基变换
+$\operatorname{Spec}(k(s))\longrightarrow S'$ 给出 $\mathcal F_s$
+的一个商 $\mathcal G_s$，且该商满足条件 (a)、(b)、(c)，亦即属于
+$A_\nu(\operatorname{Spec}(k(s)))$。那么存在 $s$ 的一个开邻域 $U$，
+使同样的条件对 $\mathcal G|f'^{-1}(U)$ 成立，亦即这个商属于
+$A_\nu(U)$。对于 (a) 和 (b)，这确由“全纯函数定理”[5]，III，\S~7
+推出；而 (c) 则由 Nakayama 引理以及下述总是成立的事实推出：
+$f'_*(\mathcal K(n+k))=\mathcal S'_k f'_*(\mathcal K(n))$
+\src{261}
+其中 $n$ 足够大且 $k\geq0$（参见 [5]，III，\S~2）。由这些说明可得
+如下结论（比较 [4]，IV）：函子 $A$ 可表，当且仅当各函子 $A_\nu$
+均可表；此时，表示 $A$ 的 $S$-预概形 $Q$ 是表示各 $A_\nu$ 的开
+子预概形 $Q_\nu$ 的递增并。
+
+令
+\[
+M_* =\bigoplus_{n\geq0}f_*(\mathcal F(n))=\mathcal S_*^{,N},
+\]
+于是
+\[
+M'_* =M_*\otimes_{\mathcal O_S}\mathcal O_{S'}
+=\bigoplus_{n\geq0}f'_*(\mathcal F'(n))=\mathcal S'_*{}^{N}.
+\]
+由 (a) 可得：
+
+\noindent (a') 当 $n\geq\nu$ 时，$f'_*(\mathcal G(n))$ 局部自由，秩为
+$P(n)$，[5]，III，\S~7；而由 (b) 取 $i=1$ 可得：
+
+\noindent (a'') $f'_*(\mathcal G(n))$ 是 $M'_n$ 的一个商模。
+
+此外，由 (c)，只要知道 $n=\nu$ 时的这个商模，就能知道所有
+$n\geq\nu$ 时 $M'_n$ 的子模 $f'_*(\mathcal K(n))$，从而知道
+$\mathcal K$，进而知道 $\mathcal G$。由此得到一个单射
+\[
+A_\nu(S')\longrightarrow\operatorname{Grass}_{P(\nu)}(M'_\nu),
+\]
+它把 $A_\nu(S')$ 映入 $M'_\nu$ 的秩为 $P(\nu)$ 的局部自由商模集合；
+因而得到函子性同态
+\[
+i_\nu:A_\nu(S')\longrightarrow
+\underline{\operatorname{Grass}}_{P(\nu)}(M_\nu)(S'),
+\]
+其中右端函子由 Grassmann 概形
+$\operatorname{Grass}_{P(\nu)}(M_\nu)$ 表示（比较 [4]，V），该概形
+在 $S$ 上射影。我们断言：
+
+\result{引理}{3.3} 函子 $A_\nu(S')$ 可表，并且表示同态 $i_\nu$ 的态射
+$Q_\nu\longrightarrow\operatorname{Grass}_{P(\nu)}(M_\nu)$ 是一个
+浸入（这蕴涵 $Q_\nu$ 在 $S$ 上拟射影）。
+
+该断言等价于如下断言（比较 [4]，IV）：设已给定 $M'_\nu$ 的一个商模
+$N$，它局部自由且秩为 $P(\nu)$。那么存在 $S'$ 的一个子预概形 $Z$，
+使得对于 $S'$ 上的任意局部诺特预概形 $T'$
+\src{262}
+，$N$ 在 $T'$ 上的拉回属于 $\operatorname{Im}A_\nu(T')$，当且仅当
+$T'\longrightarrow S'$ 通过子预概形 $Z$ 分解。更换记号后，可以
+假设 $S'=S$；亦即，我们给定了 $M_\nu$ 关于一个子模 $R_\nu$ 的商
+$N_\nu$。它来自 $A_\nu(S)$ 的一个元素，当且仅当满足下列两个条件：
+
+\medskip
+\noindent (i) 对于 $k\geq0$，
+$M_{\nu+k}/\mathcal S_kR_\nu$ 局部自由且秩为 $P(\nu+k)$。
+
+\smallskip
+\noindent (ii) 由 $M_*$ 的分次子模
+\[
+R_* =\sum_{k\geq0}\mathcal S_kR_\nu
+\]
+（[5]，II，\S~3）所定义的 $\mathcal F$ 的子层 $\mathcal K$，以及商
+$\mathcal G=\mathcal F/\mathcal K$，满足上面的条件 (a) 和 (b)。
+
+这些条件显然是必要的。反之，若它们成立，则 (ii) 中定义的层
+$\mathcal G$ 同构于分次 $\mathcal S_*$-模 $N_*$ 的相伴层，其中
+$N_*$ 是各个 $M_{\nu+k}/\mathcal S_kR_\nu$ 的直和；因此
+$\mathcal G$ 在 $S$ 上平坦（因为它的各纤维都是 $N_*$ 在
+$\mathcal S_*$ 的齐次素理想处局部化所得模的直和项），并且由 (i)
+可知其 Hilbert 多项式为 $P$。再考虑 (ii)，可知 (a') 和 (a'')
+均成立；所以当 $n\geq\nu$ 时，自然同态
+$N_n\longrightarrow f_*(\mathcal G(n))$ 是相同秩的局部自由模之间
+的满同态，因而是同构。因此
+\[
+f_*(\mathcal K(\nu+k))=\mathcal S_kR_\nu
+\quad\text{对于每个 $k\geq0$},
+\]
+这就证明了 $\mathcal G\in A_\nu(S)$，并且 $R_\nu$ 正是由
+$\mathcal G$ 所定义的
+$\operatorname{Grass}_{P(\nu)}(M_\nu)$ 的元素。
+
+条件 (i)、(ii) 所构成的这个判据同样适用于基变换
+$S'\longrightarrow S$ 之后得到的情形。我们先来证明：基变换
+$S'\longrightarrow S$ 后条件 (i) 成立，可以表述为
+$S'\longrightarrow S$ 通过 $S$ 的某个子预概形 $Z$ 分解。得到这一
+结果后，以 $Z$ 代替 $S$，便归约到条件 (i) 已在 $S$ 上成立的情形；
+由于该条件在基变换下稳定，余下只须表述条件 (ii)。此时，令 $U$
+表示所有如下 $s\in S$ 的集合：$\mathcal G(n)$ 和 $\mathcal K(n)$
+在纤维 $X_s$ 上所诱导的层，其所有次数 $>0$ 的上同调在
+$n\geq\nu$ 时均为零。我们已经指出 $U$ 是开集，而基变换
+$S'\longrightarrow S$ 后条件 (ii) 成立，当且仅当
+$S'\longrightarrow S$ 通过 $U$ 分解。这就证明了引理 3.3。现在只需
+证明下述引理：
+
+\result{引理}{3.4} 设 $S$ 是一个局部诺特预概形，配备一个
+由 $\mathcal S_1$ 生成的拟凝聚正分次代数 $\mathcal S_*$；设 $M_*$
+是一个有限型拟凝聚分次 $\mathcal S_*$-模，$P$ 是一个有理系数
+多项式，$\nu$ 是一个整数。那么存在一个（显然唯一的）$S$ 的
+子预概形 $Z$
+\src{263}
+，具有如下性质：对于 $S$ 上的任意预概形 $S'$，
+$M_n\otimes_{\mathcal O_S}\mathcal O_{S'}$ 对每个 $n\geq\nu$
+均局部自由且秩为 $P(n)$，当且仅当 $S'\longrightarrow S$ 通过 $Z$
+分解。
+
+显然可以假设 $S$ 是仿射的，因而是诺特的。此时：
+
+\result{引理}{3.5} 对每个整数 $N\geq\nu$，令 $U_N$ 为 $S$ 中由如下
+$s\in S$ 构成的开集：
+\[
+\operatorname{rang}_{k(s)}
+M_{ns}\otimes_{\mathcal O_{S,s}}k(s)\leq P(n)
+\quad\text{对于每个 $\nu\leq n\leq N$}.
+\]
+那么开集的递减列 $U_N$ 最终稳定。
+
+已知 [3]，IV，$S$ 有一个由约化子预概形 $S_i$ 构成的有限分割，使得
+每个 $M\otimes_{\mathcal O_S}\mathcal O_{S_i}$ 在 $S_i$ 上平坦。
+因此可以假设 $M$ 平坦，从而各 $M_n$ 也平坦。最后，显然还可以假设
+$S$ 连通。于是存在一个整数 $n_0$ 和一个多项式 $Q$，使得
+\[
+\operatorname{rang}_{k(s)}
+M_{ns}\otimes_{\mathcal O_{S,s}}k(s)=Q(n)
+\quad\text{当 $n\geq n_0$ 时},
+\]
+见 [5]，III，\S~7。先假设 $P<Q$\footnote{印刷文本为
+$P\neq Q$；1962年的勘误规定应为 $P<Q$，随后把“$P=Q$”的情形替换为
+相反情形，即当 $n$ 足够大时 $P(n)\geq Q(n)$，并把 (*) 中的严格
+不等式替换为非严格不等式。}，因而当 $n$ 足够大时
+$P(n)<Q(n)$；于是当 $N$ 足够大时，显然有 $U_N=\varnothing$，
+所以 $U_N$ 列最终稳定。在相反情形下，当 $n$ 足够大时有
+$P(n)\geq Q(n)$，因而当 $N\geq n_0$ 时 $U_N=U_{n_0}$，所以
+$U_N$ 列同样最终稳定。
+
+特别地，由如下 $s\in S$ 构成的集合 $U_\infty$
+\[
+\tag{*}
+\operatorname{rang}_{k(s)}
+M_{ns}\otimes_{\mathcal O_{S,s}}k(s)\leq P(n)
+\quad\text{对于每个 $n\geq\nu$}
+\]
+是各 $U_N$ 的交，因而是开集。为证明 (3.4)，于是可以用开集
+$U_\infty$\footnote{印刷文本及法、英可编辑见证在这里作未定义的
+$U$；本段唯一刚刚定义且由不等式 (*) 给出的开集是 $U_\infty$。}
+代替 $S$，这就归约到不等式 (*) 对每个 $s\in S$ 均成立的情形。
+此外：
+
+\result{引理}{3.6} 设 $M$ 是局部诺特预概形 $S$ 上的一个模，$r$ 是
+一个整数。那么存在 $S$ 的一个（显然唯一的）子预概形 $Z$，具有
+如下性质：对于 $S$ 上的任意 $S'$，
+$M\otimes_{\mathcal O_S}\mathcal O_{S'}$ 局部自由且秩为 $r$，当且
+仅当 $S'\longrightarrow S$ 通过 $Z$ 分解。若
+\[
+\operatorname{rang}_{k(s)}
+M_s\otimes_{\mathcal O_{S,s}}k(s)\leq r
+\quad\text{对于每个 $s$},
+\]
+则 $Z$ 是 $S$ 的闭子预概形（这里假设 $M$ 凝聚）。
+\src{264}
+事实上，前面的论证把我们归约到不等式 (*) 对每个 $s\in S$ 均成立
+的情形（必要时，可用由满足该不等式的各点 $s$ 构成的开部分代替
+$S$）。于是可以假设 $M$ 出现在一个正合列中：
+\[
+\mathcal O_S^q\longrightarrow\mathcal O_S^r\longrightarrow M\longrightarrow0.
+\]
+对于 $S$ 上的 $S'$，所考察的条件也意味着：在相应的正合列
+$\mathcal O_{S'}^q\longrightarrow\mathcal O_{S'}^r
+\longrightarrow M'\longrightarrow0$ 中，第二个箭头是同构，亦即
+第一个箭头为零。于是可见，由定义同态
+$\mathcal O_S^q\longrightarrow\mathcal O_S^r$ 的矩阵各项所生成的
+理想定义的 $S$ 的闭子预概形 $Z$，满足所要求的条件。
+
+现在回到先前停下的 (3.4) 的证明。对于每个 $n$，令 $Z_n$ 为由
+(3.6) 应用于模 $M_n$ 和整数 $r=P(n)$ 所得到的 $S$ 的闭子概形；
+令 $Z'_N$ 为 $\nu\leq n\leq N$ 时各 $Z_n$ 的
+$\operatorname{Inf}$。于是，各 $Z'_N$ 构成 $S$ 的闭子概形的递减列，
+\footnote{印刷文本及法、英可编辑见证在此作“$Z$ 的闭子概形”；但
+$Z$ 直到下一句才被定义为该列的稳定值，而各 $Z_n$ 都是 $S$ 的闭子概形。}
+因而必然最终稳定。令 $Z$ 为 $N$ 足够大时各 $Z'_N$ 的恒定值。这就是
+(3.4) 中所求的 $Z$。由此完成了 (3.4) 的证明，也完成了 (3.3) 的
+证明。
+
+因此，我们已经证明
+$\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}$ 可由一个
+$S$-预概形 $Q$ 表示，而 $Q$ 是一列在 $S$ 上拟射影的开子预概形
+$Q_\nu$ 的递增并。为继续推进，必须援用定理 2.1；由此容易推出 $Q$
+是拟紧的（因为它是一个在 $S$ 上有限型、参数化具有 Hilbert 多项式
+$P$ 的各 $\mathcal F_K$ 的商层族的预概形 $S'$ 的像）。因此，$Q$
+等于某个 $Q_\nu$，所以在 $S$ 上拟射影。为了证明它在 $S$ 上射影，
+只需再证明它在 $S$ 上固有；为此，只须援用 [5]，II，7.3.8
+所给形式的固有性赋值判据。只需验证如下结论：
+
+\result{引理}{3.7} 设 $S$ 是一个离散赋值环的谱，$s$ 是其一般点，
+$X$ 是 $S$ 上的一个预概形，$\mathcal F$ 是 $X$ 上的一个拟凝聚模，
+$\mathcal G_s$ 是 $X_s$ 上
+$\mathcal F_s=\mathcal F\otimes_{\mathcal O_S}k(s)$ 的一个拟凝聚商模。
+那么存在唯一的 $\mathcal F$ 的拟凝聚商模 $\mathcal G$，它在 $S$
+上平坦，并且在 $X_s$ 上的限制是 $\mathcal G_s$。
+\src{265}
+事实上，若 $\mathcal G_s=\mathcal F_s/\mathcal K_s$，只须取
+$\mathcal F$ 中诱导出 $\mathcal K_s$ 的最大子层 $\mathcal K$，
+[5]，I，9.4.2，并置 $\mathcal G=\mathcal F/\mathcal K$。容易验证
+该层满足要求。
+
+至此，定理 3.2 以及随之而来的 (3.1) 均已完全证明。
+
+该证明同时证明了如下结论：
+
+\result{命题}{3.8} 在 (3.2) 的条件下，令
+$Q=\operatorname{Quot}^P_{\mathcal F/X/S}$，$X_Q=X\times_SQ$，
+$\mathcal F_Q=\mathcal F\otimes_{\mathcal O_S}\mathcal O_Q$；并令
+$\mathcal G$ 为 $\mathcal F_Q$ 的凝聚商，它在 $Q$ 上平坦，具有相对
+Hilbert 多项式 $P$，且 $(Q,\mathcal G)$ 表示函子
+$\underline{\operatorname{Quot}}^P_{\mathcal F/X/S}$。那么存在一个
+整数 $\nu$，使得当 $n\geq\nu$ 时，
+$(f_Q)_*(\mathcal G(n))$ 是 $Q$ 上秩为 $P(n)$ 的局部自由模，并且
+相对于 $S$ 甚丰沛；亦即，它定义了 $Q$ 到 $S$ 上 Grassmann 概形
+$\operatorname{Grass}_{P(n)}(M)$ 的一个浸入。特别地，当
+$n\geq\nu$ 时，$Q$ 上的层
+\[
+\bigwedge^{P(n)}(f_Q)_*(\mathcal G(n))
+\]
+是相对于 $S$ 甚丰沛的可逆层。
+
+事实上，与 (3.2) 中一样，可以归约到 $\mathcal F$ 在 $S$ 上平坦的
+情形；此时只须取一个使 $A_\nu=A$ 的整数 $\nu$（沿用上述记号）。
+
+(3.2) 最重要的应用情形是 $\mathcal F=\mathcal O_X$。此时记
+\[
+\operatorname{Quot}_{\mathcal O_X/X/S}=\operatorname{Hilb}_{X/S},
+\qquad
+\operatorname{Quot}^P_{\mathcal O_X/X/S}=\operatorname{Hilb}^P_{X/S},
+\]
+从而得到分解
+\[
+\operatorname{Hilb}_{X/S}=\coprod_P\operatorname{Hilb}^P_{X/S}.
+\]
+依定义，$\operatorname{Hilb}_{X/S}$ 表示函子
+$\underline{\operatorname{Hilb}}_{X/S}(S')$，后者是
+$X'=X\times_SS'$ 中在 $S'$ 上平坦的闭子预概形之集合；而
+$\operatorname{Hilb}^P_{X/S}$ 表示由具有给定 Hilbert 多项式 $P$
+的闭子预概形构成的相应子函子。这些预概形也分别称为 $X$ 在 $S$
+上的 \emph{Hilbert 预概形} 和 \emph{指标为 $P$ 的 Hilbert
+预概形}。这一术语因 Hilbert 多项式在理论中所起的作用而得名。
+它们与经典 Chow 簇（后者用于参数化循环，而不是簇）在性质上的
+差别，正如一个簇的循环类 Chow 环与该簇的层类环（即
+Riemann--Roch 定理 [1] 中出现的环）之间的差别；事实上，当
+\src{266}
+$X=\mathbf P^r_S$ 且 $S$ 是一个域的谱时，知道 $X$ 上凝聚模
+$\mathcal F$ 的 Hilbert 多项式，也等价于知道 $\mathcal F$ 的
+Chern 类，或知道 $\mathcal F$ 在 $X$ 上凝聚层类环中的类。
+
+\result{注记}{3.9} 还应注意，
+$\operatorname{Quot}_{\mathcal F/X/S}$ 和
+$\operatorname{Quot}^P_{\mathcal F/X/S}$ 的构造已经归约到
+$X=\mathbf P^r_S$、$\mathcal F=\mathcal O_X^N$ 的情形，其中
+$\mathcal O_X(1)$ 是通常的甚丰沛层；更确切地说，一般的
+$\operatorname{Quot}_{\mathcal F/X/S}$ 可实现为上述预概形的
+闭子预概形。由于 $\operatorname{Quot}^P_{\mathcal F/X/S}$ 的形成
+显然与基变换 $S'\longrightarrow S$ 相容，可见还可归约到
+$S=\operatorname{Spec}(\mathbf Z)$ 的情形。归根结底，我们只须研究
+下列 $\mathbf Z$ 上的射影概形：
+\[
+\mathfrak Q^P_{r,N}=
+\operatorname{Quot}^{P}_{(\mathcal O_{\mathbf P^r_{\mathbf Z}})^N/
+\mathbf P^r_{\mathbf Z}/\operatorname{Spec}(\mathbf Z)},
+\]
+尤其是绝对 Hilbert 概形：
+\[
+\operatorname{Hilb}^P_r=\mathfrak Q^P_{r,1}.
+\]
+对这些概形作更细致的研究会非常有意义；首先应确定其连通分支
+（它们是否连通？）\footnote{1962年的勘误指出，Hartshorne 已证明
+代数闭域上的 $\operatorname{Hilb}^P_r$ 是连通的，并确定了满足
+$\operatorname{Hilb}^P_r\neq\varnothing$ 的各对 $(r,P)$。}及其
+不可约分支（根据 Serre [7]，可能存在完全位于某个素数 $p\neq0$
+之上的不可约分支）。回顾 Weil 的问题：在
+$s\in\operatorname{Spec}(\mathbf Z)$ 上，$\operatorname{Hilb}^P_r$
+各纤维的不可约分支是否对应于素域的“正则”扩张，亦即它们是否
+“相对连通”。对于 Hilbert 概形，这些问题或许比对于“Chow 簇”
+更容易处理。
+
+\fsection{4}{变体}
+
+\noindent a. 在 (3.1) 的条件下，设 $U$ 是 $X$ 中的开集，并令 $A'$
+为 $A=\underline{\operatorname{Quot}}_{\mathcal F/X/S}$ 的如下
+子函子：$A'(S')$ 是 $\mathcal F'$ 的、在 $S'$ 上平坦且支集包含于
+$U'$ 的商模 $\mathcal G$ 之集合。立即可见，$A'$ 可由表示 $A$ 的
+预概形 $\operatorname{Quot}_{\mathcal F/X/S}$ 的一个开部分表示。
+由此可知，定理 (3.1) 和 (3.2)
+\src{267}
+在假设 $X$ 在 $S$ 上拟射影而非射影时仍然成立，只须在结论中也把
+“射影”替换为“拟射影”，并且现在以
+$\underline{\operatorname{Quot}}_{\mathcal F/X/S}(S')$ 表示
+$\mathcal F'$ 的如下凝聚商 $\mathcal G$ 之集合：这些商在 $S'$ 上
+平坦，且其支集在 $S'$ 上固有。
+
+\medskip
+\noindent b. 更一般地，可以对
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'}$
+的、在 $S'$ 上平坦的商 $\mathcal G$ 施加各种在基变换下稳定的
+附加自然条件，由此得到
+$\underline{\operatorname{Quot}}_{\mathcal F/X/S}$ 的相应子函子，
+并考察这些子函子的可表性。在许多情形下，通常的判据可以证明，
+所得函子仍可由 $\operatorname{Quot}_{\mathcal F/X/S}$ 的开部分
+表示。特别地，当施加下列附加性质之一时，情形正是如此：
+
+\smallskip
+\noindent $1^\circ$ 在各纤维 $X'_{s'}$ 上诱导的模
+$\mathcal G_{s'}$（$s'\in S'$）之相伴素循环的维数，属于某个给定的
+整数集合。
+
+\smallskip
+\noindent $2^\circ$（当 $\mathcal F=\mathcal O_X$ 时，$\mathcal G$
+对应于 $X'$ 的一个闭子预概形 $Y$）：$Y$ 是 $S'$ 上的光滑预概形
+（[3]，IV），或在 $S'$ 上正规（亦即各纤维 $Y_{s'}$ 在
+“$k(s')$ 上”正规，也就是说在基域的任意扩张后均正规），或
+（当 $X$ 在 $S$ 上平坦时）相对于 $S'$ 是 $X'$ 中的局部完全交
+（亦即各纤维 $Y_{s'}$ 是 $X'_{s'}$ 中的局部完全交）。
+
+其他条件可以涉及在 $X'_{s'}$ 上诱导的各模 $\mathcal G_{s'}$ 的
+上同调性质，等等。当然，若若干条件分别由
+$\operatorname{Quot}_{\mathcal F/X/S}$ 的开集 $U_i$ 表示，则它们的
+合取由这些开集的交表示。例如，对 $S$ 上的每个 $S'$，考虑
+$X'=X\times_SS'$ 的如下闭子预概形 $Y$ 的集合：$Y$ 是 $S'$ 的给定
+秩 $r$ 的平展覆盖（[3]，I）。由此得到一个关于 $S'$ 的可表反变函子。
+
+\medskip
+\noindent c. [2]，II，C，n\textsuperscript{o} 2 中定义的预概形
+$\operatorname{Hom}_S(X,Y)$、$\Pi_{X/S}(Z/X)$、
+$\operatorname{Isom}_S(X,Y)$ 在适当的射影性假设下存在，并可实现为
+适当 Hilbert 预概形中的开部分。由于
+\[
+\operatorname{Hom}_S(X,Y)=\Pi_{X/S}((X\times_SY)/X),
+\]
+$\operatorname{Hom}_S(X,Y)$ 的情形可归约到
+$\Pi_{X/S}(Z/X)$ 的情形。于是注意到，对于 $S$ 上的每个 $S'$，
+$Z'=Z\times_SS'$ 在 $X'=X\times_SS'$ 上的截面集合，与 $Z'$ 的如下
+子预概形 $\Gamma$ 的集合一一对应：由 $Z'\longrightarrow X'$ 诱导的
+态射 $\Gamma\longrightarrow X'$ 是同构（若 $Z$ 在 $X$ 上分离，
+则这些 $\Gamma$ 必然是闭的）。由此，
+
+\src{268}
+当 $X$ 在 $S$ 上平坦且固有，而 $Z$ 在 $S$ 上拟射影时，
+$\Pi_{X/S}(Z/X)$ 存在，并实现为
+$\operatorname{Hilb}_{Z/S}$ 的一个开子预概形。因此，当 $X$ 在 $S$ 上
+射影且平坦，而 $Y$ 在 $S$ 上拟射影时，$\operatorname{Hom}_S(X,Y)$
+存在，并实现为
+$\operatorname{Hilb}_{(X\times_SY)/S}$ 的一个开子预概形。当 $X$ 和
+$Y$ 都在 $S$ 上射影时，立即可知 $\operatorname{Isom}_S(X,Y)$ 也存在，
+并由 $\operatorname{Hom}_S(X,Y)$ 的一个开部分表示。同样，当 $X$ 在
+$S$ 上平坦且射影，而 $Y$ 在 $S$ 上拟射影时，与
+$\operatorname{Hom}_S(X,Y)$ 所表示函子的如下子函子相对应的
+$S$-预概形 $\operatorname{Imm}_S(X/Y)$ 也由
+$\operatorname{Hom}_S(X,Y)$ 的一个开部分表示：该子函子的元素是作为
+浸入的 $S'$-同态 $X'\longrightarrow Y'$。
+
+设 $\mathcal L$（相应地，$\mathcal M$）是 $X$（相应地，$Y$）上相对于
+$S$ 甚丰沛的可逆层，于是
+$\mathcal L\otimes_{\mathcal O_S}\mathcal M$ 是 $X\times_SY$ 上相对于
+$S$ 甚丰沛的层。因此，对每个有理系数多项式 $P$，
+$\operatorname{Hilb}^P_{(X\times_SY)/S}$ 均有定义，并且是 $S$ 上的
+拟射影预概形。它因而在 $\operatorname{Hom}_S(X,Y)$ 上诱导出一个
+在 $S$ 上拟射影的既开又闭部分，记作
+$\operatorname{Hom}_S(X,Y)^P$。所以
+$\operatorname{Hom}_S(X,Y)^P$ 在 $S$ 上的截面，正是满足下述条件的
+$S$-态射 $g:X\longrightarrow Y$：对每个整数 $n$，都有
+\[
+\chi\!\left(\left(\mathcal L\otimes_{\mathcal O_X}g^*(\mathcal M)\right)^{
+\otimes n}\right)=P(n).
+\]
+
+由此可得到 Matsusaka 定理的若干推广；该定理断言，一个“极化”射影簇
+的自同构组成一个代数群。这里这一断言显然具有更精确的含义，因为我们
+已将这个群定义为某个泛问题的解。还应注意，在代数闭域上，以往所考察
+的自同构群，是由这里定义的“真正的”自同构群模去幂零元而得到的。这也
+说明，较早的构造很难在非完美基域上成立：基域扩张后出现的幂零元理想
+未必“在 $k$ 上有定义”。同一说明也适用于大多数旧式构造。
+
+\fsection{5}{Hilbert 概形的微分研究}
+
+它由下述结果推出：
+
+\src{269}
+\result{命题}{5.1} 设 $S$ 是预概形，$S_0$ 是由平方为零的拟凝聚理想
+$\mathcal J$ 定义的子预概形，$X$ 是 $S$-预概形，$\mathcal F$ 是
+$X$ 上的拟凝聚模，并令
+$X_0=X\times_SS_0$ 及
+$\mathcal F_0=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S_0}$；
+最后，设
+$\mathcal G_0=\mathcal F_0/\mathcal K_0$ 是 $\mathcal F_0$ 的一个
+在 $S_0$ 上平坦的拟凝聚商模。对 $X$ 的每个开集 $U$，令
+$\mathcal E(U)$ 为 $\mathcal F|U$ 的所有拟凝聚商模 $\mathcal G$
+所成的集合，其中 $\mathcal G$ 在 $S$ 上平坦，并且满足
+$\mathcal G\otimes_{\mathcal O_S}\mathcal O_{S_0}=\mathcal G_0$；
+于是，当 $U$ 变化时，各 $\mathcal E(U)$ 是 $X$ 上某个层
+$\mathcal E$ 的截面。\footnote{印刷文本及法、英可编辑见证写成层
+“在 $U$ 上”；由于 $U$ 变化而 $\mathcal E(U)$ 构成开集上的截面函子，
+该层的底空间是固定的 $X$。}在此设定下，群层
+\[
+\mathcal A=\operatorname{Hom}_{\mathcal O_{X_0}}
+(\mathcal K_0,\mathcal G_0\otimes_{\mathcal O_{S_0}}\mathcal J)
+\]
+自然作用于 $\mathcal E$，从而使 $\mathcal E$ 成为一个“在
+$\mathcal A$ 作用下形式主齐性的层”（即对 $X$ 中的每个开集 $U$，
+$\mathcal E(U)$ 或为空，或为在 $\mathcal A(U)$ 作用下的主齐性集）。
+
+由此得到：
+
+\result{推论}{5.2} 假设在 $X$ 上局部存在 $\mathcal G_0$ 的一个
+延拓 $\mathcal G$，它是 $\mathcal F$ 的一个在 $S$ 上平坦的商
+（即层 $\mathcal E$ 的各纤维均非空）。那么存在一个典范障碍类
+\[
+c(\mathcal G_0)\in H^1(X,\mathcal A),
+\]
+它的消失是存在 $\mathcal G_0$ 的全局延拓 $\mathcal G$、使之成为 $\mathcal F$ 的一个
+在 $S$ 上平坦的商的充分必要条件。若此类为零，则所有可能延拓组成的
+集合 $\mathcal E(X)$ 是在
+\[
+\mathcal A(X)=\operatorname{Hom}_{\mathcal O_{X_0}}
+(\mathcal K_0,\mathcal G_0\otimes_{\mathcal O_{S_0}}\mathcal J)
+\]
+作用下的主齐性集。
+\footnote{在最后这个公式中，印刷文本写的是 $\mathcal O_X$，而不是
+紧接在前面的 $\mathcal A$ 定义中已经确定的 $\mathcal O_{X_0}$。}
+特别地，若 $H^1(X,\mathcal A)=0$，则全局延拓必定存在。
+
+\result{推论}{5.3}\footnote{印刷文本将此推论编号为“3.3”；但它在
+第 5 节中接在 (5.1) 和 (5.2) 之后。} 假设
+$Q=\operatorname{Quot}_{\mathcal F/X/S}$ 存在（参见 4 (a)）——例如，
+$X$ 在局部诺特的 $S$ 上拟射影，且 $\mathcal F$ 凝聚。设
+$x\in Q$ 对应于 $k(s)$（$s\in S$）的剩余域扩张 $K=k(x)$：
+\src{270}
+于是，$x$ 由 $K$-预概形 $X_K$ 上的模
+$\mathcal F_0=\mathcal F_K$ 的一个凝聚商模
+$\mathcal G_0=\mathcal F_0/\mathcal K_0$ 定义。设 $\mathcal A$ 是
+$X_K$ 上由
+\[
+\mathcal A=\operatorname{Hom}_{\mathcal O_{X_0}}(\mathcal K_0,\mathcal G_0)
+\]
+定义的凝聚层。那么，纤维 $Q_s$ 在点 $x$ 处的 Zariski 切空间
+（即 $\mathfrak m/\mathfrak m^2$ 关于 $K$ 的对偶，其中
+$\mathfrak m$ 是 $\mathcal O_{Q_K,x}$ 的极大理想）典范同构于
+$H^0(X_K,\mathcal A)$。
+
+给出 Zariski 切空间的这一结果还可推广。对于给定的 $S$-态射
+$g:S'\longrightarrow Q$，即 $Q'=Q\times_SS'$ 在 $S'$ 上的一个截面
+$g'$，模
+\[
+\Omega=g^*(\Omega^1_{Q/S})=g'^*(\mathcal J/\mathcal J^2)
+\]
+（其中 $\mathcal J$ 是由 $Q'$ 在 $S'$ 上的截面 $g'$ 所定义的
+$Q'$ 上的理想）可由下述公式刻画；该公式关于 $S'$ 上的凝聚模
+$\mathcal M$ 具有函子性：
+\[
+\operatorname{Hom}_{\mathcal O_{S'}}(\Omega,\mathcal M)
+\simeq H^0(X',\mathcal A),
+\]
+其中 $\mathcal A$ 仍是 $X'=X\times_SS'$ 上由
+\[
+\mathcal A=\operatorname{Hom}_{\mathcal O_{X'}}
+(\mathcal K,\mathcal G\otimes_{\mathcal O_{S'}}\mathcal M)
+\]
+定义的模。
+\footnote{印刷文本在这个张量积中写的是 $\mathcal O_S$；但这里
+$\mathcal G$ 和 $\mathcal M$ 都是 $S'$ 上的模，而平方零形变的构造
+要求在 $\mathcal O_{S'}$ 上取张量积。}
+这里，$\mathcal G=\mathcal F'/\mathcal K$ 是与 $g$ 对应的
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'}$ 的商模。
+事实上，只须在 (5.1) 中以 $S'$ 代替 $S_0$，并以预概形
+$D(\mathcal M)=(S',\mathcal O_{S'}+\mathcal M)$ 代替 $S$，其中
+$\mathcal M$ 被视为平方为零的理想。
+
+在 (5.1) 中取 $\mathcal F=\mathcal O_X$ 时，给定 $\mathcal G_0$
+就等价于给定 $X_0$ 的一个在 $S_0$ 上平坦的闭子预概形 $Y_0$，
+其定义理想为 $\mathcal J_0=\mathcal K_0$。此时 (*) 给出
+\[
+\mathcal A=\operatorname{Hom}_{\mathcal O_{X_0}}
+(\mathcal J_0/\mathcal J_0^2,
+\mathcal O_{Y_0}\otimes_{\mathcal O_{S_0}}\mathcal J),
+\]
+其中 $\mathcal J_0/\mathcal J_0^2$ 被解释为 $Y_0$ 在 $X_0$ 中的余法层，
+\footnote{印刷文本及法、英可编辑见证在说明句中漏去了下标 $0$；
+紧接在前面的公式及 $Y_0\subset X_0$ 的定义表明余法层是
+$\mathcal J_0/\mathcal J_0^2$，而 $\mathcal J$ 是底的平方零理想。}
+也记作
+\src{271}
+$\check{\mathcal N}_{Y_0/X_0}$；此时，将 $\mathcal A$ 看作 $Y_0$
+上的模，并在 $Y_0$ 上计算 $H^0$ 和 $H^1$，会更为方便。此外，若
+$Y_0$ 在 $X_0$ 中局部为完全交，且 $X$ 在 $S$ 上平坦，则 (5.1)
+中的局部延拓必定存在；另一方面，$\mathcal J_0/\mathcal J_0^2$ 在
+$Y_0$ 上局部自由，并可写成
+\[
+\mathcal A=\mathcal N_{Y_0/X_0}\otimes_{\mathcal O_{S_0}}\mathcal J,
+\]
+其中右端第一个因子是 $Y_0$ 在 $X_0$ 中的法层。利用光滑性的基本
+判别准则（[3]，III，3.1），例如可得：
+
+\result{推论}{5.4} 在 (5.3) 的条件下，假设
+$\mathcal F=\mathcal O_X$，$X$ 在 $S$ 上平坦，并且与
+$\mathcal G_0$ 对应的 $X_0$ 的闭子预概形 $Y_0$ 在局部为完全交。
+那么，$Q_s$ 在 $x$ 处的 Zariski 切空间典范同构于
+$H^0(Y_0,\mathcal N_{Y_0/X_0})$。若
+$H^1(Y_0,\mathcal N_{Y_0/X_0})=0$，则 Hilbert 预概形
+$\operatorname{Hilb}_{X/S}$ 在点 $x$ 处相对于 $S$ 光滑。
+（$\mathcal N_{Y_0/X_0}$ 是 $Y_0$ 在 $X_0$ 中的法层。）
+
+\result{注}{5.5} 这一陈述特别适用于如下情形：$Y_0$ 是 $X_0$ 中由
+一个方程定义的完全交，即一个有效“Cartier 除子”。这时，
+$\mathcal N_{Y_0/X_0}$ 同构于 $Y_0$ 上由 $X_0$ 上的可逆层
+$\mathcal J^{-1}$ 所诱导的层，其中该可逆层由除子 $Y_0$ 定义。
+这种情形尤其出现在对非奇异射影簇 $X_0$ 上有效除子族的研究中。
+$Q$ 在点 $x$ 处的 Zariski 切空间（或者说，$Q$ 中与除子对应的开集
+$D$ 在 $x$ 处的 Zariski 切空间）与
+$H^0(Y_0,\mathcal N_{Y_0/X_0})$ 之间的同构，在经典代数几何中称为
+由前者到后者的“特征同态”。它仅在 $x$ 是某个除子“完全连续族”的
+参数簇 $T$ 的光滑点时才有定义；从我们的观点看，$T$ 就是概形
+$D$ 的一个不可约分支，并赋予诱导的约化结构。$T$ 在 $x$ 处的切空间
+于是是 $D$ 在 $x$ 处切空间的子空间，所以古典理论中的特征同态确实
+是单射，但只有在附加条件下才是满射，例如 $D$ 在 $x$ 处为整时。
+事实上，Zappa [8] 构造了一个例子
+\src{272}
+（其中 $X$ 是复数域上的非奇异射影曲面），在这个例子中，即使在
+$T$ 的一般点处，特征同态也不是满射。因此，$D$ 即使在所考察的
+不可约分支的一般点处也不是整的。这格外鲜明地表明，要理解最经典的
+曲面理论中的现象，带幂零元的簇是不可或缺的。
+\footnote{1962 年勘误补充说，Mumford 当时刚刚构造出
+$\mathbf P^3_{\mathbf C}$ 的 Hilbert 概形的一个不可约分支，其一般点
+表示次数为 14、亏格为 24 的非奇异曲线，而该分支在其一般点处
+非约化；沿其中一条曲线作爆破，还可得到一个三维正则射影概形，其
+形式模概形在一般点处非约化。}
+
+\subsection*{5.6}
+
+我们在 (5.4) 中给出了一个光滑性判别准则，它特别适用于除子概形。
+Kodaira 在 [6] 中给出了另一个判别准则，即
+$H^1(X_0,\mathcal L)$ 的消失，其中
+$\mathcal L=\mathcal J_0^{-1}$ 是 $X_0$ 上由除子 $Y_0$ 定义的可逆层；
+该判别准则在 $S$ 是特征 0 域的谱时成立，而在基域为 $\mathbf C$
+的情形下，[6] 通过超越方法证明了它。这里还应指出，更一般地，再次令
+$S$ 任意，则 Kodaira 条件是使典范态射
+\[
+D\longrightarrow\operatorname{Pic}_{X/S}
+\]
+从除子预概形到 $X/S$ 的 Picard 预概形在所考察点 $x$ 处光滑的
+充分条件（一旦知道 $\operatorname{Pic}_{X/S}$ 存在，这一点很容易
+由通常的光滑性判别准则验证）。因此，若此外
+$\operatorname{Pic}_{X/S}$ 在 $x$ 的像点处相对于 $S$ 光滑
+（例如，若 $\operatorname{Pic}_{X/S}$ 在 $S$ 上光滑），则 $D$
+在 $x$ 处相对于 $S$ 光滑。另一方面，Cartier 已证明，特征 0 域
+$k$ 上每个局部有限型的群预概形都在 $k$ 上光滑。结合这两个结果，
+即可重新得到 Kodaira 的结果。还应注意，这些说明表明，在特征
+$p>0$ 的域 $K$ 上，当 $\operatorname{Pic}_{X/S}$ 在 $K$ 上不光滑
+\footnote{印刷文本及法、英可编辑见证在这里由已经指定的域 $K$
+突然改作 $k$；本句余下部分仍以 $K$ 为基域，故恢复为 $K$。}
+时（$X$ 为 Igusa 曲面时即属此情形），条件
+$H^1(X_0,\mathcal L)=0$ 反而蕴含 $D$ 在 $x$ 处不光滑；若 $K$
+代数闭，则它在 $x$ 处甚至不是约化的。
+
+最后再指出下述结果；它在纤维空间的微分研究中起着重要作用：
+
+\result{命题}{5.7} 设 $X$ 是局部诺特预概形 $S$ 上有限平坦的
+预概形，$Z$ 是 $S$ 上的预概形，并且 $\Pi_{X/S}(Z/X)$ 存在
+（当 $Z$ 在 $X$ 上拟射影时即如此）。若 $Z$ 在 $X$ 上光滑，则
+$\Pi_{X/S}(Z/X)$ 在 $S$ 上光滑。
+
+这是定义及通常的光滑性判别准则（[3]，III，3.1）的直接推论。注意，
+当 $X$ 在 $S$ 上有限平坦时，$\Pi_{X/S}(Z/X)$ 的存在性问题
+\footnote{印刷文本在这里写的是 $Z/K$；但文中没有定义 $K$，而且从
+(5.7) 开始所考察的截面函子是 $\Pi_{X/S}(Z/X)$。}
+\src{273}
+可用非常初等的方法处理，无须使用 Hilbert 概形理论。例如，若 $X$
+在 $S$ 上纯不可分，则 $\Pi_{X/S}(Z/X)$ 无论对怎样的 $Z$ 都存在。
+再如，设 $T$ 是一个 $S$-预概形，并令 $T_n$ 为 $T\times_ST$ 的对角
+在 $T\times_ST$ 中的“$n$ 阶无穷小邻域”，配备由两个投影诱导的态射
+$p_1,p_2:T_n\longrightarrow T$。通过 $p_1$ 将 $T_n$ 看作 $T$
+上的有限预概形，并进一步假设它在 $T$ 上平坦（当 $T$ 在 $S$ 上
+光滑时即如此）。对每个 $T$ 上的预概形 $X$，令
+\[
+(X/T/S)^{(n)}=
+\Pi_{T_n/T}\bigl(p_2^*(X/T)/T_n\bigr),
+\]
+\footnote{印刷文本在符号 $\Pi$ 下写的是 $T_n/S$。这里将命题 5.7
+应用于有限平坦态射 $p_1:T_n\to T$，并且所得对象明确是 $T$ 上的
+预概形；故分母应为 $T_n/T$。}
+这是 $T$ 上的一个预概形，称为 \emph{$X$ 在 $T$ 上的 $n$ 阶截面芽丛}
+（相对于 $S$）。它函子性地依赖于 $X$；若 $X$ 在 $T$ 上光滑，
+它也在 $T$ 上光滑。
+
+\fsection{6}{与范数概念及对称积的关系}
+
+设 $S$ 是预概形，$X$ 和 $Y$ 是 $S$-预概形，并设
+\[
+u:(X/S)^n\longrightarrow Y
+\]
+是从 $X/S$ 的 $n$ 次笛卡儿幂到 $Y$ 的对称 $S$-态射。为简单起见，
+假设 $S$ 局部诺特，并且 $X$ 和 $Y$ 在 $S$ 上有限型。于是，对于
+$X$ 上每个满足下列条件的凝聚模 $\mathcal F$：其支集在 $S$ 上有限，
+它在 $S$ 上平坦，并且在 $S$ 上的相对秩等于 $n$（即
+$f_*(\mathcal F)$ 是 $S$ 上秩为 $n$ 的局部自由模），可以自然地对应
+$Y$ 在 $S$ 上的一个截面：
+\[
+\pi^u_{X/S}(\mathcal F)\in\Gamma(Y/S).
+\]
+这里不写出正式定义，只指出由此得到的形式体系是通常范数与迹的形式
+体系的一个自然推广。当 $X$ 在 $S$ 上的 $n$ 次对称幂存在时
+（例如，当对称群 $\mathfrak S_n$ 在 $(X/S)^n$ 上作用的各轨道都包含
+于仿射开集中时），可取这个对称幂
+$\operatorname{Symm}^n_S(X)$ 作为 $Y$，并得到一个典范元素
+\[
+\pi_{X/S}(\mathcal F)\in\Gamma(\operatorname{Symm}^n_S(X)/S),
+\]
+\src{274}
+由它可以恢复各 $\pi^u_{X/S}(\mathcal F)$。另一重要情形是：$X$
+是 $S$ 上的交换幺半群，$X=Y$，而态射 $u$ 来自 $X$ 的合成律。
+这时，将与 $X$ 上的模 $\mathcal F$ 相对应的 $X$ 在 $S$ 上的截面
+简记为 $\pi(\mathcal F)$。
+
+现在假设 $X$ 上有一个凝聚模 $\mathcal F$，使得
+$\operatorname{Quot}_{\mathcal F/X/S}$ 存在；或者至少，函子
+$\underline{\operatorname{Quot}}^n_{\mathcal F/X/S}$ 可由某个
+$S$-预概形 $\operatorname{Quot}^n_{\mathcal F/X/S}$ 表示。这里该
+函子把 $S$ 上的每个 $S'$ 映为下述凝聚商层 $\mathcal M$ 所成的集合：
+$\mathcal M$ 是
+$\mathcal F'=\mathcal F\otimes_{\mathcal O_S}\mathcal O_{S'}$ 的商，
+在 $S'$ 上平坦，并具有相对秩 $n$。（当 $X$ 在 $S$ 上拟射影时，
+$\operatorname{Quot}^n_{\mathcal F/X/S}$ 的确存在；采用第 3 节的
+记号，它就是 $\operatorname{Quot}^P_{\mathcal F/X/S}$，其中 $P$
+是恒等于 $n$ 的常数多项式。）由于
+$\pi^u_{X/S}(\mathcal M)$ 的构造与基变换相容，因而得到一个典范态射
+\[
+\pi^u_{X/S}:\operatorname{Quot}^n_{\mathcal F/X/S}\longrightarrow Y,
+\]
+特别地，若 $X$ 在 $S$ 上的 $n$ 次对称幂存在，则得到
+\[
+\pi_{X/S}:\operatorname{Quot}^n_{\mathcal F/X/S}
+\longrightarrow\operatorname{Symm}^n_S(X).
+\]
+最重要的情形是 $\mathcal F=\mathcal O_X$，它给出态射
+\[
+\pi_{X/S}:\operatorname{Hilb}^n_{X/S}
+\longrightarrow\operatorname{Symm}^n_S(X).
+\]
+当 $n=0$ 或 $n=1$ 时，这显然是同构。但当
+$n>1$\footnote{印刷文本再次写成 $n\geq1$，这与刚刚断言的
+$n=1$ 时为同构相矛盾。} 时，即使 $S$ 是域 $k$ 的谱，并且 $X$
+在 $S$ 上光滑，它一般也不是同构，甚至不是单射态射；这是因为，
+$X$ 的一个零维子概形（例如，它对应于局部环 $\mathcal O_{X,x}$
+中的一个以该极大理想为根的准素理想 $\mathfrak i$，其中 $x$ 是 $X$
+的闭点）并不能由它所定义的循环确定（在这里，即不能由
+$\mathfrak i$ 在 $\mathcal O_{X,x}$ 中关于 $k$ 的余维确定）。
+当 $S$ 再次任意时，只能作如下断言：
+
+\medskip
+\noindent a. 若 $X$ 在 $S$ 上光滑，则范数态射在
+$\operatorname{Hilb}^n_{X/S}$ 的如下开部分与
+$\operatorname{Symm}^n_S(X)$ 的如下开部分之间诱导一个同构：前者
+分类包含于 $X$ 中的秩为 $n$ 的平展覆盖（参见
+n\textsuperscript{o} 4，(b)），后者对应于次数为 $n$ 且无重分量的循环。
+\src{275}
+
+\medskip
+\noindent b. 若此外 $X$ 在 $S$ 上的相对维数为 1，则范数态射甚至
+给出
+$\operatorname{Hilb}^n_{X/S}$ 与 $\operatorname{Symm}^n_{X/S}$
+之间的同构。
+
+这是因为，非奇异代数曲线的零维子概形可由相应的循环确定。同一说明
+更一般地适用于非奇异代数概形上的有效 Cartier 除子（而且不能排除：
+在这一极特殊的情形下，Chow 簇给出的对象与 Hilbert 概形相同）。
+
+\fsection{7}{补充与问题}
+
+正如 J.-P. Serre 所指出的，Nagata 的一个著名例子表明，可以找到
+如下对象：一个概形 $S$，它是域 $k$ 的谱；一个 $S$-概形 $S'$，它是
+$k$ 的二次扩张 $k'$ 的谱；以及一个维数为 3 的固有光滑但非射影的
+$S'$-概形 $X$，使得 $\Pi_{S'/S}(X/S')$ 不存在。由此更可知，Hilbert
+概形 $\operatorname{Hilb}^2_{X/S}$ 不存在（甚至连表示包含于 $X$
+中的 $S$ 的秩 2 平展覆盖的 $k$-概形也不存在，从而 $X$ 的对称平方
+当然更不存在；参见上一节）。这给代数几何中进行非射影构造的可能性
+施加了严重限制。（不过，可以设想在解析几何中不会出现这种限制，
+正如在形式几何中不会出现一样（参见 [2]，II）。）另一方面，若 $X$
+是域 $k$ 的谱 $S$ 上的固有概形，而 $Z$ 在 $X$ 上拟射影，则
+$\Pi_{X/S}(Z/X)$ 存在，并且是一个由一列 $S$ 上拟射影概形的不交并
+组成的概形（如射影情形 (3.1)）。事实上，可以用一个射影
+$S$-概形 $X'$ 支配 $X$，从而归约到 $X$ 本身射影的情形。这里不写出
+证明细节；证明还使用 [2]，I，A，n\textsuperscript{o} 2 (b) 中所述
+有限态射的分解结果。该方法之所以奏效，是因为当 $S$ 是域的谱时，
+Chow 引理中出现的 $X'$ 自动在 $S$ 上平坦。
+
+我不知道在不对 $S$ 作任何假设、而只假设 $X$ 在 $S$ 上固有且平坦、
+$Z$ 在 $X$ 上拟射影时，这一结果是否仍然成立。应用中的一个重要情形
+是 $Z$ 为 $X$ 的闭子概形；这时，若 $\Pi_{X/S}(Z/X)$ 存在，它必为
+$S$ 的闭子概形。当 $X$ 在 $S$ 上射影时，可以
+\src{276}
+直接而且相当简单地构造它，无须使用 Hilbert 概形理论。所用方法还更
+一般地表明：若 $Z$ 在 $X$ 上仿射，则 $\Pi_{X/S}(Z/X)$ 存在，并在
+$S$ 上仿射。它还表明：若 $X$ 在 $S$ 上固有且平坦（不必在 $S$ 上
+射影），则对 $X$ 上每个局部平凡向量丛 $Z$，
+$\Pi_{X/S}(Z/X)$ 都存在，并且是 $S$ 上的向量丛。最好能重新研究并
+统一这些结果。
+
+\section*{参考文献}
+\addcontentsline{toc}{section}{参考文献}
+
+\begin{description}
+\item[{[1]}] BOREL (A.) 和 SERRE (J.-P.). -- Le théorème de Riemann--Roch,
+\emph{Bull. Soc. math. France}, 第 86 卷，1958 年，第 97--136 页。
+
+\item[{[2]}] GROTHENDIECK (Alexander). -- Technique de construction et
+théorèmes d'existence en géométrie algébrique, I, II, III, \emph{Séminaire
+Bourbaki}, 第 13 卷，1959/60 年，n\textsuperscript{o} 190，29 页，
+n\textsuperscript{o} 195，22 页；以及第 14 卷，1960/61 年，
+n\textsuperscript{o} 212，20 页。
+
+\item[{[3]}] GROTHENDIECK (Alexander). -- Séminaire de Géométrie algébrique,
+I, II, III, IV. -- 巴黎，Institut des hautes Études scientifiques，1960/61
+年（油印本）。
+
+\item[{[4]}] GROTHENDIECK (Alexander). -- Technique de construction en
+géométrie analytique, IV, V, \emph{Séminaire Cartan}, 第 13 卷，1960/61 年，
+n\textsuperscript{o} 11 和 12。
+
+\item[{[5]}] GROTHENDIECK (A.) 和 DIEUDONNÉ (J.). -- \emph{Éléments de
+géométrie algébrique}, I : Le langage des schémas. -- 巴黎，Presses
+universitaires de France，1960 年（Institut des hautes Études scientifiques,
+Publications mathématiques, 4）；II，III，IV（即将出版）。
+
+\item[{[6]}] KODAIRA (K.). -- Characteristic linear systems of complete
+continuous systems, \emph{Amer. J. of Math.}, 第 78 卷，1956 年，
+第 716--744 页。
+
+\item[{[7]}] SERRE (Jean-Pierre). -- Exemples de variétés projectives en
+caractéristique $p$ non relevables en caractéristique 0, \emph{Proc. Nat. Acad.
+Sc. U.S.A.}, 第 47 卷，1961 年，第 108--109 页。
+
+\item[{[8]}] ZAPPA (G.). -- Sull'esistenza, sopra le superficie algebriche, di
+sistemi continui completi infiniti, la cui curva è a serie caratteristica
+incompleta, \emph{Pont. Acad. Sc. Acta}, 第 9 卷，1945 年，第 91--93 页。
+\end{description}
+
+\section*{补遗}
+\addcontentsline{toc}{section}{补遗}
+\begin{center}
+{\small [校样修订时加入]}
+\end{center}
+
+现在看来，[2]，III，n\textsuperscript{o} 8 中的猜想是错误的；即使
+对于特征 0 域上的非奇异簇，无论就商的存在性还是拟射影性而言，这些
+猜想都不成立，甚至在 $G$ 的作用具有闭图像时也是如此。

@@ -1,0 +1,180 @@
+\clearpage
+\chapter*{第236次报告勘误与补遗}
+\addcontentsline{toc}{chapter}{第236次报告勘误与补遗}
+\sid{e236}
+\src{303}
+
+\noindent\textbf{8. TDTE VI：Picard 概形。一般性质。}
+
+\begin{center}
+[布尔巴基讨论班，第14卷，1961/62年度，第236号，23页。]
+\end{center}
+
+\noindent\textbf{第12页，第16行。} --- 把“仿射直线”改为“去掉原点的仿射
+直线”。
+
+\noindent\textbf{第18行。} --- 把“$X[t]$”改为“$X[t,t^{-1}]$”。
+
+\noindent\textbf{第16页，命题3.1，第6行。} --- 把“然而，假设……”改为
+“然而，由假设……”。
+
+\noindent\textbf{第21页，第4节：Picard 概形的有限性定理。} --- 自本篇报告
+写成以来，本节所提出的这一类有限性问题已几乎全部解决。下面指出目前在这一
+方向上已知的主要事实。为简化陈述，我们默认其中出现的所有 Picard 预概形均
+存在，尽管对这些陈述作显然的修改便可去掉任何存在性假设。以下用 $S$ 表示
+Noether 概形，用 $X,Y$ 表示 $S$ 上的固有概形。
+
+\medskip
+\noindent(i) 设 $f:X\longrightarrow Y$ 是满射态射，则
+\[
+f^*: \operatorname{Pic}_{Y/S}\longrightarrow\operatorname{Pic}_{X/S}
+\]
+是有限型态射。
+
+\src{304}
+\noindent(ii) 假设 $Y$ 在 $S$ 上射影，并配有一个相对于 $S$ 丰沛的可逆模；
+设 $X$ 是该模某一任意截面的零点概形，$f:X\longrightarrow Y$ 是典范浸入。
+再假设 $Y/S$ 各纤维的不可约分支维数均为 $\geq3$。则
+\[
+f^*: \operatorname{Pic}_{Y/S}\longrightarrow\operatorname{Pic}_{X/S}
+\]
+是有限型态射。
+
+\noindent(iii) 假设 $X$ 在 $S$ 上射影，且其所有几何纤维均为维数 $n$ 的
+整概形。设 $\mathcal O_X(1)$ 是 $X$ 上的丰沛可逆模，可用来定义 Hilbert
+多项式。设 $M$ 是 $\operatorname{Pic}_{X/S}$ 的一个子集；则 $M$ 拟紧，
+当且仅当 $M$ 中各元素的 Hilbert 多项式
+\[
+a_0x^n+a_1x^{n-1}+a_2x^{n-2}+\cdots
+\]
+中的系数 $a_1$ 和 $a_2$ 保持有界，其中要略去单项式次数为负的系数；因此当 $n=1$ 时只出现 $a_1$，当 $n=0$ 时二者都不出现。
+
+\noindent(iv) 对每个整数 $n\neq0$，$n$ 次幂同态在群预概形
+$\operatorname{Pic}_{X/S}$ 上都是有限型态射。
+
+注意，(i) 和 (ii) 还意味着：在这两个陈述各自的假设下，一个子集 $M$ 在
+$\operatorname{Pic}_{Y/S}$ 中拟紧，当且仅当它在
+$\operatorname{Pic}_{X/S}$ 中的像拟紧。由此可知，一个可逆模
+$\mathcal L$ 若定义在 $Y$ 上，则它与零 $\tau$-等价，当且仅当它在 $X$ 上
+的逆像具有这一性质；
+换言之，$\operatorname{Pic}_{Y/S}^\tau$ 是
+$\operatorname{Pic}_{X/S}^\tau$ 的逆像。特别地，要证明前一个预概形在
+$S$ 上为有限型，只须对后一个证明这一点，因为
+$\operatorname{Pic}_{Y/S}\longrightarrow
+\operatorname{Pic}_{X/S}$ 是有限型态射。于是利用 (i)、Chow 引理和 (iii)，
+得到：
+
+\medskip
+\noindent(v) $\operatorname{Pic}_{X/S}^\tau$ 在 $S$ 上为有限型。
+
+一般地，把有限态射情形的 (i) 与 (ii) 结合起来，可把大多数有限性问题归约到
+$X/S$ 的几何纤维均为维数 $\leq2$ 的正规整概形的情形；往往还可把 (i) 用于
+不必有限的满射态射，再利用代数曲面的奇点消解（任意特征下由 Abhyankar
+证明），将问题归约到 $X/S$ 甚至光滑、从而几何纤维为二维非奇异概形的情形。
+结合 (v) 以及控制非奇异射影曲面的 Néron--Severi 群之秩的 Picard--Igusa
+不等式，这例如可证明 Néron 有限性定理的如下推广：
+
+\medskip
+\noindent(vi) 设 $X/S$ 在 $S$ 上固有，除此之外任意。则 $X_i/k_i$ 是
+$X/S$ 的几何纤维，其 Néron--Severi 群
+\[
+\operatorname{Pic}_{X_i/k_i}/\operatorname{Pic}_{X_i/k_i}^\circ
+\]
+
+\src{305}
+均为有限型，而且它们的秩以及挠子群的阶均保持有界。
+
+同样归约到非奇异曲面情形，并利用该情形下的已知定理（即 Néron 有限性定理，
+以及 Néron--Severi 群上的相交形式非退化这一事实），可推出：
+
+\medskip
+\noindent(vii) 设 $X$ 是代数闭域上的固有概形。则存在有限条闭整曲线
+$C_i$（$1\leq i\leq r$）位于 $X$ 中，具有如下性质：对任一子集 $M$
+（取自 $\operatorname{Pic}_{X/k}$），$M$ 拟紧，当且仅当整数
+\[
+\deg_{C_i'}\mathcal L\qquad(\mathcal L\in M)
+\]
+保持有界（其中 $C_i'$ 表示 $C_i$ 的正规化）。
+
+这里可取 $r$ 为 Néron--Severi 群的秩。一旦知道该群为有限型，(vii) 就归结为
+如下事实：由曲线 $C$（位于 $X$ 中）在 Néron--Severi 群上定义的线性形式，
+只在该群
+的挠元素上同时为零。当 $X$ 射影且非奇异时，这一结果以及 (v) 均由
+Matsusaka 得到。利用 (vii)，容易得到与零 $\tau$-等价的可逆模在 $X$ 上的
+如下刻画：
+
+\medskip
+\noindent(viii) 设 $X/k$ 是域上的固有概形，$\mathcal L$ 是 $X$ 上的可逆
+模。下列条件等价：
+
+\noindent a. $\mathcal L$ 与零 $\tau$-等价；
+
+\noindent b. 对任意凝聚模 $F$，都有
+\[
+\chi(F\otimes\mathcal L)=\chi(F),
+\]
+其中 $\chi$ 表示 Euler--Poincaré 特征；
+
+\noindent b'. 与 (b) 相同，但取 $F=\mathcal O_Y$，其中 $Y$ 是 $X$ 中的
+一维闭整子概形；
+
+\noindent c. 对每个这样的 $Y$，以 $Y'$ 表示其正规化曲线，则
+\[
+\deg\mathcal L_{Y'}=0.
+\]
+
+若 $X/k$ 射影，并配有丰沛可逆模 $\mathcal O_X(1)$，则上述条件还等价于：
+
+\noindent d. 对每个整数 $m$，$\mathcal L^{\otimes m}(1)$ 均丰沛。
+
+\noindent e.（若 $X$ 为整概形。）对每一对整数 $m,n$，都有
+\[
+\chi(\mathcal L^{\otimes m}(n))=\chi(\mathcal O_X(n))
+\]
+
+\src{306}
+（即在 (b) 中取 $F=\mathcal L^{\otimes m}(n)$）。
+
+为说明最后一个条件的充分性，应注意它意味着各
+$\mathcal L^{\otimes m}$ 的 Hilbert 多项式全都相等；因此根据 Mumford
+判据 (iii)，各 $\mathcal L^{\otimes m}$ 留在
+$\operatorname{Pic}_{X/k}$ 的一个拟紧子集中，也就是说 (a) 成立。条件
+(b)、(b')、(c) 应看作通常在非奇异射影簇上定义的数值等价概念在任意固有
+概形上的变体。对于非奇异射影簇，(a) 与 (c) 的等价性当然早已为人所知
+（Matsusaka）。
+
+判据 (e) 还推出如下结果：
+
+\medskip
+\noindent(ix) 设 $f:X\longrightarrow S$ 是射影平坦态射，且其几何纤维均为
+整概形。则 $\operatorname{Pic}_{X/S}^\tau$ 在
+$\operatorname{Pic}_{X/S}$ 中既开又闭。
+
+下面只对关键结果 (i)、(ii)、(iii) 的证明作几点说明。（结果 (iv) 与其他结果
+稍有不同，它只需对有限、满射且纯不可分的态射使用 (i) 即可证明；更确切地
+说，对 Frobenius 态射使用 (i)。）证明 (i) 时，本质上使用非平坦下降的思想
+（尤其参见 TDTE I，第9页）。由于这里只追求有限性结果，缺少下降数据的有效
+性判据并无妨碍。另一方面，Mumford 最近证明了 (iii) 的一个稍弱形式，即涉及
+Hilbert 多项式所有系数的判据。他的论证极其简单，其思路来自 Nakai 丰沛性
+判据的证明（Nakai 为非奇异曲面陈述了这一判据，Mumford 将其推广到任意射影
+态射）。不过在我看来，这一论证只有在对 $X/S$ 的纤维再加上一项轻微限制时
+才成立，即 Serre 条件 $(S_2)$；若几何纤维正规，则该条件满足。随后在 (ii)
+的证明中使用这一受限判据：(i) 确实允许归约到 $Y/S$ 平坦且几何纤维均为正规
+整概形的情形；再用 Mumford 判据，很容易归约到 $X/S$ 也满足同样条件的情形。
+于是由维数假设，$Y$ 和 $X$ 的几何纤维在其闭点处的深度均为 $\geq2$，因而
+可以应用 SGA 1962（第XII篇报告）所给形式的“等价判据”，完成 (ii) 的证明。
+一旦得到 (i) 和 (ii)，便不难在 Mumford 判据中去掉对纤维的任何正规性假设，
+并证明 (iii) 中陈述的更强形式。
+
+\src{307}
+最后还应指出，(i) 和 (ii) 的证明也表明：当 $S$ 是域 $k$ 的谱时，态射
+\[
+\operatorname{Pic}_{Y/k}\longrightarrow\operatorname{Pic}_{X/k}
+\]
+是仿射的（而不只是有限型的）。
+
+% FGA Canon R30: scan restoration and explicit editorial apparatus.
+\par\smallskip
+\begingroup\footnotesize
+\noindent\textit{印刷本要求系数 $a_1$ 和 $a_2$ 保持有界，未说明 $n<2$ 的情形。现行读法仅明确低维时不存在的系数的约定，不宣称印刷定理为假。}\par
+\endgroup

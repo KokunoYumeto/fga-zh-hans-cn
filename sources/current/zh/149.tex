@@ -1,0 +1,1247 @@
+\unit{第149次报告——凝聚代数层的对偶定理}
+\sid{149}
+\src{169}
+\seminarzh{（1957年5月）}
+\paperhead{凝聚代数层的对偶定理}%
+  {亚历山大·格罗滕迪克 著}
+
+下述结果受塞尔的\fquote{代数对偶定理}启发，发现于1955年冬和1956年冬。借助
+关于射影空间上同调的若干相当初等的结果[3]，并大量采用[2]所述形式的
+Cartan--Eilenberg同调代数，便可极其简明地证明这些结果。
+
+\fsection{1}{模层的 Ext（[2]，第3、4章）}
+
+设 $X$ 是一个拓扑空间，并赋有一个带幺环（不必交换）的层 $\Osh$。考虑由
+$\Osh$-模层构成的阿贝尔范畴 $\Ccat^{\Osh}$；这些对象也称为 $\Osh$-模。已知
+该范畴的每个对象都具有内射消解，因而可在其中定义具有熟知形式性质的
+$\operatorname{Ext}$ 函子。为避免混淆，更确切地说，我们以
+$\operatorname{Hom}_{\Osh}(X;A,B)$，或简记为 $\operatorname{Hom}(X;A,B)$，
+表示从 $A$ 到 $B$ 的 $\Osh$-同态所成的阿贝尔群；而以
+$\Homsh_{\Osh}(A,B)$ 表示从 $A$ 到 $B$ 的同态芽所组成的层
+（$A,B\in\Ccat^{\Osh}$）。固定 $A\in\Ccat^{\Osh}$，定义函子 $h_A$ 和
+$\hsh_A$；它们分别取值于阿贝尔群范畴 $\Ccat$ 和 $X$ 上阿贝尔群层的范畴
+$\Ccat^{\Zsh}$，其定义式为：
+\begin{equation}\tag{1.1}
+  h_A(B)=\operatorname{Hom}_{\Osh}(X;A,B),
+  \qquad
+  \hsh_A(B)=\Homsh_{\Osh}(A,B).
+\end{equation}
+
+函子 $h_A$ 和 $\hsh_A$ 都是协变左正合函子。考察它们的右导出函子，分别记为
+$\operatorname{Ext}_{\Osh}^{p}(X;A,B)$ 和 $\Extsh_{\Osh}^{p}(A,B)$。因此按定义有
+\begin{equation}\tag{1.2}
+\left\{
+\begin{aligned}
+\operatorname{Ext}_{\Osh}^{p}(X;A,B)
+  &= (R^{p}h_A)(B)
+   = H^{p}\bigl(\operatorname{Hom}_{\Osh}(X;A,C(B))\bigr),\\
+\Extsh_{\Osh}^{p}(A,B)
+  &= (R^{p}\hsh_A)(B)
+   = H^{p}\bigl(\Homsh_{\Osh}(A,C(B))\bigr),
+\end{aligned}
+\right.
+\end{equation}
+
+其中符号 $R^{p}$ 表示取右导出函子，$C(B)$ 表示 $B$ 在 $\Ccat^{\Osh}$ 中的
+任意内射消解。以
+\[
+  \Gamma:\Ccat^{\Zsh}\longrightarrow\Ccat
+\]
+表示\fquote{截面}函子。回顾其右导出函子记为
+\[
+  B\longmapsto H^{p}(X,B).
+\]
+
+\src{170}
+\begin{equation}\tag{1.3}
+  H^{p}(X,B)=(R^{p}\Gamma)(B)=H^{p}\bigl(\Gamma(C(B))\bigr).
+\end{equation}
+显然 $h_A=\Gamma\hsh_A$；另一方面，容易验证 $\hsh_A$ 将内射对象变为
+$\Gamma$-无环对象。由熟知的结论可得：
+
+\result{命题}{1} 对每个 $\Osh$-模 $A$，在 $\Ccat^{\Osh}$ 上存在一个上同调
+谱函子，它收敛于分次函子
+$\bigl(\operatorname{Ext}_{\Osh}^{*}(X;A,B)\bigr)$，且其初始项为
+\begin{equation}\tag{1.4}
+  E_{2}^{p,q}(A,B)=H^{p}\bigl(X,\Extsh_{\Osh}^{q}(A,B)\bigr).
+\end{equation}
+由此得到边缘同态和一条五项正合列，兹不写出。
+
+\result{推论}{1} 若 $A$ 局部同构于 $\Osh^{n}$，则有典范同构
+\begin{equation}\tag{1.5}
+  \operatorname{Ext}_{\Osh}^{p}(X;A,B)
+  \overset{\sim}{\longleftarrow}
+  H^{p}\bigl(X,\Homsh_{\Osh}(A,B)\bigr)
+\end{equation}
+（由该谱序列的边缘同态给出）。特别地，有典范同构
+\begin{equation}\tag{1.6}
+  \operatorname{Ext}_{\Osh}^{p}(X;\Osh,B)=H^{p}(X,B).
+\end{equation}
+
+为应用这些结果，必须能够明确描述 $\Extsh_{\Osh}^{p}(A,B)$。这些函子可以
+局部计算：若 $U$ 是 $X$ 的开子集，则
+\[
+  \Extsh_{\Osh}^{p}(A,B)|U
+  =\Extsh_{\Osh|U}^{p}(A|U,B|U),
+\]
+这是因为内射 $\Osh$-模限制到 $U$ 上后仍是内射 $\Osh|U$-模。此外，固定
+$x\in X$，有函子性同态
+\begin{equation}\tag{1.7}
+  \Homsh_{\Osh}(A,B)_x
+  \longrightarrow
+  \operatorname{Hom}_{\Osh_x}(A_x,B_x),
+\end{equation}
+它唯一延拓为关于 $B$ 的上同调函子之间的一个同态：
+\begin{equation}\tag{1.8}
+  \Extsh_{\Osh}^{p}(A,B)_x
+  \longrightarrow
+  \operatorname{Ext}_{\Osh_x}^{p}(A_x,B_x).
+\end{equation}
+
+\result{命题}{2} 若在 $x$ 的某个邻域内，$A$ 同构于某个同态
+$\Osh^{m}\longrightarrow\Osh^{n}$ 的余核，则对每个 $p$，(1.8) 都是同构。%
+\footnote{印刷文本作“(1.7)”；$p$ 的出现及前一句均要求此处为“(1.8)”。}
+特别地，若 $A$ 是凝聚 $\Osh$-模 [3]，上述结论成立。
+
+\src{171}
+\result{命题}{3} 设 $L_{*}=(L_i)$ 是 $\Osh$-模 $A$ 的一个左消解，其中每个
+$\Osh$-模都局部同构于某个 $\Osh^{n}$。则 $\Extsh_{\Osh}^{*}(A,B)$ 可与
+$H^{*}\bigl(\Homsh_{\Osh}(L_{*},B)\bigr)$ 等同，而
+$\operatorname{Ext}_{\Osh}^{*}(X;A,B)$ 可与复形
+$\Homsh_{\Osh}(L_{*},B)$ 关于 $X$ 的超上同调等同。
+
+证明是标准的。考虑双复形 $\Homsh_{\Osh}(L_{*},C(B))$，其中 $C(B)$ 是 $B$
+的一个内射消解，再考虑从 $\Homsh_{\Osh}(L_{*},B)$ 和
+$\Homsh_{\Osh}(A,C(B))$ 到此双复形的自然同态即可。
+
+最后指出，(1.2) 中引入的两个 $\operatorname{Ext}$ 函子不仅是关于 $B$ 的
+上同调函子，而且是上同调双函子：关于 $B$ 协变，关于 $A$ 反变。
+
+\fsection{2}{Ext 中的合成律}
+
+本节结果由 CARTIER 和 YONEDA 各自独立得到；详情见 CARTIER 的报告 [1]。
+设 $\Ccat$ 为阿贝尔范畴，$K,L$ 为 $\Ccat$ 中两个分次对象。以
+$\operatorname{Hom}(K,L)$ 表示如下分次阿贝尔群：其 $n$ 次分量由从 $K$ 到
+$L$ 的 $n$ 次齐次同态组成（即同态 $K^{i}\longrightarrow L^{i+n}$ 所成的
+系统 $(u_i)$）。
+
+若 $K,L$ 是复形（为明确起见，设其微分算子的次数为 $+1$），则在
+$\operatorname{Hom}(K,L)$ 上引入微分算子
+\begin{equation}\tag{2.1}
+  \delta(u)=du+(-1)^{n+1}ud,\quad
+  \mbox{\upshape\fontspec{SimSun}其中 }n=\deg(u),
+\end{equation}
+从而使它成为微分次数为 $+1$ 的复形。$n$ 次闭元就是与 $d$ 反交换的 $n$ 次
+算子（视为齐次算子）。\footnote{印刷文本作“与 $u$”；方程 (2.1) 要求此处
+为“与 $d$”。} 因而可以考虑 $H^{*}\bigl(\operatorname{Hom}(K,L)\bigr)$；
+它是 $K,L$ 同伦型的不变量，可记为 $H^{*}(K,L)$。
+
+若还有第三个复形 $M$，则同态的合成定义一个配对
+\[
+  \operatorname{Hom}(K,L)\times\operatorname{Hom}(L,M)
+  \longrightarrow\operatorname{Hom}(K,M)
+\]
+且与微分算子相容，因此取上同调后得到配对
+\begin{equation}\tag{2.2}
+  H^{*}(K,L)\times H^{*}(L,M)\longrightarrow H^{*}(K,M),
+\end{equation}
+记作 $(u,v)\longmapsto vu$。这些配对显然满足结合律。特别地，
+$H^{*}(K,K)$ 是带幺结合分次环，而 $H^{*}(K,L)$（相应地，$H^{*}(L,K)$）
+是该环上的分次右模（相应地，分次左模），等等。在 $0$ 次时，(2.2) 化为
+复形同态的合成。最后，若有复形的正合列
+\[
+  0\longrightarrow K'\longrightarrow K\longrightarrow K''\longrightarrow 0,
+\]
+
+\src{172}
+并且每个 $K'^{i}$ 都可与 $K^{i}$ 的一个直和因子等同，则它诱导群复形
+$\operatorname{Hom}(K'',L)$ 等的正合列，进而给出连接算子
+\[
+  H^{i}(K',L)\longrightarrow H^{i+1}(K'',L).
+\]
+相对于 $L$ 中一条正合列的连接算子也用同样方式定义。配对 (2.2) 按通常意义
+与这些连接算子相容。
+
+现在设 $\Ccat$ 是一个范畴，其中每个对象 $A$ 都有内射消解 $C(A)$。运用
+双复形定理的诸多变式之一可知
+\[
+  H^{*}\bigl(C(A),C(B)\bigr)
+  =H^{*}\bigl(\operatorname{Hom}(C(A),C(B))\bigr)
+\]
+典范同构于
+\[
+  H^{*}\bigl(\operatorname{Hom}(A,C(B))\bigr)
+  =\operatorname{Ext}^{*}(A,B).
+\]
+上面考虑的连接算子给出 $\operatorname{Ext}$ 的连接同态。此外，配对 (2.2)
+在此给出与连接同态相容的结合配对：
+\begin{equation}\tag{2.3}
+  \operatorname{Ext}^{*}(A,B)\times\operatorname{Ext}^{*}(B,C)
+  \longrightarrow\operatorname{Ext}^{*}(A,C).
+\end{equation}
+特别地，$\operatorname{Ext}^{*}(A,A)$ 是带幺结合分次环，等等。（类似地可证，
+$\operatorname{Ext}$ 函子作用于任意函子的导出函子；此处不使用这一事实。）
+
+若所考虑的范畴是 $X$ 上 $\Osh$-模的范畴 $\Ccat^{\Osh}$，便得到配对
+\begin{equation}\tag{2.4}
+  \operatorname{Ext}_{\Osh}^{p}(X;A,B)
+  \times\operatorname{Ext}_{\Osh}^{q}(X;B,C)
+  \longrightarrow\operatorname{Ext}_{\Osh}^{p+q}(X;A,C),
+\end{equation}
+它们可以按前述方式明确写出。另一方面，作同样的推导，但把阿贝尔群范畴替换为
+$X$ 上阿贝尔群层的范畴，并把 $\operatorname{Hom}$ 函子替换为 $\Homsh$
+函子，还可定义具有相同形式性质、而且这一次具有\fquote{局部性质}的配对：
+\begin{equation}\tag{2.5}
+  \Extsh_{\Osh}^{p}(A,B)\times\Extsh_{\Osh}^{q}(B,C)
+  \longrightarrow\Extsh_{\Osh}^{p+q}(A,C).
+\end{equation}
+再注意同态 (1.8) 与 $\operatorname{Ext}$ 之间的配对相容，便可进一步明确
+这些配对。
+
+\src{173}
+最后回顾，函子 $H^{p}(X,A)$ 之间也有乘法结构（杯积）。由此可见，命题 1
+中的谱序列与乘法结构相容。更确切地说，谱序列 $E(A,B)$ 与谱序列 $E(B,C)$
+有一个取值于谱序列 $E(A,C)$ 的配对；在收敛项上，它化为整体
+$\operatorname{Ext}$ 群之间的配对，而在初始项上，它化为 (1.4) 右端中由
+杯积和局部 $\operatorname{Ext}$ 群配对所导出的配对。特别地，由此可知边缘同态
+\begin{equation}\tag{2.6}
+  \operatorname{Ext}_{\Osh}^{n}(X;A,B)
+  \longrightarrow H^{0}\bigl(X,\Extsh_{\Osh}^{n}(A,B)\bigr)
+\end{equation}
+和
+\begin{equation}\tag{2.7}
+  H^{n}\bigl(X,\Homsh_{\Osh}(A,B)\bigr)
+  \longrightarrow\operatorname{Ext}_{\Osh}^{n}(X;A,B)
+\end{equation}
+均与乘法结构相容。因此，若只考虑局部同构于某个 $\Osh^{m}$ 的层，则结合
+同构 (1.5)，即可完全用杯积明确描述整体 $\operatorname{Ext}$ 之间的合成。
+
+\fsection{3}{局部上同调的结果}
+
+设 $A$ 是一个带幺交换环，并赋有一个理想 $J$。对变动的 $A$-模 $M$，我们将
+定义函子性同态
+\begin{equation}\tag{3.1}
+\left\{
+\begin{aligned}
+\operatorname{Ext}_{A}^{p}(A/J,M)
+  &\longrightarrow
+  \operatorname{Hom}_{A}\!\left(\bigwedge^{p}J/J^{2},M\otimes A/J\right),\\
+\operatorname{Tor}_{p}^{A}(A/J,M)
+  &\longleftarrow
+  \left(\bigwedge^{p}J/J^{2}\right)
+  \otimes\operatorname{Hom}_{A}(A/J,M),
+\end{aligned}
+\right.
+\end{equation}
+其中张量积和外积都在环 $A$ 上取。还应注意，$J/J^{2}$ 实际上是一个
+$A/J$-模，而它作为 $A$-模或作为 $A/J$-模所取的外幂相同。定义同态 (3.1)，
+等价于对 $J$ 中元素的每个系统 $\underline{x}=(x_1,\ldots,x_p)$ 定义同态
+$\varphi_{\underline{x}}$：
+\begin{equation}\tag{3.2}
+\left\{
+\begin{aligned}
+\varphi_{\underline{x}}:
+  \operatorname{Ext}_{A}^{p}(A/J,M)&\longrightarrow M\otimes A/J,\\
+\varphi_{\underline{x}}:
+  \operatorname{Hom}_{A}(A/J,M)&\longrightarrow
+  \operatorname{Tor}_{p}^{A}(A/J,M),
+\end{aligned}
+\right.
+\end{equation}
+并使其满足下列条件：
+
+\src{174}
+\begin{enumerate}
+\item[\textup{i.}] $\varphi_{x_1,\ldots,x_p}$ 按交替 $A$-多线性的方式依赖于
+$x_i\in J$ 所成的系统。
+\item[\textup{ii.}] 只要有一个 $x_i$ 属于 $J^{2}$，就有
+$\varphi_{x_1,\ldots,x_p}=0$。
+\end{enumerate}
+事实上，ii 由 i 推出，因为对 $a\in J$ 有 $a\varphi_{\underline{x}}=0$；只需
+注意 (3.2) 中所有的模都被 $J$ 零化。
+
+为定义 $\varphi_{\underline{x}}$，考虑复形 $K_{\underline{x}}$：其底层
+$A$-模是 $\bigwedge A^{p}$，其微分算子是内乘算子
+$i_{\underline{x}}$，这里将 $\underline{x}$ 视为 $A^{p}$ 上分量为
+$x_1,\ldots,x_p$ 的线性形式。微分算子的次数为 $-1$，各次数非负，而该复形
+在 $0$ 维的同调为 $A/(x_1A+\cdots+x_pA)$。由于 $x_i\in J$，便得到增广
+$K_{\underline{x},0}\longrightarrow A/J$。因此 $K_{\underline{x}}$ 是一个
+以 $A/J$ 为增广模的增广自由复形。按熟知的方式，由此得到同态
+\[
+\operatorname{Ext}_{A}^{*}\bigl(H_0(K_{\underline{x}}),M\bigr)
+\longrightarrow
+H^{*}\bigl(\operatorname{Hom}_{A}(K_{\underline{x}},M)\bigr)
+\]
+以及
+\[
+\operatorname{Tor}_{*}^{A}\bigl(H_0(K_{\underline{x}}),M\bigr)
+\longleftarrow
+H_{*}\bigl(K_{\underline{x}}\otimes_A M\bigr).
+\]
+再与增广同态 $H_0(K_{\underline{x}})\longrightarrow A/J$ 所诱导的
+$\operatorname{Ext}$ 和 $\operatorname{Tor}$ 上的同态合成，得到同态
+\begin{equation}\tag{3.3}
+\left\{
+\begin{aligned}
+\psi_{\underline{x}}:
+\operatorname{Ext}_{A}^{*}(A/J,M)
+&\longrightarrow H^{*}\bigl(\operatorname{Hom}_{A}(K_{\underline{x}},M)\bigr),\\
+\psi_{\underline{x}}:
+\operatorname{Tor}_{*}^{A}(A/J,M)
+&\longleftarrow H_{*}\bigl(K_{\underline{x}}\otimes_A M\bigr).
+\end{aligned}
+\right.
+\end{equation}
+立即可见，在最高维数 $p$，右端的同调是
+$M/(x_1M+\cdots+x_pM)$（相应地，是 $M$ 中被每个 $x_i$ 零化的元素所成的
+集合）。由于 $x_i\in J$，便得到同态
+\begin{equation}\tag{3.4}
+\left\{
+\begin{aligned}
+H^{p}\bigl(\operatorname{Hom}_{A}(K_{\underline{x}},M)\bigr)
+&\longrightarrow M\otimes A/J,\\
+H_{p}\bigl(K_{\underline{x}}\otimes_A M\bigr)
+&\longleftarrow\operatorname{Hom}_{A}(A/J,M).
+\end{aligned}
+\right.
+\end{equation}
+将同态 (3.3) 与 (3.4) 合成，便得到所要定义的同态 (3.2)。条件 i 的验证
+虽然繁琐，却没有困难。
+
+\src{175}
+\result{命题}{4} 设 $A$ 是带幺交换环，$(x_1,\ldots,x_p)$ 是 $A$ 中的一个
+元素序列，并且对 $1\leq i\leq p$，$x_i$ 在 $A$ 对由
+$(x_1,\ldots,x_{i-1})$ 生成的理想所得商环中的像不是零因子。令 $J$ 为
+$x_i$ 生成的理想。则 $J/J^{2}$ 是自由 $A/J$-模，其基为 $x_i$ 的典范像；
+复形 $K_{\underline{x}}$ 是 $A/J$ 的一个自由消解；而且对任意 $A$-模 $M$，
+(3.1) 中次数为 $p$ 的同态都是双射。只要 $J M=0$，在任意次数 $i$ 定义的
+类似同态也具有相同结论。
+
+（关键之处是 $K_{\underline{x}}$ 的无环性；其余结论都由此推出。在上述条件下，
+这是熟知的事实。）
+
+\result{推论}{1} 设 $A,J$ 如上，并进一步假设 $A$ 是完美域 $k$ 上维数为
+$n$ 的正则仿射代数，且 $A/J$ 也是正则仿射代数。以 $\Omega^{1}(A)$、
+$\Omega^{1}(A/J)$ 表示 Kähler 微分模。则有与局部化相容的典范同构
+\begin{equation}\tag{3.5}
+  \operatorname{Ext}_{A}^{p}\bigl(\Omega^{n-p}(A/J),\Omega^{n}(A)\bigr)=A/J.
+\end{equation}
+事实上，$\Omega^{n-p}(A/J)$ 是秩为 $1$ 的自由 $A/J$-模，同样，
+$\Omega^{n}(A)$ 是秩为 $1$ 的自由 $A$-模，\footnote{印刷文本作“秩 $n$”；
+两个最高次形式模的秩均为 $1$，下文与 $\bigwedge^{p}(J/J^{2})$ 的等同也要求
+如此。} 因而左端等于
+\[
+  \operatorname{Ext}_{A}^{p}(A/J,A)
+  \otimes\Omega^{n-p}(A/J)'\otimes\Omega^{n}(A)
+\]
+（其中符号“$'$”表示对偶 $A/J$-模）。后两个因子的张量积可与
+$\bigwedge^{p}(J/J^{2})$ 等同，故整个表达式可与
+\[
+  \operatorname{Ext}_{A}^{p}\!\left(A/J,\bigwedge^{p}(J/J^{2})\right)
+\]
+等同，再由命题与
+\[
+  \operatorname{Hom}_{A}\!\left(\bigwedge^{p}J/J^{2},
+  \bigwedge^{p}J/J^{2}\right)
+\]
+等同，也就是与 $A/J$ 等同。特别地，
+$\operatorname{Ext}_{A}^{p}\bigl(\Omega^{n-p}(A/J),\Omega^{n}(A)\bigr)$ 中
+有一个对应于 $A/J$ 单位元的特出元素，称为\zhterm{理想 $J$ 在 $A$ 中的基本类}。
+（事实上，它可以在宽泛得多的条件下定义。）推论 1 可以表为更几何、更整体的
+形式：
+
+\result{推论}{2} 设 $X$ 是代数闭域 $k$ 上的非奇异簇，$Y$ 是 $X$ 的闭
+非奇异子簇；$\Osh_X$ 是 $X$ 的局部环层，$\Osh_Y$ 是 $Y$ 的局部环层，并将
+它视为 $\Osh_X$ 的商层。设 $X$ 的维数为 $n$，$Y$ 的维数为 $n-p$。
+
+\src{176}
+令 $\Omega_X$（相应地，$\Omega_Y$）为 $X$（相应地，$Y$）上正则微分形式
+的芽层。则有典范同构
+\begin{equation}\tag{3.6}
+  \Extsh_{\Osh_X}^{p}\bigl(\Omega_Y^{n-p},\Omega_X^{n}\bigr)=\Osh_Y,
+\end{equation}
+或者等价地，
+\begin{equation}\tag{3.6 bis}
+  \Extsh_{\Osh_X}^{p}\bigl(\Osh_Y,\Omega_X^{n}\bigr)=\Omega_Y^{n-p}.
+\end{equation}
+当 $Y$ 是奇异簇时，公式 (3.6 bis) 可用作 $\Omega_Y^{n-p}$ 的定义。更确切地说：
+
+\result{命题}{5} 设 $Y$ 是维数为 $q=n-p$ 的代数子集，包含在维数为 $n$ 的
+非奇异代数簇 $X$ 中。设 $F$ 是 $X$ 上支集包含于 $Y$ 的凝聚代数层，$L$ 是
+$X$ 上的局部自由代数层。则当 $i<p$ 时，层 $\Extsh_{\Osh_X}^{i}(F,L)$ 为零；
+而当 $i=p$ 时，有典范同构
+\begin{equation}\tag{3.7}
+  \Extsh_{\Osh_X}^{p}(F,L)
+  =\Homsh_{\Osh_X}\!\left(F,
+  \Extsh_{\Osh_X}^{p}(\Osh_X/J,L)\right),
+\end{equation}
+其中 $J$ 表示 $X$ 上任意一个零化 $F$、且零点集为 $Y$ 的理想层。特别地，
+若 $F$ 是 $Y$ 上的凝聚代数层，则
+\begin{equation}\tag{3.7 bis}
+  \Extsh_{\Osh_X}^{p}(F,L)
+  =\Homsh_{\Osh_Y}\!\left(F,\Extsh_{\Osh_X}^{p}(\Osh_Y,L)\right).
+\end{equation}
+最后，仍设 $F$ 是 $Y$ 上的凝聚代数层，则诸层
+\[
+  E^{i}(F)=\Extsh_{\Osh_X}^{p+i}(F,\Omega_X^{n})
+\]
+不依赖于把代数空间 $Y$ 嵌入非奇异簇 $X$ 的方式。
+
+问题是局部的，故可设 $X$ 仿射且 $L=\Osh_X$。这把问题归结为交换代数问题，
+甚至局部代数问题：若 $A$ 是正则局部环，$M$ 是支集维数
+$\leq q=n-p$ 的 $A$-模，则要证明当 $i<p$ 时
+$\operatorname{Ext}_{A}^{i}(M,A)=0$，并且
+\[
+  \operatorname{Ext}_{A}^{p}(M,A)
+  =\operatorname{Hom}_{A}\!\left(M,\operatorname{Ext}_{A}^{p}(A/J,A)\right),
+\]
+其中 $J$ 是任意一个零化 $M$ 且\fquote{维数} $\leq q$ 的理想。对于第一点，
+对 $q$ 作归纳：一次直接的分解化简把问题归约到 $M=A/J$ 的情形；随后把 $J$
+换成一个更小的理想，并运用归纳假设和 $\operatorname{Ext}$ 的正合列，又可归约
+到 $J$ 由命题 4 中那样的一个\fquote{参数系}生成的情形，此时结论立即成立。
+前一结果蕴含：若 $J$ 是一个理想
+
+\src{177}
+固定且\fquote{维数} $\leq q$，则 $A/J$-模范畴上的反变函子
+$E(M)=\operatorname{Ext}_{A}^{p}(M,A)$ 是左正合的；它还把直和变为直积，
+由此容易得到
+\[
+  E(M)=\operatorname{Hom}_{A}\bigl(M,E(A/J)\bigr).
+\]
+\footnote{印刷文本作 $E(A)$；在所考虑的范畴中，表示对象是 $A/J$，而 (3.7)
+所需的等式为 $E(A/J)$。} 最后，命题 5 的最后一个断言更为微妙；它由
+$E^{i}(F)$ 的一个内蕴刻画推出，而该刻画使用了此处无法陈述的局部对偶定理。
+
+\result{推论}{} 以 $\omega_Y^{q}$ 表示层
+$\Extsh_{\Osh_X}^{p}(\Osh_Y,\Omega_X^{n})$。则对 $Y$ 上的凝聚代数层 $F$，
+有函子性同构
+\begin{equation}\tag{3.8}
+  \Extsh_{\Osh_X}^{p}(F,\Omega_X^{n})
+  =\Homsh_{\Osh_X}(F,\omega_Y^{q}).
+\end{equation}
+
+\fsection{4}{与子簇相伴的上同调类}
+
+下文始终以 $X$ 表示定义在域 $k$ 上的维数为 $n$ 的代数集；为简便起见，假设
+$k$ 代数闭。除第 6 节外，均假设 $X$ 非奇异。以 $\Osh_X$ 表示 $X$ 上的局部
+环层，以
+\[
+  \Omega_X^{*}=\bigoplus_p\Omega_X^{p}
+\]
+表示 $X$ 上微分形式的芽层。\footnote{印刷文本使用并集号；这里的分次结构是
+诸层 $\Omega_X^p$ 的直和。} 若 $Y$ 是 $X$ 的闭子集，就把 $Y$ 上的凝聚代数层
+视同为 $X$ 上在 $Y$ 外为零的凝聚层；$\Osh_Y$ 和 $\Omega_Y$ 尤其如此。
+
+\result{引理}{1} 设 $F$ 是 $X$ 上支集维数 $\leq n-p$ 的凝聚代数层，$L$
+是 $X$ 上的局部自由凝聚代数层。则当 $i<p$ 时，
+$\operatorname{Ext}_{\Osh_X}^{i}(X;F,L)$ 为零，并有典范同构
+\begin{equation}\tag{4.1}
+  \operatorname{Ext}_{\Osh_X}^{p}(X;F,L)
+  =H^{0}\bigl(X,\Extsh_{\Osh_X}^{p}(F,L)\bigr).
+\end{equation}
+若 $F$ 是 $X$ 的闭子集 $Y$ 上的凝聚代数层，且 $Y$ 的维数
+$\leq n-p$，则有典范同构
+\begin{equation}\tag{4.1 bis}
+  \Extsh_{\Osh_X}^{p}(F,L)
+  =\Homsh_{\Osh_X}\!\left(
+    F\otimes L'\otimes\Omega_X^{n},\omega_Y^{n-p}
+  \right),
+\end{equation}
+其中 $\omega_Y^{n-p}$ 是命题 5 之后的推论所定义的 $Y$ 上的层（若 $Y$ 非奇异，
+它可与 $\Omega_Y^{n-p}$ 等同）。
+
+公式 (4.1) 直接由命题 1 的谱序列和命题 5 推出；根据公式 (3.8)，可以写成
+
+\src{178}
+\begin{align*}
+\Extsh_{\Osh_X}^{p}(F,L)
+&=L\otimes(\Omega_X^{n})'\otimes
+  \Extsh_{\Osh_X}^{p}(F,\Omega_X^{n})\\
+&=L\otimes(\Omega_X^{n})'\otimes
+  \Homsh_{\Osh_X}(F,\omega_Y^{q})\\
+&=\Homsh_{\Osh_X}\!\left(
+  F\otimes L'\otimes\Omega_X^{n},\omega_Y^{q}\right),
+\end{align*}
+其中 $q=n-p$，由此得到公式 (4.1 bis)。
+
+特别取 $F=\Osh_Y$、$L=\Omega_X^{p}$，并注意到
+$\Omega_X^{n}\otimes(\Omega_X^{p})'=\Omega_X^{n-p}$，便得到典范同构
+\begin{equation}\tag{4.2}
+  \operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_Y,\Omega_X^{p})
+  =\operatorname{Hom}_{\Osh_X}
+  (X;\Omega_X^{n-p},\omega_Y^{n-p}).
+\end{equation}
+为简便起见，现在假设 $Y$ 非奇异，因而
+$\omega_Y^{n-p}=\Omega_Y^{n-p}$。从 $\Omega_X^{n-p}$ 到
+$\Omega_Y^{n-p}$ 有自然同态，故得到层
+$\Extsh_{\Osh_X}^{p}(\Osh_Y,\Omega_X^{p})$ 的典范截面 $s_Y$。若 $Y$ 的
+所有分支维数均为 $n-p$，就称它为层
+$\Extsh_{\Osh_X}^{p}(\Osh_Y,\Omega_X^{p})$ 的\zhterm{基本截面}。由 (4.1)，
+该截面定义 $\operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_Y,\Omega_X^{p})$ 中的
+一个元素。另一方面，自然同态 $\Osh_X\longrightarrow\Osh_Y$ 定义同态
+\[
+  \operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_Y,\Omega_X^{p})
+  \longrightarrow
+  \operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_X,\Omega_X^{p})
+  =H^{p}(X,\Omega_X^{p}).
+\]
+这样便得到 $H^{p}(X,\Omega_X^{p})$ 中的一个元素，记作 $P_X(Y)$，称为
+\zhterm{$Y$ 在 $X$ 中的上同调类}。因此，它由
+$\Extsh_{\Osh_X}^{p}(\Osh_Y,\Omega_X^{p})$ 的截面 $s_Y$ 通过下列同态图式
+得到：
+\begin{equation}\tag{4.3}
+\begin{aligned}
+H^{p}(X,\Omega_X^{p})
+&=\operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_X,\Omega_X^{p})\\
+&\longleftarrow\operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_Y,\Omega_X^{p})
+\xrightarrow{\ \sim\ }
+H^{0}\!\left(X,\Extsh_{\Osh_X}^{p}(\Osh_Y,\Omega_X^{p})\right).
+\end{aligned}
+\end{equation}
+
+所谓\zhterm{维数为 $n-p$ 的非奇异循环}，是指由 $X$ 中维数为 $n-p$ 的不可约
+非奇异子簇生成的自由阿贝尔群中的元素。于是函数 $Y\longmapsto P(Y)$ 延拓为
+从 $X$ 上维数为 $n-p$ 的非奇异循环群到群 $H^{p}(X,\Omega_X^{p})$ 的同态。
+
+设 $Z^{n-p}$ 和 $Z'^{n-p'}$ 是维数分别为 $n-p$ 和 $n-p'$ 的非奇异循环。
+若 $Z$ 的每个分支都与 $Z'$ 的每个分支横截相交，就称它们\zhterm{横截相交}。
+此时循环 $Z.Z'$ 有定义，并且是维数为 $n-p-p'$ 的非奇异循环。在这些约定下，
+有如下结论。
+
+\src{179}
+\result{定理}{1} 若 $Z^{n-p}$ 和 $Z'^{n-p'}$ 是横截相交的非奇异循环，则
+\begin{equation}\tag{4.4}
+  P_X(Z.Z')=P_X(Z).P_X(Z'),
+\end{equation}
+其中右端的乘法是杯积
+\[
+  H^{p}(X,\Omega_X^{p})\times H^{p'}(X,\Omega_X^{p'})
+  \longrightarrow H^{p+p'}(X,\Omega_X^{p+p'}).
+\]
+（假设 $X$ 同构于某个射影空间的一个局部闭子集。）
+
+最后这个假设仅用于保证 $X$ 上每个凝聚代数层都是某个局部自由凝聚代数层的
+商（SERRE），因而具有由局部自由层组成的左消解。为证明定理 1，可以假设
+$Z,Z'$ 是横截相交的不可约非奇异子簇 $Y,Y'$。设 $L_{*}$ 是 $\Osh_Y$ 的一个
+由局部自由层组成的左消解；则根据命题 3，同态图式 (4.3) 可与下图等同：
+\[
+R^{p}\Gamma(\Omega_X^{p})
+\xleftarrow{\alpha}
+\mathbb R^{p}\Gamma\!\left(\Homsh_{\Osh_X}(L_{*},\Omega_X^{p})\right)
+\xrightarrow[\sim]{\beta}
+\Gamma\!\left(H^{p}\bigl(\Homsh_{\Osh_X}(L_{*},\Omega_X^{p})\bigr)\right).
+\]
+这里 $\Gamma$ 是 $X$ 上阿贝尔群层范畴的\fquote{截面群}函子，
+$\mathbb R^{p}\Gamma$ 表示该函子的 $p$ 维超上同调，而 $R^{p}\Gamma$ 表示其
+第 $p$ 个导出函子。为简便起见，可设 $L_0=\Osh_X$，并设增广
+$L_0\longrightarrow\Osh_Y$ 为自然同态（这是允许的）。此时 $\alpha$ 由复形
+同态 $\Osh_X\longrightarrow L_{*}$ 诱导（把 $\Osh_X$ 视为集中在次数 $0$ 的
+复形）；这里用到：若 $K$ 是集中在次数 $0$ 的层复形，则
+$\mathbb R^{p}\Gamma(K)=R^{p}\Gamma(K_0)$。同态 $\beta$ 是熟知的边缘同态。
+对 $\Osh_{Y'}$ 的一个局部自由消解 $L'_{*}$ 考虑类似图式，再考虑下列配对的
+交换图：
+\begin{equation}\tag{4.5}
+\resizebox{\textwidth}{!}{$
+\begin{array}{ccc}
+R^{p}\Gamma(\Omega_X^{p})
+&\longleftarrow
+\mathbb R^{p}\Gamma\!\left(\Homsh_{\Osh_X}(L_{*},\Omega_X^{p})\right)
+&\xrightarrow{\sim}
+\Gamma H^{p}\!\left(\Homsh_{\Osh_X}(L_{*},\Omega_X^{p})\right)
+\\[3pt]
+\times&\times&\times\\[3pt]
+R^{p'}\Gamma(\Omega_X^{p'})
+&\longleftarrow
+\mathbb R^{p'}\Gamma\!\left(\Homsh_{\Osh_X}(L'_{*},\Omega_X^{p'})\right)
+&\xrightarrow{\sim}
+\Gamma H^{p'}\!\left(\Homsh_{\Osh_X}(L'_{*},\Omega_X^{p'})\right)
+\\[3pt]
+\downarrow&\downarrow&\downarrow\\[3pt]
+R^{p+p'}\Gamma(\Omega_X^{p+p'})
+&\longleftarrow
+\mathbb R^{p+p'}\Gamma\!\left(
+\Homsh_{\Osh_X}(L_{*}\otimes L'_{*},\Omega_X^{p+p'})\right)
+&\xrightarrow{\sim}
+\Gamma H^{p+p'}\!\left(
+\Homsh_{\Osh_X}(L_{*}\otimes L'_{*},\Omega_X^{p+p'})\right).
+\end{array}
+$}
+\end{equation}
+\src{180}
+(4.5) 右侧两列中的配对由下列层复形的配对诱导：
+\[
+\Homsh_{\Osh_X}(L_{*},\Omega_X^{p})
+\times\Homsh_{\Osh_X}(L'_{*},\Omega_X^{p'})
+\longrightarrow
+\Homsh_{\Osh_X}(L_{*}\otimes L'_{*},\Omega_X^{p+p'}),
+\]
+该配对借助外积
+$\Omega_X^{p}\times\Omega_X^{p'}\longrightarrow\Omega_X^{p+p'}$ 定义。
+第一列中的配对是（相对于此外积的）杯积。我们断言，(4.5) 的最后一行可与
+类似于 (4.3) 的同构图式等同，其中以 $Y\cap Y'$ 代替 $Y$，以 $p+p'$ 代替
+$p$。为此只需证明 $L\otimes L'$ 是 $\Osh_{Y\cap Y'}$ 的一个消解（它显然
+局部自由）。事实上，
+\[
+  H_0(L\otimes L')=\Osh_Y\otimes\Osh_{Y'}=\Osh_{Y\cap Y'}
+\]
+且
+\[
+  H_i(L\otimes L')=\operatorname{Tor}_{i}^{\Osh_X}(\Osh_Y,\Osh_{Y'})=0
+  \qquad(i>0),
+\]
+因为 $Y,Y'$ 横截相交。现在定理 1 由下式推出：
+\begin{equation}\tag{4.6}
+  s_Y.s_{Y'}=s_{Y.Y'}
+\end{equation}
+（左端的乘法是 (4.5) 最后一列中的乘法）。公式 (4.6) 具有纯局部性质；对
+$L_{*},L'_{*}$ 取命题 4 中所考虑的消解，即可毫无困难地验证它。类似地（而且
+证明更容易）可证 $Z\longmapsto P_X(Z)$ 与笛卡儿积相容：
+\begin{equation}\tag{4.7}
+  P_{X\times X'}(Z\times Z')=P_X(Z)\otimes P_{X'}(Z')
+\end{equation}
+（当 $Z$、相应地 $Z'$ 是非奇异簇 $X$、相应地 $X'$ 上的非奇异循环时，该式
+成立；这里把 $Z\times Z'$ 视为 $X\times X'$ 上的非奇异循环）。由 (4.4)
+和 (4.7) 可知，$P_X(Z)$ 还与非奇异簇之间的态射
+$f:X\longrightarrow X'$ 所给出的\fquote{逆像}运算相容：
+\begin{equation}\tag{4.8}
+  P_X\bigl(f^{-1}(Z')\bigr)=f^{*}\bigl(P_{X'}(Z')\bigr),
+\end{equation}
+当 $Z'$ 是 $X'$ 上的非奇异循环且 $f$ 与 $Z'$\fquote{横截}时，该式成立；
+也就是说，$f$ 的图像在 $X\times X'$ 中与循环 $X\times Z'$ 横截。
+
+\src{181}
+\result{推论}{1} 设 $X,X'$ 是某个射影空间中的两个局部闭非奇异簇，并设
+$X'$ 完备。设 $U$ 是 $X\times X'$ 上的非奇异循环，$a,b$ 是 $X'$ 中的两个
+点，并且 $U$ 与循环 $X\times(a)$ 和 $X\times(b)$ 都横截相交。设 $Z,Z'$ 是
+$X$ 上满足
+\[
+  Z\times(a)=(X\times(a)).U,
+  \qquad
+  Z'\times(b)=(X\times(b)).U
+\]
+的非奇异循环。则
+\[
+  P_X(Z)=P_X(Z').
+\]
+
+事实上，令 $f_a:X\longrightarrow X\times X'$ 由 $f_a(x)=(x,a)$ 定义，
+根据 (4.8) 有 $P(Z)=f_a^{*}(P(U))$；同理，$P(Z')=f_b^{*}(P(U))$。利用
+Künneth 公式
+\[
+  H^{*}(X\times X',\Omega_{X\times X'}^{*})
+  =H^{*}(X,\Omega_X^{*})\otimes H^{*}(X',\Omega_{X'}^{*})
+\]
+以及 $H^{0}(X',\Osh_{X'})$ 仅由标量组成这一事实，容易得到
+$f_a^{*}=f_b^{*}$，从而得证。
+
+对每个 $x\in X$，点 $(x)$ 都是 $X$ 中余维为 $n$ 的非奇异子簇，因而定义
+$H^{n}(X,\Omega_X^{n})$ 中的一个元素 $\varepsilon_x$。若 $X$ 是非奇异射影簇，
+由推论 1 可知 $\varepsilon_x$ 不依赖于所选的点 $x$；将其记为
+$\varepsilon_X$，称为 $H^{n}(X,\Omega_X^{n})$ 的\zhterm{基本类}。
+
+\result{注}{} 为得到令人满意的理论，应当对任意循环 $Z$ 定义 $P_X(Z)$，并对
+循环的正常相交证明定理 1。（撰写本报告时，这一点尚未在完全一般的情形中完成。）
+假定这些工作已经完成，推论 1 就变成：若 $Z,Z'$ 是两个代数等价的循环，则
+$P_X(Z)=P_X(Z')$（即使 $Z,Z'$ 非奇异，这一陈述似乎也不能由前述结果推出）。
+
+\fsection{5}{对偶定理}
+
+本节中，$X$ 表示维数为 $n$ 的非奇异射影簇。
+
+\result{定理}{2} $H^{n}(X,\Omega_X^{n})$ 的基本类 $\varepsilon_X$ 是该向量
+空间的一组基。
+
+（证明将在下文给出。）借助前一定理，可以把 $H^{n}(X,\Omega_X^{n})$ 与域
+$k$ 等同。现在考虑第 2 节中引入的配对；它特别给出配对
+
+\src{182}
+\[
+\operatorname{Ext}_{\Osh_X}^{p}(X;\Osh_X,F)
+\times\operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\Omega_X^{n})
+\longrightarrow
+\operatorname{Ext}_{\Osh_X}^{n}(X;\Osh_X,\Omega_X^{n}),
+\]
+即
+\begin{equation}\tag{5.1}
+  H^{p}(X,F)
+  \times\operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\Omega_X^{n})
+  \longrightarrow H^{n}(X,\Omega_X^{n}).
+\end{equation}
+考虑到定理 2，该配对定义同态
+\begin{equation}\tag{5.2}
+  \operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\Omega_X^{n})
+  \longrightarrow\bigl(H^{p}(X,F)\bigr)'.
+\end{equation}
+该同态关于 $F$ 具有函子性，并与正合列
+$0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow0$
+所对应的连接同态可交换。
+
+\result{定理}{3} 同态 (5.2) 是同构。
+
+特别地，由此重新得到 Serre 的结果：
+
+\result{推论}{} 设 $E$ 是 $X$ 上的代数向量丛，$\Osh_X(E)$ 是 $E$ 的正则
+截面芽层。则有典范同构
+\begin{equation}\tag{5.3}
+  \bigl(H^{p}(X,\Osh_X(E))\bigr)'
+  =H^{n-p}\bigl(X,\Omega_X^{n}\otimes\Osh_X(E')\bigr).
+\end{equation}
+只需把定理 3 和命题 1 的推论 1 结合使用。
+
+定理 2 和定理 3 将由下述命题推出：
+
+\noindent\textbf{(D) 下列同态}
+\begin{equation}\tag{5.2 bis}
+  \operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\Omega_X^{n})
+  \longrightarrow\bigl(H^{p}(X,F)\bigr)'\otimes L,
+  \qquad L=H^{n}(X,\Omega_X^{n}),
+\end{equation}
+由配对 (5.1) 诱导，并且是同构。
+
+先证明 (D) 蕴含定理 2。令 $k_x=\Osh_{(x)}$ 为缩约到点 $x\in X$ 的簇的
+局部环层。考虑典范同态 $\Osh_X\longrightarrow k_x$ 以及相伴的同态
+\begin{equation}\tag{5.3 bis}
+  H^{0}(X,\Osh_X)\longrightarrow H^{0}(X,k_x),
+\end{equation}
+其转置可与下列同态等同：
+\begin{equation}\tag{5.4}
+  \operatorname{Ext}_{\Osh_X}^{n}(X;k_x,\Omega_X^{n})\otimes L'
+  \longrightarrow
+  \operatorname{Ext}_{\Osh_X}^{n}(X;\Osh_X,\Omega_X^{n})\otimes L'
+\end{equation}
+该同态由 $\Osh_X\longrightarrow k_x$ 所对应的 $\operatorname{Ext}^{n}$ 上的
+同态
+\begin{equation}\tag{5.5}
+  \operatorname{Ext}_{\Osh_X}^{n}(X;k_x,\Omega_X^{n})
+  \longrightarrow
+  \operatorname{Ext}_{\Osh_X}^{n}(X;\Osh_X,\Omega_X^{n})
+  =H^{n}(X,\Omega_X^{n}).
+\end{equation}
+诱导。
+
+\src{183}
+由于 (5.3 bis) 是同构，\footnote{印刷文本在第 182 页给出了第二个公式
+“(5.3)”，并在此处引用它；标识“(5.3 bis)”把该公式与第一个 (5.3) 区分开。}
+(5.4) 也是同构，因而 (5.5) 也是同构。根据 (4.2)，$s_{(x)}$ 是
+$\operatorname{Ext}_{\Osh_X}^{n}(X;k_x,\Omega_X^{n})$ 的一组基，故其像
+$\varepsilon_X$ 确实是 $H^{n}(X,\Omega_X^{n})$ 的一组基。
+
+还需证明命题 (D)。它将由以下诸引理所概括的初等事实纯形式地推出。在这些引理
+中，假设 $X$ 是维数为 $r$ 的射影空间 $P$ 的闭子集（可以奇异，也可以非奇异）。
+以 $\Osh_P(m)$ 表示 [3] 中记作 $\Osh(m)$ 的 $P$ 上的层，以 $\Osh_X(m)$
+表示 $X$ 上类似的层。
+
+\result{引理}{2} 若 $X=P$ 且 $F=\Osh_P(m)$，则命题 (D) 成立。
+
+该引理可由直接计算验证。$H^{i}(P,\Osh_P(m))$ 的显式计算见 [3]，不过也可用
+更初等的方法完成。为明确写出配对 (5.1) 而需要计算的杯积
+\[
+  H^{i}(P,\Osh_P(m))\times H^{j}(P,\Osh_P(m'))
+  \longrightarrow H^{i+j}(P,\Osh_P(m+m'))
+\]
+没有困难。\footnote{印刷文本作 $\Osh_P(r+r')$；两个因子 $\Osh_P(m)$ 和
+$\Osh_P(m')$ 要求此处为 $\Osh_P(m+m')$。}
+
+\result{引理}{3} $X$ 上每个凝聚代数层 $F$ 都同构于某个层
+$\Osh_X(-m)^{k}$ 的商层，其中 $m$ 可以取得任意大。
+
+这是因为当 $m$ 足够大时，$F\otimes\Osh_X(m)$\fquote{由其截面生成}；
+参见 [3]。
+
+\result{引理}{4} 设 $i>0$。当 $m$ 足够大时，
+$H^{r-i}(P,\Osh_P(-m))=0$；并且对 $X$ 上任意凝聚代数层 $B$，当 $m$
+足够大时有
+\[
+  \operatorname{Ext}_{\Osh_X}^{i}(X;\Osh_X(-m),B)=0.
+\]
+
+第一个断言由上面提到的显式计算推出。对第二个断言，注意有同构
+\[
+  \operatorname{Ext}_{\Osh_X}^{i}(X;\Osh_X(-m),B)
+  =H^{i}(X,B\otimes\Osh_X(m))
+\]
+（命题 1，推论 1），再由 [3] 中一个熟知的结果即得结论。结合前两个引理，
+得到以下推论。
+
+\result{推论}{} 设 $i>0$。则 $P$ 上凝聚代数层范畴中的函子
+$F\longmapsto H^{r-i}(P,F)$ 是余可抹去的；$X$ 上凝聚代数层范畴中的函子
+$\operatorname{Ext}_{\Osh_X}^{i}(X;F,B)$ 也是余可抹去的。
+
+\src{184}
+\result{引理}{5} 设 $A,B$ 是 $X$ 上两个凝聚代数层，并令
+$A(m)=A\otimes\Osh_X(m)$。则当 $m$ 足够大时，典范同态
+\[
+  \operatorname{Ext}_{\Osh_X}^{1}(X;A(-m),B)
+  \longrightarrow H^{0}\bigl(X,\Extsh_{\Osh_X}^{1}(A(-m),B)\bigr)
+  =H^{0}\bigl(X,\Extsh_{\Osh_X}^{1}(A,B)(m)\bigr)
+\]
+是同构。
+
+把命题 1 的谱序列用于 $A(-m),B$，便立即得到此结论，因为此时
+\[
+  E_{2}^{p,q}(A(-m),B)
+  =H^{p}\bigl(X,\Extsh_{\Osh_X}^{q}(A(-m),B)\bigr)
+  =H^{p}\bigl(X,\Extsh_{\Osh_X}^{q}(A,B)(m)\bigr),
+\]
+而当 $p>0$ 且 $m$ 足够大时，此式为零。
+
+现在证明 $X=P$ 时的 (D)。先证当 $p=n$ 时 (5.2 bis) 为同构；此时两端都是
+左正合函子（因为 $H^{r+1}(P,F)=0$），故由引理 3，只需对
+$F=\Osh_P(-m)$ 证明该断言，而这正包含在引理 2 中。由于同态 (5.2 bis)
+具有函子性并与连接算子相容，且当 $p<n$ 时 (5.2 bis) 两端都是关于 $F$ 的
+余可抹去函子（引理 4 的推论），由标准论证可知 (5.2 bis) 对每个 $p$ 都是
+同构。这就证明了射影空间的对偶定理。
+
+现在设 $X$ 任意但非奇异。由 $P$ 的对偶定理，有同构
+\[
+  H^{n}(X,F)'=H^{n}(P,F)'
+  =\operatorname{Ext}_{\Osh_P}^{r-n}(P;F,\Omega_P^{r}).
+\]
+根据第 4 节引理 1，最后一端可与
+\[
+  \operatorname{Hom}_{\Osh_P}(P;F,\omega_X^{n})
+  =\operatorname{Hom}_{\Osh_X}(X;F,\Omega_X^{n})
+  =\operatorname{Ext}_{\Osh_X}^{0}(X;F,\Omega_X^{n})
+\]
+等同，因而有同构
+\begin{equation}\tag{5.6}
+  H^{n}(X,F)'=\operatorname{Hom}_{\Osh_X}(X;F,\Omega_X^{n})
+  =\operatorname{Ext}_{\Osh_X}^{0}(X;F,\Omega_X^{n}).
+\end{equation}
+取 $F=\Omega_X^{n}$，得到同构
+\begin{equation}\tag{5.7}
+  \gamma:H^{n}(X,\Omega_X^{n})\xrightarrow{\sim}k.
+\end{equation}
+
+\src{185}
+可以验证，借助 (5.7) 取 $L=k$ 后，同构 (5.6) 正是 $p=n$ 时的
+(5.2 bis)。因此当 $p=n$ 时，(5.2 bis) 是同构。为证明它对每个 $p$ 都是
+同构，只需再证明：当 $p<n$ 时，(5.2 bis) 两端都是关于 $F$ 的余可抹去函子；
+进一步说（考虑到引理 3），只需证明取 $F=\Osh_X(-m)$ 且 $m$ 足够大时两端
+都为零。对第一端，这由引理 4 成立；对第二端，利用 $P$ 上的对偶定理写成
+\[
+  H^{p}(X,\Osh_X(-m))'
+  =\operatorname{Ext}_{\Osh_P}^{r-p}
+    (P;\Osh_X(-m),\Omega_P^{r}).
+\]
+当 $p<n$ 且 $m$ 足够大时，第二端为零。这由引理 5（其中取 $X=P$）以及下述
+事实推出：$\Osh_X$ 作为 $P$ 上的凝聚代数层，其上同调维数
+$\leq r-n$（因为 $X$ 非奇异），所以
+\[
+  \Extsh_{\Osh_P}^{r-p}(\Osh_X,\Omega_P^{r})=0
+  \qquad\mbox{\upshape\fontspec{SimSun}当 }p<n.
+\]
+
+\fsection{6}{奇异簇的对偶定理}
+
+设 $X$ 是维数为 $r$ 的射影空间 $P$ 中维数为 $n$ 的闭子集。此处公式 (5.6)
+应写成
+\begin{equation}\tag{6.1}
+  H^{n}(X,F)'
+  \simeq\operatorname{Hom}_{\Osh_X}(X;F,\omega_X^{n})
+  =\operatorname{Ext}_{\Osh_X}^{0}(X;F,\omega_X^{n}),
+\end{equation}
+其中定义
+\begin{equation}\tag{6.2}
+  \omega_X^{n}=E^{0}(\Osh_X)
+  =\Extsh_{\Osh_P}^{r-n}(\Osh_X,\Omega_P^{r}).
+\end{equation}
+如命题 5 所述，这样引入的层实际上不依赖于所选的把 $X$ 嵌入非奇异簇 $P$
+的方式。在 (6.1) 中取 $F=\omega_X^{n}$，得到
+\begin{equation}\tag{6.2 bis}
+  H^{n}(X,\omega_X^{n})'
+  \simeq\operatorname{Hom}_{\Osh_X}(X;\omega_X^{n},\omega_X^{n}),
+\end{equation}
+\footnote{印刷文本也把该公式编号为“(6.2)”；后缀“bis”用于区分两次出现。}
+因而 $H^{n}(X,\omega_X^{n})'$ 中有一个对应于 $\omega_X^{n}$ 恒等同态的
+特出元素：
+\begin{equation}\tag{6.3}
+  \gamma:H^{n}(X,\omega_X^{n})\longrightarrow k.
+\end{equation}
+
+\src{186}
+现考察由 $\operatorname{Ext}$ 的复合所定义的配对：
+\begin{equation}\tag{6.4}
+  H^{p}(X,F)\times
+  \operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\omega_X^{n})
+  \longrightarrow H^{n}(X,\omega_X^{n}),
+\end{equation}
+再把它们与 (6.3) 中的同态 $\gamma$ 复合，便得到与连接算子相容的函子性同态
+\begin{equation}\tag{6.5}
+  \operatorname{Ext}_{\Osh_X}^{n-p}(X;F,\omega_X^{n})
+  \longrightarrow H^{p}(X,F)'
+\end{equation}
+（它推广了 (5.2)）。可以验证，当 $p=n$ 时，由此得到同构 (6.1)。在这些约定下，
+有如下结论。
+
+\result{定理}{3 bis} 对给定整数 $k\geq0$，下列关于 $X$ 的四个条件等价：
+\begin{enumerate}
+  \item[\textit{i.}] 当 $n-k\leq p\leq n$ 时，函子性同态 (6.5) 是同构。
+  \item[\textit{ii.}] 当 $m$ 足够大且 $n-k\leq p<n$ 时，
+    $H^{p}(X,\Osh_X(-m))=0$。
+  \item[\textit{iii.}] 当 $n-k\leq p<n$ 时，$X$ 上凝聚代数层范畴中的函子
+    $H^{p}(X,F)$ 是余可抹去的。
+  \item[\textit{iv.}] 当 $0<i\leq k$ 时，
+    $E^{i}(\Osh_X)=\Extsh_{\Osh_P}^{r-n+i}(\Osh_X,\Omega_P^{r})=0$。
+\end{enumerate}
+
+\noindent\textbf{证明。}——由引理 4 得
+\textit{i.}$\Rightarrow$\textit{ii.}，由引理 3 得
+\textit{ii.}$\Rightarrow$\textit{iii.}。又因为当 $n-k\leq p<n$ 时，
+(6.5) 两端都是余可抹去函子（前者由引理 4），故由一个熟知的标准论证得到
+\textit{iii.}$\Rightarrow$\textit{i.}。最后证明
+\textit{ii.}$\Leftrightarrow$\textit{iv.}；这由下一命题的推论推出。
+
+\result{命题}{6} 设 $F$ 是 $X$ 上的凝聚代数层，$i$ 是整数。则当 $m$ 足够大时，
+有同构
+\begin{equation}\tag{6.6}
+  H^{i}(X,F(-m))'
+  \simeq H^{0}\bigl(X,E^{n-i}(F)(m)\bigr),
+\end{equation}
+其中规定（比较第 3 节命题 5）
+\begin{equation}\tag{6.7}
+  E^{j}(F)=\Extsh_{\Osh_P}^{r-n+j}(F,\Omega_P^{r}).
+\end{equation}
+事实上，由 $P$ 上的对偶定理，(6.6) 的左端同构于
+$\operatorname{Ext}_{\Osh_P}^{r-i}(P;F(-m),\Omega_P^{r})$，故 (6.6)
+由引理 5 推出。
+
+\src{187}
+\result{推论}{} 当 $m$ 足够大时 $H^{i}(X,F(-m))=0$，当且仅当
+$E^{n-i}(F)=0$。
+
+回顾 $E^{j}(F)$ 实际上不依赖于所考察的射影嵌入。该推论中的条件完全是局部的；
+因此，若它对 $F$ 成立，就对任一局部同构于层 $F^{n}$ 的层成立。特别地，若该
+条件对 $\Osh_X$ 成立，就对每个局部自由凝聚代数层成立。例如：若 $X$ 非奇异，
+则对每个 $i<n$ 都成立；若 $X$ 的任何分支都不退化为一个点，则对 $i=0$
+成立；若 $X$ 正规且其所有分支的维数都 $>1$，则对 $i=0,1$ 成立（参见
+[3]）。\footnote{印刷文本此处写作“$S$ 正规”；本段只涉及代数簇 $X$。}
+按照定义，要使它对每个 $i<k$ 都成立，充要条件是局部环
+$\Osh_x$（$x\in X$）的\fquote{同调余维数} $\geq k$（关于此概念参见
+[4]）。若 $k=n$，则由定理 3 bis，这意味着对偶定理对 $X$ 成立，即对每个
+$p$ 和每个 $F$，(6.5) 都是同构。关于局部环 $\Osh_x$，可以给出许多与此
+等价的条件（NAGATA），例如要求它们满足 Cohen--Macaulay 等维定理。比如，
+若 $X$ 局部地是某个非奇异环境代数簇中的\fquote{完全交}，这一条件便成立。
+
+\fsection{7}{庞加莱对偶}
+
+设 $X$ 是维数为 $n$ 的非奇异射影代数簇。则
+\[
+  H^{**}(X)=H^{*}(X,\Omega_X^{*})
+\]
+是一个有限维反交换双分次代数；我们按总次数给它分次，因而
+$H^{p,q}(X)=H^{p}(X,\Omega_X^{q})$ 的次数为 $p+q$。$H^{*}(X)$ 的次数介于
+$0$ 与 $2n$ 之间。由定理 2 和定理 3 的推论，$H^{*}(X)$ 是维数为 $2n$ 的
+\fquote{庞加莱代数}：也就是说，$H^{2n}(X)$ 具有到基域 $k$ 的一个同构，且乘法
+\[
+  H^{m}(X)\times H^{2n-m}(X)\longrightarrow H^{2n}(X)=k
+\]
+给出 $H^{m}(X)$ 与 $H^{2n-m}(X)$ 之间的对偶。此外，若 $Y$ 是另一个非奇异
+射影代数簇，则凝聚代数层的 Künneth 公式给出
+\begin{equation}\tag{7.1}
+  H^{*}(X\times Y)=H^{*}(X)\otimes H^{*}(Y),
+\end{equation}
+该同构与庞加莱代数结构相容。再者，作为交换代数，$H^{*}(X)$ 是 $X$ 的反变
+函子；态射 $f:Y\longrightarrow X$ 以显然方式定义分次代数同态
+
+\src{188}
+\begin{equation}\tag{7.2}
+  f^{*}:H^{*}(X)\longrightarrow H^{*}(Y).
+\end{equation}
+由于这里涉及的是庞加莱代数，转置便给出向量空间同态
+\begin{equation}\tag{7.3}
+  f_{*}:H^{*}(Y)\longrightarrow H^{*}(X).
+\end{equation}
+我们在第 4 节已经看到，$f^{*}$ 对非奇异循环所对应上同调类的作用，可在几何上
+解释为取这些循环的逆像所对应的上同调类。在当前情形，重要的是证明 (7.3)
+同样对应于循环的\fquote{正像}运算。至少在适当的非奇异性条件下，这由下述特殊
+情形推出。
+
+\result{定理}{4} 若 $f$ 是非奇异子簇 $Y^{m}\subset X^{n}$ 到 $X^{n}$ 的
+自然包含映射，并以 $1_Y$ 表示 $H(Y)$ 的单位元，则
+\begin{equation}\tag{7.4}
+  f_{*}(1_Y)=P_X(Y),
+\end{equation}
+其中右端是 $Y$ 在 $X$ 中所对应的上同调类。
+
+该公式等价于
+\begin{equation}\tag{7.4 bis}
+  \bigl\langle\xi^{m,m},P_X(Y)\bigr\rangle\varepsilon_Y
+  =f^{*}(\xi^{m,m})
+  \qquad
+  \bigl(\xi^{m,m}\in H^{m}(X,\Omega_X^{m})\bigr),
+\end{equation}
+\footnote{印刷文本写作 $f_{*}(\xi^{m,m})$。由于
+$\xi^{m,m}\in H^{m}(X,\Omega_X^{m})$，且等式两端均属于
+$H^{m}(Y,\Omega_Y^{m})$，这里需要的映射是 $f^{*}$。}
+其中 $\varepsilon_Y$ 是 $H^{m}(Y,\Omega_Y^{m})$ 中的基本元；对于非奇异
+射影代数簇，该式给出了 $Y$ 所对应上同调类的一个新定义。为证明定理 4，
+借助定理 3，把同态
+\[
+  H^{m}(X,\Omega_X^{m})
+  \longrightarrow H^{m}(Y,\Omega_Y^{m})
+  =H^{m}(X,\Omega_Y^{m})
+\]
+的转置解释为同态
+\begin{equation}\tag{7.5}
+\begin{split}
+  H^{n-m}(X,\Omega_X^{n-m})
+  &\simeq
+  \operatorname{Ext}_{\Osh_X}^{n-m}(X;\Omega_X^{m},\Omega_X^{n})\\
+  &\longleftarrow
+  \operatorname{Ext}_{\Osh_X}^{n-m}(X;\Omega_Y^{m},\Omega_X^{n})
+  \simeq
+  \operatorname{Hom}_{\Osh_X}(X;\Omega_Y^{m},\Omega_Y^{m}).
+\end{split}
+\end{equation}
+可以验证，$H^{m}(Y,\Omega_Y^{m})$ 的对偶中的元素 $1_Y$，与右端中对应于
+$\Omega_Y^{m}$ 恒等自同态的元素等同；另一方面，该元素在
+$H^{n-m}(X,\Omega_X^{n-m})$ 中的像正是 $P_X(Y)$。这些相容性本可在第 4 节
+就给出；事实上，它们可以对任意非奇异代数簇表述，并且确实成立。例如，第二个
+相容性来自下列典范自同态图的交换性：
+
+\src{189}
+\begin{equation}\tag{7.6}
+\resizebox{\textwidth}{!}{$
+\left\{
+\begin{array}{ccccc}
+\operatorname{Ext}_{\Osh_X}^{n-m}(X;\Omega_X^{m},\Omega_X^{n})
+&\longleftarrow&
+\operatorname{Ext}_{\Osh_X}^{n-m}(X;\Omega_Y^{m},\Omega_X^{n})
+&\simeq&
+\operatorname{Hom}_{\Osh_X}(X;\Omega_Y^{m},\Omega_Y^{m})\\[3pt]
+\Big\downarrow&&&&\Big\downarrow\\[3pt]
+\operatorname{Ext}_{\Osh_X}^{n-m}(X;\Osh_X,\Omega_X^{n-m})
+&\longleftarrow&
+\operatorname{Ext}_{\Osh_X}^{n-m}(X;\Osh_Y,\Omega_X^{n-m})
+&\simeq&
+\operatorname{Hom}_{\Osh_X}(X;\Omega_X^{m},\Omega_Y^{m})
+\end{array}
+\right.
+$}
+\end{equation}
+
+由此得到紧致定向流形上庞加莱对偶形式体系的一个完全对应物。特别地，定理 4
+可以确定 $X\times X$ 的对角线所对应的上同调类。再由一个熟知的论证，例如可得
+如下 Lefschetz 公式。
+
+\result{定理}{5} 设 $f$ 是非奇异射影代数簇 $X$ 的一个自同态，并且 $f$ 的
+所有不动点的重数均为 1。则这些不动点的数目模 $k$ 的特征，同余于 $f$ 在各
+$H^{i}(X)$ 上所诱导自同态之迹的交错和。
+
+对 $f$ 所作的限制源于第 4 节注记中提到的困难。不过应当注意，若 $f$ 与一个
+所有不动点重数均为 1 的自同态\fquote{同伦}，Lefschetz 公式仍然成立。
+
+\fsection{8}{对偶定理的推广}
+
+设 $X$ 是一个非奇异代数簇，并且 $X$ 上每个凝聚代数层 $F$ 都同构于某个局部
+自由凝聚代数层的商（当 $X$ 是射影空间中的局部闭子集时即属此情形）。于是
+$X$ 上每个凝聚代数层 $F$ 都具有一个由局部自由层组成的有限消解 $L$；对于
+任意两个这样的消解，总能找到第三个消解以及从它到前两个消解、且与增广相容的
+同态。同样，若 $L$ 是 $F$ 的局部自由有限消解，并给定同态
+$F'\longrightarrow F$，则存在 $F'$ 的局部自由有限消解 $L'$ 以及与
+$F'\longrightarrow F$ 相容的同态 $L'\longrightarrow L$；若
+$F'\longrightarrow F$ 是满射，还可以令后一同态为满射。由此，对于给定的两个
+整数 $r,s\geq0$，可以定义两个关于诸变元
+$A_1,\ldots,A_r$；$B_1,\ldots,B_s$ 的上同调多重函子；
+
+\src{190}
+这些变元在 $X$ 上凝聚代数层范畴中变化，而两个函子分别取值于 $X$ 上凝聚
+代数层范畴和 $H^{0}(X,\Osh_X)$-模范畴；其定义式为
+\begin{equation}\tag{8.1}
+\resizebox{\textwidth}{!}{$
+\left\{
+\begin{aligned}
+\underline{T}_{r}^{s*}(A_1,\ldots,A_r;B_1,\ldots,B_s)
+  &={}H^{*}\!\left(
+    \Homsh_{\Osh_X}\!\left(
+      L(A_1)\otimes\cdots\otimes L(A_r),
+      L(B_1)\otimes\cdots\otimes L(B_s)
+    \right)\right),\\[3pt]
+T_{r}^{s*}(A_1,\ldots,A_r;B_1,\ldots,B_s)
+  &={}\mathbf R^{*}\Gamma\!\left(
+    \Homsh_{\Osh_X}\!\left(
+      L(A_1)\otimes\cdots\otimes L(A_r),
+      L(B_1)\otimes\cdots\otimes L(B_s)
+    \right)\right).
+\end{aligned}
+\right.
+$}
+\end{equation}
+在该公式中，$L(F)$ 表示凝聚代数层 $F$ 的一个局部自由有限消解，
+$\mathbf R^{*}\Gamma(K)$ 表示空间 $X$ 关于层复形 $K$ 的超上同调。若 $r$ 或
+$s$ 为零，就分别用 $\Osh_X$ 代替诸 $L(A_i)$ 或诸 $L(B_j)$ 的张量积。特别地，
+$\underline{T}_{0}^{0}$ 与 $T_{0}^{0}$ 是零变元的分次函子：
+$\underline{T}_{0}^{0}$ 只在次数 0 非零，此时它是层 $\Osh_X$；而
+$T_{0}^{0}$ 等同于 $H^{*}(X,\Osh_X)$。(8.1) 右端不依赖所选消解：对第一行
+这无论如何是显然的（因为问题是局部的）；对第二行，则由此前的一般性说明以及
+层复形
+\[
+  K=\Homsh_{\Osh_X}\bigl(L(A_1)\otimes\cdots,
+      L(B_1)\otimes\cdots\bigr)
+\]
+的超上同调谱序列推出。该谱序列收敛于 $X$ 关于 $K$ 的超上同调，其初始项是
+$H^{p}(X,H^{q}(K))$，即
+\begin{equation}\tag{8.2}
+  E_{2}^{p,q}
+  =H^{p}\!\left(X,
+    (\underline{T}_{r}^{s})^{(q)}
+      (A_1,\ldots,A_r;B_1,\ldots,B_s)\right).
+\end{equation}
+由此可见，该谱序列本身也不依赖所选消解，而其收敛项就是 (8.1) 中相应的
+左端。又因每个正合列
+$0\longrightarrow F'\longrightarrow F\longrightarrow F''\longrightarrow0$
+都能由局部自由有限复形的一个正合列来消解，故容易定义关于各变元
+$A_i,B_j$ 的连接算子。
+
+在函子系 $\underline{T}_{r}^{s*}$ 以及 $T_{r}^{s*}$ 中，可以定义类似于
+张量演算的运算；它们由定义式 (8.1) 立即给出。例如，有一个复合运算
+（它推广了第 2 节所考察的复合）
+\begin{equation}\tag{8.3}
+\resizebox{\textwidth}{!}{$
+\begin{aligned}
+&T_{r}^{s*}(A_1,\ldots,A_r;B_1,\ldots,B_s)
+\times T_{r'}^{s'*}(A'_1,\ldots,A'_{r'};B'_1,\ldots,B'_{s'})\\
+&\qquad\longrightarrow
+T_{r+r'}^{s+s'*}
+(A_1,\ldots,A_r,A'_1,\ldots,A'_{r'};
+ B_1,\ldots,B_s,B'_1,\ldots,B'_{s'}),
+\end{aligned}
+$}
+\end{equation}
+它满足显然的结合律，并与函子性同态、连接同态和谱序列相容。同样，还有一些
+对称运算，其具体写法留给读者。再者，每当某个变元 $A_i$
+
+\src{191}
+等于某个变元 $B_j$ 时，就有一个缩并运算：
+\begin{equation}\tag{8.4}
+\resizebox{\textwidth}{!}{$
+\begin{aligned}
+&T_{r}^{s*}(A_1,\ldots,A_{i-1},C,A_{i+1},\ldots,A_r;
+ B_1,\ldots,B_{j-1},C,B_{j+1},\ldots,B_s)\\
+&\qquad\longrightarrow
+T_{r-1}^{s-1*}(A_1,\ldots,\widehat{A_i},\ldots,A_r;
+ B_1,\ldots,\widehat{B_j},\ldots,B_s).
+\end{aligned}
+$}
+\end{equation}
+此外，若变元 $A_i$ 是局部自由层，则可以消去它，只需把另一个 $A_j$
+（$j\neq i$）换成 $A_j\otimes A_i$，或把某个 $B_k$ 换成
+$B_k\otimes A_i'$（其中 $A_i'=\Homsh_{\Osh_X}(A_i,\Osh_X)$）；当某个变元
+$B_i$ 局部自由时，也有类似的计算规则。特别地，总可以消去等于 $\Osh_X$ 的
+变元。若除至多一个 $B_i$ 外所有变元都局部自由，刚才的规则给出函子性同构
+\begin{equation}\tag{8.5}
+  T_{r}^{s*}(A_1,\ldots,A_r;B_1,\ldots,B_s)
+  =H^{*}\bigl(X,A_1'\otimes\cdots\otimes A_r'
+    \otimes B_1\otimes\cdots\otimes B_s\bigr)
+\end{equation}
+（因为这可归结到 $r=0,s=1$ 的情形，而该情形是立即可见的；也可以直接使用
+初始项为 (8.2) 的谱序列）。对 $\underline{T}_{r}^{s}$ 也可定义与前述运算
+相应的运算。如此引入的各运算之间的关系，与张量演算中类似运算之间的关系相同。
+
+设 $n$ 是 $X$ 的维数。依次应用张量复合 (8.3)，再对重复出现的变元施行缩并
+(8.4)，便得到配对
+\begin{equation}\tag{8.6}
+\resizebox{\textwidth}{!}{$
+  (T_{r}^{s})^{p}(A_1,\ldots;B_1,\ldots)
+  \times
+  (T_{s}^{r})^{n-p}(B_1,\ldots;A_1,\ldots,A_r\otimes\Omega_X^{n})
+  \longrightarrow H^{n}(X,\Omega_X^{n}).
+$}
+\end{equation}
+
+\result{定理}{6} 若 $X$ 是非奇异射影代数簇，则配对 (8.6) 都是对偶。
+
+这完全形式地由定理 3 的推论得出。事实上，从该推论容易推出：若 $K$ 是由
+局部自由凝聚代数层组成的复形，则 $X$ 关于 $K$ 的超上同调，与 $X$ 关于
+$K'\otimes\Omega_X^{n}$ 的超上同调，通过自然配对
+\begin{equation}\tag{8.7}
+  \mathbf R^{p}\Gamma(K)
+  \times\mathbf R^{n-p}\Gamma(K'\otimes\Omega_X^{n})
+  \longrightarrow\mathbf R^{n}\Gamma(\Omega_X^{n})
+  =H^{n}(X,\Omega_X^{n}).
+\end{equation}
+互为对偶。这可由初始项为
+$H^{p}(X,H^{q}(K))$\footnote{印刷文本写作
+$H^{p}(H^{q}(X,K))$；初始项应为谱序列 (8.2) 的初始项，即
+$H^{p}(X,H^{q}(K))$。}
+的谱序列，以及 $K'\otimes\Omega_X^{n}$ 的类似谱序列看出。利用定义 (8.1)，
+定理 6 即由上述结果推出。
+
+\src{192}
+\subsection*{注记}
+
+\noindent 1\textsuperscript{o} 在定理 6 之前的定义中，并不需要假设 $X$
+非奇异，因为只使用有限消解并非不可缺少。但是，当 $X$ 奇异时，不能再先验地
+断言
+$(\underline{T}_{r}^{s})^{p}(A_1,\ldots;B_1,\ldots)$ 是凝聚层，因为在层复形
+\[
+  \Homsh_{\Osh_X}\bigl(L(A_1)\otimes\cdots,L(B_1)\otimes\cdots\bigr)
+\]
+中，每个给定的总次数都会有无穷多个分量。
+
+\medskip
+\noindent 2\textsuperscript{o} 容易验证，在公式 (8.1) 中，可以把某个
+$L(B_i)$ 换成 $B_i$。结合命题 3，这就表明
+\begin{equation}\tag{8.8}
+\left\{
+\begin{aligned}
+  \underline{T}_{1}^{1*}(A;B)&=\Extsh_{\Osh_X}^{*}(A,B),\\
+  T_{1}^{1*}(A;B)&=\operatorname{Ext}_{\Osh_X}^{*}(X;A,B).
+\end{aligned}
+\right.
+\end{equation}
+特别地，在 (8.6) 中取 $r=s=1$、$A_1=\Osh_X$，便重新得到定理 3。公式
+(8.8) 还蕴含
+\[
+  T_{0}^{1*}(B)=H^{*}(X,B),
+  \qquad
+  T_{1}^{0*}(A)=\operatorname{Ext}_{\Osh_X}^{*}(X;A,\Osh_X).
+\]
+
+\medskip
+\noindent 3\textsuperscript{o} 由公式 (8.1) 可见，一般而言，函子
+$\underline{T}_{r}^{s*}$ 和 $T_{r}^{s*}$ 同时具有正次数和负次数的分量。
+利用注记 2 可见：若 $X$ 的维数为 $n$，则当 $s>0$ 时，
+$\underline{T}_{r}^{s*}$ 的非零分量介于 $-(s-1)n$ 与 $rn$ 之间；当
+$s=0$ 时，介于 $0$ 与 $rn$ 之间。对于 $T_{r}^{s*}$，当 $s>0$ 时，其
+非零分量介于 $-(s-1)n$ 与 $(r+1)n$ 之间；当 $s=0$ 时，介于 $0$ 与
+$(r+1)n$ 之间（而且，若无误，当 $r>0$ 时，甚至分别介于 $-(s-1)n$
+与 $rn$ 之间以及 $0$ 与 $rn$ 之间）。
+
+\section*{参考文献}
+
+\noindent[1] Cartier (Pierre). --- Les groupes
+$\operatorname{Ext}^{s}(A,B)$, Séminaire A. Grothendieck : Algèbre homologique,
+t. 1, 1957, n\textsuperscript{o} 3.
+
+\noindent[2] Grothendieck (Alexandre). --- Sur quelques points d'algèbre
+homologique, \emph{Tohoku Math. J.}, t. 9, 1957, p. 119--183.
+
+\noindent[3] Serre (Jean-Pierre). --- Faisceaux algébriques cohérents,
+\emph{Annals of Math.}, t. 61, 1955, p. 197--278.
+
+\noindent[4] Serre (Jean-Pierre). --- Sur la dimension homologique des anneaux
+et des modules noethériens, \emph{Proc. Intern. Symp. on Alg. Number Theory}
+[1955, Tokyo et Nikko]. --- Tokyo, Science Council of Japan, 1956 ;
+p. 175--189.
+
+\clearpage
+\src{193}
+\section*{补记}
+
+第 13 页注记中指出的困难目前已经完全解决，这是由于对偶定理已推广到任意
+代数簇（允许任意奇点）。关于这一理论——它可以在\fquote{概形理论}的一般框架
+中表述——我们请读者参阅 J. Dieudonné 与 A. Grothendieck 当时正在编写的
+《Éléments de Géométrie algébrique》。下列文献给出了一些说明：
+
+\begin{quote}
+Grothendieck (A.). --- Cohomology theory of algebraic varieties,
+\emph{Congrès int. des Mathématiciens}, 1958, Edinburgh (à paraître).
+\end{quote}
+
+\begin{flushright}
+[1959年4月]
+\end{flushright}
+
+\begin{center}\rule{36mm}{0.5pt}\end{center}

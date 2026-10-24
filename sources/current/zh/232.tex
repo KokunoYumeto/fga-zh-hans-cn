@@ -1,0 +1,878 @@
+\unit{第232次报告——Picard 概形}
+\sid{232}
+\src{143}
+\seminarzh{第14年度，1961/62，第232号\\（1962年2月）}
+\paperhead{下降技术与代数几何中的存在性定理\\
+V. Picard 概形：存在性定理}%
+  {亚历山大·格罗滕迪克 著}
+
+\fsection{1}{相对 Picard 群与函子}
+
+对任意预概形（更一般地，任意赋环空间）$X$，我们把 $X$ 上可逆模
+（即局部同构于 $\mathcal O_X$ 的模）的同构类所成的群称为 $X$ 的
+（绝对）\emph{Picard 群}，并记作 $\operatorname{Pic}(X)$。因此有典范
+同构
+\begin{equation}
+\operatorname{Pic}(X)\xrightarrow{\sim}H^1(X,\mathcal O_X^*),
+\tag{1.1}
+\end{equation}
+其中 $\mathcal O_X^*$ 表示 $\mathcal O_X$ 的单位元层（它确实可与标准
+可逆模 $\mathcal O_X$ 的自同构层等同）。注意，
+$X\longmapsto\operatorname{Pic}(X)$ 显然是关于 $X$ 的反变函子，并且
+同构 (1.1) 是函子性的。
+
+若 $X$ 是另一个预概形 $S$ 上的预概形，则当 $S'$ 在 $S$ 上预概形范畴
+$(\mathrm{Sch})/S$ 中变化时，由上可得反变函子
+$S'\longmapsto\operatorname{Pic}(X\times_S S')$。这个函子不可能“可表”
+（[4]，II，A），因为所要分类的可逆模具有非平凡自同构，所以该函子
+不具有“局部性质”（[5]，IV，5.4）。因此应将它“局部化”；一般地，对
+任意相对预概形 $X/S$，引入一个相对性质的群
+\begin{equation}
+\operatorname{Pic}'(X/S)=H^0\bigl(S,R^1f_*(\mathcal O_X^*)\bigr),
+\tag{1.2}
+\end{equation}
+其中 $f:X\longrightarrow S$ 是结构态射（比较 [4]，II，C 3）。在前引文献中，
+这个群称为相对 Picard 群；由于即将说明的理由，这里最好把它称为
+$X/S$ 的\emph{限制相对 Picard 群}。当 $S'$ 在 $(\mathrm{Sch})/S$
+中变化时，
+$S'\longmapsto\operatorname{Pic}'(X\times_S S'/S')$ 是关于 $S'$ 的
+反变函子，也记作 $\operatorname{Pic}'_{X/S}$，因而基本上由下式定义：
+\begin{equation}
+\operatorname{Pic}'_{X/S}(S')=
+\operatorname{Pic}'(X\times_S S'/S').
+\tag{1.3}
+\end{equation}
+
+\src{144}
+由于我们已经作了所需的处理，这个函子现在具有“局部性质”。直观地说，
+(1.3) 右端可解释为 $X/S$（的各纤维）上可逆层类的“代数族”所成的
+集合，这些代数族由参数预概形 $S'/S$ 标号。当函子
+$\operatorname{Pic}'$ 可表时，表示它的 $S$ 上预概形记作
+$\operatorname{Pic}'_{X/S}$，称为 $X$ 在 $S$ 上的
+\emph{Picard 预概形}；于是有
+\begin{equation}
+\operatorname{Hom}_S(S',\operatorname{Pic}'_{X/S})
+\simeq\operatorname{Pic}'_{X/S}(S')
+=\operatorname{Pic}'(X\times_S S'/S').
+\tag{1.4}
+\end{equation}
+
+然而，在一些重要情形中，$\operatorname{Pic}'_{X/S}$ 不可表（例如域
+$k$ 上没有 $k$-有理点的“Brauer--Severi”簇），但相对 Picard 预概形
+仍有一个自然定义。原因在于，从绝对 Picard 群
+$\operatorname{Pic}(X\times_S S'/S')$ 出发定义函子
+$\operatorname{Pic}'$ 时，局部化尚不充分；更确切地说，
+$\operatorname{Pic}'$ 一般并不“与忠实平坦下降相容”。下面明确说明。
+
+令 $\mathfrak M$ 为所有\emph{忠实平坦且拟紧}的预概形态射所成的类；
+这个类在基变换和复合下稳定。设 $P$ 是从 $(\mathrm{Sch})/S$ 到集合范畴
+的反变函子；对每个满足 $u\in\mathfrak M$ 的 $S$-态射
+$u:T'\longrightarrow T$，考虑图式
+\begin{equation}
+P(T)\longrightarrow P(T')\rightrightarrows P(T'\times_TT')
+\tag{1.5}
+\end{equation}
+它是由 $P$ 作用于图式
+\[
+T\longleftarrow T'\mathrel{\substack{\xleftarrow{\,\mathrm{pr}_1\,}\\[-0.35ex]
+\xleftarrow[\,\mathrm{pr}_2\,]{}}}T'\times_TT'.
+\]
+所得。若 $P$ 可表，则由下降理论（[4]，I，B，定理 2），对每个
+$u\in\mathfrak M$，图式 (1.5) 都正合。我们把这一事实表述为 $P$ 与
+$\mathfrak M$ 相容；在这里，即称 $P$“与忠实平坦下降相容”，也可说
+$(\mathrm{Sch})/S$ 上的“预层”$P$ 对由 $\mathfrak M$ 给出的局部化概念
+而言是一个“层”。当 $P$ 任意时，一个在通常拓扑局部化情形中熟知的
+标准过程，可以给它配上一个“层”$\mathcal P$ 和一个函子同态
+$P\longrightarrow\mathcal P$，并使该同态在显然意义下具有泛性。
+$\mathcal P$ 的计算可明确写成如下形式：为定义 $\mathcal P(T)$，对每个
+$T$ 上满足 $u:T'\longrightarrow T$ 属于 $\mathfrak M$ 的 $T'$，记
+
+\src{145}
+$\overline H^0(T'/T,P)$ 为 $P(T')$ 的如下子集：其元素 $\xi$ 在
+$P(T'\times_TT')$ 中的两个像 $\xi_1,\xi_2$ 满足，存在一个
+$v\in\mathfrak M$ 的态射 $v:T''\longrightarrow T'\times_TT'$，使
+$\xi_1$ 与 $\xi_2$ 在 $P(T'')$ 中的像相同。[注意——如此定义的集合
+$\overline H^0$ 因而大于 [4]，I，A，4(a) 中引入的集合
+$H^0(T'/T,P)$。] 当 $T'$ 在固定的 $T$ 上变化时（始终要求
+$u\in\mathfrak M$），若以支配关系定义的预序赋予所有 $T'$ 所成的
+集合，则诸 $\overline H^0(T'/T,P)$ 构成一个归纳系；置
+\begin{equation}
+\mathcal P(T)=\varinjlim_{T'}\overline H^0(T'/T,P).
+\tag{1.6}
+\end{equation}
+这一表达式关于 $T$ 的函子律可显然地写出。
+
+当
+\[
+P(T)=\operatorname{Pic}(X\times_ST),
+\]
+时，由 (1.6) 定义的 $(\mathrm{Sch})/S$ 上的反变函子称为 $X$ 在 $S$
+上的\emph{相对 Picard 函子}，记作 $\operatorname{Pic}_{X/S}$；群
+$\operatorname{Pic}_{X/S}(S)$ 称为 $X$ 在 $S$ 上的
+\emph{相对 Picard 群}，记作 $\operatorname{Pic}(X/S)$。于是有显然的
+双射
+\begin{equation}
+\operatorname{Pic}_{X/S}(T)\simeq\operatorname{Pic}(X\times_ST/T).
+\tag{1.7}
+\end{equation}
+
+因此，$\operatorname{Pic}(X/S)$ 的一个元素由某个群
+$\operatorname{Pic}(X\times_SS')$ 的元素 $\xi'$ 给出，其中
+$S'\longrightarrow S$ 忠实平坦且拟紧，并且存在一个忠实平坦且拟紧的
+态射 $S''\longrightarrow S'\times_SS'$，使 $\xi'$ 在
+$\operatorname{Pic}(X\times_SS'')$ 中的两个逆像相同。元素 $\xi'$ 属于 $\operatorname{Pic}(X\times_SS')$，而元素
+$\xi_1$ 属于 $\operatorname{Pic}(X\times_SS_1)$（二者满足刚才明确说明的
+条件）定义 $\operatorname{Pic}(X/S)$ 中的同一个元素，当且仅当存在
+忠实平坦且拟紧的态射
+$S'_1\longrightarrow S'\times_SS_1$，使上述两个元素在
+$\operatorname{Pic}(X\times_SS'_1)$ 中的像相等。继续使用上面引入的
+函子 $P'=\operatorname{Pic}'_{X/S}$ 往往很方便；立即可见，典范态射
+$P\longrightarrow P'$ 定义一个同构
+\begin{equation}
+\mathcal P\xrightarrow{\sim}\mathcal P',
+\tag{1.8}
+\end{equation}
+由此可用 $\operatorname{Pic}'_{X/S}=P'$ 来描述
+$\operatorname{Pic}_{X/S}$，这往往更方便。根据下文 2.3，在刚刚明确
+说明的 $\operatorname{Pic}(X/S)$ 的描述中以 $P'$ 代替 $P$ 时，至少
+在前引文献中所说明的条件下，确实可以
+\src{146}
+取 $S''=S'\times_SS'$、$S'_1=S'\times_SS_1$。
+
+当函子 $\operatorname{Pic}_{X/S}$ 可表时，称 $X/S$ 有 Picard
+预概形；表示该函子的 $S$ 上预概形称为 $X$ 在 $S$ 上的
+\emph{Picard 预概形}，仍记作 $\operatorname{Pic}_{X/S}$。为此，
+$P'=\operatorname{Pic}'_{X/S}$ 可表显然已经足够，因为此时 $P'$ 已经是
+一个“层”，而公式 (1.8) 表明态射 $P'\longrightarrow\mathcal P'$ 可与
+典范态射
+\begin{equation}
+\operatorname{Pic}'_{X/S}\longrightarrow\operatorname{Pic}_{X/S},
+\tag{1.9}
+\end{equation}
+等同；该态射此时是同构。因此，我们的术语与上面随 (1.4) 引入的
+术语相容。一般地，当 $\operatorname{Pic}_{X/S}$ 存在时，它由函子性
+同构
+\begin{equation}
+\operatorname{Hom}_S(S',\operatorname{Pic}_{X/S})\xrightarrow{\sim}
+\operatorname{Pic}(X\times_SS'/S').
+\tag{1.10}
+\end{equation}
+定义。
+
+\fsection{2}{各类相对与绝对 Picard 群之间的关系}
+
+\result{命题}{2.1} 设 $f:X\longrightarrow S$ 是满足
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$ 的态射。则有正合列
+\[
+0\longrightarrow\operatorname{Pic}(S)\longrightarrow\operatorname{Pic}(X)
+\longrightarrow\operatorname{Pic}'(X/S).
+\]
+当 $X$ 在 $S$ 上有截面时，最后一个态射为满射，亦即有同构
+\[
+\operatorname{Pic}'(X/S)\xrightarrow{\sim}
+\operatorname{Pic}(X)/\operatorname{Pic}(S).
+\]
+
+该正合列可视为关于 $f$ 与 $\mathcal O_X^*$ 的 Leray 谱序列所对应的
+低次数正合列。第二个断言也同样是形式的。
+
+\result{命题}{2.2} 设 $f:X\longrightarrow S$ 是拟紧分离态射，满足
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$；设
+$S'\longrightarrow S$ 是忠实平坦且拟紧的态射。则：
+
+\noindent (i) $\operatorname{Pic}'(X/S)\longrightarrow
+\operatorname{Pic}'(X\times_SS'/S')$ 是单射；
+
+\noindent (ii) 若 $X$ 在 $S$ 上局部有截面（即每个 $s\in S$ 都有一个
+开邻域 $U$，使 $X|U$ 在 $U$ 上有截面），则图式
+\[
+\operatorname{Pic}'(X/S)\longrightarrow
+\operatorname{Pic}'(X\times_SS'/S')\rightrightarrows
+\operatorname{Pic}'(X\times_SS''/S'')
+\]
+
+\src{147}
+是正合的，其中 $S''=S'\times_SS'$。
+
+借助忠实平坦下降的初等性质，第一个断言可由下述一般事实推出。若
+$f:X\longrightarrow S$ 满足
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$，则从 $S$ 上有限型
+局部自由模范畴到 $X$ 上有限型局部自由模范畴的函子
+$\mathcal F\longmapsto f^*(\mathcal F)$ 是充分忠实的；它的本质像由
+$X$ 上满足如下条件的模 $\mathcal G$ 构成：$f_*(\mathcal G)$ 局部
+自由，且典范同态
+\[
+f^*\bigl(f_*(\mathcal G)\bigr)\longrightarrow\mathcal G
+\]
+是同构。第二个断言已在 [4]，I，B，4 中用下降理论证明。
+
+2.2 的结果也可表述如下：
+
+\result{推论}{2.3} 在 2.2 的条件下，典范同态 (1.9)
+$\operatorname{Pic}'_{X/S}\longrightarrow\operatorname{Pic}_{X/S}$ 是
+单射；若 $X$ 在 $S$ 上局部有截面，则它还是双射。（因此，在后一
+情形中，相对 Picard 群 $\operatorname{Pic}(X/S)$ 与限制相对
+Picard 群 $\operatorname{Pic}'(X/S)$ 相同。）
+
+与 2.1 结合可得：
+
+\result{推论}{2.4} 在 2.2 的条件下，有正合列
+\[
+0\longrightarrow\operatorname{Pic}(S)\longrightarrow\operatorname{Pic}(X)
+\longrightarrow\operatorname{Pic}(X/S).
+\]
+当 $X$ 在 $S$ 上有截面时，最后一个同态为满射，亦即此时有同构
+\[
+\operatorname{Pic}(X/S)\xrightarrow{\sim}
+\operatorname{Pic}(X)/\operatorname{Pic}(S).
+\]
+
+\result{注记}{2.5} 设 $f:X\longrightarrow S$ 是满足
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$ 的态射，$g$ 是 $X$
+在 $S$ 上的一个截面。设 $\mathcal L$ 是 $X$ 上的可逆模；把同构
+$\mathcal O_S\xrightarrow{\sim}g^*(\mathcal L)$ 称为 $\mathcal L$ 的
+$g$-刚化，并把配有一个 $g$-刚化的 $X$ 上可逆模 $\mathcal L$ 称为
+\emph{$g$-刚化可逆模}。这种结构的每个自同构都是平凡的，并且
+$\operatorname{Pic}'(X/S)$ 可与 $X$ 上 $g$-刚化可逆模的同构类集合
+等同\footnote{印刷文本作“在 $S$ 上”；这里，由截面 $g:S\to X$
+进行刚化所涉及的是 $X$ 上的模 $\mathcal L$。}。（正是这一事实使我们
+能够使用下降理论来证明 2.2(ii)。）至少当 $f$ 还拟紧且分离时，这给出
+$\operatorname{Pic}(X/S)$ 的一种新解释；此时由 2.3，
+$\operatorname{Pic}(X/S)\simeq\operatorname{Pic}'(X/S)$。
+
+\src{148}
+\result{注记}{2.6} 设 $f:X\longrightarrow S$ 为 2.2 中那样的态射，
+$S'\longrightarrow S$ 为忠实平坦且拟紧的态射，并且存在一个
+$S$-态射 $S'\longrightarrow X$，亦即 $X'=X\times_SS'$ 在 $S'$ 上有
+截面。置 $S''=S'\times_SS'$、$X''=X\times_SS''$，并考虑正合列
+\[
+\operatorname{Pic}(X/S)\longrightarrow\operatorname{Pic}(X'/S')
+\rightrightarrows\operatorname{Pic}(X''/S'').
+\]
+应用 2.4，得到正合列
+\[
+\operatorname{Pic}(X/S)\longrightarrow
+\operatorname{Pic}(X')/\operatorname{Pic}(S')
+\rightrightarrows
+\operatorname{Pic}(X'')/\operatorname{Pic}(S''),
+\]
+特别地，相对 Picard 群的每个元素都已经“来自”
+$\operatorname{Pic}(X')$ 的某个元素。因此，这大大简化了上一节给出的
+相对 Picard 群的描述，也同样简化了 $X$ 在 $S$ 上的 Picard 函子的
+描述，因为对 $S$ 上的每个 $T$，可将上述结果应用于
+$X\times_ST/T$ 以及态射 $T'=S'\times_ST\longrightarrow T$。例如，
+若 $f$ 本身忠实平坦，则可取 $S'=X$；当 $f$ 还为有限型（相应地，
+光滑，等等）时，在相对 Picard 函子
+$T\longmapsto\operatorname{Pic}(X\times_ST/T)$ 的描述中，就可以只考虑
+有限型（相应地，光滑，等等）的基变换 $T'\longrightarrow T$。当 $f$
+射影且平坦、$S$ 局部诺特时，可以证明上面的
+$S'\longrightarrow S$ 可取成使 $S'$ 为 $S$ 的诸开集 $S_i$（它们覆盖
+$S$）的平坦覆盖 $S'_i$ 的不交并；若 $f$ 甚至可分，则可取 $S'_i$ 在
+$S_i$ 上平展。
+
+\fsection{3}{主要存在性定理：陈述}
+
+即使作为猜想，目前也没有一个涵盖所有已知情形的 Picard 预概形存在性
+命题。可以说，一个“几乎必要”的条件是 $f:X\longrightarrow S$ 固有
+（这保证若干本质的有限性性质）且平坦。这些条件并不充分，即使 $S$
+是域 $k$ 上对偶数代数 $k[t]/(t^2)$ 的谱（例如取复数域
+$\mathbf C$），且 $X$ 的维数为 1，也仍不充分。在撰写本篇报告时，
+关于 Picard 预概形的最重要存在性定理均由下述定理推出：
+
+\result{定理}{3.1} 设 $f:X\longrightarrow S$ 是局部诺特预概形之间的
+态射。假设：
+
+\noindent (i) $f$ 射影；
+
+\src{149}
+\noindent (ii) $f$ 平坦；
+
+\noindent (iii) $f$ 的几何纤维均为整概形。
+
+在这些条件下，$\operatorname{Pic}_{X/S}$ 存在。
+
+将在以下两节概述的证明，同时还会表明如下事实：设 $\xi$ 是
+$\operatorname{Pic}_{X/S}$ 的一个截面，它对应于 $X/S$ 上的甚丰沛层
+$\mathcal O_X(1)$（即由射影浸入
+$X\longrightarrow\mathbf P(\mathcal E)$ 所诱导）；则存在
+$\operatorname{Pic}_{X/S}$ 的一个开部分 $U$，它是若干在 $S$ 上
+拟射影的开部分之不交并，使得 $U$ 在由 $\xi$ 作平移下稳定，并且
+$\operatorname{Pic}_{X/S}$ 是诸开集 $U-n\xi$（它们全都同构于 $U$）
+的递增并。特别地，在 3.1 的条件下，
+$\operatorname{Pic}_{X/S}$ 在 $S$ 上分离。
+
+\result{注记}{3.2} 从一些例子可以看出（例如 $S$ 是离散赋值环的谱，
+$X$ 在 $S$ 上相对维数为 1），若在 3.1 中去掉假设 (iii)，并以如下
+较弱假设代替：对每个 $s\in S$，同态
+\[
+k(s)\longrightarrow H^0(X_s,\mathcal O_{X_s})
+\]
+都是同构，则 $\operatorname{Pic}_{X/S}$ 未必在 $S$ 上分离。这既会
+发生在 $f$ 的几何纤维均约化、但一个整的几何一般纤维在特殊化时
+“裂开”为两个不可约分支的情形，也会发生在 $f$ 的几何纤维均不可约、
+但一个整的几何一般纤维特殊化为一个“重纤维”的情形。第一种情形例如
+出现在一条二次曲线退化为两条相交直线时；第二种情形的一个例子由
+D. Mumford 告诉我，其中一条椭圆曲线退化为一条二重椭圆曲线。这些
+例子在任意特征下都成立。
+
+\result{注记}{3.3} 在 3.1 的条件下，我不知道
+$\operatorname{Pic}_{X/S}$ 是否是不交开部分之并，而这些开部分在 $S$
+上为有限型、因而拟射影。\footnote{1962 年的勘误指出，D. Mumford
+利用这里发展的 Picard 概形理论肯定地解决了这个问题。}注意，像
+Hilbert 概形的情形（[4]，IV）一样，考察 Hilbert 多项式
+$Q\in\mathbf Q[t]$ 可把 $\operatorname{Pic}_{X/S}$ 分解为诸开部分
+$\operatorname{Pic}^{Q}_{X/S}$ 的不交并；这些开部分似乎应当在 $S$
+上拟射影。至少在下一篇报告中，当 $f$ 是光滑态射时，我们将会看到
+这一点。应注意，如果把假设 (i) 替换为“$X$ 在 $S$ 上局部射影”这一
+假设（这足以保证 3.1 成立，因为 $\operatorname{Pic}_{X/S}$ 的存在性
+显然是 $S$ 上的局部问题），那么另一方面却容易
+
+\src{150}
+给出一些例子，其中 $\operatorname{Pic}_{X/S}$ 含有在 $S$ 上并非有限型
+的连通分支。例如，设 $X_0$ 是代数闭域 $k$ 上的非奇异射影代数簇，
+配备一个自同构 $u$ 和 $X_0$ 的 Néron--Severi 群中的一个元素 $\xi$，
+使各 $u^n(\xi)$ 两两不同。例如，可以取 $X_0$ 为一条椭圆曲线 $E$
+与自身的积，并取 $u$ 为 $E\times E$ 的如下自同构：
+\[
+(x,y)\longmapsto(x,y+x)
+\]
+令 $S$ 为两条在 $a$、$b$ 两点相交的非奇异不可约曲线之并。$S$ 上存在
+一个群为 $\mathbf Z$ 的连通主覆盖 $P$；利用由 $u$ 定义的
+$\mathbf Z$ 在 $X_0$ 上的作用，可由此得到 $S$ 上一个以 $X_0$ 为纤维
+的伴随丛（它在 $S-a$ 和 $S-b$ 上平凡）；在所考察的特殊情形中，它
+实际上是 $S$ 上的一个阿贝尔概形。容易看出，
+$\operatorname{Pic}_{X/S}$ 也是由 $P$ 以及 $\mathbf Z$ 通过 $u$ 在
+$\operatorname{Pic}_{X_0/k}$ 上的作用所得到的伴随丛，并含有一个
+同构于
+\[
+P\times\operatorname{Pic}^{0}_{X_0/k},
+\]
+的连通分支（其中 $\operatorname{Pic}^{0}$ 表示
+$\operatorname{Pic}$ 中单位元所在的连通分支）；该分支在 $S$ 上并非
+有限型。[在 3.3 所考察的、$S$ 上非分离的 Picard 预概形的若干情形中，
+也会出现类似现象。]
+
+\fsection{4}{相对 Cartier 除子与射影丛}
+
+我们只需使用有效除子，故在本节下文中省略这一附加限定词。
+
+设 $X$ 是一个预概形。$X$ 上的一个 \emph{Cartier 除子}，或为简便起见
+简称 $X$ 上的除子，是 $X$ 的一个闭子预概形 $D$；它由一个理想
+$\mathcal J$ 定义，而该理想是可逆模，亦即局部由
+$\mathcal O_X$ 的一个非零因子截面生成。我们给 $D$ 配置一个可逆模，
+即
+\[
+\mathcal L(D)=\mathcal J^{-1},
+\]
+而典范单射 $\mathcal J\longrightarrow\mathcal O_X$ 给出一个典范同态
+\[
+s_D:\mathcal O_X\longrightarrow\mathcal J^{-1}=\mathcal L(D),
+\qquad\text{亦即}\quad s_D\in\Gamma(X,\mathcal L(D)).
+\]
+此外，给定一个除子，本质上等价于给定 $X$ 上的一个可逆模
+$\mathcal L$ 以及它的一个处处为非零因子的截面 $s$；反过来，对这样的
+一对 $(\mathcal L,s)$，配置 $s$ 的“除子”，记作
+$\operatorname{div}(s)$。对于 $X$ 上一个给定的可逆模 $\mathcal L$，
+所有
+
+\src{151}
+定义 $\mathcal L$ 的除子 $D$ 之集合，与商集
+\[
+\Gamma(X,\mathcal L)^*/\Gamma(X,\mathcal O_X^*),
+\]
+一一对应，其中 $\Gamma(X,\mathcal L)^*$ 表示
+$\Gamma(X,\mathcal L)$ 中由处处为非零因子的截面构成的部分。
+
+现在假设给定一个局部有限型态射 $f:X\longrightarrow S$，并为简便起见
+假设 $S$ 局部诺特。设 $\mathcal J$ 是 $X$ 上的凝聚理想，$D$ 是它
+定义的 $X$ 的子概形，$x\in X$，且 $s=f(x)$。可以证明，下列条件
+等价：
+
+\noindent (i) $\mathcal J$ 在 $x$ 处可逆（亦即 $\mathcal J_x$ 由
+$\mathcal O_{X,x}$ 的一个正则元生成），并且 $D$ 在 $x$ 处于 $S$
+上平坦；
+
+\noindent (ii) $X$ 和 $D$ 在 $x$ 处均于 $S$ 上平坦，并且 $D_s$ 在点
+$x$ 处是纤维 $X_s$ 上的 Cartier 除子；
+
+\noindent (iii) $X$ 在 $x$ 处于 $S$ 上平坦，并且 $\mathcal J_x$
+由一个元素 $f_x$ 生成，而该元素在 $X_s$ 上诱导出一个非零因子芽。
+
+此时称 $D$ 在所考察点处是 $X/S$ 上的一个
+\emph{相对 Cartier 除子}（或简称 $X/S$ 上的相对除子）。由 (i)
+可见，此时 $D$ 在 $x$ 的邻近各点处也是相对除子。因此，若 $X$ 和
+$D$ 均在 $S$ 上平坦，而 $D$ 在 $S$ 上固有，则所有如下 $s\in S$
+构成 $S$ 的一个开部分：$D_s$ 是 $X_s$ 中的 Cartier 除子（亦即
+$D$ 在 $X_s$ 的各点处是相对 Cartier 除子）。另一方面，上述定义
+正是为使相对 Cartier 除子的概念在任意基变换
+$S'\longrightarrow S$ 下稳定而作出的。现在考虑 $X/S$ 上相对除子
+的集合 $\operatorname{Div}(X/S)$，并定义以 $S$ 上的 $S'$ 为变量的
+反变函子
+\[
+\operatorname{Div}_{X/S}(S')=
+\operatorname{Div}(X\times_SS'/S').
+\]
+
+假设 $X$ 在 $S$ 上平坦且固有。由相对 Cartier 除子的刻画 (ii)，
+$\operatorname{Div}_{X/S}$ 可视为 [4]，IV 中定义的函子
+$\operatorname{Hilb}_{X/S}$ 的子函子；由上述说明，包含态射
+\[
+\operatorname{Div}_{X/S}\longrightarrow\operatorname{Hilb}_{X/S}
+\]
+“可由开浸入表示”（参见 [5]，IV，3.13）。运用 [4]，IV 的主存在
+定理，得到：
+
+\src{152}
+\result{命题}{4.1} 假设 $f:X\longrightarrow S$ 射影且平坦。那么函子
+$\operatorname{Div}_{X/S}$ 可表；更确切地说，它可由
+$\operatorname{Hilb}_{X/S}$ 的一个开部分表示。
+
+对于 $X/S$ 上一个给定的甚丰沛层 $\mathcal O_X(1)$，利用
+$\operatorname{Hilb}_{X/S}$ 按照 Hilbert 多项式
+$Q\in\mathbf Q[t]$ 典范分解为各开部分
+$\operatorname{Hilb}^{Q}_{X/S}$ 的分解，还可推出类似的分解
+\[
+\operatorname{Div}_{X/S}=
+\coprod_{Q\in\mathbf Q[t]}\operatorname{Div}^{Q}_{X/S}
+\]
+即分解为在 $S$ 上拟射影的两两不交开部分之不交并。
+
+另一方面，映射 $D\longmapsto\mathcal L(D)$ 给出函子性同态
+\begin{equation}
+\operatorname{Div}_{X/S}\longrightarrow\operatorname{Pic}_{X/S}
+\tag{+}
+\end{equation}
+，我们将研究这个同态；在相当一般的条件下，它将是相对可表的
+（[5]，IV，3）。因此，从
+$\operatorname{Pic}_{X/S}(S')$ 的一个元素 $\xi$ 出发；为简化记号，
+假设 $S'=S$，并证明 $\operatorname{Div}_{X/S}$ 的相应子函子可表。
+先考虑 $\xi$ 由 $X$ 上的一个可逆模 $\mathcal L$ 定义的情形。我们
+假设 $X$ 在 $S$ 上固有且平坦，并且 $X$ 在 $S$ 上的各几何纤维均为
+整的；这还蕴涵（[2]，III，第7段）
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$，并且这一关系在
+任意基变换 $S'\longrightarrow S$ 后仍成立。于是，$X/S$ 上满足
+下列条件的相对 Cartier 除子 $D$：
+$\mathcal L(D)$ 与 $\mathcal L$ 定义
+$\operatorname{Pic}(X/S)=\operatorname{Pic}_{X/S}(S)$ 的同一元素，
+亦即根据 2.4，$\mathcal L(D)$ 与 $\mathcal L$ 在 $S$ 上局部同构；
+它们与商层 $f_*(\mathcal L)^*/\mathcal O_S^*$ 的截面一一对应。
+这一对应与基变换相容。另一方面，所引文献中“Künneth”型的一般论证
+（另见 [6]）表明，$X/S$ 的固有性以及 $\mathcal L$ 在 $S$ 上的
+平坦性蕴涵：存在 $S$ 上一个凝聚模 $\mathcal Q$，它在唯一同构的意义
+下确定，并且存在层同构
+\[
+f_*(\mathcal L)\xrightarrow{\sim}
+\operatorname{Hom}_{\mathcal O_S}(\mathcal Q,\mathcal O_S),
+\]
+\footnote{印刷文本把 $\mathcal O_X$ 写在
+$\operatorname{Hom}$ 的下标中；由于 $\mathcal Q$ 是 $S$ 上的模，
+其对偶应在 $\mathcal O_S$ 上取。}
+而 $\mathcal Q$ 的形成与基变换相容。这里
+$f_*(\mathcal L)^*$ 表示 $f_*(\mathcal L)$ 的集合子层；它在 $U$
+上的截面，是 $\mathcal L$ 在 $f^{-1}(U)$ 上定义
+
+\src{153}
+$f^{-1}(U)/U$ 上相对 Cartier 除子的截面，亦即在各
+$X_s$（$s\in U$）上诱导出非零因子截面的截面。利用纤维 $X_s$ 为
+整的这一假设，这只意味着在各纤维 $X_s$ 上诱导的截面并非恒等于零；
+用局部同态 $\mathcal Q\longrightarrow\mathcal O_S$ 来说，也就是
+这些同态为满射（Nakayama 引理）。这表明，
+$f_*(\mathcal L)^*/\mathcal O_S^*$ 的截面集合与 $\mathcal Q$ 的
+可逆商模集合一一对应；或者，根据与凝聚模 $\mathcal Q$ 相伴的射影丛
+$\mathbf P(\mathcal Q)$ 的定义（参见 [5]，V，2），它与
+$\mathbf P(\mathcal Q)$ 在 $S$ 上的截面集合一一对应。这一描述与
+拉回的形成相容，因此得到下述定理。
+
+\result{定理}{4.3} 设 $f:X\longrightarrow S$ 是一个固有平坦态射，
+其几何纤维均为整的，其中 $S$ 局部诺特；设 $\mathcal L$ 是 $X$
+上的可逆模。对于 $S$ 上的每个 $S'$，令 $T(S')$ 为
+$X\times_SS'/S'$ 上所有满足下列条件的相对除子 $D$ 之集合：
+$\mathcal L(D)$ 在 $S'$ 上局部同构于
+$\mathcal L\otimes_{\mathcal O_S}\mathcal O_{S'}$（亦即
+$\mathcal L(D)$ 与
+$\mathcal L\otimes_{\mathcal O_S}\mathcal O_{S'}$ 定义
+$\operatorname{Pic}(X\times_SS'/S')$ 的同一元素）。那么存在 $S$
+上的一个凝聚模 $\mathcal Q$，它在唯一同构的意义下确定，使函子
+$T$ 可由射影丛 $\mathbf P(\mathcal Q)$ 表示。
+
+\result{推论}{4.4} 若进一步假设 $f$ 射影，则函子性同态
+$\operatorname{Div}_{X/S}\longrightarrow\operatorname{Pic}_{X/S}$
+可由射影态射表示。
+
+事实上，当 $X$ 在 $S$ 上有截面（相应地，局部有截面）时，由 4.3
+和 2.1，上述同态可由射影丛（相应地，由局部射影丛）表示。在 $f$
+拟射影的情形下，使用 $X$ 在 $S$ 上局部的有限平坦准截面，通过
+下降法容易归约到前一种情形。
+
+\result{注}{4.5} 在 4.3 的条件下，$S$ 上的模 $\mathcal Q$ 一般并非
+局部自由；这表现为 $\mathcal Q$ 的约化纤维的维数，亦即当
+$s\in S$ 变化时 $H^0(X_s,\mathcal L_s)$ 的维数，可能发生跳跃。
+给定局部诺特预概形 $S$ 上的一个凝聚模 $\mathcal Q$，容易验证：
+对于给定的 $s\in S$，$\mathcal Q$ 在 $s$ 处自由，当且仅当
+$\mathbf P(\mathcal Q)$ 在 $s$ 上方各点处于 $S$ 上平坦（在这种
+情形下，它甚至在 $s$ 上方各点处于 $S$ 上光滑）。在当前情形中，
+$\mathcal Q$ 按上述方式由 $\mathcal L$ 定义；这也意味着正像
+$f_*(\mathcal L)$ 的形成“与基变换在 $s$ 的
+
+\src{154}
+邻域内可交换”，或者等价地说，
+$f_*(\mathcal L)_s\longrightarrow H^0(X_s,\mathcal L_s)$ 为满射。
+例如，当 $H^1(X_s,\mathcal L_s)=0$ 时，情况就是如此。在所涉及的
+各预概形存在的前提下，这些判据尤其适用于泛情形
+$\operatorname{Div}_{X/S}\longrightarrow\operatorname{Pic}_{X/S}$，
+并分别给出这个态射在 $\operatorname{Div}_{X/S}$ 的一个给定点处
+光滑的充分必要条件和充分条件。
+
+\fsection{5}{主存在定理的证明}
+
+在 3.1 的条件下，选择 $X/S$ 上的一个甚丰沛模
+$\mathcal O_X(1)$，并令 $\xi$ 为
+$\operatorname{Pic}(X/S)$ 中的相应元素。简记
+\[
+P(S')=\operatorname{Pic}(X\times_SS'/S'),
+\]
+并为简便起见，先假设 $X/S$ 有一个截面。令 $P^+(S')$ 为
+$P(S')$ 中由 $X\times_SS'$ 上满足下列条件的可逆模 $\mathcal L$
+的类所构成的部分：
+\[
+R^if'_*(\mathcal L(n))=0\quad\text{对 $i>0$ 及所有 $n\geq0$},
+\qquad
+f'_*(\mathcal L(n))\neq0\quad\text{对所有 $n\geq0$}.
+\]
+这些条件在基变换下稳定，因而定义了 $P$ 的一个子函子 $P^+$；
+它显然在由 $\xi$ 给出的平移下稳定。利用 Serre 的“定理 A 和 B”
+（[2]，III，2）以及 [5]，IV，5 中的一般理论，容易看出：$P$
+可表，当且仅当 $P^+$ 可表；此时，$P^+$ 可由表示 $P$ 的 Picard
+预概形 $\operatorname{Pic}_{X/S}$ 的一个开部分 $U$ 表示，而后者
+是各开部分 $U-n\xi$ 的递增并。
+
+简记 $D=\operatorname{Div}_{X/S}$，并令 $D^+$ 为典范态射
+$D\longrightarrow P$ 下 $P^+$ 的逆像。因此有态射
+\begin{equation}
+D^+\longrightarrow P^+,
+\tag{+}
+\end{equation}
+并且已经知道，$D^+$ 可由预概形
+$D=\operatorname{Div}_{X/S}$ 的一个开部分 $D^+$ 表示（其存在性由
+4.1 保证）。由 4.3 容易推出，态射 (+) 可由光滑、射影且满射的态射
+表示（更确切地说，由与处处非零的局部自由模相伴的射影丛表示）。
+其原因是：当 $X\times_SS'$ 上的 $\mathcal L$ 如本节开头所述时，
+$f'_*(\mathcal L)$ 是一个局部自由模 $\neq0$，其形成与基变换可交换；
+采用 4.3 的记号，$\mathcal Q$ 此时同构于
+$f'_*(\mathcal L)$ 的对偶。利用一般判据（[5]，IV，4.7），我们将由此
+推出 $P^+$ 的可表性。在所引文献中，取 $\mathfrak C$ 为所有忠实
+
+\src{155}
+平坦且拟紧的预概形态射所成的类（根据 [4]，I B，它们确实是有效
+满态射）。所引文献的条件 (a)，即 (+) 可由属于 $\mathfrak C$ 的
+态射表示，已经由上述论证验证；条件 (b) 也同样得到验证，它表示
+函子 $P^+$ 与忠实平坦拟紧下降相容，而这一点是立即可见的。只剩下
+证明所引文献的条件 (c)：由 $\mathfrak C$-可表态射 (+) 在预概形
+$D^+$ 中导出的等价关系 $R$ 是 $\mathfrak C$-有效的，亦即它是有效
+的，并且 $D^+\longrightarrow D^+/R$ 属于 $\mathfrak C$。为此，
+先注意，与各个虚 Hilbert 多项式 $Q\in\mathbf Q[t]$ 对应的 $D^+$
+的开部分 $D^{+Q}$ 在 $R$ 下稳定（因为 $R$ 的纤维连通）；因此，
+问题归约为证明：对于每个 $Q$，$D^{+Q}$ 中诱导的等价关系 $R^Q$
+是 $\mathfrak C$-有效的。现在，$D^{+Q}$ 是拟射影的，而等价关系
+$R^Q$ 是射影且平坦的。因此，[4]，III，6.1 的适用条件均已满足，
+并蕴涵所需结果。
+
+在 $X/S$ 不必有截面的一般情形下，可通过下降法容易归约到前一种
+情形；也可以在 $P^+$ 的定义中作必要修改后，重复上述证明。
+
+\result{注记}{5.1} 所采用的方法本质上是 Matsusaka 用于射影构造
+Picard 簇的方法。为取有效商而援用的 [4]，III 中的结果，也容易由
+Hilbert 概形存在定理推出（例如参见 [6]）（经典方法则利用 Chow
+坐标来构造这些商）。还应注意，
+$\operatorname{Pic}_{X/S}$ 的开部分
+$\operatorname{Pic}^{+}_{X/S}$ 的形成，以及它按照定义所考察可逆模
+的各除子的 Hilbert 多项式而分解为在 $S$ 上拟射影的开部分
+$\operatorname{Pic}^{+Q}_{X/S}$，均与基变换相容（这使下降法得以
+应用）。
+
+\result{注记}{5.2} 不排除在下述所有情形中
+$\operatorname{Pic}_{X/S}$ 都存在：$f:X\longrightarrow S$ 固有且
+平坦，并且各同态
+\[
+k(s)\longrightarrow H^0(X_s,\mathcal O_{X_s})\qquad(s\in S)
+\]
+均为同构（后一条件此时还表示
+$\mathcal O_S\xrightarrow{\sim}f_*(\mathcal O_X)$，且这一关系在
+任意基变换 $S'\longrightarrow S$ 后仍成立）。至少，在 $f$ 进一步
+射影时，解析空间的框架中可以用 [5]，IX，3.1 所说明的另一种方法
+（若我没有弄错，即 Chow 的方法）证明这一点。
+\footnote{1962年的勘误指出，本注记开头提出的存在性猜想是错误的，
+但 Mumford 的方法给出一个稍弱的定理。}
+在这种方法中，取
+
+\src{156}
+在除子概形的某个开集中按固有平坦等价关系取商，被替换为在 $X$
+浸入 $\mathbf P^r_S$ 的浸入概形中按射影群取商。利用 Mumford 关于按
+射影群取商的结果 [8]，这一方法很可能可以推广到概形的情形；目前，
+只有当 $X$ 在 $S$ 上有“许多局部截面”时才有成文的证明，例如，当
+$X$ 在一个剩余域代数闭的完备局部环上可分时。
+\footnote{印刷文本漏去了“剩余域代数闭”；勘误指出，Mumford 的反例
+表明这一限制不可或缺。}
+原则上，所述方法的适用范围会更广，因为它还能在 Picard 预概形不分离
+的情形下给出其存在性，而第一种方法在这种情形下必然失效。（从技术上
+说，困难来自如下事实：当 $f$ 的几何纤维不再为整时，4.3 中所考察的
+函子不再由射影丛 $\mathbf P(\mathcal Q)$ 本身表示，而是由它的一个
+开部分表示；这就引出了按平坦但非固有的等价关系取商这一棘手问题。）
+
+\result{注}{5.3} 应当注意，这里给出的证明既不借助预先构造曲线或
+曲线族的 Jacobian，也不借助阿贝尔簇或阿贝尔概形理论；因此，它与
+Lang 的著作 [7] 或 Chevalley 的报告 [1] 这类沿用 A. Weil 所勾勒
+途径的传统论述有本质区别。即使对于代数闭域（比如复数域）上非奇异
+曲线的 Jacobian，这里给出的构造也是目前所知唯一能赋予它第 1 节中
+被我们用作定义的那些很强性质的构造；这些性质本质上就是 Chevalley
+的性质，但还把带幂零元的“参数簇”考虑在内。Picard 概形的构造应当
+先于而不是后于阿贝尔簇理论，这一点先验地就很清楚，因为 Picard 概形
+一般既不是阿贝尔概形，也不能归结为阿贝尔概形。代数闭域上的奇异曲线
+已经说明了这一点：此时会出现 Rosenlicht 的“广义 Jacobian”，而它们
+并不是阿贝尔簇。此外，一旦有了一般的 Picard 概形理论，阿贝尔簇理论
+以及更一般的阿贝尔概形理论都会大为简化。特别地，阿贝尔概形的对偶
+理论，尤其是 Cartier 型结果，将由此变得几乎是形式的（例如参见
+[10]）。
+
+\src{157}
+\result{注}{5.4} Igusa 关于退化为奇异曲线的曲线之 Jacobian 的
+“相容性原理”，只有把它理解为不必在 $S$ 上光滑的相对曲线概形
+$X/S$ 的 Picard 概形存在性定理，才能得到恰当的说明。因此，
+当特化曲线为整时（即用经典术语说，它不可约且重数为 1），这就是主要
+存在性定理 3.1 的一个特例。应当注意，目前当特殊曲线可约时，即使各
+分支的重数均为 1，也就是说特殊曲线在剩余域上可分，已知存在性定理
+仍不能处理这一情形；唯一的例外是基底为一个剩余域代数闭的完备离散
+赋值环，参见 5.2。在用概形理论对亏格为 $g$ 的曲线模概形作
+Baily--Satake“紧化”的几何构造中，必然会遇到这一存在性问题。
+（目前仅当 $g=1$ 时，由于 Igusa 的工作，才知道这种紧化。）
+
+\fsection{6}{相对存在性定理}
+
+这里将概述若干有用情形：某些 Picard 概形的存在性蕴含另一些 Picard
+概形的存在性；由此可从主要定理 3.1 推出其他若干存在性定理。
+
+\result{命题}{6.1} 设 $f:X\longrightarrow S$ 是平坦射影态射，并且在
+Stein 分解 $f=f''f'$ 中，态射 $f':X\longrightarrow S'$ 平坦且具有
+整的几何纤维（因而满足 3.1 的假设），而有限态射
+$f'':S'\longrightarrow S$ 平坦。那么 $\operatorname{Pic}_{X/S}$
+存在，并且（采用 [4]，II，C 2 中引入的记号）有典范同构
+\[
+\operatorname{Pic}_{X/S}\xrightarrow{\sim}
+\Pi_{S'/S}\operatorname{Pic}_{X/S'}.
+\]
+
+为证明这一点，先建立函子的同构
+\[
+\operatorname{Pic}_{X/S}\xrightarrow{\sim}
+\Pi_{S'/S}\operatorname{Pic}_{X/S'},
+\]
+再使用 3.1；该定理蕴含 $\operatorname{Pic}_{X/S'}$ 可表。最后，
+利用第 n\textsuperscript{o} 3 节中指出的
+$\operatorname{Pic}_{X/S'}$ 的结构，即
+$\operatorname{Pic}_{X/S'}$ 在 $S$ 上每条纤维中的任一有限子集都
+包含于某个仿射开集中，得到
+$\Pi_{S'/S}\operatorname{Pic}_{X/S'}$ 的存在性。
+
+\src{158}
+例如，当 $X$ 是 $S$ 上满足 3.1 条件的诸概形 $X_i$ 的不交并概形时，
+陈述 6.1 归结为平凡的陈述
+\[
+\operatorname{Pic}_{X/S}\xrightarrow{\sim}
+\prod_i\operatorname{Pic}_{X_i/S}.
+\]
+
+\result{推论}{6.2} 设 $f:X\longrightarrow S$ 是射影平坦态射，其几何
+纤维局部为整（例如，该态射射影且正规），则
+$\operatorname{Pic}_{X/S}$ 存在。
+
+此外，在这一情形下，$S'$ 是 $S$ 的一个平展覆盖（每当 $f$ 可分时
+均如此；所谓可分，是指该态射平坦且几何纤维约化）。利用
+$\operatorname{Pic}_{X/S'}$ 的类似结构，可以验证第
+n\textsuperscript{o} 3 节对 $\operatorname{Pic}_{X/S}$ 陈述的
+结构定理仍然成立。
+
+另一方面，下降法给出一个相对存在性定理；其适用范围取决于 [4]，I，
+A (c) 中提出的非平坦下降问题的解决。这里仅明确陈述其中一个特例：
+
+\result{命题}{6.3} 设 $f:X\longrightarrow S$ 是固有态射，$X_1$ 和
+$X_2$ 是 $X$ 的两个在 $S$ 上平坦的子预概形，分别由两个凝聚理想
+$\mathcal I_1$ 和 $\mathcal I_2$ 定义，并满足
+$\mathcal I_1\cap\mathcal I_2=(0)$，且
+$\mathcal O_X/(\mathcal I_1+\mathcal I_2)$ 在 $S$ 上平坦（即 $X_1$
+与 $X_2$ 在 $X$ 中的上确界为 $X$，而它们的下确界 $Z$ 在 $S$ 上
+平坦）。
+\footnote{最后一个字母在印刷文本中为“$X$”，但紧接在前面的条件是
+$\mathcal O_X/(\mathcal I_1+\mathcal I_2)$ 在 $S$ 上平坦，因此定义
+的是 $Z$ 在 $S$ 上平坦。}
+再假设对每个 $s\in S$，同态
+\[
+k(s)\longrightarrow H^0(X_{i,s},\mathcal O_{X_{i,s}}),\qquad i=1,2,
+\]
+均为双射。那么函子的自然同态
+\[
+\operatorname{Pic}_{X/S}\longrightarrow
+\operatorname{Pic}_{X_1/S}\times\operatorname{Pic}_{X_2/S}
+\]
+由仿射态射表示。因此，如果 $\operatorname{Pic}_{X_1/S}$ 和
+$\operatorname{Pic}_{X_2/S}$ 存在，则 $\operatorname{Pic}_{X/S}$
+也存在，并且典范态射
+\[
+\operatorname{Pic}_{X/S}\longrightarrow
+\operatorname{Pic}_{X_1/S}\times\operatorname{Pic}_{X_2/S}
+\]
+是仿射的。
+
+通过忠实平坦下降，可归结到 $Z$ 在 $S$ 上有截面的情形；该截面因而
+定义了 $X$、$X_1$、$X_2$ 在 $S$ 上的截面，并使我们能够像 2.5 中
+所说明的那样消去所考察结构中的自同构。此时，证明只须注意，一个
+可逆模
+
+\src{159}
+$\mathcal L$，它在 $X$ 上带有“刚化”；这等价于给定三元组
+$(\mathcal L_1,\mathcal L_2,u)$，其中 $\mathcal L_i$ 是
+$X_i$ 上带有“刚化”的可逆模，而 $u$ 是从 $\mathcal L_1|Z$ 到
+$\mathcal L_2|Z$ 且与刚化相容的同构。只须验证，在
+$\mathcal L_1$、$\mathcal L_2$ 固定时，$u$ 的数据可以表示成 $S$
+上某个在 $S$ 上仿射的适当概形的一个截面；这是容易的。由 6.3
+容易推出：
+
+\result{推论}{6.4} 设 $X$ 是域 $k$ 上固有且可分的概形，$X_i$ 是
+$X$ 的各不可约分支。如果各 $\operatorname{Pic}_{X_i/k}$ 存在，
+则 $\operatorname{Pic}_{X/k}$ 也存在，并且典范态射
+\[
+\operatorname{Pic}_{X/k}\longrightarrow\prod_i\operatorname{Pic}_{X_i/k}
+\]
+是仿射的。
+
+结合 6.2，例如可知，每当 $X$ 是域 $k$ 上射影且可分的概形时，
+$\operatorname{Pic}_{X/k}$ 都存在。当 $X$ 在 $k$ 上不再可分时，
+利用 Oort [11] 的一个论证，也可得到一个归约结果。该方法同样适用于
+任意基概形（例如，在下一篇报告中证明 3.3 所预告的有限性结果时，
+这一情形很有用）。为避免陈述过于技术化，这里仅限于基底为域的情形：
+
+\result{命题}{6.5} 设 $X$ 是域 $k$ 上的固有概形，$X_0$ 是一个
+具有相同底集合的子概形（因而由 $X$ 上的一个幂零理想定义）。
+那么函子态射
+\[
+\operatorname{Pic}_{X/k}\longrightarrow\operatorname{Pic}_{X_0/k}
+\]
+由仿射态射表示。特别地，若 $\operatorname{Pic}_{X_0/k}$ 存在，
+则 $\operatorname{Pic}_{X/k}$ 也存在，而且态射
+$\operatorname{Pic}_{X/k}\longrightarrow\operatorname{Pic}_{X_0/k}$
+是仿射的。
+
+结合 6.4，容易得到：
+
+\result{推论}{6.6} 设 $X$ 是域 $k$ 上的射影预概形，则
+$\operatorname{Pic}_{X/k}$ 存在。
+
+\result{注}{6.6} 极有可能，对域 $k$ 上的每个固有概形 $X$，
+$\operatorname{Pic}_{X/k}$ 都存在。
+\footnote{1962 年勘误指出，Murre 当时刚刚肯定地解决了这一问题。}
+前述结果把这一问题归结到 $k$ 代数闭且 $X$ 为整的情形。这时，由
+Chow 引理，存在一个在 $k$ 上射影的整概形 $X'$ 以及支配态射
+$g:X'\longrightarrow X$。因此，只须证明相应的
+
+\src{160}
+函子态射
+\[
+\operatorname{Pic}_{X/k}\longrightarrow\operatorname{Pic}_{X'/k}
+\]
+可表（而且无疑由仿射态射表示），因为另一方面已经知道
+$\operatorname{Pic}_{X'/k}$ 可表。这引出了目前尚未解决的非平坦下降
+问题。应当注意，若只考虑函子 $\operatorname{Pic}_{X/k}$ 在约化
+预概形上的限制（其中 $X$ 是代数闭域 $k$ 上的固有整概形），则确实
+得到可表函子；Chevalley [1] 在 $X$ 正规时证明了这一点，而 Seshadri
+[12] 用下降法证明了一般情形。但采用我们的记号，这些作者构造的概形
+并不是 $\operatorname{Pic}_{X/k}$，而是
+$(\operatorname{Pic}_{X/k})_{\mathrm{réd}}$，即与
+$\operatorname{Pic}_{X/k}$ 对应的约化概形。
+
+\result{注}{6.7} 更一般地，设 $f:X'\longrightarrow X$ 是域 $k$ 上
+固有预概形之间的满射态射。非平坦下降方面的考虑使人猜想
+\[
+\operatorname{Pic}_{X/k}\longrightarrow\operatorname{Pic}_{X'/k}
+\]
+是仿射态射；
+\footnote{1962 年勘误指出，这一问题有肯定答案，并参见下一篇报告
+《评论》的最后一段。}
+这尤其会蕴含：模去单位元所在的连通分支后，Néron--Severi 群上的
+相应同态模挠单射。当 $X$ 和 $X'$ 非奇异时，可由相交理论验证这一点。
+在其他任何情形下，答案似乎都还是未知的。
+
+\result{注}{6.8} 与人们可能以为的相反，考察带幂零元的代数概形的
+Picard 概形，在各种问题中是有用的，甚至是不可或缺的。例如，设 $X$
+是一个射影概形，比如在 $k$ 上光滑，
+\footnote{印刷文本作“正则”；勘误规定改为“在 $k$ 上光滑”。}
+而 $Y$ 是一个超平面截面；这时必须考察 $Y$ 的所有阶“无穷小邻域”
+$X_n$ 以及 Picard 概形 $\operatorname{Pic}_{X_n/k}$。当 $X$
+不可约且维数 $\geq4$（相应地，$\geq3$）时，典范态射
+\[
+\operatorname{Pic}_{X/k}\longrightarrow\operatorname{Pic}_{X_n/k}
+\qquad(n\text{ 充分大})
+\]
+是同构（相应地，在 Néron--Severi 挠子群的逆像上诱导同构）；这一
+结果将在下一篇报告中对 Picard 概形的定性研究中用到。同样，考察某些
+带幂零元曲线的 Picard 概形，并结合形式几何的基本定理 [3]，可以在
+等特征情形下验证 Mumford 的一个猜想，即：对每个维数为 2 的完备
+诺特正规局部环 $A$，$A$ 的除子类群都可视为剩余域 $k$ 上某个
+
+\src{161}
+代数群 $G$ 的 $k$-有理点集合（而且一旦在 $A$ 中给定一个系数域，
+$G$ 就被典范地确定）。当 $A$ 具有任意维数时，很可能存在一个 $k$
+上的 pro-代数群，扮演
+上述 $G$ 的同样角色；在能够对 $\operatorname{Spec}(A)$ 作“解奇异”
+的情形下，它可构造为 $k$ 上适当的带幂零元射影概形之 Picard 概形的
+逆极限。
+
+\section*{参考文献}
+\addcontentsline{toc}{section}{参考文献}
+
+\begin{description}\small
+\item[{[1]}] CHEVALLEY (Claude). -- Sur la théorie de Picard,
+\emph{Amer. J. of Math.}, 第 82 卷，1960 年，第 435--490 页。
+
+\item[{[2]}] GROTHENDIECK (A.) 和 DIEUDONNÉ (J.). -- Éléments de géométrie
+algébrique, Chapitre I et suivants. -- 巴黎，Presses universitaires de France,
+1960--1961 年（Institut des Hautes Études Scientifiques, Publications
+mathématiques 4, 8, \ldots）。
+
+\item[{[3]}] GROTHENDIECK (Alexander). -- Géométrie formelle et géométrie
+algébrique, \emph{Séminaire Bourbaki}, 第 11 卷，1958/59 年，
+n\textsuperscript{o} 182，28 页。
+
+\item[{[4]}] GROTHENDIECK (Alexander). -- Techniques de descente et théorèmes
+d'existence en géométrie algébrique, I--IV, \emph{Séminaire Bourbaki}, 第 12
+卷，1959/60 年，n\textsuperscript{o} 190，29 页及
+n\textsuperscript{o} 195，22 页；第 13 卷，1960/61 年，
+n\textsuperscript{o} 212，20 页及 n\textsuperscript{o} 221，28 页。
+
+\item[{[5]}] GROTHENDIECK (Alexander). -- Techniques de construction en
+géométrie analytique, I--X, \emph{Séminaire Cartan}, 第 13 卷，1960/61 年：
+Déformation des structures analytiques complexes,
+n\textsuperscript{o} 7--17。
+
+\item[{[6]}] GROTHENDIECK (Alexander). -- Séminaire de géométrie algébrique,
+Lichtenbaum 编纂，Harvard University，1961 年（待刊）。
+
+\item[{[7]}] LANG (Serge). -- \emph{Abelian varieties}. -- New York,
+Interscience Publishers, 1959（Interscience Tracts in pure and applied
+Mathematics, 7）。
+
+\item[{[8]}] MUMFORD (D.). -- An elementary theorem in geometric invariant
+theory, \emph{Bull. Amer. math. Soc.}, 第 67 卷，1961 年，第 483--486 页。
+
+\item[{[9]}] MUMFORD (D.). -- The topology of normal singularities of an
+algebraic surface and a criterion for simplicity. -- 巴黎，Presses
+universitaires de France，1961 年（Institut des Hautes Études Scientifiques,
+Publications mathématiques, 9）。
+
+\item[{[10]}] MUMFORD (D.) 和 TATE (J.). -- Séminaire de géométrie
+algébrique, Harvard University, Spring Term 1962（待刊）。
+
+\item[{[11]}] OORT (F.). -- Sur le schéma de Picard,
+\emph{Bull. Soc. math. France}, 第 90 卷，1962 年（待刊）。
+
+\item[{[12]}] SESHADRI (C. S.). -- 待刊论文，拟发表于
+\emph{Annali di Matematica}。
+\end{description}

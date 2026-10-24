@@ -1,0 +1,5 @@
+# Sources and authorship
+
+The original work is Alexandre Grothendieck’s *Fondements de la géométrie algébrique*: Bourbaki exposés 149, 182, 190, 195, 212, 221, 232 and 236, their errata, and the 1962 comments. [French originals](https://www.numdam.org/).
+
+The Chinese translation is AI-translated; subsequent corrections, editing and typesetting are AI-produced. The publisher did not translate the text. The French text is the primary source; the maintained [English edition](https://github.com/KokunoYumeto/fga-en) is a secondary reference. That English reference contains wording shared with [Tim Hosgood’s human translation](https://github.com/thosgood/fga/tree/9976dd5f8e2ddcb388f0a07f3aa334f120d1019f), whose human authorship remains credited. This credits the English reference; it does not attribute the Chinese translation to Tim Hosgood. The identified upstream version is 9976dd5f8e2ddcb388f0a07f3aa334f120d1019f. Attribution does not establish permission or endorsement.
