@@ -26,8 +26,7 @@ references:
   authors:
   - family-names: Grothendieck
     given-names: Alexandre
-  doi: 10.5281/zenodo.23124640
-  url: https://doi.org/10.5281/zenodo.23124640
+  url: https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/tag/fga-zh-hans-cn-2026-10-03-r2
   version: 2026-10-03-r2
   year: '2026'
   languages:

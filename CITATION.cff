@@ -3,7 +3,6 @@ message: 引用本译本时，请同时注明历史原著和本次语言版本�
 title: 《代数几何基础》简体中文版：校订读本与完整LaTeX源文件
 version: 2026-10-03-r2
 date-released: '2026-10-03'
-doi: 10.5281/zenodo.23124640
 authors: &id001
 - family-names: Grothendieck
   given-names: Alexandre
@@ -28,5 +27,4 @@ preferred-citation:
   title: 《代数几何基础》简体中文版：校订读本与完整LaTeX源文件
   version: 2026-10-03-r2
   date-released: '2026-10-03'
-  doi: 10.5281/zenodo.23124640
   authors: *id001

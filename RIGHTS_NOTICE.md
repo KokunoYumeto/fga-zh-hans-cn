@@ -1,7 +1,5 @@
-# Rights and availability
+# 权利与使用
 
-Rights in the original works and in any protected contributions to these derivative translations and transcriptions remain with their respective rights holders. Anything in these editions that the publisher holds rights to is dedicated to the public domain under CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/). Existing third-party notices and any permissions already granted remain applicable.
+在出版者对人工智能完成的翻译、订正和排版享有任何权利的范围内，这些权利依 CC0 1.0（https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hans）贡献到公有领域。这不影响原著及所列人工贡献的权利，也不授予使用它们的许可。第三方的权利声明和已经给予的许可仍然有效。
 
-These editions are made available free of charge for non-commercial, purely educational purposes, on the presumption that the respective rights holders would not object to these translations and transcriptions being freely available alongside the French originals on [NUMDAM](https://www.numdam.org/journals/PMIHES/). This presumption is not a statement that permission has been obtained; free access to the originals does not itself grant permission to translate, adapt or republish them.
-
-If you hold rights in any material presented here and object to its availability, please [open a GitHub issue](https://github.com/KokunoYumeto/fga-zh-hans-cn/issues). The publisher will take down the affected material at the rights holder's request.
+本版本免费提供，用于非商业的教育目的，与 [NUMDAM](https://www.numdam.org/) 上的法文原文并存，并以权利人不会反对为前提；这一前提并不表示已获得许可。如果您对这里的某项材料享有权利并反对其公开，请[在 GitHub 上提出 issue](https://github.com/KokunoYumeto/fga-zh-hans-cn/issues)，相关材料将被撤下。
