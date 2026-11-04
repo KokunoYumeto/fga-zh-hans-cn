@@ -7,7 +7,7 @@ authors: &id001
 - family-names: Grothendieck
   given-names: Alexandre
 repository-code: https://github.com/KokunoYumeto/fga-zh-hans-cn
-abstract: 非官方简体中文译本，含八篇讲演、勘误和1962年评论。翻译、订正与排版由人工智能 OpenAI Codex（GPT-5.6 Sol 与 GPT-6 Astra，Ultra）生成。原作与所继承的英文人工翻译分别保留其作者身份与来源。
+abstract: 非官方简体中文译本，含八篇讲演、勘误和1962年评论。翻译由 OpenAI Codex 的 GPT-5.6 Sol 完成，GPT-6 Astra 负责检查、订正和组装（Ultra）。原作与所继承的英文人工翻译分别保留其作者身份与来源。
 keywords:
 - 代数几何
 - FGA

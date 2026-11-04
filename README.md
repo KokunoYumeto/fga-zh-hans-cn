@@ -4,7 +4,7 @@
 
 ## 制作方式
 
-中文翻译、校订、编辑和排版由人工智能完成，工作记录为 OpenAI Codex 的 GPT-5.6 Sol 与 GPT-6 Astra（Ultra 推理强度）。译文以法文原文为主要依据，本项目维护的英文版（[fga-en](https://github.com/KokunoYumeto/fga-en)）作为次要参照（见“来源与署名”）。原文页码保留在页边。
+中文翻译、校订、编辑和排版由人工智能完成：翻译由 OpenAI Codex 的 GPT-5.6 Sol 完成，GPT-6 Astra 负责检查、订正和组装（Ultra 推理强度）。译文以法文原文为主要依据，本项目维护的英文版（[fga-en](https://github.com/KokunoYumeto/fga-en)）作为次要参照（见“来源与署名”）。原文页码保留在页边。
 
 ## 状态
 
