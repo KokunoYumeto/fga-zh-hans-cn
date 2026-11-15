@@ -25,9 +25,9 @@
 
 2026 年 10 月 24 日累积校订版（fga-zh-hans-cn-2026-10-24-r3）：
 
-- [PDF 读本](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-10-24-r3/00_FGA_zh_Hans_CUMULATIVE_READER.pdf)
-- [单一 LaTeX 文件](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-10-24-r3/01_FGA_zh_Hans_DIRECT.tex)
-- [完整可编辑源文件包](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-10-24-r3/02_FGA_zh_Hans_EDITABLE_SOURCES.zip)
+- [PDF 读本](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-11-15-pdf-check/00_FGA_zh_Hans_CUMULATIVE_READER.pdf)
+- [单一 LaTeX 文件](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-11-15-pdf-check/01_FGA_zh_Hans_DIRECT.tex)
+- [完整可编辑源文件包](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases/download/fga-zh-hans-cn-2026-11-15-pdf-check/02_FGA_zh_Hans_EDITABLE_SOURCES.zip)
 
 仓库中的 [editions/FGA_ZH_CURRENT](editions/FGA_ZH_CURRENT/README.md) 包含模块化 LaTeX 主文件 `source/zh/main.tex` 和内容相同的单一文件 `FGA_Chinese_Current_Direct.tex`；字体和编译方法见其中的 `BUILD.md`。更早的版本见 [GitHub 发布页](https://github.com/KokunoYumeto/fga-zh-hans-cn/releases)。
 
